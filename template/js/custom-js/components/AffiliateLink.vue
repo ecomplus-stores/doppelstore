@@ -76,7 +76,7 @@
       setLink () {
         const customer = ecomPassport.getCustomer()
         this.link = `https://${window.location.host}/` +
-          `?coupon=afiliado&referral=${customer._id}`
+          `?coupon=CONVITEESPECIAL&referral=${customer._id}`
       },
   
       share () {

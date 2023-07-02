@@ -1,11 +1,20 @@
 // Add your custom JavaScript for storefront pages here.
 import Vue from 'vue'
+import ecomPassport from '@ecomplus/passport-client'
 import AffiliateLink from './components/AffiliateLink.vue'
 
 const affiliateLinkDiv = document.getElementById('affiliate-link')
 if (affiliateLinkDiv) {
   new Vue(AffiliateLink).$mount(affiliateLinkDiv)
 }
+
+ecomPassport.on('login', () => {
+  document.getElementById('user-greetings').innerText = 'Olá ' +
+    ecomPassport.getCustomer().display_name
+})
+ecomPassport.on('logout', () => {
+  document.getElementById('user-greetings').innerText = 'Entrar / Cadastrar'
+})
 
 const { $ } = window
 $('.header__search-input').on('input', function () {

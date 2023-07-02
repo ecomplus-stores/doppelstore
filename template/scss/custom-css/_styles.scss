@@ -90,15 +90,23 @@ body {
       }
     }
   }
+}
 
-  #user-button {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    gap: .2rem;
-    > span {
-      opacity: .9;
-    }
+#user-button {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .2rem;
+  > span {
+    opacity: .9;
+  }
+}
+#user-greetings {
+  text-align: left;
+  display: none;
+  @media (min-width: 800px) {
+    width: 115px;
+    display: block;
   }
 }
 
@@ -605,9 +613,6 @@ body {
         font-size: .875rem;
     }
     @media(max-width: 576px) {
-        .login {
-            display: none;
-        }
         &__buttons {
             padding-right: 25px;
         }

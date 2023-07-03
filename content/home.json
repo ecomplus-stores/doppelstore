@@ -22,6 +22,22 @@
       "enabled": true
     },
     {
+      "autoplay": 1000,
+      "page": 2,
+      "title": "AS MAIS FAMOSAS DE TODOS OS TEMPOS",
+      "shuffle": false,
+      "headless": false,
+      "type": "collection-shelf",
+      "limit": 16,
+      "collection_id": "6492f5055e6069037042bdf1:categories:Camiseta:/camiseta",
+      "sort": "sales"
+    },
+    {
+      "type": "responsive-banner",
+      "img": "/img/uploads/1675345524_1621135595_trustvox-desktop2.webp",
+      "mobile_img": "/img/uploads/trust_vox_mobile.webp"
+    },
+    {
       "autoplay": 0,
       "page": 1,
       "title": "ÚLTIMAS ESTAMPAS LANÇADAS",
@@ -31,6 +47,11 @@
       "limit": 12,
       "collection_id": "6492f2735e6069037042bb18:categories:Estampas:/estampas",
       "sort": "news"
+    },
+    {
+      "type": "responsive-banner",
+      "img": "/img/uploads/categoria-leve-4-pague-3-02-100.webp",
+      "link": "/vestuario"
     },
     {
       "type": "banners-grid-block",
@@ -69,21 +90,6 @@
       ]
     },
     {
-      "autoplay": 0,
-      "page": 1,
-      "title": "AS MAIS FAMOSAS DE TODOS OS TEMPOS",
-      "shuffle": false,
-      "headless": false,
-      "type": "collection-shelf",
-      "limit": 12,
-      "collection_id": null,
-      "sort": "sales"
-    },
-    {
-      "type": "responsive-banner",
-      "img": "/img/uploads/1675345524_1621135595_trustvox-desktop2.webp"
-    },
-    {
       "type": "banners-grid-block",
       "reverse_order": true,
       "banners": [
@@ -118,22 +124,6 @@
           "mobile_img": ""
         }
       ]
-    },
-    {
-      "autoplay": 0,
-      "page": 1,
-      "title": "CADERNOS",
-      "shuffle": false,
-      "headless": false,
-      "type": "collection-shelf",
-      "limit": 12,
-      "collection_id": null,
-      "sort": "news"
-    },
-    {
-      "type": "responsive-banner",
-      "img": "/img/uploads/categoria-leve-4-pague-3-02-100.webp",
-      "link": "/vestuario"
     },
     {
       "type": "partner_list",
@@ -180,6 +170,17 @@
     {
       "type": "custom-html",
       "html": "<!-- Trustvox -->\n<script type=\"text/javascript\" src=\"//colt.trustvox.com.br/colt.min.js\"></script><script>var _trustvox_colt = _trustvox_colt || [];_trustvox_colt.push(['_storeId', '74914'], ['_limit', '7']);</script>\n<!-- /Trustvox -->\n<div id=\"_trustvox_colt\"></div>"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/Produtos-560x560-site-produtos-cadernos-lancamento_cadernos.webp"
+        },
+        {
+          "img": "/img/uploads/Produtos-560x560-site-produtos-camiseta-lancamento_cadernos.webp"
+        }
+      ]
     }
   ]
 }

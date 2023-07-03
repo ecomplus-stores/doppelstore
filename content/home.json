@@ -22,6 +22,36 @@
       "enabled": true
     },
     {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/Produtos-560x560-site-produtos-camiseta-lancamento_cadernos.webp",
+          "link": "/camiseta"
+        },
+        {
+          "img": "/img/uploads/Produtos-560x560-site-produtos-cadernos-lancamento_cadernos.webp",
+          "link": "/caderno"
+        }
+      ]
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/Produtos-560x560-site-produtos-moletom-lancamento_cadernos.webp",
+          "link": "/moletom"
+        },
+        {
+          "img": "/img/uploads/Produtos-560x560-site-produtos-copos_bucks-lancamento_cadernos.webp",
+          "link": "/copo-bucks"
+        },
+        {
+          "img": "/img/uploads/Produtos-560x560-site-produtos-meias-lancamento_cadernos.webp",
+          "link": "/meia"
+        }
+      ]
+    },
+    {
       "autoplay": 1000,
       "page": 2,
       "title": "AS MAIS FAMOSAS DE TODOS OS TEMPOS",
@@ -53,78 +83,6 @@
       "img": "/img/uploads/categoria-leve-4-pague-3-02-80.jpg",
       "link": "/vestuario",
       "mobile_img": "/img/uploads/categoria-mobile-leve-4-pague-3-02-80.jpg"
-    },
-    {
-      "type": "banners-grid-block",
-      "reverse_order": false,
-      "banners": [
-        {
-          "img": "/img/uploads/banner-mosaico-1.webp",
-          "alt": "",
-          "link": "/mulheres-na-ciencia",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/banner-mosaico-8.webp",
-          "alt": "",
-          "link": "/historia",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/banner-mosaico-4.webp",
-          "alt": "",
-          "link": "/nosso-manifesto",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/banner-mosaico-3.webp",
-          "alt": "",
-          "link": "/brilha-no-escuro",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/banner-mosaico-7.webp",
-          "alt": "",
-          "link": "/frases",
-          "mobile_img": ""
-        }
-      ]
-    },
-    {
-      "type": "banners-grid-block",
-      "reverse_order": true,
-      "banners": [
-        {
-          "img": "/img/uploads/banner-mosaico-2.webp",
-          "alt": "",
-          "link": "/cursos",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/banner-mosaico-10.webp",
-          "alt": "",
-          "link": "/matematica",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/banner-mosaico-12.webp",
-          "alt": "",
-          "link": "/astronomia",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/banner-mosaico-13.webp",
-          "alt": "",
-          "link": "/quimica",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/banner-mosaico-11.webp",
-          "alt": "",
-          "link": "/fisica",
-          "mobile_img": ""
-        }
-      ]
     },
     {
       "type": "partner_list",
@@ -171,6 +129,45 @@
     {
       "type": "custom-html",
       "html": "<!-- Trustvox -->\n<script type=\"text/javascript\" src=\"//colt.trustvox.com.br/colt.min.js\"></script><script>var _trustvox_colt = _trustvox_colt || [];_trustvox_colt.push(['_storeId', '74914'], ['_limit', '7']);</script>\n<!-- /Trustvox -->\n<div id=\"_trustvox_colt\"></div>"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/banner-mosaico-1.webp",
+          "link": "/mulheres-na-ciencia",
+          "mobile_img": ""
+        },
+        {
+          "img": "/img/uploads/banner-mosaico-13.webp",
+          "link": "/quimica"
+        },
+        {
+          "img": "/img/uploads/banner-mosaico-2.webp",
+          "link": "/cursos"
+        },
+        {
+          "img": "/img/uploads/banner-mosaico-4.webp",
+          "link": "/nosso-manifesto"
+        }
+      ]
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/banner-mosaico-10.webp",
+          "link": "/matematica"
+        },
+        {
+          "img": "/img/uploads/banner-mosaico-8.webp",
+          "link": "/historia"
+        },
+        {
+          "img": "/img/uploads/banner-mosaico-3.webp",
+          "link": "/brilha-no-escuro"
+        }
+      ]
     }
   ]
 }

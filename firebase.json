@@ -1,6 +1,51 @@
 {
   "hosting": {
     "redirects": [
+      {
+        "source": "/fale-conosco",
+        "destination": "/pages/contato",
+        "type": 301
+      },
+      {
+        "source": "/empresa",
+        "destination": "/pages/sobre-nos",
+        "type": 301
+      },
+      {
+        "source": "/empresa",
+        "destination": "/pages/sobre-nos",
+        "type": 301
+      },
+      {
+        "source": "/noticias",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/loja/arquivos/680735/sitemaps/sitemap_1.xml",
+        "destination": "/sitemap.xml",
+        "type": 301
+      },
+      {
+        "source": "/privacidade",
+        "destination": "/pages/privacidade",
+        "type": 301
+      },
+      {
+        "source": "/prazos-e-trocas",
+        "destination": "/pages/trocas",
+        "type": 301
+      },
+      {
+        "source": "/formas-de-pagamento",
+        "destination": "/pages/pagamentos",
+        "type": 301
+      },
+      {
+        "source": "/frete-e-entregas",
+        "destination": "/pages/entrega",
+        "type": 301
+      }  
     ],
     "public": "dist",
     "ignore": [

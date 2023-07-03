@@ -7,7 +7,7 @@ import getExtraPages from '@ecomplus/storefront-template/template/js/netlify-cms
 import getWidgets from '@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets'
 
 export default options => {
-    options.sections = getSections(options).concat[
+    options.sections = getSections(options).concat([
         {
             label: 'Grid de banners bloco 2 colunas',
             name: 'banners-grid-block',
@@ -199,7 +199,7 @@ export default options => {
                 }
             ]
         }
-    ]
+    ])
 
     return {
         backend: {

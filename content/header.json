@@ -15,8 +15,14 @@
     "socials": true
   },
   "categories_list": {
-    "featured": [],
-    "random": 6,
+    "featured": [
+      "/vestuario?Vestuário",
+      "/decoracao?Decoração",
+      "/colecoes?Coleções",
+      "/estampas?Estampas",
+      "/parceiros?Parceiros"
+    ],
+    "random": 0,
     "full_width": true
   },
   "centralized_logo": false,

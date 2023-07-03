@@ -75,6 +75,21 @@
         "source": "/instrucoes-mascaras",
         "destination": "/pages/instrucoes-mascaras",
         "type": 301
+      },
+      {
+        "source": "/vale-compra",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/saldao-surpresa",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/parceiros/um-sabado-qualquer",
+        "destination": "/um-sabado-qualquer",
+        "type": 301
       }
     ],
     "public": "dist",

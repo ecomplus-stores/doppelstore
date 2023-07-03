@@ -45,6 +45,16 @@
         "source": "/frete-e-entregas",
         "destination": "/pages/entrega",
         "type": 301
+      },
+      {
+        "source": "/medidas",
+        "destination": "/pages/medidas",
+        "type": 301
+      },
+      {
+        "source": "/qualidade",
+        "destination": "/pages/qualidade",
+        "type": 301
       }  
     ],
     "public": "dist",

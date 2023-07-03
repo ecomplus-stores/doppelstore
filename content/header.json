@@ -7,8 +7,8 @@
   "contacts_stripe": {
     "pages": [
       {
-        "title": "Sobre nós",
-        "link": "/pages/sobre-nos"
+        "title": "Manifesto",
+        "link": "/empresa"
       }
     ],
     "phone_wpp": true,

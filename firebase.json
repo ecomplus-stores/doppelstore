@@ -55,7 +55,27 @@
         "source": "/qualidade",
         "destination": "/pages/qualidade",
         "type": 301
-      }  
+      },
+      {
+        "source": "/my-account/login",
+        "destination": "/app/#/account/",
+        "type": 301
+      },
+      {
+        "source": "/cadastro*",
+        "destination": "/app/#/account/",
+        "type": 301
+      },
+      {
+        "source": "/produtos-por-estampa",
+        "destination": "/estampas",
+        "type": 301
+      },
+      {
+        "source": "/instrucoes-mascaras",
+        "destination": "/pages/instrucoes-mascaras",
+        "type": 301
+      }
     ],
     "public": "dist",
     "ignore": [

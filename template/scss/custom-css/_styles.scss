@@ -850,3 +850,13 @@ body {
 .form-control:disabled, .form-control[readonly] {
     background-color: #9db4cb;
 }
+@media (max-width: 767px) {
+  .desktop {
+    display: none !important;
+  }
+} 
+@media (min-width: 767px) {
+  .mobile {
+    display: none !important;
+  }
+} 

@@ -990,4 +990,9 @@ main .minicart__aside {
   }
 }
 
-
+.cart__summary-row.mt-1 {
+  & > span, div {
+    color: var(--success);
+    font-weight: 600;
+  }
+}

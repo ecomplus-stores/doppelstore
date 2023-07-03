@@ -1,7 +1,10 @@
 {
   "sort_categories": [
+    "vestuario",
     "acessorios",
-    "colecoes"
+    "colecoes",
+    "estampas",
+    "parceiros"
   ],
   "alphabetical_order": false,
   "phone_wpp": true,

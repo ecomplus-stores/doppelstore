@@ -1,9 +1,13 @@
 {
+  "pkg": "@ecomplus/widget-gmc-ratings",
   "active": true,
+  "desktopOnly": true,
+  "enableCheckout": true,
+  "disablePages": true,
   "options": {
-    "gmcMerchantId": 115724000,
     "badgePosition": "INLINE",
-    "dialogPosition": "CENTER_DIALOG"
+    "dialogPosition": "CENTER_DIALOG",
+    "gmcMerchantId": 115724000
   },
-  "desktopOnly": true
+  "stampsAppend": "src/append/stamps"
 }

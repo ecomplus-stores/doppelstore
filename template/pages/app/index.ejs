@@ -4,6 +4,7 @@ const footer = _.cms('footer') || {}
 const logo = _.settings.logo
   ? { url: _.settings.logo, alt: _.settings.name }
   : _.store.logo
+
 %>
 
 <!doctype html>
@@ -52,6 +53,9 @@ const logo = _.settings.logo
   </header>
 
   <main id="spa">
+    <!-- <div class="container" id="warning-migration">
+      <img src="/img/uploads/ecomplus-orders.jpeg" style="max-width: 100%;" alt="">
+    </div> -->
     <div id="storefront-app">
       <%- await include('@/sections/inc/loading') %>
     </div>

@@ -5,9 +5,9 @@
     },
     {
       "type": "responsive-banner",
-      "img": "/img/uploads/categoria-leve-4-pague-3-02-100.webp",
-      "link": "/vestuario",
-      "mobile_img": "/img/uploads/retangular-leve-4-pague-3-02_1-100.webp"
+      "img": "/img/uploads/categoria-leve-4-pague-3-02-80.jpg",
+      "link": "/camiseta",
+      "mobile_img": "/img/uploads/categoria-mobile-leve-4-pague-3-02-80.jpg"
     },
     {
       "type": "breadcrumbs",

@@ -50,8 +50,9 @@
     },
     {
       "type": "responsive-banner",
-      "img": "/img/uploads/categoria-leve-4-pague-3-02-100.webp",
-      "link": "/vestuario"
+      "img": "/img/uploads/categoria-leve-4-pague-3-02-80.jpg",
+      "link": "/vestuario",
+      "mobile_img": "/img/uploads/categoria-mobile-leve-4-pague-3-02-80.jpg"
     },
     {
       "type": "banners-grid-block",
@@ -170,17 +171,6 @@
     {
       "type": "custom-html",
       "html": "<!-- Trustvox -->\n<script type=\"text/javascript\" src=\"//colt.trustvox.com.br/colt.min.js\"></script><script>var _trustvox_colt = _trustvox_colt || [];_trustvox_colt.push(['_storeId', '74914'], ['_limit', '7']);</script>\n<!-- /Trustvox -->\n<div id=\"_trustvox_colt\"></div>"
-    },
-    {
-      "type": "banners-grid",
-      "banners": [
-        {
-          "img": "/img/uploads/Produtos-560x560-site-produtos-cadernos-lancamento_cadernos.webp"
-        },
-        {
-          "img": "/img/uploads/Produtos-560x560-site-produtos-camiseta-lancamento_cadernos.webp"
-        }
-      ]
     }
   ]
 }

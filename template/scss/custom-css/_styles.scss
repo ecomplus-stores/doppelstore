@@ -926,49 +926,12 @@ body {
   box-shadow: unset !important;
 }
 
-.btn-link: {
-    color: #627093!important;
-    background: var(--primary)!important;
-}
-.btn-link:hover {
-    color: #ffffff!important;
-    background: var(--primary)!important;
-}
-.btn-light {
-    background-color: #627093!important;
-}
-.btn-light:hover {
-    background-color: var(--primary)!important;
-}
-.btn-outline-secondary {
-    background: #475569!important;
-  
 .card-header:first-child {
     background: #475569!important;
 }
   
 .card-footer:last-child {
   background: #24354d!important;
-  }
+}
 
-.shipping-calculator__services .active {
-background: #37a581!important;
-  color: white!important;
-  }
-.shipping-calculator__services:hover {
-background: #71c7ab!important;
-  color: white!important;
-  }
-  .shipping-calculator__services {
-background: #627093!important;
-  color: white!important;
-  }
-    .input-group>.custom-file, .input-group>.custom-select, .input-group>.form-control, .input-group>.form-control-plaintext {
-      background: #627093!important;
-    }
-    .form-control {
-      background: #627093!important;
-    }
-    .summary__amount__row--total strong {
-    color: var(--primary)!important;
-  }
+

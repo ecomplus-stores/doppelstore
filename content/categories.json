@@ -1,6 +1,9 @@
 {
   "sections": [
     {
+      "type": "page-title"
+    },
+    {
       "type": "responsive-banner",
       "img": "/img/uploads/categoria-leve-4-pague-3-02-100.webp",
       "link": "/vestuario",

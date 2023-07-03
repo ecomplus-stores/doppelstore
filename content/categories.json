@@ -3,7 +3,8 @@
     {
       "type": "responsive-banner",
       "img": "/img/uploads/categoria-leve-4-pague-3-02-100.webp",
-      "link": "/vestuario"
+      "link": "/vestuario",
+      "mobile_img": "/img/uploads/retangular-leve-4-pague-3-02_1-100.webp"
     },
     {
       "type": "breadcrumbs",

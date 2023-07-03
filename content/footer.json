@@ -54,12 +54,12 @@
         "url": "/acessorios"
       },
       {
-        "text": "Decoração",
-        "url": "/decoracao"
-      },
-      {
         "text": "Papelaria",
         "url": "/papelaria"
+      },
+      {
+        "text": "Decoração",
+        "url": "/decoracao"
       },
       {
         "text": "Coleções",

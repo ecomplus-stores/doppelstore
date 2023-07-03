@@ -722,7 +722,7 @@ body {
         margin-top: -10px;
     }
 }
-.responsive-baner, .banners-grid-block {
+.responsive-baner, .banners-grid-block, .banners-grid {
     .banner {
         transition: ease-out .3s;
         &:hover {
@@ -863,47 +863,48 @@ body {
 
 // Igor 
 .cart .cart-item {
-    padding: 16px!important;
-    background: #283043!important;
+    padding: 16px !important;
+    background: #283043 !important;
 }
 a {
     color: #ffffff;
     text-decoration: none;
 }
 .cart-item__price-un {
-    color: var(--gray)!important;
-    font-size: calc(var(--font-size-sm)*1)!important;
+    color: var(--gray) !important;
+    font-size: calc(var(--font-size-sm)*1) !important;
 }
 ain .cart__info, main .minicart__aside {
-    background-color: #627093!important;
+    background-color: #627093 !important;
 }
 .list-group-item.active {
-background-color: #627093!important;
+background-color: #627093 !important;
 }
 
 .input-group>.input-group-append>.btn {
-background: #627093!important;
+background: #627093 !important;
 }
 .input-group:not(.has-validation)>.form-control:not(:last-child) {
-background: var(--light)!important;
+background: var(--light) !important;
 }
 .custom-select {
-  background: #475569!important;
+  background: #475569 !important;
 }
 
-.btn-link: {
+.btn-link {
     color: #627093!important;
-    background: var(--primary)!important;
+    background: var(--primary) !important;
 }
 .btn-link:hover {
-    color: #ffffff!important;
-    background: var(--primary)!important;
+    color: #ffffff !important;
+    background: var(--primary) !important;
 }
 .btn-light {
-    background-color: #627093!important;
+    background-color: #627093 !important;
 }
 .btn-light:hover {
-    background-color: var(--primary)!important;
+    background-color: var(--primary) !important;
 }
 .btn-outline-secondary {
-    background: #475569!important;
+    background: #475569 !important;
+}

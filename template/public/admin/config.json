@@ -4,5 +4,176 @@
     "branch": "master",
     "identity_url": "https://gotrue.ecomplus.biz/4566/.netlify/identity",
     "gateway_url": "https://gitgateway.ecomplus.biz/4566/.netlify/git"
-  }
+  },
+  "collections": [
+    {},
+    {},
+    {
+      "name": "pages",
+      "files": [
+        {
+          "name": "home",
+          "label": "Página inicial",
+          "file": "content/home.json",
+          "fields": [
+            {
+              "label": "Meta title",
+              "name": "meta_title",
+              "widget": "string",
+              "hint": "Título exibido na aba do navegador e nos resultados de motores de busca, relevante para SEO",
+              "required": false
+            },
+            {
+              "label": "Meta description",
+              "name": "meta_description",
+              "widget": "string",
+              "hint": "Descrição exibida nos resultados de motores de busca, relevante para SEO",
+              "required": false
+            },
+            {
+              "label": "Seções",
+              "name": "sections",
+              "widget": "list",
+              "types": [
+                {
+                  "label": "Grid de banners bloco 2 colunas",
+                  "name": "banners-grid-block",
+                  "widget": "object",
+                  "icon": "https://api.iconify.design/bi:grid.svg",
+                  "fields": [
+                      {
+                          "label": "Banners",
+                          "name": "banners",
+                          "widget": "list",
+                          "fields": [
+                              {
+                                  "label": "Imagem",
+                                  "name": "img",
+                                  "widget": "image",
+                                  "media_library": {
+                                      "config": {
+                                          "max_file_size": "Math.max(window.CMS_MAX_FILE_SIZE || 0, 1000000)"
+                                      }
+                                  }
+                              },
+                              {
+                                  "label": "Link",
+                                  "required": false,
+                                  "name": "link",
+                                  "widget": "string"
+                              },
+                              {
+                                  "label": "Alt",
+                                  "required": false,
+                                  "name": "alt",
+                                  "widget": "string"
+                              },
+                              {
+                                  "label": "Imagem para mobile",
+                                  "required": false,
+                                  "name": "mobile_img",
+                                  "widget": "image",
+                                  "media_library": {
+                                      "config": {
+                                          "max_file_size": "Math.max(window.CMS_MAX_FILE_SIZE || 0, 1000000)"
+                                      }
+                                  }
+                              },
+                              {
+                                  "name": "width",
+                                  "required": false,
+                                  "widget": "hidden"
+                              },
+                              {
+                                  "name": "height",
+                                  "required": false,
+                                  "widget": "hidden"
+                              }
+                          ]
+                      },
+                      {
+                          "label": "Ordem reversa",
+                          "name": "reverse_order",
+                          "widget": "boolean",
+                          "default": false
+                      }
+                  ]
+              },
+              {
+                  "label": "Lista de estampas",
+                  "name": "stamps_list",
+                  "widget": "object",
+                  "fields": [
+                      {
+                          "label": "Título da vitrine de estampas",
+                          "name": "stamps_title",
+                          "widget": "string",
+                          "required": false
+                      },
+                      {
+                          "label": "Banners",
+                          "name": "banners",
+                          "widget": "list",
+                          "fields": [
+                              {
+                                  "label": "Imagem",
+                                  "name": "img",
+                                  "widget": "image",
+                                  "media_library": {
+                                      "config": {
+                                          "max_file_size": "Math.max(window.CMS_MAX_FILE_SIZE || 0, 1000000)"
+                                      }
+                                  }
+                              },
+                              {
+                                  "label": "Link",
+                                  "required": false,
+                                  "name": "link",
+                                  "widget": "string"
+                              },
+                              {
+                                  "label": "Alt",
+                                  "required": false,
+                                  "name": "alt",
+                                  "widget": "string"
+                              },
+                              {
+                                  "label": "Imagem para mobile",
+                                  "required": false,
+                                  "name": "mobile_img",
+                                  "widget": "image",
+                                  "media_library": {
+                                      "config": {
+                                          "max_file_size": "Math.max(window.CMS_MAX_FILE_SIZE || 0, 1000000)"
+                                      }
+                                  }
+                              },
+                              {
+                                  "name": "width",
+                                  "required": false,
+                                  "widget": "hidden"
+                              },
+                              {
+                                  "name": "height",
+                                  "required": false,
+                                  "widget": "hidden"
+                              },
+                              {
+                                  "label": "Texto customizado para estampas",
+                                  "name": "markdown_stamp",
+                                  "widget": "markdown",
+                                  "hint": "Markdown parseado para HTML",
+                                  "required": false
+                              }
+                          ]
+                      }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

@@ -6,12 +6,70 @@
   "links_1": {
     "list_pages": true,
     "title": "Páginas",
-    "list": []
+    "list": [
+      {
+        "text": "Manifesto",
+        "url": "/pages/manifesto"
+      },
+      {
+        "text": "Fale com a Doppel",
+        "url": "pages/contato"
+      },
+      {
+        "text": "O que são Doppilas (D$)? ",
+        "url": "pages/o-que-sao-doppilas-d"
+      },
+      {
+        "text": "Indique e ganhe Doppilas",
+        "url": "pages/indique"
+      },
+      {
+        "text": "Prazos, Trocas e Devoluções",
+        "url": "pages/trocas"
+      },
+      {
+        "text": "Condições de Entrega",
+        "url": "pages/entrega"
+      },
+      {
+        "text": "Formas de Pagamento",
+        "url": "pages/pagamentos"
+      },
+      {
+        "text": "Política de Privacidade",
+        "url": "pages/privacidade"
+      }
+    ]
   },
   "links_2": {
     "list_categories": true,
     "title": "Categorias",
-    "list": []
+    "list": [
+      {
+        "text": "Vestuário",
+        "url": "/vestuario"
+      },
+      {
+        "text": "Acessórios",
+        "url": "/acessorios"
+      },
+      {
+        "text": "Decoração",
+        "url": "/decoracao"
+      },
+      {
+        "text": "Coleções",
+        "url": "/colecoes"
+      },
+      {
+        "text": "Estampas",
+        "url": "/estampas"
+      },
+      {
+        "text": "Parceiros",
+        "url": "/parceiros"
+      }
+    ]
   },
   "contacts": {
     "title": "Contatos",

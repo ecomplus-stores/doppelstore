@@ -937,6 +937,9 @@ main .minicart__aside {
 .card-footer:last-child {
   background: #24354d!important;
 }
+.main .cart__info {
+    background: #283043!important;
+}
 
 @media(min-width: 992px) {
   .minicart__aside .card-footer {
@@ -996,3 +999,21 @@ main .minicart__aside {
     font-weight: 600;
   }
 }
+.app .app__header {
+    background-color: #1e293b!important;
+}
+.checkout__step {
+  background: #35445d!important;
+}
+.payment__stamp {
+    background: #35445d!important;
+    padding: 10px!important;
+}
+
+.checkout__app[data-current-step="2"] .checkout__shipping-method {
+  background-color: #37a581 !important;
+  color: white !important;
+  small {
+    color: white !important;
+  }
+} 

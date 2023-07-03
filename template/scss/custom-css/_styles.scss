@@ -722,7 +722,7 @@ body {
         margin-top: -10px;
     }
 }
-.responsive-baner, .banners-grid-block, .banners-grid {
+.responsive-baner, .banners-grid-block, .banners-gridgit  {
     .banner {
         transition: ease-out .3s;
         &:hover {
@@ -866,45 +866,62 @@ body {
     padding: 16px !important;
     background: #283043 !important;
 }
-a {
+.cart-item__name a {
     color: #ffffff;
     text-decoration: none;
 }
 .cart-item__price-un {
     color: var(--gray) !important;
-    font-size: calc(var(--font-size-sm)*1) !important;
 }
-ain .cart__info, main .minicart__aside {
+.cart__info, main .minicart__aside {
     background-color: #627093 !important;
 }
-.list-group-item.active {
-background-color: #627093 !important;
+.shipping-calculator {
+  .list-group-item {
+    &:hover {
+      background-color: #71c7ab;
+      color: #fff;
+    }
+    &.active {
+      background-color: #37a581 !important;
+      color: white !important;
+      border: none;
+    }
+  }
 }
 
-.input-group>.input-group-append>.btn {
-background: #627093 !important;
+.checkout__btn-offers {
+  display: none;
 }
-.input-group:not(.has-validation)>.form-control:not(:last-child) {
-background: var(--light) !important;
+.summary__amount__row--total .prices__value {
+  color: var(--primary);
 }
-.custom-select {
-  background: #475569 !important;
+.payment__gateway {
+  &.list-group-item:hover {
+    background-color: #71c7ab;
+    color: white;
+  }
+}
+#spa {
+  input.form-control, #order-notes {
+    background-color: #35445d !important;
+    &::placeholder {
+      color: #fff;
+      opacity: .5;
+    }
+  }
+
+  .btn-outline-secondary, .btn-light, .cart__btn-back {
+    background: #627093;
+    color: #fff;
+    &:hover {
+      background-color: var(--primary) !important;
+      color: #fff;
+    }
+  } 
 }
 
-.btn-link {
-    color: #627093!important;
-    background: var(--primary) !important;
-}
-.btn-link:hover {
-    color: #ffffff !important;
-    background: var(--primary) !important;
-}
-.btn-light {
-    background-color: #627093 !important;
-}
-.btn-light:hover {
-    background-color: var(--primary) !important;
-}
-.btn-outline-secondary {
-    background: #475569 !important;
+.variations__option--selected {
+  border: 2px solid var(--primary) !important;
+  box-shadow: unset !important;
 }

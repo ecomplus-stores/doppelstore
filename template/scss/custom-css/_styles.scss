@@ -956,7 +956,7 @@ main .minicart__aside {
   position: fixed;
   bottom: 0;
   padding: 1rem .5rem;
-  background-color: #fff;
+  background-color: #24354d;
   box-shadow: 0 0 40px 0 rgba(0,0,0,.68);
   z-index: 999;
   width:100%;
@@ -971,7 +971,7 @@ main .minicart__aside {
   button {
     &:hover {
       color:#fff;
-      background: var(--customic);
+      background: var(--primary);
     }
     color: #fff;
     font-weight: 700;
@@ -990,6 +990,10 @@ main .minicart__aside {
   .row{
     display:flex;
     align-items:center;
+  }
+
+  #cookieconsent-btn {
+    border: 1px solid var(--primary);
   }
 }
 
@@ -1017,3 +1021,6 @@ main .minicart__aside {
     color: white !important;
   }
 } 
+.earn-points-progress {
+  display: none !important;
+}

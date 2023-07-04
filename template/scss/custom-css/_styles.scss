@@ -956,6 +956,9 @@ main .minicart__aside {
 .card-header,
 .card-footer {
   background: $darken-slate;
+  .close {
+    color: $slate-300;
+  }
 }
 .main .cart__info {
   background: #283043 !important;

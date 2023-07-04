@@ -5,7 +5,7 @@ $slate-200: #e2e8f0;
 $slate-300: #cbd5e1;
 $slate-400: #94a3b8;
 $slate-500: #64748b;
-$slate-600: #475569;
+$slate-600: var(gray-blue);
 $container-width: 1110px;
 
 body {
@@ -931,7 +931,7 @@ main .minicart__aside {
 }
 
 .card-header:first-child {
-    background: #475569!important;
+    background: var(gray-blue)!important;
 }
   
 .card-footer:last-child {
@@ -1023,4 +1023,29 @@ main .minicart__aside {
 } 
 .earn-points-progress {
   display: none !important;
+}
+
+.product-quickview__box {
+    background: var(--dark-blue)!important;
+}
+
+.variations__select {
+    background: var(--gray-blue)!important;
+}
+.variations__option--selected {
+background: var(--green)!important;
+}
+
+.variations__option--selected:not(.disabled) {
+  border-color: var(--light-green)!important;
+  border-width: 2px!important;
+}
+
+.custom-select {
+  background: var(--dark-gray-blue)!important;
+}
+
+.btn-primary {
+  background-color: var(--green)!important;
+  border-color: var(--green)!important;
 }

@@ -1037,26 +1037,26 @@ main .minicart__aside {
 }
 
 .product-quickview__box{
-    background: var(--dark-gray-blue)!important;
+    background: #293445!important;
 }
 
 .variations__select {
-    background: var(--gray-blue)!important;
+    background: #293445!important;
 }
 .variations__option--selected {
-background: var(--green)!important;
+background: #61a58f!important;
 }
 
 .variations__option--selected:not(.disabled) {
-  border-color: var(--light-green)!important;
+  border-color: #4bd1a5!important;
   border-width: 2px!important;
 }
 
 .custom-select {
-  background: var(--dark-gray-blue)!important;
+  background: #293445!important;
 }
 
 .btn-primary {
-  background-color: var(--cool-green)!important;
-  border-color: var(--cool-green)!important;
+  background-color: #61a58f!important;
+  border-color: #61a58f!important;
 }

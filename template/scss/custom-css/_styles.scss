@@ -1,5 +1,6 @@
 // Add your custom CSS here.
 $dark-slate: #283043;
+$darken-slate: #24354d;
 $slate-100: #f1f5f9;
 $slate-200: #e2e8f0;
 $slate-300: #cbd5e1;
@@ -483,8 +484,14 @@ body {
   }
 }
 
-.search-engine__retail > .row > div {
-  padding-bottom: var(--spacer-4);
+.search-engine{
+  &__retail > .row > div {
+    padding-bottom: var(--spacer-4);
+  }
+
+  &__filter--pattern {
+    display: none;
+  }
 }
 
 .text-center {
@@ -891,7 +898,7 @@ $--cool-green: #61a58f;
   color: #9db4cb !important;
 }
 main .minicart__aside {
-  background-color: #627093 !important;
+  background-color: $darken-slate;
 }
 .shipping-calculator {
   .list-group-item {
@@ -946,12 +953,9 @@ main .minicart__aside {
   box-shadow: unset !important;
 }
 
-.card-header:first-child {
-  background: var(gray-blue) !important;
-}
-
-.card-footer:last-child {
-  background: #24354d !important;
+.card-header,
+.card-footer {
+  background: $darken-slate;
 }
 .main .cart__info {
   background: #283043 !important;

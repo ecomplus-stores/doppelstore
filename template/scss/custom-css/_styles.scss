@@ -9,6 +9,25 @@ $slate-500: #64748b;
 $slate-600: #9db4cb;
 $container-width: 1110px;
 
+.login-modal__body::before,
+#checkout::before,
+.account__content::before {
+  content: "";
+  background-image: url(/img/uploads/aviso-mobile.webp);
+  background-size: contain;
+  display: block;
+  width: 100%;
+  aspect-ratio: 586 / 168;
+  margin-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  #checkout::before,
+  .account__content::before {
+    background-image: url(/img/uploads/aviso-desktop.webp);
+    aspect-ratio: 1181 / 122;
+  }
+}
+
 body {
   background-image: url(/img/uploads/fundo.webp);
 }

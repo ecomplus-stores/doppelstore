@@ -8,11 +8,18 @@
       "full_width": true,
       "slides": [
         {
-          "img": "/img/uploads/faixa-desktop-leve-4-pague-3-02-80221.jpg",
-          "link": "/camiseta",
+          "img": "/img/uploads/faixa_desktop-1940x385-site-faixa-desktop-imas_tabela-80.jpg",
+          "link": "",
           "alt": "",
           "start": "2020-04-02T05:54:06.750Z",
           "end": "",
+          "mobile_img": "/img/uploads/faixa_mobile-460x460-site-faixa-mobile-imas_tabela-80.jpg"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "/img/uploads/faixa-desktop-leve-4-pague-3-02-80221.jpg",
+          "link": "/camiseta",
           "mobile_img": "/img/uploads/quadrado-leve-4-pague-3-02-80.jpg"
         }
       ]
@@ -25,11 +32,15 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/Produtos-560x560-site-produtos-camiseta-lancamento_cadernos.webp",
+          "img": "/img/uploads/produtos-560x560-site-produtos-copos_bucks-imas_tabela-copia-80.jpg",
+          "link": "/quebra-cabeca"
+        },
+        {
+          "img": "/img/uploads/produtos-560x560-site-produtos-camiseta-imas_tabela-80.jpg",
           "link": "/camiseta"
         },
         {
-          "img": "/img/uploads/Produtos-560x560-site-produtos-cadernos-lancamento_cadernos.webp",
+          "img": "/img/uploads/produtos-560x560-site-produtos-cadernos-imas_tabela-80.jpg",
           "link": "/caderno"
         }
       ]
@@ -38,15 +49,15 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/Produtos-560x560-site-produtos-moletom-lancamento_cadernos.webp",
+          "img": "/img/uploads/produtos-560x560-site-produtos-moletom-imas_tabela-80.jpg",
           "link": "/moletom"
         },
         {
-          "img": "/img/uploads/Produtos-560x560-site-produtos-copos_bucks-lancamento_cadernos.webp",
+          "img": "/img/uploads/produtos-560x560-site-produtos-copos_bucks-imas_tabela-80.jpg",
           "link": "/copo-bucks"
         },
         {
-          "img": "/img/uploads/Produtos-560x560-site-produtos-meias-lancamento_cadernos.webp",
+          "img": "/img/uploads/produtos-560x560-site-produtos-meias-imas_tabela-80.jpg",
           "link": "/meia"
         }
       ]

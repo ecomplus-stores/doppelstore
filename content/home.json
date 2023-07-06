@@ -36,8 +36,8 @@
           "link": "/quebra-cabeca"
         },
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-camiseta-imas_tabela-80.jpg",
-          "link": "/camiseta"
+          "img": "/img/uploads/decoracao.jpg",
+          "link": "/decoracao"
         },
         {
           "img": "/img/uploads/produtos-560x560-site-produtos-cadernos-imas_tabela-80.jpg",
@@ -49,12 +49,16 @@
       "type": "banners-grid",
       "banners": [
         {
+          "img": "/img/uploads/produtos-560x560-site-produtos-camiseta-imas_tabela-80.jpg",
+          "link": "/camiseta"
+        },
+        {
           "img": "/img/uploads/produtos-560x560-site-produtos-moletom-imas_tabela-80.jpg",
           "link": "/moletom"
         },
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-copos_bucks-imas_tabela-80.jpg",
-          "link": "/copo-bucks"
+          "img": "/img/uploads/produtos-560x560-site-produtos-colecao_infantil-imas_tabela-80.jpg",
+          "link": "/camiseta-infantil"
         },
         {
           "img": "/img/uploads/produtos-560x560-site-produtos-meias-imas_tabela-80.jpg",

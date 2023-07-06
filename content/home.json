@@ -36,8 +36,8 @@
           "link": "/quebra-cabeca"
         },
         {
-          "img": "/img/uploads/decoracao.jpg",
-          "link": "/decoracao"
+          "img": "/img/uploads/produtos-560x560-site-produtos-copos_bucks-imas_tabela-80.jpg",
+          "link": "/copo-bucks"
         },
         {
           "img": "/img/uploads/produtos-560x560-site-produtos-cadernos-imas_tabela-80.jpg",
@@ -76,6 +76,23 @@
       "limit": 16,
       "collection_id": "6492f5055e6069037042bdf1:categories:Camiseta:/camiseta",
       "sort": "sales"
+    },
+    {
+      "type": "banners-grid",
+      "banners": [
+        {
+          "img": "/img/uploads/produtos-560x560-site-produtos-placas-imas_tabela-copia-2.png",
+          "link": "/placa-decorativa"
+        },
+        {
+          "img": "/img/uploads/produtos-560x560-site-produtos-posteres-imas_tabela-copia.png",
+          "link": "/poster"
+        },
+        {
+          "img": "/img/uploads/produtos-560x560-site-produtos-quadros-imas_tabela.png",
+          "link": "/quadro"
+        }
+      ]
     },
     {
       "type": "responsive-banner",

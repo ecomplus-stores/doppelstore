@@ -1095,25 +1095,6 @@ main .minicart__aside {
 .cart-item__out-of-stock {
   display: none !important;
 }
-@media (max-width: 576px) {
-  .banners-grid {
-    .col-12.col-lg-4:not(:first-child) {
-      max-width: 50%;
-    }
-    .col-12.col-lg-3:not(:first-child) {
-      max-width: 50%;
-    }
-    .col-12.col-lg-2:not(:first-child) {
-      max-width: 50%;
-    }
-    .col-12.col-lg-1:not(:first-child) {
-      max-width: 50%;
-    }
-    .col-12.col-lg-0:not(:first-child) {
-      max-width: 50%;
-    }
-  }
-}
 .footer__title {
     color: 9db4cb;
     font-weight: 500;

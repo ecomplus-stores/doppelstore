@@ -485,6 +485,7 @@ export default {
                 case 'poster':
                 case 'placa-decorativa':
                 case 'quebra-cabeca':
+                case 'quadro':
                   if (size) {
                     this.variationImages = [
                       [`https://static.doppelstore.com.br/produtos/${category}/${size.replace(/-[\d]+-pcs$/, '')}.jpg`, 1200],
@@ -529,6 +530,12 @@ export default {
     buy () {
       this.hasClickedBuy = true
       const product = sanitizeProductBody(this.body)
+      if (
+        this.variationImages.length &&
+        /\/(camiseta|moletom|camiseta-infantil)\//.test(this.variationImages[0][0])
+      ) {
+        product.pictures = this.productToGallery.pictures
+      }
       let variationId
       if (this.hasVariations) {
         if (this.selectedVariationId) {

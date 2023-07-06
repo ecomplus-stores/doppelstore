@@ -503,7 +503,7 @@ body {
   }
 }
 
-.search-engine{
+.search-engine {
   &__retail > .row > div {
     padding-bottom: var(--spacer-4);
   }
@@ -1093,11 +1093,20 @@ main .minicart__aside {
   border-color: #61a58f !important;
 }
 .cart-item__out-of-stock {
-  display: none!important;
+  display: none !important;
 }
 @media (max-width: 576px) {
   .banners-grid {
     .col-12.col-lg-4:not(:first-child) {
+      max-width: 50%;
+    }
+    .col-12.col-lg-3:not(:first-child) {
+      max-width: 50%;
+    }
+    .col-12.col-lg-2:not(:first-child) {
+      max-width: 50%;
+    }
+    .col-12.col-lg-1:not(:first-child) {
       max-width: 50%;
     }
   }

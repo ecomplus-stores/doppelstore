@@ -1095,3 +1095,10 @@ main .minicart__aside {
 .cart-item__out-of-stock {
   display: none!important;
 }
+@media (max-width: 576px) {
+  .banners-grid {
+    .col-12.col-lg-4:not(:first-child) {
+      max-width: 50%;
+    }
+  }
+}

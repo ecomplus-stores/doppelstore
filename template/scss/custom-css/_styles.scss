@@ -1109,5 +1109,8 @@ main .minicart__aside {
     .col-12.col-lg-1:not(:first-child) {
       max-width: 50%;
     }
+    .col-12.col-lg-0:not(:first-child) {
+      max-width: 50%;
+    }
   }
 }

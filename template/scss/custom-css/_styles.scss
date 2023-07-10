@@ -1121,3 +1121,34 @@ a {
 color: var(--success);
     font-weight: 600;
 }
+
+.header__submenu--full {
+  width: 39%;
+  max-height: 550px;
+}
+.header__submenu {
+    background-color: #677495;
+}
+.header__submenu-category {
+    color: #ffffff!important;
+      font-size: 17px;
+}
+.header__submenu-subcategory {
+    color: #bdc8e7!important;
+}
+main .card-body, main .login__info {
+    background-color: #475169;
+}
+.accordion {
+    background: #4e5a77;
+}
+.menu__item {
+      border-bottom: var(--border-width) solid #353751;
+    color: #ffffff;
+}
+.menu__link {
+    color: #ffffff;
+}
+.menu__footer a {
+    color: #b0c0d7;
+}

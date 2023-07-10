@@ -1152,12 +1152,12 @@ main .card-body, main .login__info {
 .menu__footer a {
     color: #b0c0d7;
 }
-ts-shelf-container {
-    display: unset;
+.ts-shelf-container {
+    display: unset!important;
 }
 
 .ts-shelf-container .ts-shelf-rate-count {
-    left: 177px;
+    left: 177px!important;
     top: -19px;
 }
 .header__nav {
@@ -1174,4 +1174,7 @@ ts-shelf-container {
 }
 .info-bar {
     background-color: #434f6b;
+}
+.product-card {
+    background-color: #394359;
 }

@@ -9,7 +9,7 @@ if (affiliateLinkDiv) {
 }
 
 ecomPassport.on('login', () => {
-  document.getElementById('user-greetings').innerText = 'Olá ' +
+  document.getElementById('user-greetings').innerText = 'Olá, ' +
     ecomPassport.getCustomer().display_name
 })
 ecomPassport.on('logout', () => {

@@ -8,19 +8,11 @@
       "full_width": true,
       "slides": [
         {
-          "img": "/img/uploads/faixa_desktop-1940x385-site-faixa-desktop-imas_tabela-80.jpg",
-          "link": "",
-          "alt": "",
-          "start": "2020-04-02T05:54:06.750Z",
-          "end": "",
-          "mobile_img": "/img/uploads/faixa_mobile-460x460-site-faixa-mobile-imas_tabela-80.jpg"
-        },
-        {
           "start": "",
           "end": "",
-          "img": "/img/uploads/faixa-desktop-leve-4-pague-3-02-80221.jpg",
+          "img": "https://static.doppelstore.com.br/promo-vigente/faixa-desktop.png",
           "link": "/camiseta",
-          "mobile_img": "/img/uploads/quadrado-leve-4-pague-3-02-80.jpg"
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.png"
         }
       ]
     },
@@ -32,15 +24,15 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-copos_bucks-imas_tabela-copia-80.jpg",
+          "img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabeca.png",
           "link": "/quebra-cabeca"
         },
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-copos_bucks-imas_tabela-80.jpg",
+          "img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.png",
           "link": "/copo-bucks"
         },
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-cadernos-imas_tabela-80.jpg",
+          "img": "https://static.doppelstore.com.br/promo-vigente/cadernos.png",
           "link": "/caderno"
         }
       ]
@@ -49,19 +41,19 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-camiseta-imas_tabela-80.jpg",
+          "img": "https://static.doppelstore.com.br/promo-vigente/camisetas.png",
           "link": "/camiseta"
         },
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-moletom-imas_tabela-80.jpg",
+          "img": "https://static.doppelstore.com.br/promo-vigente/moletom.png",
           "link": "/moletom"
         },
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-colecao_infantil-imas_tabela-80.jpg",
+          "img": "https://static.doppelstore.com.br/promo-vigente/colecao-infantil.png",
           "link": "/camiseta-infantil"
         },
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-meias-imas_tabela-80.jpg",
+          "img": "https://static.doppelstore.com.br/promo-vigente/meia.png",
           "link": "/meia"
         }
       ]
@@ -81,15 +73,15 @@
       "type": "banners-grid",
       "banners": [
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-placas-imas_tabela-copia-2.png",
+          "img": "https://static.doppelstore.com.br/promo-vigente/placa-decorativa.png",
           "link": "/placa-decorativa"
         },
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-posteres-imas_tabela-copia.png",
+          "img": "https://static.doppelstore.com.br/promo-vigente/poster.png",
           "link": "/poster"
         },
         {
-          "img": "/img/uploads/produtos-560x560-site-produtos-quadros-imas_tabela.png",
+          "img": "https://static.doppelstore.com.br/promo-vigente/quadro.png",
           "link": "/quadro"
         }
       ]

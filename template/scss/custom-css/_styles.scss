@@ -1123,11 +1123,12 @@ color: var(--success);
 }
 
 .header__submenu--full {
-  width: 30%;
+  width: 35%;
   max-height: 550px;
 }
 .header__submenu {
     background-color: #677495;
+    grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
 }
 .header__submenu-category {
     color: #ffffff!important;

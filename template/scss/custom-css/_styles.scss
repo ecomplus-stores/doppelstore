@@ -1153,14 +1153,20 @@ main .card-body, main .login__info {
 .menu__footer a {
     color: #b0c0d7;
 }
+// TRUSTVOX
 .ts-shelf-container {
     display: unset!important;
 }
 
+.ts-shelf-container .ts-shelf-rate {
+    width: 103px;
+    margin-left: 68px;
+}
 .ts-shelf-container .ts-shelf-rate-count {
     left: 177px!important;
-    top: -19px;
+    top: -19px!important;
 }
+// TRUSTVOX
 .header__nav {
     background-color: #434f6b;
 }

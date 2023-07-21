@@ -1188,3 +1188,11 @@ main .card-body, main .login__info {
 .header #search-input {
     background-color: #434f6b;
 }
+
+.toast-body {
+    padding: 0.75rem;
+    background-color: black;
+}
+.toast-header {
+    color: #64748b!important;
+}

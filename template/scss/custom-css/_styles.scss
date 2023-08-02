@@ -1158,13 +1158,16 @@ main .card-body, main .login__info {
     display: unset!important;
 }
 
-.ts-shelf-container .ts-shelf-rate {
-    width: 103px;
-    margin-left: 68px;
-}
 .ts-shelf-container .ts-shelf-rate-count {
     left: 177px!important;
     top: -19px!important;
+}
+
+html body .ts-shelf-container div, html body .ts-shelf-container p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -13px;
 }
 // TRUSTVOX
 .header__nav {

@@ -439,6 +439,16 @@ body {
       padding-right: var(--spacer-2);
     }
   }
+  &__prices {
+    flex-grow: 0;
+  }
+  &__rating {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: .125rem;
+  }
 
   &__colors {
     line-height: 0;

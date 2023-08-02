@@ -73,14 +73,15 @@
       </a-link>
 
       <template v-else>
-        <slot name="rating">
-          <div
-            v-once
-            class="product-card__rating"
-            :data-sku="body.sku"
-            v-html="ratingHtml"
-          ></div>
-        </slot>
+        <div class="product-card__rating">
+          <slot name="rating">
+            <div
+              v-once
+              :data-sku="body.sku"
+              v-html="ratingHtml"
+            ></div>
+          </slot>
+        </div>
 
         <slot
           name="unavailable"

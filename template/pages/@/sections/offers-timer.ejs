@@ -41,5 +41,13 @@ if (Array.isArray(opt.offers) && opt.offers.length) {
     </section>
     <%
   }
+} else if (opt.notes) {
+  %>
+  <section class="offers-timer my-4 my-lg-5">
+    <div class="container">
+      <%- await include('@/sections/inc/timer', { _, opt }) %>
+    </div>
+  </section>
+  <%
 }
 %>

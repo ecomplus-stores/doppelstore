@@ -5,9 +5,9 @@
     },
     {
       "type": "responsive-banner",
-      "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.png",
+      "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
       "link": "/camiseta",
-      "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.png"
+      "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg"
     },
     {
       "type": "breadcrumbs",

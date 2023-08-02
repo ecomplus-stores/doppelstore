@@ -5,9 +5,9 @@
     },
     {
       "type": "responsive-banner",
-      "img": "/img/uploads/categoria-leve-4-pague-3-02-80.jpg",
+      "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.png",
       "link": "/camiseta",
-      "mobile_img": "/img/uploads/categoria-mobile-leve-4-pague-3-02-80.jpg"
+      "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.png"
     },
     {
       "type": "breadcrumbs",

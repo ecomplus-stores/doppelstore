@@ -1,4 +1,4 @@
-<% if (Array.isArray(opt.banners) && opt.banners.length) { %>
+<% if (Array.isArray(opt.banners) && opt.banners.length & !opt.disable) { %>
   <% const colSize = Math.ceil(12 / opt.banners.length) %>
   <div class="banners-grid my-3 my-md-4 my-lg-5">
     <div class="container">

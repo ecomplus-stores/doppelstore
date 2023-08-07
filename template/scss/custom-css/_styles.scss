@@ -1202,3 +1202,8 @@ main .card-body, main .login__info {
 .toast-header {
     color: #64748b!important;
 }
+.minicart__aside .card-footer:before {
+  content: "Descontos, brindes e cupons serão aplicados na finalização do pedido :D";
+  font-weight: bold;
+  font-size: .875rem;
+}

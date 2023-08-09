@@ -22,7 +22,7 @@
     },
     {
       "type": "banners-grid",
-      "disable": false,
+      "disable": true,
       "banners": [
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabeca.png",
@@ -73,7 +73,7 @@
     },
     {
       "type": "banners-grid",
-      "disable": false,
+      "disable": true,
       "banners": [
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/placa-decorativa.png",

@@ -7,17 +7,19 @@ import getExtraPages from "@ecomplus/storefront-template/template/js/netlify-cms
 import getWidgets from "@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets"
 
 export default options => {
-  options.sections = getSections(options).forEach(item => {
-    if (item && item.label && item.fields && item.name === 'banners-grid') {
-      item.fields.push({
+  options.sections = getSections(options)
+  if (Array.isArray(options.sections) && options.sections.length && options.sections[0] && options.sections[0].name === 'responsive-banner') {
+    options.sections.forEach(element => {
+      if (element.name === 'banners-grid') {
+        element.fields.push({
           label: 'Desativar',
-          hint: `Desativar o ${item.label}`,
+          hint: `Desativar grid de banners`,
           name: 'disable',
-          required: 'false',
           widget: 'boolean'
-      })
-    }
-  })
+        })
+      }
+    });
+  }
 
   return {
     backend: {

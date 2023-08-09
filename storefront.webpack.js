@@ -10,8 +10,8 @@ module.exports = () => ({
       './html/EcCheckout.html': path.resolve(__dirname, 'template/js/custom-js/components/EcCheckout.html'),
       './html/AccountPoints.html': path.resolve(__dirname, 'template/js/custom-js/components/AccountPoints.html'),
       './html/PointsApplier.html': path.resolve(__dirname, 'template/js/custom-js/components/PointsApplier.html'),
-      './js/PointsApplier.js': path.resolve(__dirname, 'template/js/custom-js/components/PointsApplier.js')
-      //'./base-config': path.resolve(__dirname, 'template/js/netlify-cms/base-config')
+      './js/PointsApplier.js': path.resolve(__dirname, 'template/js/custom-js/components/PointsApplier.js'),
+      './base-config': path.resolve(__dirname, 'template/js/netlify-cms/base-config')
     }
   }
 })

@@ -12,9 +12,9 @@ export default options => {
     options.sections.forEach(element => {
       if (element.name === 'banners-grid') {
         element.fields.push({
-          label: 'Desativar',
-          hint: `Desativar grid de banners`,
-          name: 'disable',
+          label: 'Ativar',
+          hint: `Ativar grid de banners`,
+          name: 'enabled',
           widget: 'boolean'
         })
       }

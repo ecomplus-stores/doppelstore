@@ -8,7 +8,7 @@ import getWidgets from "@ecomplus/storefront-template/template/js/netlify-cms/ba
 
 export default options => {
   options.sections = getSections(options).forEach(item => {
-    if (item && item.name && item.label && item.fields) {
+    if (item && item.label && item.fields && item.name === 'banners-grid') {
       item.fields.push({
           label: 'Desativar',
           hint: `Desativar o ${item.label}`,

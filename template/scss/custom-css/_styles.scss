@@ -1222,3 +1222,7 @@ section.ts-customer-questions {
 .order-info__toggle {
   display: none !important;
 }
+
+div.backdrop {
+  top: calc(-100vh - 28px);
+}

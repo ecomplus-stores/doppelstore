@@ -1172,6 +1172,18 @@ main .card-body, main .login__info {
     margin-bottom: -13px;
 }
 
+.ts-product-reviews {
+    background: white;
+    padding: 20px;
+  color: black;
+}
+
+section.ts-customer-questions {
+    background: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+
 // TRUSTVOX
 .header__nav {
     background-color: #434f6b;
@@ -1213,4 +1225,8 @@ main .card-body, main .login__info {
   max-width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+div.backdrop {
+  top: calc(-100vh - 28px);
 }

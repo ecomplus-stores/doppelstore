@@ -30,12 +30,10 @@ $('body').click((e) => {
 })
 
 const newURL = new URLSearchParams(window.location.search)
-console.log(newURL)
 const isShowAll = newURL.get('show_all') || window.sessionStorage.getItem('show_all')
 if (isShowAll === '59$2a82') {
   window.sessionStorage.setItem('show_all', '59$2a82')
   EcomSearch.dslMiddlewares.push((dsl) => {
-    console.log('test')
     dsl.query.bool.filter.forEach(filter => {
       if (filter && filter.term) {
         filter.term = {

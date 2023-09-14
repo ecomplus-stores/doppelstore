@@ -6,8 +6,24 @@
     "gateway_url": "https://gitgateway.ecomplus.biz/4566/.netlify/git"
   },
   "collections": [
-    {},
-    {},
+    {
+      "name": "settings",
+      "files": [
+        {
+          "name": "theme",
+          "label": "Customizações gerais",
+          "file": "content/custom.json",
+          "fields": [
+            {
+              "label": "Texto do banner",
+              "name": "banner_text",
+              "widget": "string",
+              "hint": "Texto exibido em cima do banner principal"
+            }
+          ]
+        }
+      ]
+    },
     {
       "name": "pages",
       "files": [

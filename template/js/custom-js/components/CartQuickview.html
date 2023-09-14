@@ -1,0 +1,132 @@
+<div class="minicart">
+  <a-backdrop
+    :is-visible="isVisible"
+    @hide="toggle(false)"
+  />
+
+  <transition
+    enter-active-class="animated slideInRight"
+    leave-active-class="animated slideOutRight"
+  >
+    <aside
+      v-show="isVisible"
+      class="minicart__aside card shadow"
+    >
+      <slot name="header">
+        <header class="card-header">
+          {{ i19myShoppingCart }}
+          <button
+            type="button"
+            class="close"
+            :aria-label="i19close"
+            @click="toggle"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </header>
+      </slot>
+
+      <article class="minicart__body card-body">
+        <transition-group enter-active-class="animated fadeIn slow">
+          <div
+            class="minicart__list"
+            v-if="cart.items.length"
+            key="list"
+          >
+            <slot
+              name="list"
+              v-bind="{ items: cart.items }"
+            >
+              <transition-group
+                enter-active-class="animated fadeInDown"
+                leave-active-class="animated fadeOutUp faster position-absolute"
+              >
+                <cart-item
+                  v-for="item in cart.items"
+                  :key="item._id"
+                  :item="item"
+                />
+              </transition-group>
+            </slot>
+          </div>
+
+          <div
+            v-else
+            class="minicart__empty"
+            key="empty"
+          >
+            <slot name="empty">
+              <p class="lead text-muted">
+                {{ i19emptyCart }} ...
+              </p>
+              <a
+                class="btn btn-block btn-primary"
+                href="#"
+                @click.prevent="toggle"
+              >
+                <i class="i-arrow-left mr-1"></i>
+                {{ i19continueShopping }}
+              </a>
+            </slot>
+          </div>
+
+          <div
+            class="minicart__shipping"
+            v-if="cart.items.length && hasShippingCalculator"
+            key="shipping"
+          > 
+            <hr>
+            <shipping-calculator
+              class="minicart__shipping-calculator"
+              :can-select-services="true"
+              :shipped-items="cart.items"
+              @select-service="selectShippingService"
+            />
+          </div>
+        </transition-group>
+      </article>
+
+      <slot name="footer">
+        <footer
+          class="card-footer"
+          v-if="cart.subtotal || cart.items.length"
+        >
+          <div class="minicart__summary">
+            <span>{{ i19subtotal }}</span>
+            <div class="minicart__subtotal">
+              <a-prices
+                :product="{ price: total || cart.subtotal }"
+                :is-literal="true"
+              />
+            </div>
+          </div>
+
+          <a-link
+            class="minicart__btn-checkout btn btn-block btn-primary"
+            role="button"
+            :href="checkoutUrl"
+          >
+            <i class="i-check mr-1"></i>
+            {{ i19checkout }}
+          </a-link>
+          <a-link
+            class="minicart__btn-cart btn btn-block btn-outline-secondary"
+            role="button"
+            :href="cartUrl"
+          >
+            {{ i19seeCart }}
+          </a-link>
+
+          <button
+            type="button"
+            class="minicart__btn-back btn btn-block btn-sm btn-link d-md-none"
+            @click="toggle"
+          >
+            <i class="i-arrow-left mr-1"></i>
+            {{ i19continueShopping }}
+          </button>
+        </footer>
+      </slot>
+    </aside>
+  </transition>
+</div>

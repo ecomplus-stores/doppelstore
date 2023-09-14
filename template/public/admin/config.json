@@ -10,15 +10,34 @@
       "name": "settings",
       "files": [
         {
-          "name": "theme",
+          "name": "custom",
           "label": "Customizações gerais",
           "file": "content/custom.json",
           "fields": [
             {
-              "label": "Texto do banner",
-              "name": "banner_text",
-              "widget": "string",
-              "hint": "Texto exibido em cima do banner principal"
+              "label": "Barra de progresso no carrinho",
+              "name": "cart_progress_bar",
+              "widget": "object",
+              "fields": [
+                {
+                  "label": "Valor a atingir",
+                  "name": "value",
+                  "widget": "number",
+                  "min": 0,
+                  "max": 999999
+                },
+                {
+                  "label": "Rótulo do prêmio",
+                  "name": "award_label",
+                  "widget": "string",
+                  "hint": "Ex.: 'Para granhar ABC!'"
+                },
+                {
+                  "label": "Mensagem de valor atingido",
+                  "name": "success_message",
+                  "widget": "string"
+                }
+              ]
             }
           ]
         }

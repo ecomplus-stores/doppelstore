@@ -110,6 +110,14 @@ body {
       }
     }
   }
+
+  .cart-progress {
+    display: none;
+  }
+  .minicart__aside .cart-progress {
+    display: block;
+    min-height: 50px;
+  }
 }
 
 #user-button {

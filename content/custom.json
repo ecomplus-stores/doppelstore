@@ -1,3 +1,7 @@
 {
-  
+  "cart_progress_bar": {
+    "value": 0,
+    "award_label": "Para ganhar",
+    "success_message": "VOCÊ GANHOU!"
+  }
 }

@@ -3,6 +3,7 @@ import EcomSearch from '@ecomplus/search-engine'
 import Vue from 'vue'
 import ecomPassport from '@ecomplus/passport-client'
 import AffiliateLink from './components/AffiliateLink.vue'
+import './cart-progress'
 
 const affiliateLinkDiv = document.getElementById('affiliate-link')
 if (affiliateLinkDiv) {

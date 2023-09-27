@@ -110,13 +110,21 @@ body {
       }
     }
   }
+}
 
-  .cart-progress {
-    display: none;
-  }
-  .minicart__aside .cart-progress {
-    display: block;
-    min-height: 50px;
+.cart-progress {
+  display: none;
+}
+.minicart__aside .cart-progress {
+  display: block;
+  min-height: 50px;
+}
+.app .cart-progress {
+  display: block;
+  min-height: 70px;
+  font-size: 1.25rem;
+  .progress {
+    height: 2rem;
   }
 }
 

@@ -115,17 +115,22 @@ body {
 .cart-progress {
   display: none;
 }
-.minicart__aside .cart-progress {
+.minicart__aside .cart-progress:not(:empty) {
   display: block;
   min-height: 50px;
 }
-.app .cart-progress {
+.app .cart-progress:not(:empty) {
   display: block;
   min-height: 70px;
+  margin: 1.5rem auto;
+  max-width: 800px;
   font-size: 1.25rem;
   .progress {
     height: 2rem;
   }
+}
+#spa:has(#account) .cart-progress {
+  display: none;
 }
 
 #user-button {

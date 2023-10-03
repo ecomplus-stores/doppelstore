@@ -6,6 +6,9 @@ import getBlogPosts from "@ecomplus/storefront-template/template/js/netlify-cms/
 import getExtraPages from "@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/extra-pages"
 import getWidgets from "@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets"
 
+//CUSTOM MODULES
+import getAssinatura from './collections/assinatura'
+
 export default options => {
   options.sections = getSections(options)
   if (Array.isArray(options.sections) && options.sections.length && options.sections[0] && options.sections[0].name === 'responsive-banner') {
@@ -48,6 +51,7 @@ export default options => {
       getSettings(options),
       getLayout(options),
       getPages(options),
+      getAssinatura(options),
       getBlogPosts(options),
       getExtraPages(options),
       getWidgets(options)

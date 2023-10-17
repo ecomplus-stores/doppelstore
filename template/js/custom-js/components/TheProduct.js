@@ -621,6 +621,7 @@ export default {
           const kitComposition = this.body.kit_composition
           const ecomSearch = new EcomSearch()
           ecomSearch
+            .removeFilter('visible')
             .setPageSize(kitComposition.length)
             .setProductIds(kitComposition.map(({ _id }) => _id))
             .fetch(true)

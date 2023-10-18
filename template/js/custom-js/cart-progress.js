@@ -1,3 +1,4 @@
+import { price as getPrice } from '@ecomplus/utils'
 import ecomCart from '@ecomplus/shopping-cart'
 
 const cartProgressConfig = window.customSettings.cart_progress_bar
@@ -5,19 +6,34 @@ if (cartProgressConfig && cartProgressConfig.value > 0) {
   if (document.getElementById('cart-progress')) {
     const {
       value: minValue,
-      category_items: categoryItems,
+      min_items: minItems,
+      category_slugs: categorySlugs,
       award_label: awardLabel,
       success_message: successMsg
     } = cartProgressConfig
     const updateCartProgress = ({ data }) => {
+      let subtotal = 0
+      let numItems = 0
+      data.items.forEach((item) => {
+        if (categorySlugs && categorySlugs.length) {
+          if (
+            !item.categories ||
+            !item.categories.find(({ slug }) => categorySlugs.includes(slug))
+          ) {
+            return
+          }
+        }
+        subtotal += (item.quantity * getPrice(item))
+        numItems += item.quantity
+      })
       if (minValue > 0) {
-        const valuePercentage = Math.round(data.subtotal * 100 / minValue)
+        const valuePercentage = Math.round(subtotal * 100 / minValue)
         document.getElementById('cart-progress').innerHTML = String.raw`
         <div class="cart-progress mb-3">
           <span>
-            ${data.subtotal >= minValue
+            ${subtotal >= minValue
               ? `<span style="font-weight: 600">${successMsg}</span>`
-              : `Faltam <b>R$ ${Math.round(minValue - data.subtotal)}</b> ${awardLabel.toLowerCase()}`}
+              : `Faltam <b>R$ ${Math.round(minValue - subtotal)}</b> ${awardLabel.toLowerCase()}`}
           </span>
           ${valuePercentage < 100
               ? String.raw`
@@ -37,22 +53,14 @@ if (cartProgressConfig && cartProgressConfig.value > 0) {
                 <i class="i-check"></i>
               </span>`}
         </div>`
-      } else if (categoryItems && categoryItems.min_items > 0) {
-        const countItems = data.items.filter((item) => {
-          if (!categoryItems.category_slugs || categoryItems.category_slugs.length) {
-            return true
-          }
-          return item.categories && item.categories.find(({ slug }) => {
-            return categoryItems.category_slugs.includes(slug)
-          })
-        })
-        const countPercentage = Math.round(countItems * 100 / categoryItems.min_items)
+      } else if (minItems > 0) {
+        const countPercentage = Math.round(numItems * 100 / minItems)
         document.getElementById('cart-progress').innerHTML = String.raw`
         <div class="cart-progress mb-3">
           <span>
-            ${countItems >= categoryItems.min_items
+            ${numItems >= minItems
               ? `<span style="font-weight: 600">${successMsg}</span>`
-              : `Faltam <b>${(categoryItems.min_items - countItems)}</b> ${awardLabel.toLowerCase()}`}
+              : `Faltam <b>${(minItems - numItems)}</b> ${awardLabel.toLowerCase()}`}
           </span>
           ${countPercentage < 100
               ? String.raw`

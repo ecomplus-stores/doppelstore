@@ -28,26 +28,20 @@
                   "required": false
                 },
                 {
-                  "label": "A partir de X itens",
+                  "label": "Número mínimo de produtos",
                   "hint": "Preencha se o objetivo for completar um número mínimo de itens de determinada categoria (não subtotal do carrinho)",
-                  "name": "category_items",
-                  "widget": "object",
-                  "required": false,
-                  "fields": [
-                    {
-                      "label": "Número mínimo de produtos",
-                      "name": "min_items",
-                      "widget": "number",
-                      "min": 0,
-                      "max": 9999,
-                      "step": 1
-                    },
-                    {
-                      "label": "Categorias (slug) dos itens",
-                      "name": "category_slugs",
-                      "widget": "list"
-                    }
-                  ]
+                  "name": "min_items",
+                  "widget": "number",
+                  "min": 0,
+                  "max": 9999,
+                  "step": 1,
+                  "required": false
+                },
+                {
+                  "label": "Categorias (slug) dos itens considerados",
+                  "name": "category_slugs",
+                  "widget": "list",
+                  "required": false
                 },
                 {
                   "label": "Rótulo do prêmio",

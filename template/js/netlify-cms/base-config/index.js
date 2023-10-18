@@ -9,6 +9,7 @@ import getWidgets from "@ecomplus/storefront-template/template/js/netlify-cms/ba
 //CUSTOM MODULES
 import getAssinatura from './collections/assinatura'
 
+
 export default options => {
   options.sections = getSections(options)
   if (Array.isArray(options.sections) && options.sections.length && options.sections[0] && options.sections[0].name === 'responsive-banner') {
@@ -23,6 +24,9 @@ export default options => {
       }
     });
   }
+
+  const pages = getPages(options)
+  pages.files.push(getAssinatura(options))
 
   return {
     backend: {
@@ -50,8 +54,7 @@ export default options => {
     collections: [
       getSettings(options),
       getLayout(options),
-      getPages(options),
-      getAssinatura(options),
+      pages,
       getBlogPosts(options),
       getExtraPages(options),
       getWidgets(options)

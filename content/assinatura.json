@@ -1,0 +1,19 @@
+{
+  "meta_title": "Assinatura de Kits",
+  "meta_description": "",
+  "sections": [
+    {
+      "type": "shelfs-nav",
+      "shuffle": false,
+      "limit": 8,
+      "page": 1,
+      "collection_ids": [
+        "649b21ac5e606903704a9885:collections:Estampa Dognauta:/estampa-dognauta"
+      ]
+    },
+    {
+      "type": "custom-html",
+      "html": "teste teste"
+    }
+  ]
+}

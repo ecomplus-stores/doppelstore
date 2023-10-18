@@ -1,11 +1,23 @@
 export default ({ baseDir, sections }) => ({
   name: 'assinatura',
   label: 'Assinatura',
-  folder: `${baseDir}content/assinatura`,
+  folder: `${baseDir}content/assinatura.json`,
   extension: 'json',
-  create: true,
-  slug: '{{slug}}',
   fields: [
+    {
+      label: 'Meta title',
+      name: 'meta_title',
+      widget: 'string',
+      hint: 'Título exibido na aba do navegador e nos resultados de motores de busca, relevante para SEO',
+      required: false
+    },
+    {
+      label: 'Meta description',
+      name: 'meta_description',
+      widget: 'string',
+      hint: 'Descrição exibido na aba do navegador e nos resultados de motores de busca, relevante para SEO',
+      required: false
+    },
     {
       label: 'Seções',
       name: 'sections',
@@ -13,20 +25,8 @@ export default ({ baseDir, sections }) => ({
       hint: 'Por padrão o layout será composto por breadcrumbs, título e corpo. Pode personalizar tudo com seções de assinatura',
       widget: 'list',
       types: [
-        {
-          label: 'Corpo',
-          name: 'blog-post',
-          widget: 'object',
-          fields: [
-            {
-              label: 'Exibir conteúdo do post',
-              name: 'enabled',
-              widget: 'boolean',
-              default: true
-            }
-          ]
-        }
-      ].concat(sections)
+        ...sections
+      ]
     }
   ]
 })

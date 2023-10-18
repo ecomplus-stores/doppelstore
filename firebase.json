@@ -116,8 +116,8 @@
         "destination": "/checkout.js"
       },
       {
-        "source": "/checkout.?*.css",
-        "destination": "/checkout.css"
+        "source": "/pages/assinatura",
+        "destination": "/assinatura"
       }
     ],
     "headers": [

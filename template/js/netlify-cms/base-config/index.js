@@ -7,7 +7,6 @@ import getExtraPages from "@ecomplus/storefront-template/template/js/netlify-cms
 import getWidgets from "@ecomplus/storefront-template/template/js/netlify-cms/base-config/collections/widgets"
 
 //CUSTOM MODULES
-import getAssinatura from './collections/assinatura'
 
 
 export default options => {
@@ -25,8 +24,7 @@ export default options => {
     });
   }
 
-  const pages = getPages(options)
-  pages.files.push(getAssinatura(options))
+  //console.log(getAssinatura)
 
   return {
     backend: {
@@ -54,7 +52,7 @@ export default options => {
     collections: [
       getSettings(options),
       getLayout(options),
-      pages,
+      getPages(options),
       getBlogPosts(options),
       getExtraPages(options),
       getWidgets(options)

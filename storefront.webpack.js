@@ -13,7 +13,9 @@ module.exports = () => ({
       './html/PointsApplier.html': path.resolve(__dirname, 'template/js/custom-js/components/PointsApplier.html'),
       './js/PointsApplier.js': path.resolve(__dirname, 'template/js/custom-js/components/PointsApplier.js'),
       './base-config': path.resolve(__dirname, 'template/js/netlify-cms/base-config'),
-      './html/CartQuickview.html': path.resolve(__dirname, 'template/js/custom-js/components/CartQuickview.html')
+      './html/CartQuickview.html': path.resolve(__dirname, 'template/js/custom-js/components/CartQuickview.html'),
+      './html/APrices.html': path.resolve(__dirname, 'template/js/custom-js/components/APrices.html'),
+      './js/APrices.js': path.resolve(__dirname, 'template/js/custom-js/components/APrices.js')
     }
   }
 })

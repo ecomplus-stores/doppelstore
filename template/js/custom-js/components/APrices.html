@@ -1,0 +1,86 @@
+<div
+  class="prices"
+  :class="{ 'prices--literal': isLiteral, 'prices--big': isBig }"
+>
+  <span
+    v-if="comparePrice"
+    class="prices__compare"
+  >
+    <template v-if="isLiteral">
+      <small>
+        {{ i19from }}
+      </small>
+      <s>{{ formatMoney(comparePrice) }}</s>
+      <small>
+        {{ i19to }}
+      </small>
+    </template>
+    <s v-else>{{ formatMoney(comparePrice) }}</s>
+  </span>
+
+  <strong class="prices__value">
+    <small v-if="hasVariedPrices">
+      {{ i19asOf }}
+    </small>
+    {{ formatMoney(price) }}
+  </strong>
+
+  <transition-group enter-active-class="animated slideInDown">
+    <div
+      key="points"
+      v-if="earnPointsFactor > 0 && !(pointsMinPrice > price)"
+      class="prices__points"
+    >
+      <i class="i-check-circle"></i>
+      {{ i19youEarn }}
+      <span>
+        +{{ (earnPointsFactor * price).toFixed(1) }}
+      </span>
+      <em>{{ pointsProgramName }}</em>
+    </div>
+
+    <div
+      key="installments"
+      v-if="installmentsNumber > 1 && installmentValue"
+      class="prices__installments"
+    >
+      <small v-if="isLiteral">
+        {{ i19upTo }}
+      </small>
+      {{ installmentsNumber }}x
+      <small v-if="isLiteral">
+        {{ i19of }}
+      </small>
+      <span>
+        {{ formatMoney(installmentValue) }}
+      </span>
+      <small v-if="!monthlyInterest && isLiteral">
+        {{ i19interestFree }}
+      </small>
+    </div>
+
+    <div
+      key="discount"
+      v-if="typeof priceWithDiscount === 'number' && priceWithDiscount < price"
+      class="prices__discount"
+    >
+      <template v-if="typeof discountLabel === 'string' && discountLabel">
+        <span>
+          {{ formatMoney(priceWithDiscount) }}
+        </span>
+        <small class="prices__discount-label">
+          {{ discountLabel }}
+        </small>
+      </template>
+
+      <template v-else>
+        <small>
+          {{ i19asOf }}
+        </small>
+        <span>
+          {{ formatMoney(priceWithDiscount) }}
+        </span>
+      </template>
+    </div>
+  </transition-group>
+</div>

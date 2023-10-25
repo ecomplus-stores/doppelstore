@@ -15,6 +15,7 @@ import {
   formatMoney
 } from '@ecomplus/utils'
 
+import ecomCart from '@ecomplus/shopping-cart'
 import waitStorefrontInfo from '@ecomplus/storefront-components/src/js/helpers/wait-storefront-info'
 
 const getPriceWithDiscount = (price, discount) => {
@@ -50,7 +51,8 @@ export default {
     canShowPriceOptions: {
       type: Boolean,
       default: true
-    }
+    },
+    isEarningPoints: Boolean
   },
 
   data () {
@@ -191,7 +193,15 @@ export default {
             this.updateInstallments(paymentInfo.installments_option)
             this.updateDiscount(paymentInfo.discount_option)
             const pointsPrograms = paymentInfo.loyalty_points_programs
-            if (this.isLiteral && pointsPrograms) {
+            let { isEarningPoints } = this
+            if (!isEarningPoints && this.isAmountTotal) {
+              isEarningPoints = !ecomCart.data.items.find(({ categories }) => {
+                return !categories || !categories.find(({ _id, slug }) => {
+                  return _id === '64c590d95e60690370785d73' || slug === 'clube-de-apoiadores'
+                })
+              })
+            }
+            if (this.isLiteral && isEarningPoints && pointsPrograms) {
               this.$nextTick(() => {
                 for (const programId in pointsPrograms) {
                   const pointsProgram = pointsPrograms[programId]

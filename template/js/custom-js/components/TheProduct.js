@@ -300,6 +300,15 @@ export default {
         }
       }
       return this.body
+    },
+
+    isEarningPoints () {
+      if (this.body.categories) {
+        return Boolean(this.body.categories.find(({ _id, slug }) => {
+          return _id === '64c590d95e60690370785d73' || slug === 'clube-de-apoiadores'
+        }))
+      }
+      return false
     }
   },
 

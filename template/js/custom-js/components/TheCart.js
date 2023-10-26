@@ -111,6 +111,22 @@ export default {
       if (!canApplyDiscount) {
         this.isCouponApplied = false
       }
+    },
+
+    'cart.items': {
+      handler () {
+        for (let i = 0; i < this.cart.items.length; i++) {
+          const item = this.cart.items[i]
+          if (
+            item.categories &&
+            item.categories
+              .find(({ _id, slug }) => (_id === '65301b272cd6b6595980036e' || slug === 'assinaturas'))
+          ) {
+            window.location = this.checkoutUrl
+          }
+        }
+      },
+      immediate: true
     }
   },
 

@@ -309,6 +309,15 @@ export default {
         }))
       }
       return false
+    },
+
+    isSubscription () {
+      if (this.body.categories) {
+        return Boolean(this.body.categories.find(({ _id, slug }) => {
+          return _id === '65301b272cd6b6595980036e' || slug === 'assinaturas'
+        }))
+      }
+      return false
     }
   },
 
@@ -556,7 +565,13 @@ export default {
       const customizations = [...this.customizations]
       this.$emit('buy', { product, variationId, customizations })
       if (this.canAddToCart) {
-        ecomCart.addProduct({ ...product, customizations }, variationId, this.qntToBuy)
+        if (this.isSubscription) {
+          ecomCart.clear()
+          ecomCart.addProduct({ ...product, customizations }, variationId, 1)
+          window.location.href = '/app/#/checkout'
+        } else {
+          ecomCart.addProduct({ ...product, customizations }, variationId, this.qntToBuy)
+        }
       }
       this.isOnCart = true
     },

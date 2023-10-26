@@ -202,7 +202,12 @@
 
               <template #amount-custom>
                 <points-applier
-                  v-if="enabledCheckoutStep > 1"
+                  v-if="enabledCheckoutStep > 1 && !cart.items.find(({ name, categories }) => {
+                    if (!categories) return /apoio/i.test(name)
+                    return categories.find(({ slug, _id }) => {
+                      return _id === '64c590d95e60690370785d73' || slug === 'clube-de-apoiadores'
+                    })
+                  })"
                   class="checkout__loyalty-points"
                   :points-applied.sync="loyaltyPointsApplied"
                   :points-amount.sync="loyaltyPointsAmount"

@@ -398,6 +398,7 @@
                 <b class="d-inline-block">mas vale a pena!</b> :3
               </div>
               <shipping-calculator
+                v-if="body.commodity_type !== 'digital'"
                 :shippedItems="isKit ? kitItems : [{
                   ...body,
                   ...selectedVariation,

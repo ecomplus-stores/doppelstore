@@ -63,6 +63,7 @@
 
                 <div
                   v-if="shippingAddress"
+                  v-show="cart.items.find(({ weight }) => (weight && weight.value > 0))"
                   class="checkout__shipping"
                 >
                   <transition-group enter-active-class="animated fadeInDown">

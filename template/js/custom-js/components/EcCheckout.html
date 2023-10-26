@@ -14,6 +14,7 @@
         <div :class="canHideSummary ? 'col' : 'col-lg-8'">
           <nav class="checkout__steps">
             <a
+              v-if="!isSubscription"
               :href="cartUrl"
               class="checkout__step"
               :title="i18n('BackToCart')"
@@ -202,12 +203,7 @@
 
               <template #amount-custom>
                 <points-applier
-                  v-if="enabledCheckoutStep > 1 && !cart.items.find(({ name, categories }) => {
-                    if (!categories) return /apoio/i.test(name)
-                    return categories.find(({ slug, _id }) => {
-                      return _id === '64c590d95e60690370785d73' || slug === 'clube-de-apoiadores'
-                    })
-                  })"
+                  v-if="enabledCheckoutStep > 1 && !isEarningPoints"
                   class="checkout__loyalty-points"
                   :points-applied.sync="loyaltyPointsApplied"
                   :points-amount.sync="loyaltyPointsAmount"
@@ -242,7 +238,7 @@
               </div>
             </div>
 
-            <div class="checkout__back">
+            <div v-if="!isSubscription" class="checkout__back">
               <a :href="cartUrl" class="btn btn-sm btn-light">
                 <i class="i-chevron-left mr-1"></i>
                 {{ i18n('BackToCart') }}
@@ -252,7 +248,7 @@
         </div>
       </div>
 
-      <template v-if="canRecommendItems">
+      <template v-if="canRecommendItems && !isSubscription">
         <recommended-items
           ref="offers"
           class="mt-5 pt-lg-3 mx-xl-3"

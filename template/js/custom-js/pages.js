@@ -4,6 +4,7 @@ import Vue from 'vue'
 import ecomPassport from '@ecomplus/passport-client'
 import AffiliateLink from './components/AffiliateLink.vue'
 import './cart-progress'
+import './check-subscription-cart'
 
 const affiliateLinkDiv = document.getElementById('affiliate-link')
 if (affiliateLinkDiv) {

@@ -252,6 +252,24 @@ export default {
         }
       })
       return key
+    },
+
+    isEarningPoints () {
+      return Boolean(this.cart.items.find(({ name, categories }) => {
+        if (!categories) return /apoio/i.test(name)
+        return categories.find(({ slug, _id }) => {
+          return _id === '64c590d95e60690370785d73' || slug === 'clube-de-apoiadores'
+        })
+      }))
+    },
+
+    isSubscription () {
+      if (this.isEarningPoints) return true
+      return Boolean(this.cart.items.find(({ categories }) => {
+        return categories && categories.find(({ _id, slug }) => {
+          return _id === '65301b272cd6b6595980036e' || slug === 'assinaturas'
+        })
+      }))
     }
   },
 

@@ -25,15 +25,15 @@
       "enabled": false,
       "banners": [
         {
-          "img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabeca.png",
+          "img": "https://www.doppelstore.com.br/img/uploads/banner-mosaico-13.webp",
           "link": "/quebra-cabeca"
         },
         {
-          "img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.png",
+          "img": "https://www.doppelstore.com.br/img/uploads/banner-mosaico-13.webp",
           "link": "/copo-bucks"
         },
         {
-          "img": "https://static.doppelstore.com.br/promo-vigente/cadernos.png",
+          "img": "https://www.doppelstore.com.br/img/uploads/banner-mosaico-13.webp",
           "link": "/caderno"
         }
       ]

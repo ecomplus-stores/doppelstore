@@ -22,24 +22,6 @@
     },
     {
       "type": "banners-grid",
-      "enabled": false,
-      "banners": [
-        {
-          "img": "https://www.doppelstore.com.br/img/uploads/banner-mosaico-13.webp",
-          "link": "/quebra-cabeca"
-        },
-        {
-          "img": "https://www.doppelstore.com.br/img/uploads/banner-mosaico-13.webp",
-          "link": "/copo-bucks"
-        },
-        {
-          "img": "https://www.doppelstore.com.br/img/uploads/banner-mosaico-13.webp",
-          "link": "/caderno"
-        }
-      ]
-    },
-    {
-      "type": "banners-grid",
       "enabled": true,
       "banners": [
         {
@@ -48,12 +30,40 @@
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/camisetas.jpg"
         },
         {
-          "img": "https://static.doppelstore.com.br/promo-vigente/moletom.png",
-          "link": "/moletom"
+          "img": "https://static.doppelstore.com.br/promo-vigente/meias.jpg",
+          "link": "/meia",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/meias.jpg"
         },
         {
-          "img": "https://static.doppelstore.com.br/promo-vigente/meia.png",
-          "link": "/meia"
+          "img": "https://static.doppelstore.com.br/promo-vigente/cadernos.jpg",
+          "link": "/cadernos",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/cadernos.jpg"
+        }
+      ]
+    },
+    {
+      "type": "banners-grid",
+      "enabled": true,
+      "banners": [
+        {
+          "img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabeca.jpg",
+          "link": "/quebra-cabeca",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabeca.jpg"
+        },
+        {
+          "img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.jpg",
+          "link": "/copo-bucks",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.jpg"
+        },
+        {
+          "img": "https://static.doppelstore.com.br/promo-vigente/placa-decorativa.jpg",
+          "link": "/placa-decorativa",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/placa-decorativa.jpg"
+        },
+        {
+          "img": "https://static.doppelstore.com.br/promo-vigente/poster.jpg",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/poster.jpg",
+          "link": "/poster"
         }
       ]
     },

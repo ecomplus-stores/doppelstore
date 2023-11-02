@@ -7,6 +7,11 @@
         "type": 301
       },
       {
+        "source": "/slug-inexistente",
+        "destination": "/search?term=slug-inexistente",
+        "type": 301
+      },
+      {
         "source": "/empresa",
         "destination": "/pages/sobre-nos",
         "type": 301

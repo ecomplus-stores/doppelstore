@@ -30,9 +30,9 @@
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/camisetas.jpg"
         },
         {
-          "img": "https://static.doppelstore.com.br/promo-vigente/meias.jpg",
-          "link": "/meia",
-          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/meias.jpg"
+          "img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabeca.jpg",
+          "link": "/quebra-cabeca",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabeca.jpg"
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/cadernos.jpg",
@@ -46,9 +46,9 @@
       "enabled": true,
       "banners": [
         {
-          "img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabeca.jpg",
-          "link": "/quebra-cabeca",
-          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabeca.jpg"
+          "img": "https://static.doppelstore.com.br/promo-vigente/meias.jpg",
+          "link": "/meia",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/meias.jpg"
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.jpg",

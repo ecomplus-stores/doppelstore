@@ -68,24 +68,6 @@
       ]
     },
     {
-      "type": "banners-grid",
-      "enabled": false,
-      "banners": [
-        {
-          "img": "https://static.doppelstore.com.br/promo-vigente/placa-decorativa.png",
-          "link": "/placa-decorativa"
-        },
-        {
-          "img": "https://static.doppelstore.com.br/promo-vigente/poster.png",
-          "link": "/poster"
-        },
-        {
-          "img": "https://static.doppelstore.com.br/promo-vigente/quadro.png",
-          "link": "/quadro"
-        }
-      ]
-    },
-    {
       "type": "responsive-banner",
       "img": "/img/uploads/1675345524_1621135595_trustvox-desktop2.webp",
       "mobile_img": "/img/uploads/trust_vox_mobile.webp"

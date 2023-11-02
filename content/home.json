@@ -43,8 +43,9 @@
       "enabled": true,
       "banners": [
         {
-          "img": "https://static.doppelstore.com.br/promo-vigente/camisetas.png",
-          "link": "/camiseta"
+          "img": "https://static.doppelstore.com.br/promo-vigente/camisetas.jpg",
+          "link": "/camiseta",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/camisetas.jpg"
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/moletom.png",

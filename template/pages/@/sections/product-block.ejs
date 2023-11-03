@@ -4,6 +4,12 @@ let stampsList
 if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
   stampsList = stamps.stamps_list
 }
+let isSubscription = false
+if (_.state.categories) {
+  isSubscription = _.state.categories.some(({ _id, slug }) => {
+          return _id === '65301b272cd6b6595980036e' || slug === 'assinaturas'
+  })
+}
 %>
 
 <div id="product-block" class="product-block my-4 mb-lg-5">
@@ -203,11 +209,11 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
                       <%= _.dictionary('buyKit') %>
                     <% } else { %> 
                       <% let buyText %>
-                      <% if (Array.isArray(_.widgets)) { %>
+                      <% if (Array.isArray(_.widgets) && !isSubscription) { %>
                         <% const productWidget = _.widgets.find(item => item.pkg === '@ecomplus/widget-product') %>
                         <% buyText = productWidget && productWidget.options.buyText %>
                       <% } %>
-                      <%= buyText || _.dictionary('buy') %>
+                      <%= isSubscription ? 'ASSINAR' : buyText || _.dictionary('buy') %>
                     <% } %>
                   </div>
                 </button>

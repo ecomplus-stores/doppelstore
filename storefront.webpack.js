@@ -1,5 +1,5 @@
 const path = require('path')
-console.log(path.resolve(__dirname, 'template/js/custom-js/html/TheProduct.html'))
+console.log(path.resolve(__dirname, 'template/js/custom-js/components/PaymentMethods.html'))
 module.exports = () => ({
   resolve: {
     alias: {

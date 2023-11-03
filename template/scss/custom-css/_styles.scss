@@ -1261,3 +1261,17 @@ section.ts-customer-questions {
 div.backdrop {
   top: calc(-100vh - 28px);
 }
+.payment__gateway--112381[data-label="Mensal"] {
+  &+ .payment__method {
+    button.btn.btn-lg.btn-block.btn-success {
+      font-size: 0;
+      i {
+        font-size: 1.25rem !important;
+      }
+      &::after {
+        font-size: 1.25rem !important;
+        content: 'ASSINAR AGORA';
+      } 
+    }
+  }
+}

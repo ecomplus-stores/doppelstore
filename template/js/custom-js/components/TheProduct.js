@@ -235,7 +235,7 @@ export default {
     },
 
     strBuy () {
-      return this.buyText || i18n(i19buy)
+      return this.isSubscription ? 'ASSINAR' : this.buyText || i18n(i19buy)
     },
 
     discount () {

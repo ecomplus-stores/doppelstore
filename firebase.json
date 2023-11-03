@@ -127,7 +127,7 @@
       },
       {
         "source": "/pages/assinatura",
-        "destination": "/assinatura"
+        "destination": "/assinar"
       }
     ],
     "headers": [

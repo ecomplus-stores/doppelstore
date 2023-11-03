@@ -24,8 +24,6 @@ export default options => {
     });
   }
 
-  //console.log(getAssinatura)
-
   return {
     backend: {
       name: "git-gateway",

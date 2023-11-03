@@ -6,7 +6,7 @@
   "sections": [
     {
       "type": "custom-html",
-      "html": "teste html"
+      "html": "<div class=\"my-0\">Doppel Gang - Grupo de Apoiadores</div>\n<div class=\"row\">    \n    <div class=\"col-6 col-md-4 col-lg-3\">\n        <article class=\"product-item\">\n            <h3 class=\"product-card__name\">Benefício 1</h3>\n        </article>\n    </div>\n    <div class=\"col-6 col-md-4 col-lg-3\">\n        <article class=\"product-item\">\n            <h3 class=\"product-card__name\">Benefício 2</h3>\n        </article>\n    </div>\n    <div class=\"col-6 col-md-4 col-lg-3\">\n        <article class=\"product-item\">\n            <h3 class=\"product-card__name\">Benefício 3</h3>\n        </article>\n    </div>\n    <div class=\"col-6 col-md-4 col-lg-3\">\n        <article class=\"product-item\">\n            <h3 class=\"product-card__name\">Benefício 4</h3>\n        </article>\n    </div>\n    <div class=\"col-6 col-md-4 col-lg-3\">\n        <article class=\"product-item\">\n            <h3 class=\"product-card__name\">Benefício 5</h3>\n        </article>\n    </div>\n</div>"
     }
   ]
 }

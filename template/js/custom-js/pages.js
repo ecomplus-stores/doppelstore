@@ -45,7 +45,3 @@ if (isShowAll === '59$2a82') {
     })
   })
 }
-
-if (window.location.pathname === '/pages/assinatura') {
-  window.ecomCart.reset()
-}

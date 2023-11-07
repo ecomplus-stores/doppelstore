@@ -566,9 +566,13 @@ export default {
       this.$emit('buy', { product, variationId, customizations })
       if (this.canAddToCart) {
         if (this.isSubscription) {
+          try {
+            window.localStorage.setItem('cartItemsToRestore', JSON.stringify(ecomCart.data.items))
+          } catch {
+          }
           ecomCart.clear()
           ecomCart.addProduct({ ...product, customizations }, variationId, 1)
-          window.location.href = '/app/#/checkout'
+          window.location.href = `/app/#/lp/${product._id}/checkout/`
         } else {
           ecomCart.addProduct({ ...product, customizations }, variationId, this.qntToBuy)
         }

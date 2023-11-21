@@ -17,14 +17,15 @@
   "categories_list": {
     "featured": [
       "/vestuario?Vestuário",
-      "/caixa-de-schrodinger?Caixa de Schrödinger",
       "/acessorios?Acessórios",
       "/decoracao?Decoração",
+      "/jogos?Jogos",
+      "/caixa-de-schrodinger?Caixa de Schrödinger",
       "/colecoes?Coleções",
       "/estampas?Estampas",
       "/parceiros?Parceiros"
     ],
-    "random": 0,
+    "random": 3,
     "full_width": true
   },
   "centralized_logo": false,

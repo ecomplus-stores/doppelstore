@@ -26,7 +26,7 @@
       "/combos?Combos"
     ],
     "random": 3,
-    "full_width": true
+    "full_width": false
   },
   "centralized_logo": false,
   "desktop_megamenu": true,

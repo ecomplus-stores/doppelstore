@@ -1,12 +1,14 @@
 <% if (_.state.body_html) {
-  const clothingCategory = _.state.categories && _.state.categories.find(({ slug }) => {
-    return [
-      'camiseta',
-      'moletom',
-      'camiseta-infantil',
-    ].includes(slug)
-  })
-  const clothingCategorySlug = clothingCategory && clothingCategory.slug
+  let isTShirt
+  if (_.state.categories) {
+    for (let i = 0; i < _.state.categories.length; i++) {
+      const { slug } = _.state.categories[i]
+      if (slug === 'camiseta' || slug === 'vestuario/camisetas') {
+        isTShirt = true
+        break
+      }
+    }
+  }
   %>
   <section id="product-description" class="product-description my-4 my-lg-5">
     <div class="container">
@@ -18,7 +20,7 @@
             aria-controls="nav-description" aria-selected="true">
             <%= _.dictionary('productDescription') %>
           </button>
-          <% if (clothingCategorySlug === 'camiseta') { %>
+          <% if (isTShirt) { %>
             <button class="nav-link" id="nav-quality-tab"
               data-toggle="tab" data-target="#nav-quality" type="button" role="tab"
               aria-controls="nav-quality" aria-selected="false">
@@ -54,7 +56,7 @@
             ) %>
           </div>
         </div>
-        <% if (clothingCategorySlug === 'camiseta') { %>
+        <% if (isTShirt) { %>
           <div class="tab-pane fade" id="nav-quality" role="tabpanel" aria-labelledby="nav-quality-tab">
             <%- await include('@/custom-html/tab-qualidade') %>
           </div>

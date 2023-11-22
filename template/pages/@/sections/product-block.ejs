@@ -125,14 +125,24 @@ if (_.state.categories) {
                   <!-- Custom info for products with variations, such as sizes table link -->
                   <%
                   let sizeGuide = opt.size_guide
-                  const clothingCategory = _.state.categories && _.state.categories.find(({ slug }) => {
-                    return [
-                      'camiseta',
-                      'moletom',
-                      'camiseta-infantil',
-                    ].includes(slug)
-                  })
-                  const clothingCategorySlug = clothingCategory && clothingCategory.slug
+                  let clothingCategorySlug
+                  if (_.state.categories) {
+                    for (let i = 0; i < _.state.categories.length; i++) {
+                      const { slug } = _.state.categories[i]
+                      if (slug === 'vestuario/camisetas') {
+                        clothingCategorySlug = 'camiseta'
+                        break
+                      }
+                      if (slug === 'vestuario/moletons') {
+                        clothingCategorySlug = 'moletom'
+                        break
+                      }
+                      if (slug === 'camiseta' || slug === 'moletom' || slug === 'camiseta-infantil') {
+                        clothingCategorySlug = slug
+                        break
+                      }
+                    }
+                  }
                   if (clothingCategorySlug) {
                     sizeGuide = {
                       image: 'auto'

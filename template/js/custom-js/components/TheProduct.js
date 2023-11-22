@@ -426,21 +426,39 @@ export default {
           const isBrilliant = this.body.specifications && this.body.specifications.brilha_no_escuro &&
             this.body.specifications.brilha_no_escuro[0] &&
             this.body.specifications.brilha_no_escuro[0].value === 'sim'
-          let category = this.body.categories.find(({ slug }) => {
-            return [
-              'camiseta',
-              'moletom',
-              'camiseta-infantil',
-              'caderno',
-              'copo-bucks',
-              'quadro',
-              'poster',
-              'placa-decorativa',
-              'quebra-cabeca'
-            ].includes(slug)
-          })
+          let category
+          for (let i = 0; i < this.body.categories.length; i++) {
+            const { slug } = this.body.categories[i]
+            switch (slug) {
+              case 'vestuario/camisetas':
+                category = 'camiseta'; break
+              case 'vestuario/moletons':
+                category = 'moletom'; break
+              case 'acessorios/cadernos':
+                category = 'caderno'; break
+              case 'cozinha/copo-bucks':
+                category = 'copo-bucks'; break
+              case 'decoracao/quadros':
+                category = 'quadro'; break
+              case 'decoracao/posters':
+                category = 'poster'; break
+              case 'decoracao/placas-decorativas':
+                category = 'placa-decorativa'; break
+              case 'jogos/quebra-cabecas-2d':
+                category = 'quebra-cabeca'; break
+              case 'camiseta':
+              case 'moletom':
+              case 'camiseta-infantil':
+              case 'caderno':
+              case 'copo-bucks':
+              case 'quadro':
+              case 'poster':
+              case 'placa-decorativa':
+              case 'quebra-cabeca':
+                category = slug
+            }
+          }
           if (category) {
-            category = category.slug
             const { specifications } = variation
             if (specifications) {
               const color = specifications.colors && specifications.colors[0] &&

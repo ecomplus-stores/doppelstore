@@ -43,31 +43,31 @@
   },
   "links_2": {
     "list_categories": false,
-    "title": "Categorias",
+    "title": "Navegação",
     "list": [
       {
-        "text": "Vestuário",
-        "url": "/vestuario"
+        "text": "Produtos",
+        "url": "/produtos"
       },
       {
-        "text": "Acessórios",
-        "url": "/acessorios"
+        "text": "Lançamentos",
+        "url": "/lancamentos"
       },
       {
-        "text": "Papelaria",
-        "url": "/papelaria"
+        "text": "Caixa de Schrödinger",
+        "url": "/caixa-de-schrodinger"
       },
       {
-        "text": "Decoração",
-        "url": "/decoracao"
-      },
-      {
-        "text": "Coleções",
-        "url": "/colecoes"
+        "text": "Aprenda se Divertindo",
+        "url": "/aprenda-se-divertindo"
       },
       {
         "text": "Estampas",
         "url": "/estampas"
+      },
+      {
+        "text": "Coleções",
+        "url": "/colecoes"
       },
       {
         "text": "Parceiros",

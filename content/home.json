@@ -34,17 +34,17 @@
       "banners": [
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/camisetas.jpg",
-          "link": "/camiseta",
+          "link": "/vestuario/camisetas",
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/camisetas.jpg"
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabecas.jpg",
-          "link": "/quebra-cabeca",
+          "link": "/jogos/quebra-cabecas-2d",
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabecas.jpg"
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/cadernos.jpg",
-          "link": "/caderno",
+          "link": "/acessorios/cadernos",
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/cadernos.jpg"
         }
       ]
@@ -55,23 +55,23 @@
       "banners": [
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/meias.jpg",
-          "link": "/meia",
+          "link": "/vestuario/meias",
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/meias.jpg"
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.jpg",
-          "link": "/copo-bucks",
+          "link": "/cozinha/copo-bucks",
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.jpg"
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/placas-decorativas.jpg",
-          "link": "/placa-decorativa",
+          "link": "/decoracao/placas-decorativas",
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/placas-decorativas.jpg"
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/posters.jpg",
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/posters.jpg",
-          "link": "/poster"
+          "link": "/decoracao/posters"
         }
       ]
     },

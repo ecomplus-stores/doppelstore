@@ -454,7 +454,7 @@ export default {
               case 'quadro':
               case 'poster':
               case 'placa-decorativa':
-              case 'quebra-cabeca':
+              case 'quebra-cabeca-2d':
                 category = slug
             }
           }

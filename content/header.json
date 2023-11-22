@@ -1,19 +1,4 @@
 {
-  "marketing_stripe": {
-    "text": "",
-    "link": "/promotion",
-    "background": "#ea356c"
-  },
-  "contacts_stripe": {
-    "pages": [
-      {
-        "title": "Manifesto",
-        "link": "/empresa"
-      }
-    ],
-    "phone_wpp": true,
-    "socials": true
-  },
   "categories_list": {
     "featured": [
       "/produtos?Produtos",
@@ -28,9 +13,25 @@
     "random": 3,
     "full_width": true
   },
+  "menu_all_departments": true,
   "centralized_logo": false,
-  "desktop_megamenu": true,
-  "search_input": true,
+  "marketing_stripe": {
+    "text": "",
+    "link": "/promotion",
+    "background": "#ea356c"
+  },
   "alphabetical_order_submenu": false,
-  "full_width_submenu": false
+  "search_input": true,
+  "desktop_megamenu": true,
+  "full_width_submenu": false,
+  "contacts_stripe": {
+    "pages": [
+      {
+        "title": "Manifesto",
+        "link": "/empresa"
+      }
+    ],
+    "phone_wpp": true,
+    "socials": true
+  }
 }

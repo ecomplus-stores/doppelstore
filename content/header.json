@@ -17,13 +17,13 @@
   "categories_list": {
     "featured": [
       "/produtos?Produtos",
-      "/acessorios?Acessórios",
-      "/decoracao?Decoração",
-      "/jogos?Jogos",
+      "/lancamentos?Lançamentos",
       "/caixa-de-schrodinger?Caixa de Schrödinger",
-      "/colecoes?Coleções",
+      "/assinaturas/doppelgang?DoppelGang",
       "/estampas?Estampas",
-      "/parceiros?Parceiros"
+      "/colecoes?Coleções",
+      "/parceiros?Parceiros",
+      "/combos?Combos"
     ],
     "random": 3,
     "full_width": true

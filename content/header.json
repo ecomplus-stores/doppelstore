@@ -29,7 +29,7 @@
     "full_width": true
   },
   "centralized_logo": false,
-  "desktop_megamenu": true,
+  "desktop_megamenu": false,
   "search_input": true,
   "alphabetical_order_submenu": false,
   "full_width_submenu": true

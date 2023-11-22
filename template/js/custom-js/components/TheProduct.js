@@ -520,7 +520,7 @@ export default {
                   break
                 case 'poster':
                 case 'placa-decorativa':
-                case 'quebra-cabeca':
+                case 'quebra-cabeca-2d':
                 case 'quadro':
                   if (size) {
                     this.variationImages = [

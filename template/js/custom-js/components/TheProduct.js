@@ -445,7 +445,7 @@ export default {
               case 'decoracao/placas-decorativas':
                 category = 'placa-decorativa'; break
               case 'jogos/quebra-cabecas-2d':
-                category = 'quebra-cabeca'; break
+                category = 'quebra-cabeca-2d'; break
               case 'camiseta':
               case 'moletom':
               case 'camiseta-infantil':

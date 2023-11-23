@@ -1289,3 +1289,6 @@ div.backdrop {
         border-radius: 10px;
       }
 
+      .custom-control-input:checked ~ .custom-control-label::before {
+        background-color: #37a581 !important
+      }

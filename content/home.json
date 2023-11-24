@@ -33,9 +33,9 @@
       "enabled": true,
       "banners": [
         {
-          "img": "https://static.doppelstore.com.br/promo-vigente/camisetas.jpg",
-          "link": "/vestuario/camisetas",
-          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/camisetas.jpg"
+          "img": "/img/uploads/planner.jpg",
+          "link": "/acessorios/planners",
+          "mobile_img": "/img/uploads/planner.jpg"
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/quebra-cabecas.jpg",

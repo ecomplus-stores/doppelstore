@@ -3,20 +3,6 @@
   "meta_description": "",
   "sections": [
     {
-      "type": "banner-slider",
-      "autoplay": 6000,
-      "full_width": false,
-      "slides": [
-        {
-          "start": "",
-          "end": "",
-          "img": "https://static.doppelstore.com.br/promo-vigente/faixa-desktop.jpg",
-          "link": "https://links.doppelstore.com.br/3QEFd5z",
-          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.jpg"
-        }
-      ]
-    },
-    {
       "type": "info-bar",
       "enabled": true
     },

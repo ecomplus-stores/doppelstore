@@ -21,6 +21,13 @@ export default options => {
           widget: 'boolean'
         })
       }
+      if (element.name === 'responsive-banner') {
+        element.fields.push({
+          label: 'Ativar Banner em tela cheia',
+          name: 'full_banner_responsive',
+          widget: 'boolean'
+        })
+      }
     });
   }
 

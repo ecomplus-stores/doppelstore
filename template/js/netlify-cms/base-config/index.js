@@ -18,14 +18,16 @@ export default options => {
           label: 'Ativar',
           hint: `Ativar grid de banners`,
           name: 'enabled',
-          widget: 'boolean'
+          widget: 'boolean',
+          required: false
         })
       }
       if (element.name === 'responsive-banner') {
         element.fields.push({
           label: 'Ativar Banner em tela cheia',
           name: 'full_banner_responsive',
-          widget: 'boolean'
+          widget: 'boolean',
+          required: false
         })
       }
     });

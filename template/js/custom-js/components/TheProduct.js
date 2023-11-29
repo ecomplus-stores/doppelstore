@@ -430,21 +430,21 @@ export default {
           for (let i = 0; i < this.body.categories.length; i++) {
             const { slug } = this.body.categories[i]
             switch (slug) {
-              case 'vestuario/camisetas':
+              case 'camisetas':
                 category = 'camiseta'; break
-              case 'vestuario/moletons':
+              case 'moletons':
                 category = 'moletom'; break
-              case 'acessorios/cadernos':
+              case 'cadernos':
                 category = 'caderno'; break
-              case 'cozinha/copo-bucks':
+              case 'copo-bucks':
                 category = 'copo-bucks'; break
-              case 'decoracao/quadros':
+              case 'quadros':
                 category = 'quadro'; break
-              case 'decoracao/posters':
+              case 'posters':
                 category = 'poster'; break
-              case 'decoracao/placas-decorativas':
+              case 'placas-decorativas':
                 category = 'placa-decorativa'; break
-              case 'jogos/quebra-cabecas-2d':
+              case 'quebra-cabecas-2d':
                 category = 'quebra-cabeca-2d'; break
               case 'camiseta':
               case 'moletom':

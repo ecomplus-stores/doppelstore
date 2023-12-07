@@ -119,6 +119,9 @@ if (mainCategories) {
                   <%= subcategory.name %>
                 </span>
               </a>
+              <% if (subcategory.slug === 'astronautica') { %>
+                <!-- <a id="c-exemplo" class="menu__item" href="/exemplo"><span> EXEMPLO </span></a> -->
+              <% } %>
             <% }) %>
           </div>
 

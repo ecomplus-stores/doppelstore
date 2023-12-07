@@ -351,6 +351,9 @@ const hasAllDepartments = header.menu_all_departments
                       <% subcategories.forEach(subcategory => { %>
                         <div>               
                           <a id="sd-<%= subcategory._id %>" class="header__submenu-category" href="/<%= subcategory.slug %>"><%= subcategory.name %></a>
+                          <% if (subcategory.slug === 'astronautica') { %>
+                            <!-- <a id="sd-exemplo" class="header__submenu-category" href="/exemplo"> EXEMPLO </a> -->
+                          <% } %>
                           <% const thirdCategories = _.categories.filter(({ parent }) => parent && parent.slug === subcategory.slug) %>
                           <%
                             if (isAlphabeticalOrderSubmenu) {

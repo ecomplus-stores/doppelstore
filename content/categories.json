@@ -1,12 +1,6 @@
 {
   "sections": [
     {
-      "type": "responsive-banner",
-      "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
-      "full_banner_responsive": true,
-      "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg"
-    },
-    {
       "type": "page-title"
     },
     {

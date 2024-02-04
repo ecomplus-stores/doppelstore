@@ -3,8 +3,8 @@
     {
       "type": "responsive-banner",
       "link": "https://promo.doppelstore.com.br/promo-janeiro-2024-volta-as-aulas",
-      "img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg",
-      "mobile_img": null
+      "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
+      "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg"
     },
     {
       "type": "page-title"

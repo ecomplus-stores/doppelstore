@@ -13,7 +13,7 @@ export default options => {
   options.sections = getSections(options)
   if (Array.isArray(options.sections) && options.sections.length && options.sections[0] && options.sections[0].name === 'responsive-banner') {
     options.sections.forEach(element => {
-      if (element.name === 'banners-grid') {
+      if ((element.name === 'banners-grid') || (element.name === 'responsive-banner') || (element.name === 'banner-slider')) {
         element.fields.push({
           label: 'Ativar',
           hint: `Ativar grid de banners`,

@@ -26,6 +26,12 @@
       "enabled": true,
       "banners": [
         {
+          "img": "https://static.doppelstore.com.br/promo-vigente/caixa-de-schrodinger.jpg",
+          "link": "https://www.doppelstore.com.br/caixa-de-schrodinger-vol-1-biomas-do-mundo",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/caixa-de-schrodinger.jpg",
+          "enabled": true
+        },
+        {
           "img": "/img/uploads/planner.jpg",
           "link": "/acessorios/planners",
           "mobile_img": "/img/uploads/planner.jpg"
@@ -39,10 +45,6 @@
           "img": "https://static.doppelstore.com.br/promo-vigente/cadernos.jpg",
           "link": "/acessorios/cadernos",
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/cadernos.jpg"
-        },
-        {
-          "img": "https://static.doppelstore.com.br/promo-vigente/caixa-de-schrodinger.jpg",
-          "link": "https://www.doppelstore.com.br/caixa-de-schrodinger-vol-1-biomas-do-mundo"
         }
       ]
     },

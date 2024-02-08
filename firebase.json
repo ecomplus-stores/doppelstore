@@ -9,7 +9,7 @@
       {
         "regex": "/*-brinde",
         "destination": "/",
-        "type": 302
+        "type": 301
       },
       {
         "source": "/camisetas",

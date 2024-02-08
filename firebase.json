@@ -9,7 +9,7 @@
       {
         "source": "/*-brinde",
         "destination": "/",
-        "type": 301
+        "type": 302
       },
       {
         "source": "/camisetas",

@@ -1301,3 +1301,23 @@ div.backdrop {
     width: 100%;
   }
 }
+
+.page--home > .sections >.custom-html {
+  margin-bottom: 5px !important;
+  margin-top: 5px !important;
+}
+
+.page--home > .sections > .custom-html .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.page--home > .sections > .custom-html .html-clearfix {
+  margin-bottom: 3px !important;
+  margin-top: 3px !important;
+}
+
+.page--home > .sections > .custom-html + .responsive-baner {
+  margin-top: 3px !important;
+}

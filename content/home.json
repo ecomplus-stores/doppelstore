@@ -10,8 +10,9 @@
       "type": "responsive-banner",
       "img": "https://static.doppelstore.com.br/promo-vigente/faixa-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.jpg",
-      "link": "https://promo.doppelstore.com.br/promo-janeiro-2024-volta-as-aulas",
-      "full_banner_responsive": true
+      "link": "",
+      "full_banner_responsive": true,
+      "enabled": true
     },
     {
       "type": "info-bar",

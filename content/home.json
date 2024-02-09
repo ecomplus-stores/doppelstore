@@ -32,9 +32,10 @@
           "enabled": true
         },
         {
-          "img": "/img/uploads/planner.jpg",
+          "img": "https://static.doppelstore.com.br/promo-vigente/planners.jpg",
           "link": "/acessorios/planners",
-          "mobile_img": "/img/uploads/planner.jpg"
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/planners.jpg",
+          "enabled": true
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/jogos-educativos.jpg",

@@ -84,7 +84,8 @@
       "type": "responsive-banner",
       "full_banner_responsive": false,
       "img": "/img/uploads/1675345524_1621135595_trustvox-desktop2.webp",
-      "mobile_img": "/img/uploads/trust_vox_mobile.webp"
+      "mobile_img": "/img/uploads/trust_vox_mobile.webp",
+      "enabled": true
     },
     {
       "type": "banners-grid",

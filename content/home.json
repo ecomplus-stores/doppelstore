@@ -3,6 +3,10 @@
   "meta_description": "",
   "sections": [
     {
+      "type": "custom-html",
+      "html": "<script>(function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = \"//www.tickcounter.com/static/js/loader.js\"; pjs.parentNode.insertBefore(js, pjs); }(document, \"script\", \"tickcounter-sdk\"));</script><a data-type=\"countdown\" data-id=\"4889238\" class=\"tickcounter\" style=\"display:block; left:0; width:100%; height:50px; position:relative; padding-bottom:0; margin:0 auto;\" title=\"PROMO VOLTA ÀS AULAS (E DA DOPPEL)\" >PROMO VOLTA ÀS AULAS (E DA DOPPEL)</a>"
+    },
+    {
       "type": "responsive-banner",
       "img": "https://static.doppelstore.com.br/promo-vigente/faixa-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.jpg",
@@ -61,7 +65,8 @@
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.jpg",
           "link": "/cozinha/copo-bucks",
-          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.jpg"
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/copo-bucks.jpg",
+          "enabled": false
         },
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/placas-decorativas.jpg",

@@ -435,6 +435,7 @@ export default {
               case 'moletons':
                 category = 'moletom'; break
               case 'acessorios/cadernos':
+              case 'cadernos':
                 category = 'caderno'; break
               case 'copo-bucks':
                 category = 'copo-bucks'; break

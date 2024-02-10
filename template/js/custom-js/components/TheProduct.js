@@ -419,6 +419,7 @@ export default {
     },
 
     showVariationPictures (variation) {
+
       if (this.body.categories) {
         const pattern = this.body.specifications && this.body.specifications.pattern &&
           this.body.specifications.pattern[0] && this.body.specifications.pattern[0].value
@@ -428,8 +429,13 @@ export default {
             this.body.specifications.brilha_no_escuro[0].value === 'sim'
           let category
           for (let i = 0; i < this.body.categories.length; i++) {
-            const { slug } = this.body.categories[i]
-            switch (slug) {
+            const nameCategory = this.body.categories[i] && this.body.categories[i].name
+            .trim()
+            .toLowerCase()
+            .replaceAll(' ', '-')
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+
+            switch (nameCategory) {
               case 'camisetas':
                 category = 'camiseta'; break
               case 'moletons':
@@ -443,6 +449,7 @@ export default {
                 category = 'quadro'; break
               case 'posters':
                 category = 'poster'; break
+              case 'placas-decorativa':
               case 'placas-decorativas':
                 category = 'placa-decorativa'; break
               case 'quebra-cabecas-2d':
@@ -456,9 +463,10 @@ export default {
               case 'poster':
               case 'placa-decorativa':
               case 'quebra-cabeca-2d':
-                category = slug
+                category = nameCategory
             }
           }
+
           if (category) {
             const { specifications } = variation
             if (specifications) {

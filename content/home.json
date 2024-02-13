@@ -3,6 +3,35 @@
   "meta_description": "",
   "sections": [
     {
+      "type": "banner-slider",
+      "autoplay": 9000,
+      "full_width": true,
+      "slides": [
+        {
+          "start": "",
+          "end": "",
+          "img": "https://static.doppelstore.com.br/promo-vigente/slide-desktop-1.jpg",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/slide-mobile-1.jpg",
+          "link": "https://www.doppelstore.com.br/acessorios/cadernos"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "https://static.doppelstore.com.br/promo-vigente/slide-desktop-2.jpg",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/slide-mobile-2.jpg",
+          "link": "https://www.doppelstore.com.br/planners-de-estudos"
+        },
+        {
+          "start": "",
+          "end": "",
+          "img": "https://static.doppelstore.com.br/promo-vigente/slide-desktop-3.jpg",
+          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/slide-mobile-3.jpg",
+          "link": "https://www.doppelstore.com.br/acessorios/planners"
+        }
+      ],
+      "enabled": true
+    },
+    {
       "type": "responsive-banner",
       "img": "https://static.doppelstore.com.br/promo-vigente/faixa-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.jpg",

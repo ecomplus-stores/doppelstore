@@ -114,6 +114,26 @@
       "enabled": true
     },
     {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 1,
+      "collection_id": "6492f5025e6069037042bde7:categories:Cadernos:/cadernos",
+      "sort": "sales",
+      "title": "Cadernos",
+      "autoplay": 1000
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 1,
+      "collection_id": "6492f5335e6069037042be7c:categories:Placas Decorativa:/placas-decorativas",
+      "sort": "sales",
+      "title": "Placas Decorativas",
+      "autoplay": 1000
+    },
+    {
       "type": "banners-grid",
       "enabled": false,
       "banners": [

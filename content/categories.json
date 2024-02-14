@@ -1,6 +1,10 @@
 {
   "sections": [
     {
+      "type": "document-description",
+      "enabled": true
+    },
+    {
       "type": "responsive-banner",
       "link": "",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
@@ -22,10 +26,6 @@
       "type": "category-retail",
       "enabled": true,
       "sort": "sales"
-    },
-    {
-      "type": "document-description",
-      "enabled": true
     }
   ]
 }

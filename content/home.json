@@ -47,9 +47,11 @@
       "type": "collection-shelf",
       "shuffle": false,
       "limit": 12,
-      "page": 1,
-      "collection_id": "655c7a072cd6b65959b15152:collections:Caixa de Schrödinger Vol. 1: Biomas do Mundo:/caixa-de-schrodinger/biomas-do-mundo",
-      "title": "ÚLTIMOS LANÇAMENTOS"
+      "page": 2,
+      "collection_id": null,
+      "title": "ÚLTIMOS LANÇAMENTOS",
+      "sort": "news",
+      "autoplay": 3000
     },
     {
       "type": "banners-grid",
@@ -78,6 +80,36 @@
           "mobile_img": "https://static.doppelstore.com.br/promo-vigente/cadernos.jpg"
         }
       ]
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 3,
+      "collection_id": "6492f5025e6069037042bde7:categories:Cadernos:/cadernos",
+      "sort": "sales",
+      "title": "Cadernos",
+      "autoplay": 3000
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 3,
+      "collection_id": "65c8c3f687ab487fbfb30864:categories:Planners de Estudos:/planners-de-estudos",
+      "sort": "sales",
+      "title": "Planners de Estudos",
+      "autoplay": 3000
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 3,
+      "collection_id": "655c74822cd6b65959b14e82:categories:Planners:/acessorios/planners",
+      "sort": "sales",
+      "link": "Planners com e sem data",
+      "autoplay": 3000
     },
     {
       "type": "banners-grid",
@@ -117,10 +149,10 @@
       "type": "collection-shelf",
       "shuffle": false,
       "limit": 12,
-      "page": 3,
-      "collection_id": "6492f5025e6069037042bde7:categories:Cadernos:/cadernos",
+      "page": 1,
+      "collection_id": "655c73342cd6b65959b14e04:categories:Jogos:/jogos",
       "sort": "sales",
-      "title": "Cadernos",
+      "title": "Aprenda se divertindo",
       "autoplay": 3000
     },
     {
@@ -138,16 +170,6 @@
       "shuffle": false,
       "limit": 12,
       "page": 3,
-      "collection_id": "6492f5345e6069037042be81:categories:Pôsters:/posters",
-      "sort": "sales",
-      "autoplay": 3000,
-      "link": "Pôsters"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
       "sort": "sales",
       "collection_id": "6492f5355e6069037042be83:categories:Quadros:/quadros",
       "autoplay": 3000,
@@ -157,40 +179,20 @@
       "type": "collection-shelf",
       "shuffle": false,
       "limit": 12,
+      "page": 3,
+      "collection_id": "6492f5345e6069037042be81:categories:Pôsters:/posters",
+      "sort": "sales",
+      "autoplay": 3000,
+      "link": "Pôsters"
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
       "page": 1,
       "collection_id": "6492f50d5e6069037042be0a:categories:Copo Bucks:/copo-bucks",
       "autoplay": 3000,
       "title": "Copo Bucks"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
-      "collection_id": "655c74822cd6b65959b14e82:categories:Planners:/acessorios/planners",
-      "sort": "sales",
-      "link": "Planners com e sem data",
-      "autoplay": 3000
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
-      "collection_id": "65c8c3f687ab487fbfb30864:categories:Planners de Estudos:/planners-de-estudos",
-      "sort": "sales",
-      "title": "Planners de Estudos",
-      "autoplay": 3000
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 1,
-      "collection_id": "655c73342cd6b65959b14e04:categories:Jogos:/jogos",
-      "sort": "sales",
-      "title": "Aprenda se divertindo",
-      "autoplay": 3000
     },
     {
       "type": "banners-grid",

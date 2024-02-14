@@ -12,9 +12,6 @@
       "enabled": false
     },
     {
-      "type": "page-title"
-    },
-    {
       "type": "breadcrumbs",
       "enabled": true
     },

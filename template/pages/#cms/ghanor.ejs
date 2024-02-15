@@ -1,0 +1,16 @@
+<%
+const ghanorPage = _.cms('ghanor')
+const { slug, content } = await _.resolveRoute()
+_.breadcrumbs = [{
+  name: ghanorPage.title,
+  link: `/ghanor`
+}, {
+  name: content.title,
+  link: `/ghanor/${slug}`
+}]
+//console.log(content)
+%>
+
+<%- await include('@/view') %>
+
+

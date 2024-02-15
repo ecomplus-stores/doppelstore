@@ -205,8 +205,13 @@ export default options => {
             required: false,
             widget: 'list',
             types: [
-              ...options.sections
-            ]
+              {
+                label: 'Título Página',
+                required: false,
+                name: 'title',
+                widget: 'string'
+              }
+            ].concat(options.sections)
           }
         ]
       }

@@ -1,0 +1,29 @@
+{
+  "title": "ghanor doppel",
+  "sections": [
+    {
+      "type": "responsive-banner",
+      "img": "https://cdn.ghanor.com.br/project-images/1/8e05b90c-db18-4cdc-8a4f-7670f986151b",
+      "full_banner_responsive": true
+    },
+    {
+      "type": "custom-content",
+      "markdown": "<!--StartFragment-->\n\n**Late pledge iniciado! Obrigado a todos que\\\napoiam e continuam nos apoiando a expandir este universo.\\\nGhanor continua na Doppel Store!**\n\n<!--EndFragment-->"
+    },
+    {
+      "type": "summary_ghanor",
+      "end": "2024-05-01T02:59:08.121Z",
+      "meta": 500000,
+      "enable_share": true,
+      "img": "https://ecoms1.com/4566/imgs/big/@v3/1700557131533-1.jpg.avif"
+    },
+    {
+      "type": "product_list",
+      "products": [
+        "653016232cd6b659597ff9c7",
+        "6540d26c2cd6b65959916dd5",
+        "6540d2912cd6b65959916dfb"
+      ]
+    }
+  ]
+}

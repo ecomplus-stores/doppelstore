@@ -17,7 +17,8 @@ module.exports = () => ({
       './html/CartQuickview.html': path.resolve(__dirname, 'template/js/custom-js/components/CartQuickview.html'),
       './html/APrices.html': path.resolve(__dirname, 'template/js/custom-js/components/APrices.html'),
       './js/APrices.js': path.resolve(__dirname, 'template/js/custom-js/components/APrices.js'),
-      './js/TheCart.js': path.resolve(__dirname, 'template/js/custom-js/components/TheCart.js')
+      './js/TheCart.js': path.resolve(__dirname, 'template/js/custom-js/components/TheCart.js'),
+      './js/DiscountApplier.js': path.resolve(__dirname, 'template/js/custom-js/components/DiscountApplier.js'),
     }
   }
 })

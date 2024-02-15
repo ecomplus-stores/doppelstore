@@ -138,6 +138,7 @@ export default options => {
     ]
   }
   ])
+  console.log(options.sections)
   if (Array.isArray(options.sections) && options.sections.length && options.sections[0] && options.sections[0].name === 'responsive-banner') {
     options.sections.forEach(element => {
       if ((element.name === 'banners-grid') || (element.name === 'responsive-banner') || (element.name === 'banner-slider')) {
@@ -191,10 +192,10 @@ export default options => {
       getExtraPages(options),
       getWidgets(options),
       {
-        name: 'ghanor_pages',        
+        name: 'ghanor-pages',        
         label: 'Lps ghanor',
         description: 'Configure any páginas para ghanor',
-        folder: `${options.baseDir}content/ghanor_pages`,
+        folder: `${options.baseDir}content/ghanor`,
         extension: 'json',
         create: true,
         slug: '{{slug}}',

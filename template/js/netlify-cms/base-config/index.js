@@ -201,18 +201,18 @@ export default options => {
         slug: '{{slug}}',
         fields: [
           {
+            label: "Título da Página",
+            name: "title",
+            widget: "string"          
+          }, 
+          {
             label: 'Seções',
             name: 'sections',
             required: false,
             widget: 'list',
             types: [
-              {
-                label: 'Título Página',
-                required: false,
-                name: 'title',
-                widget: 'string'
-              }
-            ].concat(options.sections)
+              ...options.sections
+            ]
           }
         ]
       }

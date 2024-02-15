@@ -8,9 +8,136 @@ import getWidgets from "@ecomplus/storefront-template/template/js/netlify-cms/ba
 
 //CUSTOM MODULES
 
-
 export default options => {
-  options.sections = getSections(options)
+  options.sections = getSections(options).concat([
+    {
+        label: "Compartilhar projeto",
+        name: "share",
+        widget: "object",
+        icon: "https://api.iconify.design/bi:grid.svg",
+        fields: [
+            {
+                label: "Link de compartilhamento",
+                name: "share_link",
+                widget: "string",
+                required: false
+            },
+            {
+              label: "Habilitar compartilhamento",
+              name: "share_link_enable",
+              widget: "boolean",
+              required: false
+          }
+        ]
+    },
+    {
+      label: "Lista lateral de produtos com apoio",
+      name: "product_card_apoio",
+      widget: "object",
+      fields: [
+          {
+              label: "Lista de selecionáveis",
+              name: "product_id_apoio",
+              required: false,
+              widget: "list",
+              fields: [
+                  {
+                    label: 'Produtos',
+                    name: 'products',
+                    widget: 'list',
+                    field: {
+                      label: 'SKU do produto',
+                      name: 'product_id',
+                      widget: 'select',
+                      options: options.state.routes
+                        .filter(({ sku }) => typeof sku === 'string')
+                        .map(({ _id, sku }) => ({
+                          label: sku,
+                          value: _id
+                        }))
+                    }
+                  }
+              ]
+          }
+      ]
+  },
+  {
+    label: 'Lista de Produtos (Vitrine Personalizada)',
+    name: 'product_list',
+    widget: 'object',
+    fields: [
+      {
+        label: 'Produtos',
+        name: 'products',
+        required: false,
+        widget: 'list',
+        field: {
+          label: 'SKU do produto',
+          name: 'product_id',
+          widget: 'select',
+          options: options.state.routes
+            .filter(({ sku }) => typeof sku === 'string')
+            .map(({ _id, sku }) => ({
+              label: sku,
+              value: _id
+            }))
+        }
+      },
+      {
+        label: 'Título',
+        required: false,
+        name: 'title',
+        widget: 'string'
+      },
+      {
+        label: 'Link de destino',
+        required: false,
+        name: 'link',
+        widget: 'string'
+      }
+    ]
+  },
+  {
+    label: 'Bloco Imagem/Video e Apoio Total',
+    name: 'summary_ghanor',
+    widget: 'object',
+    fields: [
+      {
+        label: "Imagem do bloco",
+        name: "img",
+        widget: "image",
+        required: false
+      },
+      {
+        label: "Video do bloco",
+        name: "link",
+        widget: "string",
+        required: false
+      },
+      {
+        label: 'Meta',
+        required: false,
+        name: 'meta',
+        widget: 'number'
+      },
+      {
+        label: 'Data de encerramento',
+        required: false,
+        name: 'end',
+        widget: 'datetime',
+        default: '',
+        date_format: 'DD/MM/YYYY',
+        time_format: 'HH:mm'
+      },
+      {
+        label: 'Habilitar compartilhamento',
+        required: false,
+        name: 'enable_share',
+        widget: 'boolean'
+      }
+    ]
+  }
+  ])
   if (Array.isArray(options.sections) && options.sections.length && options.sections[0] && options.sections[0].name === 'responsive-banner') {
     options.sections.forEach(element => {
       if ((element.name === 'banners-grid') || (element.name === 'responsive-banner') || (element.name === 'banner-slider')) {
@@ -62,7 +189,27 @@ export default options => {
       getPages(options),
       getBlogPosts(options),
       getExtraPages(options),
-      getWidgets(options)
+      getWidgets(options),
+      {
+        name: 'ghanor_pages',        
+        label: 'Lps ghanor',
+        description: 'Configure any páginas para ghanor',
+        folder: `${options.baseDir}content/ghanor_pages`,
+        extension: 'json',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          {
+            label: 'Seções',
+            name: 'sections',
+            required: false,
+            widget: 'list',
+            types: [
+              ...options.sections
+            ]
+          }
+        ]
+      }
     ]
   }
 }

@@ -190,32 +190,7 @@ export default options => {
       getPages(options),
       getBlogPosts(options),
       getExtraPages(options),
-      getWidgets(options),
-      {
-        name: 'ghanor-pages',        
-        label: 'Lps ghanor',
-        description: 'Configure any páginas para ghanor',
-        folder: `${options.baseDir}content/ghanor`,
-        extension: 'json',
-        create: true,
-        slug: '{{slug}}',
-        fields: [
-          {
-            label: "Título da Página",
-            name: "title",
-            widget: "string"          
-          }, 
-          {
-            label: 'Seções',
-            name: 'sections',
-            required: false,
-            widget: 'list',
-            types: [
-              ...options.sections
-            ]
-          }
-        ]
-      }
+      getWidgets(options)
     ]
   }
 }

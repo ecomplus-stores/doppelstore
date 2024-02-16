@@ -8,7 +8,15 @@ _.breadcrumbs = [{
   name: content.title,
   link: `/ghanor/${slug}`
 }]
-//console.log(content)
+if (!content.sections || !content.sections.length) {
+  content.sections = [
+    { type: 'breadcrumbs' },
+    { type: 'page-title' },
+    { type: 'ghanor-pages' }
+  ]
+} else if (!content.sections.find(({ type }) => type === 'ghanor-pages')) {
+  content.sections.push({ type: 'ghanor-pages' })
+}
 %>
 
 <%- await include('@/view') %>

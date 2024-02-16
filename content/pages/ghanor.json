@@ -11,6 +11,13 @@
       "markdown": "<!--StartFragment-->\n\n**Late pledge iniciado! Obrigado a todos que\\\napoiam e nos ajudam a expandir este universo.\\\nGhanor continua na Doppel Store**\n\n<!--EndFragment-->"
     },
     {
+      "type": "summary_ghanor",
+      "meta": 100,
+      "img": "https://cdn.ghanor.com.br/project-images/1/6b7b3fee-ac7c-4de3-977f-3a10e50a7ceb",
+      "enable_share": true,
+      "end:": "2024-02-20T07:18:08.923Z"
+    },
+    {
       "type": "extra-page",
       "enabled": true
     }

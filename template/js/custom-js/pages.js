@@ -3,6 +3,7 @@ import EcomSearch from '@ecomplus/search-engine'
 import Vue from 'vue'
 import ecomPassport from '@ecomplus/passport-client'
 import AffiliateLink from './components/AffiliateLink.vue'
+import GhanorSummary from './components/GhanorSummary.vue'
 import './cart-progress'
 import './check-subscription-cart'
 
@@ -10,6 +11,11 @@ const affiliateLinkDiv = document.getElementById('affiliate-link')
 if (affiliateLinkDiv) {
   new Vue(AffiliateLink).$mount(affiliateLinkDiv)
 }
+
+/* const ghanorDiv = document.getElementById('ghanor-block')
+if (ghanorDiv) {
+  new Vue(GhanorSummary).$mount(ghanorDiv)
+} */
 
 ecomPassport.on('login', () => {
   document.getElementById('user-greetings').innerText = 'Olá, ' +

@@ -1,0 +1,11 @@
+{
+  "title": "Ghanor",
+  "meta_title": "Ghanor",
+  "meta_description": "Ghanor",
+  "sections": [
+    {
+      "type": "ghanor",
+      "enabled": true
+    } 
+  ]
+}

@@ -8,6 +8,7 @@ _.breadcrumbs = [{
   name: content.title,
   link: `/ghanor/${slug}`
 }]
+console.log(content)
 if (!content.sections || !content.sections.length) {
   content.sections = [
     { type: 'breadcrumbs' },

@@ -12,10 +12,10 @@ if (affiliateLinkDiv) {
   new Vue(AffiliateLink).$mount(affiliateLinkDiv)
 }
 
-const ghanorDiv = document.getElementById('ghanor-block')
+/* const ghanorDiv = document.getElementById('ghanor-block')
 if (ghanorDiv) {
   new Vue(GhanorSummary).$mount(ghanorDiv)
-}
+} */
 
 ecomPassport.on('login', () => {
   document.getElementById('user-greetings').innerText = 'Olá, ' +

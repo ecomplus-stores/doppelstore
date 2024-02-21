@@ -1,0 +1,73 @@
+<% 
+    if (Array.isArray(opt.products) && opt.products.length) {
+        const search = new _.EcomSearch()
+        await search.setProductIds(opt.products).fetch(true)
+        const items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+        items.sort((a, b) => {
+            if (opt.products.indexOf(a._id) > opt.products.indexOf(b._id)) {
+                return 1
+            }
+            return -1
+        })
+    %>
+
+<section
+    class="products-carousel"
+    data-size="<%= items.length %>"
+  >
+  <% if (opt.title) { %>
+    <h4 class="products-carousel__title">
+      <% if (opt.link) { %>
+        <a href="<%= opt.link %>">
+          <%= opt.title %>
+        </a>
+      <% } else { %>
+        <span>
+          <%= opt.title %>
+        </span>
+      <% } %>
+    </h4>
+  <% } %>
+    <div
+      class="glide"
+      data-wait-mutation="true"
+      data-autoplay="<%= opt.autoplay %>"
+      data-per-view="4"
+      data-per-view-md="3"
+      data-per-view-sm="2"
+    >
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides products-carousel__list">
+          <% for (let i = 0; i < items.length; i++) { %>
+            <li class="glide__slide products-carousel__item">
+              <%- await include('@/sections/inc/product-item-apoio', {
+                _, opt: { item: items[i] }
+              }) %>
+            </li>
+          <% } %>
+        </ul>
+
+        <div
+          class="glide__arrows glide__arrows--outer"
+          data-glide-el="controls"
+        >
+          <button
+            class="btn glide__arrow glide__arrow--left"
+            data-glide-dir="<"
+            aria-label="<%= _.dictionary('previous') %>"
+          >
+            <i class="i-chevron-left"></i>
+          </button>
+          <button
+            class="btn glide__arrow glide__arrow--right"
+            data-glide-dir=">"
+            aria-label="<%= _.dictionary('next') %>"
+          >
+            <i class="i-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+<% } %>
+  

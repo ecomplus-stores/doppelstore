@@ -63,7 +63,7 @@ export default options => {
   },
   {
     label: 'Lista de Produtos (Vitrine Personalizada)',
-    name: 'product_list',
+    name: 'product-list',
     widget: 'object',
     fields: [
       {
@@ -71,17 +71,76 @@ export default options => {
         name: 'products',
         required: false,
         widget: 'list',
-        field: {
-          label: 'SKU do produto',
-          name: 'product_id',
-          widget: 'select',
-          options: options.state.routes
-            .filter(({ sku }) => typeof sku === 'string')
-            .map(({ _id, sku }) => ({
-              label: sku,
-              value: _id
-            }))
-        }
+        fields: [
+          {
+            label: 'SKU do produto',
+            name: 'product_id',
+            widget: 'select',
+            options: options.state.routes
+              .filter(({ sku }) => typeof sku === 'string')
+              .map(({ _id, sku }) => ({
+                label: sku,
+                value: _id
+              }))
+          },
+          {
+            label: 'Data de encerramento',
+            required: false,
+            name: 'end',
+            widget: 'datetime',
+            default: '',
+            date_format: 'DD/MM/YYYY',
+            time_format: 'HH:mm'
+          }
+       ]
+      },
+      {
+        label: 'Título',
+        required: false,
+        name: 'title',
+        widget: 'string'
+      },
+      {
+        label: 'Link de destino',
+        required: false,
+        name: 'link',
+        widget: 'string'
+      }
+    ]
+  },
+  {
+    label: 'Lista de Produtos do Apoio',
+    name: 'product-list-apoio',
+    widget: 'object',
+    fields: [
+      {
+        label: 'Produtos',
+        name: 'products',
+        required: false,
+        widget: 'list',
+        fields: [
+          {
+            label: 'SKU do produto',
+            name: 'product_id',
+            widget: 'select',
+            options: options.state.routes
+              .filter(({ sku }) => typeof sku === 'string')
+              .map(({ _id, sku }) => ({
+                label: sku,
+                value: _id
+              }))
+          },
+          {
+            label: 'Data de encerramento',
+            hint: 'Será considerado encerramento essa data ou de promoção',
+            required: false,
+            name: 'end',
+            widget: 'datetime',
+            default: '',
+            date_format: 'DD/MM/YYYY',
+            time_format: 'HH:mm'
+          }
+       ]
       },
       {
         label: 'Título',

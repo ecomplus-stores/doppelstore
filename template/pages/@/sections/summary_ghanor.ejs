@@ -33,8 +33,10 @@ if ((img || link) && meta > 0) {
         </div>
       </div>
       <p><%= percent %>%</p>
-      <div class="sc-49b423c2-2 jCEwOp"><div><span color="white" class="sc-de075f52-0 diRWUO"> <%= quantity %></span><span color="white" class="sc-de075f52-1 bdEowS">Apoiadores</span></div><div class="sc-49b423c2-3 jFWOvG"></div><span color="white" class="sc-de075f52-0 diRWUO"> <%= _.ecomUtils.formatDate(end) %></span></div>
-
+      <% if (quantity && end) { %>
+        <%- await include('@/sections/support-with-data', { _, opt: { quantity, end } }) %> 
+      <% } %>
+      
       <% if (enable_share) { %>
         <%- await include('@/sections/share', { _, opt: { enable_share } }) %>
       <% } %>

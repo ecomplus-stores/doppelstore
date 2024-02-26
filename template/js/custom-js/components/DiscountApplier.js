@@ -47,12 +47,6 @@ const addFreebieItems = (ecomCart, productIds) => {
           .catch(console.error)
       }
     })
-  } else {
-    ecomCart.data.items.forEach(({ _id, flags }) => {
-      if (flags && flags.includes('freebie')) {
-        ecomCart.removeItem(_id)
-      }
-    })
   }
 }
 

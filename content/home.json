@@ -3,6 +3,17 @@
   "meta_description": "",
   "sections": [
     {
+      "autoplay": 2000,
+      "page": 1,
+      "title": "CAMISETAS - SÓ ATÉ DIA 29",
+      "shuffle": false,
+      "type": "collection-shelf",
+      "link": "https://doppelstore.com.br/camisetas",
+      "limit": 12,
+      "collection_id": "6492f5055e6069037042bdf1:categories:Camisetas:/camisetas",
+      "sort": "sales"
+    },
+    {
       "type": "banner-slider",
       "autoplay": 9000,
       "full_width": true,
@@ -29,7 +40,7 @@
           "link": "https://www.doppelstore.com.br/acessorios/planners"
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "type": "responsive-banner",
@@ -37,7 +48,7 @@
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.jpg",
       "link": "",
       "full_banner_responsive": true,
-      "enabled": false
+      "enabled": true
     },
     {
       "type": "info-bar",
@@ -196,7 +207,7 @@
     },
     {
       "type": "banners-grid",
-      "enabled": false,
+      "enabled": true,
       "banners": [
         {
           "img": "/img/uploads/banner-mosaico-1.webp",
@@ -219,7 +230,7 @@
     },
     {
       "type": "banners-grid",
-      "enabled": false,
+      "enabled": true,
       "banners": [
         {
           "img": "/img/uploads/banner-mosaico-10.webp",

@@ -3,17 +3,6 @@
   "meta_description": "",
   "sections": [
     {
-      "autoplay": 2000,
-      "page": 1,
-      "title": "CAMISETAS - SÓ ATÉ DIA 29",
-      "shuffle": false,
-      "type": "collection-shelf",
-      "link": "https://doppelstore.com.br/camisetas",
-      "limit": 12,
-      "collection_id": "6492f5055e6069037042bdf1:categories:Camisetas:/camisetas",
-      "sort": "sales"
-    },
-    {
       "type": "banner-slider",
       "autoplay": 9000,
       "full_width": true,
@@ -53,6 +42,17 @@
     {
       "type": "info-bar",
       "enabled": true
+    },
+    {
+      "autoplay": 2000,
+      "page": 1,
+      "title": "CAMISETAS - SÓ ATÉ DIA 29",
+      "shuffle": false,
+      "type": "collection-shelf",
+      "link": "https://doppelstore.com.br/camisetas",
+      "limit": 12,
+      "collection_id": "6492f5055e6069037042bdf1:categories:Camisetas:/camisetas",
+      "sort": "sales"
     },
     {
       "type": "collection-shelf",

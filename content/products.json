@@ -4,8 +4,8 @@
       "type": "responsive-banner",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg",
-      "link": "",
-      "enabled": false
+      "link": "https://doppelstore.com.br/camisetas",
+      "enabled": true
     },
     {
       "type": "breadcrumbs",

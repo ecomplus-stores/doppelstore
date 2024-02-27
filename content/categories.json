@@ -6,10 +6,10 @@
     },
     {
       "type": "responsive-banner",
-      "link": "",
+      "link": "https://doppelstore.com.br/camisetas",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg",
-      "enabled": false
+      "enabled": true
     },
     {
       "type": "breadcrumbs",

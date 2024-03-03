@@ -1,19 +1,45 @@
 <% 
     if (Array.isArray(opt.products) && opt.products.length) {
         const search = new _.EcomSearch()
-        await search.setProductIds(opt.products).fetch(true)
-        const items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+        const productsIds = opt.products.map(({ product_id }) => product_id)
+        await search.setProductIds(productsIds).fetch(true)
+        let items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+        const promises = []
+        const { subscriptions } = _
+        let res
+        for (let index = 0; index < items.length; index++) {
+          promises.push(_.ecomClient.store({
+              url: `/products/${items[index]._id}.json`
+          }))
+        }
+        res = (await Promise.all(promises))
+        .map(({data}) => {
+          const item = items.find(({_id}) => _id === data._id)
+            return {
+                ...item,
+                ...data
+            }
+        })
+        items = res.map(item => {
+          const productConfig = opt.products.find(({product_id}) => product_id === item._id)
+          if (productConfig && productConfig.product_id) {
+            item['end'] = productConfig.end
+          }
+          return item
+        })
         items.sort((a, b) => {
-            if (opt.products.indexOf(a._id) > opt.products.indexOf(b._id)) {
+            if (productsIds.indexOf(a._id) > productsIds.indexOf(b._id)) {
                 return 1
             }
             return -1
         })
+
     %>
 
 <section
-    class="products-carousel"
+    class="products-carousel apoio aside"
     data-size="<%= items.length %>"
+
   >
   <% if (opt.title) { %>
     <h4 class="products-carousel__title">
@@ -28,46 +54,28 @@
       <% } %>
     </h4>
   <% } %>
-    <div
-      class="glide"
-      data-wait-mutation="true"
-      data-autoplay="<%= opt.autoplay %>"
-      data-per-view="4"
-      data-per-view-md="3"
-      data-per-view-sm="2"
-    >
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides products-carousel__list">
-          <% for (let i = 0; i < items.length; i++) { %>
-            <li class="glide__slide products-carousel__item">
-              <%- await include('@/sections/inc/product-item-apoio', {
+  <article class="search-engine__retail">
+    <div class="row">
+       <% for (let i = 0; i < items.length; i++) { %>
+           <div class="col-12 col-md-4 col-lg-4">
+            <%- await include('@/sections/inc/product-item-apoio', {
                 _, opt: { item: items[i] }
-              }) %>
-            </li>
-          <% } %>
-        </ul>
-
-        <div
-          class="glide__arrows glide__arrows--outer"
-          data-glide-el="controls"
-        >
-          <button
-            class="btn glide__arrow glide__arrow--left"
-            data-glide-dir="<"
-            aria-label="<%= _.dictionary('previous') %>"
-          >
-            <i class="i-chevron-left"></i>
-          </button>
-          <button
-            class="btn glide__arrow glide__arrow--right"
-            data-glide-dir=">"
-            aria-label="<%= _.dictionary('next') %>"
-          >
-            <i class="i-chevron-right"></i>
-          </button>
-        </div>
-      </div>
+            }) %>
+           </div>
+       <% } %>
     </div>
+  </article>
   </section>
 <% } %>
+<script>
+  var apoioElement = document.querySelector('.apoio.aside');
+  var extraPageElement = document.querySelector('.extra-page');
+
+// Check if both elements exist on the page
+if (apoioElement && extraPageElement) {
+    // Append the apoio element inside the extra-page element
+    extraPageElement.appendChild(apoioElement);
+    extraPageElement.classList.add('aside-grid')
+}
+</script>
   

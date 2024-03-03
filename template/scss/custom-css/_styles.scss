@@ -1389,8 +1389,69 @@ div.backdrop {
 }
 
 .page--pages\/ghanor {
+  @media(min-width: 992px) {
+    .aside-grid {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr;
+      .apoio.aside {
+        .col-12.col-lg-4.col-md-4 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+      .products-carousel {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+        margin: var(--spacer-2) auto !important;
+      }
+    }
+  }
+  @media(max-width: 991px) {
+    .aside-grid {
+      display: flex;
+      flex-direction: column;
+      .products-carousel {
+        order: -1;
+      }
+    }
+  }
+  
   .sections > .responsive-baner .banner {
     display: flex;
     justify-content: center;
+  }
+  .apoio {
+    .sc-49b423c2-2.jCEwOp, .description-product, .apoio-link, div[data-slot="rating"] {
+      padding-left: var(--spacer-3);
+      padding-right: var(--spacer-3);
+    }
+    .row {
+      justify-content: center;
+    }
+    .prices__value, .product-card__name, .apoio-link a {
+      font-size: 25px;
+    }
+    .jCEwOp {
+      margin-top: 20px !important;
+      margin-bottom: 20px !important;
+    }
+    .banner {
+      width: 100%;
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    .product-card__pictures {
+      aspect-ratio: unset !important;
+      height: auto;
+      width: 100%;
+    }
+    .container-apoio {
+      background-color: #394359;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding: 10px;
+    }
   }
 }

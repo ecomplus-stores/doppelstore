@@ -30,84 +30,6 @@ export default options => {
           }
         ]
     },
-    {
-      label: "Lista lateral de produtos com apoio",
-      name: "product_card_apoio",
-      widget: "object",
-      fields: [
-          {
-              label: "Lista de selecionáveis",
-              name: "product_id_apoio",
-              required: false,
-              widget: "list",
-              fields: [
-                  {
-                    label: 'Produtos',
-                    name: 'products',
-                    widget: 'list',
-                    field: {
-                      label: 'SKU do produto',
-                      name: 'product_id',
-                      widget: 'select',
-                      options: options.state.routes
-                        .filter(({ sku }) => typeof sku === 'string')
-                        .map(({ _id, sku }) => ({
-                          label: sku,
-                          value: _id
-                        }))
-                    }
-                  }
-              ]
-          }
-      ]
-  },
-  {
-    label: 'Lista de Produtos (Vitrine Personalizada)',
-    name: 'product-list',
-    widget: 'object',
-    fields: [
-      {
-        label: 'Produtos',
-        name: 'products',
-        required: false,
-        widget: 'list',
-        fields: [
-          {
-            label: 'SKU do produto',
-            name: 'product_id',
-            widget: 'select',
-            options: options.state.routes
-              .filter(({ sku }) => typeof sku === 'string')
-              .map(({ _id, sku }) => ({
-                label: sku,
-                value: _id
-              }))
-          },
-          {
-            label: 'Data de encerramento',
-            required: false,
-            name: 'end',
-            widget: 'datetime',
-            default: '',
-            date_format: 'DD/MM/YYYY',
-            time_format: 'HH:mm'
-          }
-       ]
-      },
-      {
-        label: 'Título',
-        required: false,
-        name: 'title',
-        widget: 'string'
-      },
-      {
-        label: 'Link de destino',
-        required: false,
-        name: 'link',
-        widget: 'string'
-      }
-    ]
-  },
   {
     label: 'Lista de Produtos do Apoio',
     name: 'product-list-apoio',
@@ -139,6 +61,12 @@ export default options => {
             default: '',
             date_format: 'DD/MM/YYYY',
             time_format: 'HH:mm'
+          },
+          {
+            label: 'Descrição produto',
+            required: false,
+            name: "html",
+            widget: "markdown",
           }
        ]
       },

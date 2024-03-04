@@ -6,24 +6,11 @@
         let items = search.getItems().filter(item => _.ecomUtils.inStock(item))
         const promises = []
         const { subscriptions } = _
-        let res
-        for (let index = 0; index < items.length; index++) {
-          promises.push(_.ecomClient.store({
-              url: `/products/${items[index]._id}.json`
-          }))
-        }
-        res = (await Promise.all(promises))
-        .map(({data}) => {
-          const item = items.find(({_id}) => _id === data._id)
-            return {
-                ...item,
-                ...data
-            }
-        })
-        items = res.map(item => {
+        items = items.map(item => {
           const productConfig = opt.products.find(({product_id}) => product_id === item._id)
           if (productConfig && productConfig.product_id) {
             item['end'] = productConfig.end
+            item['html'] = productConfig.html
           }
           return item
         })

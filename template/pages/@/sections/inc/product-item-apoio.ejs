@@ -1,10 +1,11 @@
 <%
 const stamps = _.cms('stamps') || {}
 const itemData = {}
-let itemDataFields = ['_id', 'sku', 'slug', 'quantity', 'body_html', 'end']
+let itemDataFields = ['_id', 'sku', 'slug', 'quantity', 'end']
 if (Array.isArray(_.itemDataFields)) {
   itemDataFields = itemDataFields.concat(_.itemDataFields)
 }
+console.log(opt.item.html)
 itemDataFields.forEach(field => itemData[field] = opt.item[field])
 itemData.name = _.ecomUtils.name(opt.item)
 itemData.price = _.ecomUtils.price(opt.item)
@@ -101,11 +102,12 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
           <%= itemData.name %>
         </h3>
       </div> 
-      <div class="description-product container">
-        <div class="html-clearfix">
-          <%- itemData.body_html %>
-        </div>
-      </div> 
+      <% if (opt && opt.item && opt.item.html) { %>
+        <div class="description-product container">
+          <%- await include('@/sections/inc/md-content', { _, opt: {markdown: opt.item.html} }) %>
+        </div> 
+      <% } %>
+      
       <div class="product-card__prices prices">
         <strong class="prices__value">
           <% if (opt.item.available && opt.item.visible && _.ecomUtils.inStock(opt.item)) { %>

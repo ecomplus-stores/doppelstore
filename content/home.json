@@ -3,10 +3,6 @@
   "meta_description": "",
   "sections": [
     {
-      "type": "custom-html",
-      "html": "<script>(function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = \"//www.tickcounter.com/static/js/loader.js\"; pjs.parentNode.insertBefore(js, pjs); }(document, \"script\", \"tickcounter-sdk\"));</script><a data-type=\"countdown\" data-id=\"4952361\" class=\"tickcounter\" style=\"display:block; left:0; width:80%; height:0; position:relative; padding-bottom:8%; margin:0 auto;\" title=\"O FIM DO LOTE DAS CAMISETAS TERMINA EM\" href=\"//www.tickcounter.com/\">O LOTE DAS CAMISETAS TERMINA EM</a>"
-    },
-    {
       "type": "banner-slider",
       "autoplay": 9000,
       "full_width": true,
@@ -33,7 +29,7 @@
           "link": "https://www.doppelstore.com.br/acessorios/planners"
         }
       ],
-      "enabled": false
+      "enabled": true
     },
     {
       "type": "responsive-banner",
@@ -41,22 +37,11 @@
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.jpg",
       "link": "",
       "full_banner_responsive": true,
-      "enabled": true
+      "enabled": false
     },
     {
       "type": "info-bar",
       "enabled": true
-    },
-    {
-      "autoplay": 2000,
-      "page": 1,
-      "title": "CAMISETAS - SÓ ATÉ DIA 29",
-      "shuffle": false,
-      "type": "collection-shelf",
-      "link": "https://doppelstore.com.br/camisetas",
-      "limit": 12,
-      "collection_id": "6492f5055e6069037042bdf1:categories:Camisetas:/camisetas",
-      "sort": "sales"
     },
     {
       "type": "collection-shelf",
@@ -211,7 +196,7 @@
     },
     {
       "type": "banners-grid",
-      "enabled": true,
+      "enabled": false,
       "banners": [
         {
           "img": "/img/uploads/banner-mosaico-1.webp",
@@ -234,7 +219,7 @@
     },
     {
       "type": "banners-grid",
-      "enabled": true,
+      "enabled": false,
       "banners": [
         {
           "img": "/img/uploads/banner-mosaico-10.webp",

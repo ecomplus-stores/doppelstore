@@ -67,6 +67,24 @@ export default options => {
             required: false,
             name: "html",
             widget: "markdown",
+          },
+          {
+            label: 'Link de destino (opcional)',
+            required: false,
+            name: 'link',
+            widget: 'string'
+          },
+          {
+            label: 'Desativar Checkout Único?',
+            required: false,
+            name: 'disable_checkout',
+            widget: 'boolean'
+          },
+          {
+            label: 'Label do Botão',
+            required: false,
+            name: 'label',
+            widget: 'string'
           }
        ]
       },
@@ -74,12 +92,6 @@ export default options => {
         label: 'Título',
         required: false,
         name: 'title',
-        widget: 'string'
-      },
-      {
-        label: 'Link de destino',
-        required: false,
-        name: 'link',
         widget: 'string'
       }
     ]

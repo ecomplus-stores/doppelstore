@@ -11,6 +11,9 @@
           if (productConfig && productConfig.product_id) {
             item['end'] = productConfig.end
             item['html'] = productConfig.html
+            item['label'] = productConfig.label
+            item['link'] = productConfig.link
+            item['disable_checkout'] = productConfig.disable_checkout
           }
           return item
         })
@@ -30,15 +33,9 @@
   >
   <% if (opt.title) { %>
     <h4 class="products-carousel__title">
-      <% if (opt.link) { %>
-        <a href="<%= opt.link %>">
-          <%= opt.title %>
-        </a>
-      <% } else { %>
-        <span>
-          <%= opt.title %>
-        </span>
-      <% } %>
+      <span>
+        <%= opt.title %>
+      </span>>
     </h4>
   <% } %>
   <article class="search-engine__retail">

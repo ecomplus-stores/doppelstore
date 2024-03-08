@@ -39,93 +39,205 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
   stampsList = stamps.stamps_list
 }
 
+const url = itemData.link
+  ? itemData.link 
+  : `/app/#/lp/${itemData._id}/checkout`
+
 %>
-
-<article class="apoio-item" data-product="<%= JSON.stringify(itemData) %>">
-  <div
-    class="apoio-card"
-    data-product-id="<%= itemData._id %>"
-    data-sku="<%= itemData.sku %>"
-    <% if (!opt.static) { %>
-      data-to-render="true"
-    <% } %>
-  >
-    <!--
-      `ProductCard` should be rendered (hydrated) here:
-      https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/ProductCard.html
-    -->
-    <div data-slot="stamps">
-      <% if (Array.isArray(stampsList) && stampsList.length) { %>
-        <div class="product-card__stamps">
-          <% for (stamp of stampsList) { 
-            if (stamp.img && (!stamp.skus || !stamp.skus.length || stamp.skus.includes(itemData.sku))) {
-              %>
-              <span class="product-card__stamps-<%= stamp.id && stamp.id.toLowerCase().replace(/\s/g, '-') %>">
-                <img src="<%= stamp.img %>" alt="<%= stamp.id %>">
-              </span>
-            <% } %>
-          <% } %>
-        </div>
+<% if (!item.disable_checkout) { %>
+  <article class="apoio-item" data-product="<%= JSON.stringify(itemData) %>">
+    <div
+      class="apoio-card"
+      data-product-id="<%= itemData._id %>"
+      data-sku="<%= itemData.sku %>"
+      <% if (!opt.static) { %>
+        data-to-render="true"
       <% } %>
-    </div>
-
-    <a
-      href="/<%= itemData.slug %>"
-      class="product-card__link"
-      title="<%= itemData.name %>"
     >
-      <!-- Custom code on product card top wrapped by link:
-      <span data-slot="header">
-      </span>
+      <!--
+        `ProductCard` should be rendered (hydrated) here:
+        https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/ProductCard.html
       -->
-
-      <div class="product-card__pictures">
-        <!-- Picture(s) will be inserted and loaded dynamically within `ProductCard` -->
-        <% if (imgObj) { %>
-          <picture class="banner">
-            <img
-              data-src="<%= imgObj.url %>"
-              alt="<%= imgObj.alt %>"
-              class="lozad-delay fade"
-              <% if (imgObj.url.startsWith('https://ecoms1.com/')) { %>
-                crossorigin="anonymous"
+      <div data-slot="stamps">
+        <% if (Array.isArray(stampsList) && stampsList.length) { %>
+          <div class="product-card__stamps">
+            <% for (stamp of stampsList) { 
+              if (stamp.img && (!stamp.skus || !stamp.skus.length || stamp.skus.includes(itemData.sku))) {
+                %>
+                <span class="product-card__stamps-<%= stamp.id && stamp.id.toLowerCase().replace(/\s/g, '-') %>">
+                  <img src="<%= stamp.img %>" alt="<%= stamp.id %>">
+                </span>
               <% } %>
-            >
-          </picture>
+            <% } %>
+          </div>
         <% } %>
       </div>
-    </a>
+  
+      <a
+        href="/<%= itemData.slug %>"
+        class="product-card__link"
+        title="<%= itemData.name %>"
+      >
+        <!-- Custom code on product card top wrapped by link:
+        <span data-slot="header">
+        </span>
+        -->
+  
+        <div class="product-card__pictures">
+          <!-- Picture(s) will be inserted and loaded dynamically within `ProductCard` -->
+          <% if (imgObj) { %>
+            <picture class="banner">
+              <img
+                data-src="<%= imgObj.url %>"
+                alt="<%= imgObj.alt %>"
+                class="lozad-delay fade"
+                <% if (imgObj.url.startsWith('https://ecoms1.com/')) { %>
+                  crossorigin="anonymous"
+                <% } %>
+              >
+            </picture>
+          <% } %>
+        </div>
+      </a>
+  
+      <div class="container-apoio">
+        <div data-slot="title">
+          <h3 class="product-card__name">
+            <%= itemData.name %>
+          </h3>
+        </div> 
+        <% if (opt && opt.item && opt.item.html) { %>
+          <div class="description-product container">
+            <%- await include('@/sections/inc/md-content', { _, opt: {markdown: opt.item.html} }) %>
+          </div> 
+        <% } %>
+        
+        <div class="product-card__prices prices">
+          <strong class="prices__value">
+            <% if (opt.item.available && opt.item.visible && _.ecomUtils.inStock(opt.item)) { %>
+              <%= _.ecomUtils.formatMoney(itemData.price) %>
+            <% } else { %>
+              --
+            <% } %>
+          </strong>
+        </div>
+        <% if (quantity >= 0 && end) { %>
+          <%- await include('@/sections/support-with-data', { _, opt: { quantity, end } }) %> 
+        <% } %>
+        <div class="apoio-link">
+          <a href=""><%= (itemData.label || 'Apoio') %></a>
+        </div>
+      </div>
+  
+  
+    </div>
+  
+  </article>
+<% } else if (item.disable_checkout) { %>
+  <article class="product-item" data-product="<%= JSON.stringify(itemData) %>">
+    <div
+      class="product-card"
+      data-product-id="<%= itemData._id %>"
+      data-sku="<%= itemData.sku %>"
+      <% if (!opt.static) { %>
+        data-to-render="true"
+      <% } %>
+    >
+      <!--
+        `ProductCard` should be rendered (hydrated) here:
+        https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/ProductCard.html
+      -->
+      <div data-slot="stamps">
+        <% if (Array.isArray(stampsList) && stampsList.length) { %>
+          <div class="product-card__stamps">
+            <% for (stamp of stampsList) { 
+              if (stamp.img && (!stamp.skus || !stamp.skus.length || stamp.skus.includes(itemData.sku))) {
+                %>
+                <span class="product-card__stamps-<%= stamp.id && stamp.id.toLowerCase().replace(/\s/g, '-') %>">
+                  <img src="<%= stamp.img %>" alt="<%= stamp.id %>">
+                </span>
+              <% } %>
+            <% } %>
+          </div>
+        <% } %>
+      </div>
+  
+      <a
+        href="/<%= itemData.slug %>"
+        class="product-card__link"
+        title="<%= itemData.name %>"
+      >
+        <!-- Custom code on product card top wrapped by link:
+        <span data-slot="header">
+        </span>
+        -->
+  
+        <div class="product-card__pictures">
+          <!-- Picture(s) will be inserted and loaded dynamically within `ProductCard` -->
+          <% if (imgObj) { %>
+            <picture class="product-card__picture">
+              <img
+                data-src="<%= imgObj.url %>"
+                alt="<%= imgObj.alt %>"
+                class="lozad-delay fade"
+                <% if (imgObj.url.startsWith('https://ecoms1.com/')) { %>
+                  crossorigin="anonymous"
+                <% } %>
+              >
+            </picture>
+          <% } %>
+        </div>
+  
+        <div data-slot="title">
+          <h3 class="product-card__name">
+            <%= itemData.name %>
+          </h3>
+        </div>
+      </a>
 
-    <div class="container-apoio">
-      <div data-slot="title">
-        <h3 class="product-card__name">
-          <%= itemData.name %>
-        </h3>
-      </div> 
       <% if (opt && opt.item && opt.item.html) { %>
         <div class="description-product container">
           <%- await include('@/sections/inc/md-content', { _, opt: {markdown: opt.item.html} }) %>
         </div> 
       <% } %>
-      
-      <div class="product-card__prices prices">
-        <strong class="prices__value">
-          <% if (opt.item.available && opt.item.visible && _.ecomUtils.inStock(opt.item)) { %>
-            <%= _.ecomUtils.formatMoney(itemData.price) %>
-          <% } else { %>
-            --
-          <% } %>
-        </strong>
+  
+      <%
+      const isPatternProduct = itemData.categories && itemData.categories.some(category => {
+        return category.slug === 'estampas'
+      })
+      if (!isPatternProduct) {
+        %>
+        <div class="product-card__prices prices">
+          <strong class="prices__value">
+            <% if (opt.item.available && opt.item.visible && _.ecomUtils.inStock(opt.item)) { %>
+              <%= _.ecomUtils.formatMoney(itemData.price) %>
+            <% } else { %>
+              --
+            <% } %>
+          </strong>
+        </div>
+        <%
+      }
+
+      <div data-slot="buy-button-content">
+        <i class="i-shopping-bag mr-1"></i>
+        <%= (itemData.label || 'Apoio') %>
       </div>
-      <% if (quantity >= 0 && end) { %>
-        <%- await include('@/sections/support-with-data', { _, opt: { quantity, end } }) %> 
-      <% } %>
-      <div class="apoio-link">
-        <a href="/app/#/lp/<%= itemData._id %>/checkout">Apoiar</a>
+      %>
+  
+  
+      <div class="spinner-border spinner-border-sm fade" role="status">
+        <span class="sr-only">Loading...</span>
       </div>
+  
+      <%- await include('@/helpers/widgets-append', {
+        _, opt, field: 'productCardSlots'
+      }) %>
     </div>
+  
+    <%- await include('@/helpers/widgets-append', {
+      _, opt, field: 'productItemAppend'
+    }) %>
+  </article>
+<% } %>
 
-
-  </div>
-
-</article>

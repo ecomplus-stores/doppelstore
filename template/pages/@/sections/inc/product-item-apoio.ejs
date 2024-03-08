@@ -125,7 +125,7 @@ const url = itemData.link
           <%- await include('@/sections/support-with-data', { _, opt: { quantity, end } }) %> 
         <% } %>
         <div class="apoio-link">
-          <a href=""><%= (itemData.label || 'Apoio') %></a>
+          <a class="btn btn-primary" href="<%= url %>"><%= (itemData.label || 'Apoio') %></a>
         </div>
       </div>
   

@@ -1,6 +1,13 @@
 {
   "sections": [
     {
+      "type": "responsive-banner",
+      "link": "https://promo.doppelstore.com.br/lote-camisetas-maio?utm_source=site",
+      "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop-lote-camiseta.jpg",
+      "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile-lote-camiseta.jpg",
+      "enabled": true
+    },
+    {
       "type": "search-engine",
       "enabled": true
     }

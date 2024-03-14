@@ -13,6 +13,7 @@ const { subscriptions } = _
 
 let subscriptionProduct, quantity, end
 if (subscriptions && subscriptions.data && subscriptions.data.products && subscriptions.data.products.length) {
+  console.log('entrei')
   subscriptionProduct = subscriptions.data.products.find(({_id}) => _id === itemData._id) || {}
   if (subscriptionProduct && subscriptionProduct.quantity) {
     quantity = subscriptionProduct.quantity

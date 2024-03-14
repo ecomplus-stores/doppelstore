@@ -1,6 +1,6 @@
 <%
 
-const { img, link, meta, end, enable_share } = opt
+const { img, link, meta, end, enable_share, is_money } = opt
 let amount = 0
 let quantity = 0
 
@@ -10,10 +10,79 @@ const {data : data} =  await _.axios.get('https://us-central1-ecom-ghanor.cloudf
   }
 })
 
+const dataOrder =  await _.axios.get('https://us-central1-ecom-ghanor.cloudfunctions.net/app/4566/orders', {
+  headers: {
+    'x-server-token': '423B726488D7972D6A2FABDC6C6E6'
+  }
+})
+
+console.log(dataOrder.data.data)
+
+function mergeArrays(array1, array2) {
+    // Create a map to store elements from array1 by their _id
+    const map = new Map(array1.map(item => [item._id, item]));
+
+    // Iterate over elements in array2
+    array2.forEach(({ store_id, total, quantity, searchItem }) => {
+        // Check if there's a matching element in array1
+        if (map.has(searchItem)) {
+            const existingItem = map.get(searchItem);
+            // Compare quantity and total values
+            if (quantity > existingItem.quantity || total > existingItem.total) {
+                // Replace the element in array1 with the one from array2
+                map.set(searchItem, { _id: existingItem._id, total, quantity });
+            }
+        } else {
+            // If there's no matching element, add the element from array2 to array1
+            map.set(searchItem, { _id: searchItem, total, quantity });
+        }
+    });
+
+    // Return the values of the map (merged elements)
+    return Array.from(map.values());
+}
+
+if (data && data.data && data.data.products && data.data.products.length && dataOrder && dataOrder.data && dataOrder.data.data) {
+  data.data.productsOrders = []
+
+  dataOrder.data.data.forEach(item => {
+    data.data.productsOrders.push({
+      total: item.total,
+      quantity: item.quantity,
+      _id: item.searchItem
+    })
+  })
+
+  data.data.products = mergeArrays(data.data.products, dataOrder.data.data)
+  const totalReduce = data.data.productsOrders.reduce((accumulator, currentItem) => accumulator + currentItem.total, 0)
+  const quantityReduce = data.data.productsOrders.reduce((accumulator, currentItem) => accumulator + currentItem.quantity, 0)
+  data.data.total = totalReduce
+  data.data.quantity = quantityReduce
+} else if (data && data.data && !(data.data.products && data.data.products.length) && dataOrder && dataOrder.data && dataOrder.data.data) {
+  data.data.products = []
+  data.data.productsOrders = []
+  dataOrder.data.data.forEach(item => {
+    data.data.products.push({
+      total: item.total,
+      quantity: item.quantity,
+      _id: item.searchItem
+    })
+    data.data.productsOrders.push({
+      total: item.total,
+      quantity: item.quantity,
+      _id: item.searchItem
+    })
+  })
+  const totalReduce = data.data.productsOrders.reduce((accumulator, currentItem) => accumulator + currentItem.total, 0)
+  const quantityReduce = data.data.productsOrders.reduce((accumulator, currentItem) => accumulator + currentItem.quantity, 0)
+  data.data.total = totalReduce
+  data.data.quantity = quantityReduce
+}
+
 _.subscriptions = data
 amount = data.data && data.data.total
 quantity = data.data && data.data.quantity
-const percent = Math.round((amount * 100) /meta)
+const percent = Math.round(((is_money ? amount : quantity) * 100) /meta)
 if ((img || link) && meta > 0) {
   %>
   <div class="container">
@@ -25,16 +94,18 @@ if ((img || link) && meta > 0) {
         <div id="video-ghanor" class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" src="<%- link %>"></iframe> </div>
       <% } %>
     </div>
-    <div class="col-12 col-md-4">
-      <h2 id="ghanor-block"> <%= _.ecomUtils.formatMoney(amount) %></h2>
-      <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= _.ecomUtils.formatMoney(meta) %></span>
+    <div class="col-12 col-md-4"> 
+      <%= is_money ? `<h2 id="ghanor-block">${_.ecomUtils.formatMoney(amount)}</h2>` : '' %>
+      <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? _.ecomUtils.formatMoney(meta) : meta %></span>
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: <%= percent %>%" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100">
         </div>
       </div>
       <p><%= percent %>%</p>
-      <% if (quantity && end) { %>
-        <%- await include('@/sections/support-with-data', { _, opt: { quantity, end } }) %> 
+      <% if (quantity && end) {
+        const isSummary = true
+      %>
+        <%- await include('@/sections/support-with-data', { _, opt: { quantity, end, isSummary } }) %> 
       <% } %>
       
       <% if (enable_share) { %>

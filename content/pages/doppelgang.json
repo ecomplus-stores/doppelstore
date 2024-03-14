@@ -13,9 +13,10 @@
     {
       "type": "summary_ghanor",
       "meta": 100,
+      "is_money": false,
       "img": "https://cdn.ghanor.com.br/project-images/1/6b7b3fee-ac7c-4de3-977f-3a10e50a7ceb",
       "enable_share": true,
-      "end": "2024-02-29T07:18:08.923Z"
+      "end": "2024-06-29T07:18:08.923Z"
     },
     {
       "type": "extra-page",

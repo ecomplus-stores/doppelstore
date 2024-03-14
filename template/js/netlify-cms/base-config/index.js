@@ -191,7 +191,65 @@ export default options => {
       getPages(options),
       getBlogPosts(options),
       getExtraPages(options),
-      getWidgets(options)
+      getWidgets(options),
+      {
+        name: 'custom',        
+        label: 'Configuração progresso carrinho lateral',
+        folder: `${options.baseDir}content/custom`,
+        extension: 'json',
+        create: true,
+        slug: '{{slug}}',
+        fields: [
+          {
+            label: "Título do Registro",
+            name: "title",
+            widget: "string",
+            required: false          
+          },
+          {
+            label: "Ativar",
+            name: "enable",
+            widget: "boolean",
+            defailt: false,
+            required: false          
+          },
+          {
+            label: "Valor mínimo",
+            name: "minvalue",
+            min: 0,
+            default: 0,
+            widget: "number",
+            required: false        
+          }, 
+          {
+            label: "Mínimo de items",
+            name: "minitems",
+            min: 0,
+            default: 0,
+            widget: "number" ,
+            required: false        
+          },
+          {
+            label: "Mensagem para incentivar a completar o objetivo",
+            name: "award_label",
+            widget: "string",
+            required: false          
+          },
+          {
+            label: "Mensagem de sucesso",
+            name: "success_message",
+            widget: "string",
+            required: false          
+          },
+          {
+            label: "Slug da categoria",
+            hint: "Slug da categoria para filtrar os produtos na determinada condição",
+            name: "category_slugs",
+            widget: "string",
+            required: false          
+          }
+        ]
+      }
     ]
   }
 }

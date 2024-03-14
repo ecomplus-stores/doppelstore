@@ -138,6 +138,8 @@ export default options => {
   }
   ])
   console.log(options.sections)
+  options.settings = getSettings(options)
+  console.log(options.settings)
   if (Array.isArray(options.sections) && options.sections.length && options.sections[0] && options.sections[0].name === 'responsive-banner') {
     options.sections.forEach(element => {
       if ((element.name === 'banners-grid') || (element.name === 'responsive-banner') || (element.name === 'banner-slider')) {

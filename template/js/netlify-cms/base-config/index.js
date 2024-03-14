@@ -120,13 +120,20 @@ export default options => {
         widget: 'number'
       },
       {
+        label: 'Ativar meta financeira',
+        hint: 'Caso desative a meta financeira, será considerado meta de assinanantes',
+        required: false,
+        name: 'is_money',
+        widget: 'boolean',
+        default: false
+      },
+      {
         label: 'Data de encerramento',
         required: false,
         name: 'end',
         widget: 'datetime',
         default: '',
-        date_format: 'DD/MM/YYYY',
-        time_format: 'HH:mm'
+        date_format: 'DD/MM/YYYY'
       },
       {
         label: 'Habilitar compartilhamento',
@@ -138,8 +145,6 @@ export default options => {
   }
   ])
   console.log(options.sections)
-  options.settings = getSettings(options)
-  console.log(options.settings)
   if (Array.isArray(options.sections) && options.sections.length && options.sections[0] && options.sections[0].name === 'responsive-banner') {
     options.sections.forEach(element => {
       if ((element.name === 'banners-grid') || (element.name === 'responsive-banner') || (element.name === 'banner-slider')) {

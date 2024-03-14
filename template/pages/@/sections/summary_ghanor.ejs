@@ -43,38 +43,22 @@ function mergeArrays(array1, array2) {
 }
 
 if (data && data.data && data.data.products && data.data.products.length && dataOrder && dataOrder.data && dataOrder.data.data) {
-  data.data.productsOrders = []
-
-  dataOrder.data.data.forEach(item => {
-    data.data.productsOrders.push({
-      total: item.total,
-      quantity: item.quantity,
-      _id: item.searchItem
-    })
-  })
-
   data.data.products = mergeArrays(data.data.products, dataOrder.data.data)
-  const totalReduce = data.data.productsOrders.reduce((accumulator, currentItem) => accumulator + currentItem.total, 0)
-  const quantityReduce = data.data.productsOrders.reduce((accumulator, currentItem) => accumulator + currentItem.quantity, 0)
+  const totalReduce = data.data.products.reduce((accumulator, currentItem) => accumulator + currentItem.total, 0)
+  const quantityReduce = data.data.products.reduce((accumulator, currentItem) => accumulator + currentItem.quantity, 0)
   data.data.total = totalReduce
   data.data.quantity = quantityReduce
 } else if (data && data.data && !(data.data.products && data.data.products.length) && dataOrder && dataOrder.data && dataOrder.data.data) {
   data.data.products = []
-  data.data.productsOrders = []
   dataOrder.data.data.forEach(item => {
     data.data.products.push({
       total: item.total,
       quantity: item.quantity,
       _id: item.searchItem
     })
-    data.data.productsOrders.push({
-      total: item.total,
-      quantity: item.quantity,
-      _id: item.searchItem
-    })
   })
-  const totalReduce = data.data.productsOrders.reduce((accumulator, currentItem) => accumulator + currentItem.total, 0)
-  const quantityReduce = data.data.productsOrders.reduce((accumulator, currentItem) => accumulator + currentItem.quantity, 0)
+  const totalReduce = data.data.products.reduce((accumulator, currentItem) => accumulator + currentItem.total, 0)
+  const quantityReduce = data.data.products.reduce((accumulator, currentItem) => accumulator + currentItem.quantity, 0)
   data.data.total = totalReduce
   data.data.quantity = quantityReduce
 }

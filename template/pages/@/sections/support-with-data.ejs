@@ -1,5 +1,5 @@
 <% 
-const { quantity, end, isSummary } = opt
+const { quantity, end, isSummary, disableStats } = opt
 if (quantity >=0 && end) { 
   function calculateDaysLeft(finalDate) {
     const today = new Date();
@@ -12,10 +12,12 @@ if (quantity >=0 && end) {
   const splitData = end.split('-')
   %>
   <div class="sc-49b423c2-2 jCEwOp">
-    <div><span color="white" class="sc-de075f52-0 diRWUO">
+    <% if (!disableStats) { %>
+      <div><span color="white" class="sc-de075f52-0 diRWUO">
         <%= quantity %>
       </span><span color="white" class="sc-de075f52-1 bdEowS">Apoiadores</span></div>
-    <div class="sc-49b423c2-3 jFWOvG"></div>
+      <div class="sc-49b423c2-3 jFWOvG"></div>
+    <% } %>
     <% if (daysLeft >= 0 && isSummary) { %>
       <span color="white" class="sc-de075f52-0 diRWUO">
         <strong><%=  daysLeft %></strong> dias restantes

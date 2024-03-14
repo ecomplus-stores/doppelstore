@@ -81,6 +81,13 @@ export default options => {
             widget: 'boolean'
           },
           {
+            label: 'Desativar Estatistica',
+            required: false,
+            name: 'disable_stats',
+            widget: 'boolean',
+            default: false
+          },
+          {
             label: 'Label do Botão',
             required: false,
             name: 'label',

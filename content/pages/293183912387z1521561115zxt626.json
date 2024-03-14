@@ -43,7 +43,7 @@
           "end": "2024-03-21T03:00:00.000Z",
           "product_id": "64931deb5e606903704336a7",
           "html": "t﻿este2",
-          "disable_checkout": true,
+          "disable_checkout": false,
           "label": "testando3"
         }
       ],

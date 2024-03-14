@@ -32,6 +32,19 @@
         {
           "end": "2024-09-01T02:59:00.000Z",
           "product_id": "6543c6642cd6b6595994dc86"
+        },
+        {
+          "end": "2024-03-15T03:00:00.000Z",
+          "product_id": "655da25d2cd6b65959b3a3b5",
+          "html": "t﻿este",
+          "label": "TESTE"
+        },
+        {
+          "end": "2024-03-21T03:00:00.000Z",
+          "product_id": "64931deb5e606903704336a7",
+          "html": "t﻿este2",
+          "disable_checkout": true,
+          "label": "testando3"
         }
       ],
       "title": "ASSINATURAS"

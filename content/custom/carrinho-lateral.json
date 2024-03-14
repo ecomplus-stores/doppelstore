@@ -1,5 +1,7 @@
 {
-  "minvalue": 100,
-  "minitems": 0,
+  "value": 0,
+  "min_tems": 0,
+  "award_label": "Compre e ganhe um belo brinde surpresa",
+  "success_message": "Parabéns! Você ganhou o brinde!", 
   "title": "carrinho-lateral"
 }

@@ -207,15 +207,9 @@ export default options => {
             required: false          
           },
           {
-            label: "Ativar",
-            name: "enable",
-            widget: "boolean",
-            defailt: false,
-            required: false          
-          },
-          {
             label: "Valor mínimo",
-            name: "minvalue",
+            hint: "Se zero, não mostrará nada",
+            name: "value",
             min: 0,
             default: 0,
             widget: "number",
@@ -223,7 +217,7 @@ export default options => {
           }, 
           {
             label: "Mínimo de items",
-            name: "minitems",
+            name: "min_items",
             min: 0,
             default: 0,
             widget: "number" ,

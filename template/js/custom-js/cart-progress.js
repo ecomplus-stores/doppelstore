@@ -1,7 +1,8 @@
 import { price as getPrice } from '@ecomplus/utils'
 import ecomCart from '@ecomplus/shopping-cart'
 
-const cartProgressConfig = window.customSettings.cart_progress_bar
+const cartProgressConfig = window.customSettings
+console.log(cartProgressConfig)
 if (cartProgressConfig && cartProgressConfig.value > 0) {
   if (document.getElementById('cart-progress')) {
     const {

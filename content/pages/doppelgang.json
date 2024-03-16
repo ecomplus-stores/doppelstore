@@ -7,16 +7,12 @@
       "img": "/img/uploads/logo-copy.png"
     },
     {
-      "type": "custom-content",
-      "markdown": "<!--StartFragment-->\n\nBem-vindo ao Doppelgang.\n\nA nova fase do jogo começa agora e você faz parte disso :3\n\n<!--EndFragment-->"
-    },
-    {
       "type": "summary_ghanor",
-      "meta": 100,
-      "is_money": false,
+      "meta": 100000,
+      "is_money": true,
       "img": "/img/uploads/01-capa-copy.jpg",
       "enable_share": true,
-      "end": "2024-06-29T07:18:08.923Z"
+      "end": ""
     },
     {
       "type": "extra-page",

@@ -26,17 +26,27 @@
       "type": "product-list-apoio",
       "products": [
         {
-          "end": "2024-05-01T02:59:00.000Z",
-          "product_id": "64931e105e60690370433727",
-          "html": "<div class=\"sc-76458188-5 jelZwB\"><p>Você recebe seis publicações em versão digital (formatos PDF e ebook), mais dois audiobooks e a trilha sonora do Nerdcast RPG (formato mp3)!</p><p>&nbsp;</p><p>No Nível 1 você recebe:</p><ul><li>Graphic Novel Vol. 1 (digital)</li><li>Graphic Novel Vol. 2 (digital)</li><li>As Máscaras do Metamorfo (digital)</li><li>As Aventuras de Feldon &amp; Alma (digital)</li><li><strong>+ Meta desbloqueada:</strong> Revista Dragão Brasil – Edição Especial Ghanor (digital)! 64 páginas coloridas com conteúdo sobre o mundo de Ghanor e o RPG!</li><li><strong>+ Meta desbloqueada:</strong> Filosofia de Combate (digital)! O livro de Korin, o General da Companhia do Cão!</li><li><strong>+ Meta desbloqueada:</strong> audiobook de As Máscaras do Metamorfo!</li><li><strong>+ Meta desbloqueada:</strong> audiobook de As Aventuras de Feldon &amp; Alma!</li><li><strong>+ Meta desbloqueada:</strong> trilha sonora do Nerdcast RPG.</li></ul></div>"
+          "end": "",
+          "product_id": "65f1741987ab487fbfe30ca5",
+          "html": "descrição",
+          "label": "APOIAR"
         },
         {
-          "end": "2024-09-01T02:59:00.000Z",
-          "product_id": "6543c6642cd6b6595994dc86",
-          "disable_stats": true
+          "end": "",
+          "product_id": "65f17e6e87ab487fbfe3148f",
+          "disable_stats": false,
+          "html": "d﻿escrição",
+          "label": "APOIAR"
+        },
+        {
+          "end": "",
+          "disable_stats": false,
+          "product_id": "65f17eaa87ab487fbfe314d7",
+          "html": "d﻿escrição",
+          "label": "APOIAR"
         }
       ],
-      "title": "ASSINATURAS"
+      "title": "TIERS DE APOIO"
     }
   ]
 }

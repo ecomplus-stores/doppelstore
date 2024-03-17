@@ -9,7 +9,7 @@
     {
       "type": "summary_ghanor",
       "meta": 150000,
-      "is_money": false,
+      "is_money": true,
       "img": "/img/uploads/01-capa-copy.jpg",
       "enable_share": true,
       "end": ""
@@ -24,21 +24,21 @@
         {
           "end": "",
           "product_id": "65f1741987ab487fbfe30ca5",
-          "html": "descrição",
+          "html": "<!--StartFragment-->\n\nNo **Apoio I: Doppelganger**  você recebe os seguintes benefícios:\n\n* **Acesso ao grupo secreto**\n* **Prioridade na fabricação de pedidos**\n* **Brinde colecionável**\n* **Live mensal de sorteios**\n* **Poder de voto para decidir novidades e rumos da Doppel**\n* **E além de tudo, ao final do período de assintura (3 meses), \"cashback\" de 100% do valor apoiado em Doppilas**\n\n<!--EndFragment-->",
           "label": "APOIAR"
         },
         {
           "end": "",
           "product_id": "65f17e6e87ab487fbfe3148f",
           "disable_stats": false,
-          "html": "d﻿escrição",
+          "html": "<!--StartFragment-->\n\nNo **Apoio II: Baú de Recompensas** você recebe os seguintes benefícios:\n\n* Todos os benefícios do **Apoio I: Doppelganger**\n* **Baú de Recompensas**\n* **Presente no mês de aniversário**\n* **Acesso à loja secreta**\n\n<!--EndFragment-->",
           "label": "APOIAR"
         },
         {
           "end": "",
           "disable_stats": false,
           "product_id": "65f17eaa87ab487fbfe314d7",
-          "html": "d﻿escrição",
+          "html": "<!--StartFragment-->\n\nNo **Apoio III: Caixa de Schrödinger** você recebe os seguintes benefícios:\n\n* Todos os benefícios do **Apoio I: Doppelganger e Apoio II: Baú de Recompensas**\n* Poder **personalizar itens como cadernos**, pôsteres e etc usando sua arte\n* Poder escolher receber trimestralmente a **Caixa de Schrödinger** em vez de **Doppilas**\n\n<!--EndFragment-->",
           "label": "APOIAR"
         }
       ],

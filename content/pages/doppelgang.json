@@ -9,7 +9,7 @@
     {
       "type": "summary_ghanor",
       "meta": 150000,
-      "is_money": true,
+      "is_money": false,
       "img": "/img/uploads/01-capa-copy.jpg",
       "enable_share": true,
       "end": ""

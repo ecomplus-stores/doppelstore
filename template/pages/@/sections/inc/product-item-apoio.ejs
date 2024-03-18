@@ -27,7 +27,6 @@ if (subscriptions && subscriptions.data && subscriptions.data.products && subscr
   end = itemData.end
 }
 
-console.log(itemData)
 const imgObj = _.ecomUtils.img(opt.item)
 if (imgObj) {
   itemData.pictures = [{
@@ -121,7 +120,7 @@ if (!itemData.disable_checkout) { %>
             <% } %>
           </strong>
         </div>
-        <% if (quantity >= 0 && end) { const isSummary = false; const disableStats = itemData.disable_stats %>
+        <% if (quantity >= 0) { const isSummary = false; const disableStats = itemData.disable_stats %>
           <%- await include('@/sections/support-with-data', { _, opt: { quantity, end, isSummary, disableStats } }) %> 
         <% } %>
         <div class="apoio-link">

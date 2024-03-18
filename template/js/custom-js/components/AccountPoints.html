@@ -4,7 +4,7 @@
 >
   <div class="account-points__info">
     <h4> Doppilas </h4>
-    <span>{{ i19available }}: <b>{{ totalPoints.toFixed(1) }}</b> / Doppilas: <b> D$  {{ ((totalCashback).toFixed(2)).replace('.', ',') }}</b></span>
+    <span>{{ i19available }}: <b> D$ {{ totalPoints.toFixed(1) }}</b></span>
   </div>
 
   <ul class="list-group">
@@ -12,28 +12,9 @@
       v-for="pointsEntry in validPointsEntries"
       class="list-group-item account-points__entry"
     >
-      <div class="account-points__entry-title">
-        <h5 class="mb-1">
-          {{ pointsEntry.name }}
-        </h5>
-        <small v-if="pointsEntry.valid_thru">
-          {{ i19upTo }}
-          {{ formatDate(pointsEntry.valid_thru) }}
-        </small>
-      </div>
 
       {{ i19available }}:
-      <b>{{ pointsEntry.active_points.toFixed(1) }}</b>
-      <small
-        v-if="pointsEntry.earned_points"
-        class="text-muted"
-      >
-        / {{ `${pointsEntry.earned_points.toFixed(1)}` }} Doppilas
-      </small>
-      <div class="account-points__cashback">
-        Doppilas:
-        <b> D$ {{ ((pointsEntry.active_points * pointsEntry.ratio).toFixed(2)).replace('.', ',') }}</b>
-      </div>
+      <b>D$ {{ pointsEntry.active_points.toFixed(1) }}</b>
     </li>
   </ul>
 </div>

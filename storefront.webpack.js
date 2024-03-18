@@ -8,6 +8,7 @@ module.exports = () => ({
       './js/ProductCard.js': path.resolve(__dirname, 'template/js/custom-js/components/ProductCard.js'),
       './html/ProductCard.html': path.resolve(__dirname, 'template/js/custom-js/components/ProductCard.html'),
       './html/EcCheckout.html': path.resolve(__dirname, 'template/js/custom-js/components/EcCheckout.html'),
+      './html/LoginModal.html': path.resolve(__dirname, 'template/js/custom-js/components/LoginModal.html'),
       './js/EcCheckout.js': path.resolve(__dirname, 'template/js/custom-js/components/EcCheckout.js'),
       './html/EcOrderInfo.html': path.resolve(__dirname, 'template/js/custom-js/components/EcOrderInfo.html'),
       './html/AccountPoints.html': path.resolve(__dirname, 'template/js/custom-js/components/AccountPoints.html'),
@@ -18,6 +19,7 @@ module.exports = () => ({
       './html/APrices.html': path.resolve(__dirname, 'template/js/custom-js/components/APrices.html'),
       './js/APrices.js': path.resolve(__dirname, 'template/js/custom-js/components/APrices.js'),
       './js/TheCart.js': path.resolve(__dirname, 'template/js/custom-js/components/TheCart.js'),
+      './js/TheAccount.js': path.resolve(__dirname, 'template/js/custom-js/components/TheAccount.js'),
       //'./js/DiscountApplier.js': path.resolve(__dirname, 'template/js/custom-js/components/DiscountApplier.js'),
     }
   }

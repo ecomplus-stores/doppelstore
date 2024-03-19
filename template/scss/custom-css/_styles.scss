@@ -1341,12 +1341,20 @@ div.backdrop {
   -moz-box-align: center;
   align-items: center;
   -moz-box-pack: justify;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 38px;
 }
+
+.entrega {
+  font-size: 15px !important;
+}
+
 .jCEwOp div {
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
+  .bdEowS {
+    margin-left: 5px;
+  }
 }
 .diRWUO {
   font-size: 22px;
@@ -1453,5 +1461,18 @@ div.backdrop {
       border-bottom-right-radius: 5px;
       padding: 10px;
     }
+  }
+}
+
+
+.extra-page.aside-grid.container {
+  max-width: 1250px !important;
+}
+
+.container-apoio {
+  .action {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 }

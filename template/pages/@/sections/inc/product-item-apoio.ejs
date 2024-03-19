@@ -43,6 +43,19 @@ const url = itemData.link
   ? itemData.link 
   : `/app/#/lp/${itemData._id}/checkout`
 
+function calculateDaysLeft(finalDate) {
+  const today = new Date();
+  const endDate = new Date(finalDate);
+  const differenceMs = endDate.getTime() - today.getTime();
+  const daysLeft = Math.ceil(differenceMs / (1000 * 60 * 60 * 24));
+  return daysLeft;
+}
+const daysLeft = calculateDaysLeft(end)
+const splitData = end.split('-')
+
+const disableStats = itemData.disable_stats
+
+
 if (!itemData.disable_checkout) { %>
   <article class="apoio-item" data-product="<%= JSON.stringify(itemData) %>">
     <div
@@ -110,21 +123,39 @@ if (!itemData.disable_checkout) { %>
             <%- await include('@/sections/inc/md-content', { _, opt: {markdown: opt.item.html} }) %>
           </div> 
         <% } %>
-        
-        <div class="product-card__prices prices">
-          <strong class="prices__value">
-            <% if (opt.item.available && opt.item.visible && _.ecomUtils.inStock(opt.item)) { %>
-              <%= _.ecomUtils.formatMoney(itemData.price) %>
-            <% } else { %>
-              --
-            <% } %>
-          </strong>
+        <div class="info-analysis">
+          <div class="sc-49b423c2-2 jCEwOp">
+            <% if (!disableStats) { %>
+              <div>
+                <span color="white" class="sc-de075f52-0 diRWUO">
+                <%= quantity %>
+                </span><span color="white" class="sc-de075f52-1 bdEowS">Apoiadores</span>
+              </div>
+            <% } 
+            if (!disableStats && daysLeft) { %>
+              <div class="sc-49b423c2-3 jFWOvG"></div>
+            <% }
+            
+            if (end && splitData[0] && splitData[1]) { 
+              %>
+              <span color="white" class="sc-de075f52-0 diRWUO entrega">
+                <span>Entrega Prevista:</span><br>
+                <span><%= splitData[1] %>/<%= splitData[0] %></span>
+              </span>
+            <% } %> 
+          </div>
         </div>
-        <% if (quantity >= 0) { const isSummary = false; const disableStats = itemData.disable_stats %>
-          <%- await include('@/sections/support-with-data', { _, opt: { quantity, end, isSummary, disableStats } }) %> 
-        <% } %>
-        <div class="apoio-link">
-          <a class="btn btn-primary" href="<%= url %>"><%= (itemData.label || 'Apoio') %></a>
+        <div class="action">
+          <div class="product-card__prices prices">
+            <strong class="prices__value">
+              <% if (opt.item.available && opt.item.visible && _.ecomUtils.inStock(opt.item)) { %>
+                <%= _.ecomUtils.formatMoney(itemData.price) %>
+              <% } %>
+            </strong>
+          </div>
+          <div class="apoio-link">
+            <a class="btn btn-primary" href="<%= url %>"><%= (itemData.label || 'Apoio') %></a>
+          </div>
         </div>
       </div>
   
@@ -210,8 +241,6 @@ if (!itemData.disable_checkout) { %>
         <strong class="prices__value">
           <% if (opt.item.available && opt.item.visible && _.ecomUtils.inStock(opt.item)) { %>
             <%= _.ecomUtils.formatMoney(itemData.price) %>
-          <% } else { %>
-            --
           <% } %>
         </strong>
       </div>
@@ -236,7 +265,7 @@ if (!itemData.disable_checkout) { %>
   <%- await include('@/helpers/widgets-append', {
     _, opt, field: 'productItemAppend'
   }) %>
-</article>
+  </article>
 <% } %>
 
 

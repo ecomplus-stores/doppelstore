@@ -1351,6 +1351,11 @@ div.backdrop {
 
 .jCEwOp div {
   display: flex;
+  flex-direction: column;
+}
+
+.info-analysis .jCEwOp div {
+  display: flex;
   align-items: baseline;
   .bdEowS {
     margin-left: 5px;

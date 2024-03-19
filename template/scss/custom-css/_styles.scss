@@ -1357,6 +1357,7 @@ div.backdrop {
 .info-analysis .jCEwOp div {
   display: flex;
   align-items: baseline;
+  flex-direction: row !important;
   .bdEowS {
     margin-left: 5px;
   }

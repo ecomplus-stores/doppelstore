@@ -45,6 +45,10 @@
         }
       ],
       "title": "TIERS DE APOIO"
+    },
+    {
+      "type": "custom-html",
+      "html": "<style>\n  .container{\n  margin-top: 1.5rem;\n  }\n</style>"
     }
   ]
 }

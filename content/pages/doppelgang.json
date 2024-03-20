@@ -25,14 +25,14 @@
         {
           "end": "",
           "product_id": "65f1741987ab487fbfe30ca5",
-          "html": "<!--StartFragment-->\n\nNo **Apoio I: Doppelganger**  você recebe os seguintes benefícios:\n\n* **Acesso ao grupo secreto:**\n* **Prioridade na fabricação de pedidos**\n* **Brinde colecionável mensal ao fazer um pedido**\n* **Live mensal de sorteios**\n* **Poder de voto para decidir novidades e rumos da Doppel**\n* **Doppilas (D$ 74,90) ao final do ciclo**\n\n<!--EndFragment-->",
+          "html": "<!--StartFragment-->\n\nNo **Apoio I Doppelganger**  você recebe os seguintes benefícios:\n\n* Acesso ao grupo secreto\n* Prioridade na fabricação de pedidos\n* Brinde colecionável mensal ao fazer um pedido\n* Live mensal de sorteios\n* Poder de voto para decidir novidades e rumos da Doppel\n* Doppilas (D$ 74,90) ao final do ciclo\n\n<!--EndFragment-->",
           "label": "Apoiar"
         },
         {
           "end": "",
           "product_id": "65f17e6e87ab487fbfe3148f",
           "disable_stats": false,
-          "html": "<!--StartFragment-->\n\nNo **Apoio II: Baú de Recompensas** você recebe os seguintes benefícios:\n\n* Benefícios do **Apoio I: Doppelganger (exceto Doppilas que é maior aqui)**\n* **Baú de Recompensas:**\n* **Presente no mês de aniversário**\n* **Acesso à loja secreta (previsão de abertura em abril)**\n* **Doppilas (D$ 149,90) ao final do ciclo**\n\n<!--EndFragment-->",
+          "html": "<!--StartFragment-->\n\nNo **Apoio II: Baú de Recompensas** você recebe os seguintes benefícios:\n\n* Benefícios do **Apoio I Doppelganger (exceto Doppilas que é maior aqui)**\n* Baú de Recompensas\n* Presente no mês de aniversário\n* Acesso à loja secreta (previsão de abertura em abril)\n* Doppilas (D$ 149,90) ao final do ciclo\n\n<!--EndFragment-->",
           "label": "APOIAR",
           "disable_checkout": false
         },
@@ -40,7 +40,7 @@
           "end": "",
           "disable_stats": false,
           "product_id": "65f17eaa87ab487fbfe314d7",
-          "html": "<!--StartFragment-->\n\nNo **Apoio III: Caixa de Schrödinger** você recebe os seguintes benefícios:\n\n* Benefícios do **Apoio II: Baú de Recompensas (exceto Doppilas que é maior aqui)**\n* **Personalização de itens:** Um catálogo estará disponível para você ver quais dos nossos produtos vocêcconsegue personalizar som a sua arte **(ainda em desenvolvimento, previsão de lançamento em abril)**\n* **Doppilas (D$ 269,90) ao final do ciclo** ou então a **Caixa de Schrödinger (precisa escolher um dos dois)**\n\n<!--EndFragment-->",
+          "html": "<!--StartFragment-->\n\nNo **Apoio III Caixa de Schrödinger** você recebe os seguintes benefícios:\n\n* Benefícios do **Apoio II: Baú de Recompensas (exceto Doppilas que é maior aqui)**\n* Personalização de itens com a sua arte\n* **Doppilas (D$ 269,90) ao final do ciclo** ou então a **Caixa de Schrödinger (precisa escolher um dos dois)**\n\n<!--EndFragment-->",
           "label": "APOIAR"
         }
       ],

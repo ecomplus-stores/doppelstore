@@ -4,7 +4,8 @@
   "sections": [
     {
       "type": "responsive-banner",
-      "img": "/img/uploads/logo-copy.png"
+      "img": "/img/uploads/logo-copy.png",
+      "enabled": true
     },
     {
       "type": "summary_ghanor",

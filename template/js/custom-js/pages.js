@@ -12,6 +12,10 @@ if (affiliateLinkDiv) {
   new Vue(AffiliateLink).$mount(affiliateLinkDiv)
 }
 
+import checkDoppel from './check-doppel'
+
+checkDoppel()
+
 /* const ghanorDiv = document.getElementById('ghanor-block')
 if (ghanorDiv) {
   new Vue(GhanorSummary).$mount(ghanorDiv)

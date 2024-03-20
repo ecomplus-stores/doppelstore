@@ -149,7 +149,7 @@ if (!itemData.disable_checkout) { %>
           <div class="product-card__prices prices">
             <strong class="prices__value">
               <% if (opt.item.available && opt.item.visible && _.ecomUtils.inStock(opt.item)) { %>
-                <%= _.ecomUtils.formatMoney(itemData.price) %>
+                <%= _.ecomUtils.formatMoney(itemData.price) %> por trimestre (<%= _.ecomUtils.formatMoney(itemData.price / 3) %> por mês)
               <% } %>
             </strong>
           </div>

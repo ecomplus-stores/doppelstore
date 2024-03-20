@@ -82,7 +82,7 @@ if ((img || link) && meta > 0) {
       <% if (is_money) { %>
         <h2 id="ghanor-block"><%- _.ecomUtils.formatMoney(amount) %></h2>
       <% } %> 
-      <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? _.ecomUtils.formatMoney(meta) : meta %></span>
+      <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? _.ecomUtils.formatMoney(meta / 3) : meta %></span>
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: <%= percent %>%" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100">
         </div>

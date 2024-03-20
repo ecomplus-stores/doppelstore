@@ -78,14 +78,14 @@ if ((img || link) && meta > 0) {
       <% } %>
     </div>
     <div class="col-12 col-md-4">
-      <h2 id="ghanor-block" class="<%= is_money ? 'amount' : 'apoiadores' %>"><%= is_money ? _.ecomUtils.formatMoney(amount) : `${quantity} Apoiadores` %></h2> 
-      <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? _.ecomUtils.formatMoney(meta) : meta %></span>
+      <h2 id="ghanor-block" class="<%= is_money ? 'amount' : 'apoiadores' %>"><%= is_money ? `${_.ecomUtils.formatMoney(amount)} por mês` : `${quantity} Apoiadores` %></h2> 
+      <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? `${_.ecomUtils.formatMoney(meta)} por mês` : meta %></span>
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: <%= percent %>%" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100">
         </div>
       </div>
       <p><%= percent %>%</p>
-      <% if (quantity && end) {
+      <% if (quantity) {
         const isSummary = true
       %>
         <%- await include('@/sections/support-with-data', { _, opt: { quantity, end, isSummary } }) %> 

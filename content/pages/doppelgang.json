@@ -5,7 +5,7 @@
     {
       "type": "responsive-banner",
       "img": "/img/uploads/logo-copy.png",
-      "enabled": true
+      "enabled": false
     },
     {
       "type": "summary_ghanor",

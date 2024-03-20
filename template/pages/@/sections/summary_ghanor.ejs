@@ -1,6 +1,7 @@
 <%
 
-const { img, link, meta, end, enable_share, is_money } = opt
+const { img, link, end, enable_share, is_money } = opt
+const meta = is_money ? (opt.meta / 3) : opt.meta
 let amount = 0
 let quantity = 0
 
@@ -15,8 +16,6 @@ const dataOrder =  await _.axios.get('https://us-central1-ecom-ghanor.cloudfunct
     'x-server-token': '423B726488D7972D6A2FABDC6C6E6'
   }
 })
-
-console.log(dataOrder.data.data)
 
 function mergeArrays(array1, array2) {
     // Create a map to store elements from array1 by their _id
@@ -64,7 +63,7 @@ if (data && data.data && data.data.products && data.data.products.length && data
 }
 
 _.subscriptions = data
-amount = data.data && data.data.total
+amount = (data.data && data.data.total) / 3
 quantity = data.data && data.data.quantity
 const percent = Math.round(((is_money ? amount : quantity) * 100) /meta)
 if ((img || link) && meta > 0) {
@@ -79,10 +78,8 @@ if ((img || link) && meta > 0) {
       <% } %>
     </div>
     <div class="col-12 col-md-4">
-      <% if (is_money) { %>
-        <h2 id="ghanor-block"><%- _.ecomUtils.formatMoney(amount) %></h2>
-      <% } %> 
-      <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? _.ecomUtils.formatMoney(meta / 3) : meta %></span>
+      <h2 id="ghanor-block" class="<%= is_money ? 'amount' : 'apoiadores' %>"><%= is_money ? _.ecomUtils.formatMoney(amount) : `${quantity} Apoiadores` %></h2> 
+      <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? _.ecomUtils.formatMoney(meta) : meta %></span>
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: <%= percent %>%" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100">
         </div>

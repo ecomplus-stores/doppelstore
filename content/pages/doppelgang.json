@@ -9,7 +9,7 @@
     {
       "type": "summary_ghanor",
       "meta": 150000,
-      "is_money": true,
+      "is_money": false,
       "img": "/img/uploads/01-capa-copy.jpg",
       "enable_share": true,
       "end": ""
@@ -28,7 +28,7 @@
           "label": "APOIAR"
         },
         {
-          "end": "2024-03-25T03:21:24.627Z",
+          "end": "",
           "product_id": "65f17e6e87ab487fbfe3148f",
           "disable_stats": false,
           "html": "<!--StartFragment-->\n\nNo **Apoio II: Baú de Recompensas** você recebe os seguintes benefícios:\n\n* Todos os benefícios do **Apoio I: Doppelganger**\n* **Baú de Recompensas**\n* **Presente no mês de aniversário**\n* **Acesso à loja secreta**\n\n<!--EndFragment-->",

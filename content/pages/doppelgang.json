@@ -48,7 +48,7 @@
     },
     {
       "type": "custom-html",
-      "html": "<style>\n  .container{\n  margin-top: 1.5rem;\n  }\n  \n  .product-card__name{\n  font-size: 20px;\n  }\n  \n  @media (max-width: 520px) {\n        .image-mobile {\n            display: inline-block;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\n        .image-desktop {\n            display: none;\n        }\n    }\n\n    @media (min-width: 920px) {\n        .image-mobile {\n            display: none;\n        }\n\n        .image-desktop {\n            display: inline-block;\n            margin-left: auto;\n            margin-right: auto;\n        }\n    }\n\n</style>"
+      "html": "<style>\n  .container{\n  margin-top: 1.5rem!important;\n  }\n  \n  .product-card__name{\n  font-size: 20px!important;\n  }\n  \n  @media (max-width: 520px) {\n        .image-mobile {\n            display: inline-block;\n            margin-left: auto;\n            margin-right: auto;\n        }\n\n        .image-desktop {\n            display: none;\n        }\n    }\n\n    @media (min-width: 920px) {\n        .image-mobile {\n            display: none;\n        }\n\n        .image-desktop {\n            display: inline-block;\n            margin-left: auto;\n            margin-right: auto;\n        }\n    }\n\n</style>"
     }
   ]
 }

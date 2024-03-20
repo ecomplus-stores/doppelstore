@@ -25,7 +25,7 @@
         {
           "end": "",
           "product_id": "65f1741987ab487fbfe30ca5",
-          "html": "<!--StartFragment-->\n\nNo **Apoio I: Doppelganger**  você recebe os seguintes benefícios:\n\n* **Acesso ao grupo secreto**\n* **Prioridade na fabricação de pedidos**\n* **Brinde colecionável**\n* **Live mensal de sorteios**\n* **Poder de voto para decidir novidades e rumos da Doppel**\n* **E além de tudo, ao final do período de assintura (3 meses), \"cashback\" de 100% do valor apoiado em Doppilas**\n\n<!--EndFragment-->",
+          "html": "<!--StartFragment-->\n\n<﻿div style = \"font-size:14px\">\n\nNo **Apoio I: Doppelganger**  você recebe os seguintes benefícios:\n\n* **Acesso ao grupo secreto**\n* **Prioridade na fabricação de pedidos**\n* **Brinde colecionável**\n* **Live mensal de sorteios**\n* **Poder de voto para decidir novidades e rumos da Doppel**\n* **E além de tudo, ao final do período de assintura (3 meses), \"cashback\" de 100% do valor apoiado em Doppilas**\n\n  <﻿/div>\n\n<!--EndFragment-->",
           "label": "APOIAR"
         },
         {
@@ -48,7 +48,7 @@
     },
     {
       "type": "custom-html",
-      "html": "<style>\n  .container{\n  margin-top: 1.5rem;\n  }\n</style>"
+      "html": "<style>\n  .container{\n  margin-top: 1.5rem;\n  }\n  \n  .product-card__name{\n  font-size: 20px;\n  }\n</style>"
     }
   ]
 }

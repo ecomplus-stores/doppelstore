@@ -152,7 +152,7 @@ if (!itemData.disable_checkout) { %>
                 <%= _.ecomUtils.formatMoney(itemData.price) %> 
               <% } %>
             </strong>
-            <span>por trimestre ( <strong><%= _.ecomUtils.formatMoney(itemData.price / 3) %></strong> por mês)</span>
+            <span>por trimestre (<strong><%= _.ecomUtils.formatMoney(itemData.price / 3) %></strong> por mês)</span>
           </div>
           <div class="apoio-link">
             <a class="btn btn-primary" href="<%= url %>"><%= (itemData.label || 'Apoio') %></a>

@@ -65,6 +65,20 @@ jobs:
         env:
           CHANGED_FILES: ${{ steps.changed_files.outputs.all }}
         run: |
+          IS_ECOMPLUS_CD=$(node -p "const f = JSON.parse('${CHANGED_FILES}'); f.length === 1 && f[0] === '.ecomplus.cd.json'");
+          if [ $IS_ECOMPLUS_CD != false ]; then
+            BUILD_SLUG=$(node -p "require('./.ecomplus.cd.json').slug || false");
+            STORE_DOMAIN=$(node -p "require('./content/settings.json').domain || false");
+            if [ $BUILD_SLUG != false ] && [ $STORE_DOMAIN != false ]; then
+              IFS=",";
+              read -ra slug <<< "$BUILD_SLUG";
+              for i in "${slug[@]}"; do
+                curl -X PURGE "https://$STORE_DOMAIN/$i"
+              done;
+              echo "::set-output name=isg::2";
+              exit 0;
+            fi
+          fi
           npm run build -- --prerender=index,app/index,search,404,blog,admin/index --prerender-limit=0;
           echo "::set-output name=isg::0";
         id: partial_build

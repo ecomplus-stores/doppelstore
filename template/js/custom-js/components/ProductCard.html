@@ -122,6 +122,7 @@
 
           <div
             @click="buy"
+            v-if="!isSecret"
             class="product-card__buy fade"
           >
             <slot name="buy">

@@ -6,10 +6,7 @@ export default (isCheckout = false) => {
     const customerDoc = ecomPassport.getCustomer().doc_number
     if (customerDoc && customerDoc !== window.checkedDoppelDoc) {
       window.axios.get(
-        'https://sistema.doppelverso.com.br/ecom/doppelgang',
-        {
-          docNumber: customerDoc
-        }
+        `https://sistema.doppelverso.com.br/ecom/doppelgang/${customerDoc}`,
       )
         .then(({ data }) => {
           if (data.isDoppelgang) {

@@ -152,6 +152,18 @@
               <slot name="variations-info"/>
             </slot>
 
+            <div class="gift-list-subscription" v-if="giftList && giftList.length">
+              <h5><a href="https://links.doppelstore.com.br/492GOrS">Brindes para assinantes</a></h5>
+              <ul>
+                <li v-for="gift in giftList">
+                  <div class="gift-block">
+                    <span>{{ gift.quantity }}</span> - <span>{{ gift.label }}</span>
+                  </div>
+                  <img width="40px" :src="gift.image_url">  
+                </li>
+              </ul>
+            </div>
+
             <slot
               name="customizations"
               v-if="body.customizations"

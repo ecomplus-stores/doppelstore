@@ -55,3 +55,7 @@ if (isShowAll === '59$2a82') {
     })
   })
 }
+const isDoppelGang = window.isDoppelgang || window.sessionStorage.getItem('isDoppelGang')
+if (window.isDoppelgangCategory && !isDoppelGang) {
+  window.location = 'https://links.doppelstore.com.br/492GOrS'
+}

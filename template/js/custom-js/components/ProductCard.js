@@ -104,6 +104,12 @@ export default {
       return getExternalHtml('Rating', this.body)
     },
 
+    isSecret () {
+      return this.body.categories.some(({ _id }) => {
+        return _id === '65fae92687ab487fbfeed8f6'
+      })
+    },
+
     buyHtml () {
       return getExternalHtml('Buy', this.body)
     },

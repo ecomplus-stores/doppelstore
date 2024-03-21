@@ -164,7 +164,8 @@ export default {
       kitItems: [],
       currentTimer: null,
       variationImages: [],
-      variationImagesKey: null
+      variationImagesKey: null,
+      giftList: []
     }
   },
 
@@ -727,6 +728,9 @@ export default {
     const presetQntToBuy = () => {
       this.qntToBuy = this.body.min_quantity || 1
     }
+    window.axios.get(`https://sistema.doppelverso.com.br/ecom/rewardchest/${this.product.sku}`).then(({data}) => {
+      this.giftList = data.rewardChest || []
+    })
     if (this.product) {
       this.body = this.product
       this.sortVariationGrids()

@@ -1482,3 +1482,15 @@ div.backdrop {
     align-items: center;
   }
 }
+
+.gift-list-subscription {
+  li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  ul {
+    padding-left: 0;
+  }
+}

@@ -283,7 +283,7 @@
                           <span v-if="shippingLine.app">
                             {{ shippingLine.app.label }}
                           </span>
-                          <shipping-line :shipping-line="shippingLine"/>
+                          <shipping-line v-if="!isSubscriptionDoppel" :shipping-line="shippingLine"/>
 
                           <div
                             v-if="shippingLine.tracking_codes"
@@ -312,7 +312,7 @@
                           </div>
 
                           <div
-                            if="shippingLine.invoices"
+                            v-if="shippingLine.invoices && shippingLine.invoices.length"
                             class="order-info__shipping-nfe"
                           >
                             <hr>

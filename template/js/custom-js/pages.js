@@ -13,7 +13,7 @@ if (affiliateLinkDiv) {
 }
 
 import checkDoppel from './check-doppel'
-
+import igor1523 from './igor1523'
 checkDoppel()
 
 /* const ghanorDiv = document.getElementById('ghanor-block')

@@ -13,12 +13,19 @@ if (_.state.categories) {
   isDoppelgangCategory = _.state.categories.some(({ _id }) => {
           return _id === '65fae92687ab487fbfeed8f6'
   })
+
+  isDoppelgang3Category = _.state.categories.some(({ _id }) => {
+          return _id === '65fcce7b08d55b3b783c2505'
+  })
 }
 
 %>
 
 <script>
-  window.isDoppelgangCategory = <%- JSON.stringify(isDoppelgangCategory) %>
+  window.isDoppelgangCategory = <%- JSON.stringify(isDoppelgang3Category) %>
+</script>
+<script>
+  window.isDoppelgang3Category = <%- JSON.stringify(isDoppelgangCategory) %>
 </script>
 
 <div id="product-block" class="product-block my-4 mb-lg-5">

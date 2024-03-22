@@ -59,3 +59,8 @@ const isDoppelGang = window.isDoppelgang || window.sessionStorage.getItem('isDop
 if (window.isDoppelgangCategory && !isDoppelGang) {
   window.location = 'https://links.doppelstore.com.br/492GOrS'
 }
+
+const isDoppelGang3 = window.isDoppelgang3 || window.sessionStorage.getItem('isDoppelGang3')
+if (window.isDoppelgangCategory3 && !isDoppelGang3) {
+  window.location = 'https://links.doppelstore.com.br/492GOrS'
+}

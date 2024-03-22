@@ -327,9 +327,9 @@ const hasAllDepartments = header.menu_all_departments
               <% let $categoryLink %>
               <div class="d-inline-block">
                 <a
-                  href="javascript:;"
+                  href="<%- slug === 'doppelgang' ? '/pages/doppelgang' : 'javascript:;' %>"
                   class="<%- hasMegamenu && subcategories.length ? 'has-sub ' : '' %>header__category"
-                  id="cd-<%= _id %>"
+                  id="cd-<%= slug %>"
                   <%- hasMegamenu
                     ? `onmouseover="toggleSubmenu('${slug}', this)" onclick="toggleSubmenu('${slug}', this, true)"`
                     : `onclick="toggleSidenav('${slug}')"` %>

@@ -17,6 +17,19 @@ export default (isCheckout = false) => {
           }
         })
         .catch(console.error)
+
+        window.axios.get(
+          `https://sistema.doppelverso.com.br/ecom/doppelgang3/${customerDoc}`,
+        )
+          .then(({ data }) => {
+            if (data.isDoppelgang3) {
+              window.checkedDoppelgang3Doc = customerDoc
+              window.isDoppelgang3 = data.isDoppelgang3
+              window.sessionStorage.setItem('isDoppelgang3', 1)
+              window.dispatchEvent(new Event('checkDoppel'))
+            }
+          })
+          .catch(console.error)
     }
   }, 400)
   ecomPassport.on('change', checkDoppel)

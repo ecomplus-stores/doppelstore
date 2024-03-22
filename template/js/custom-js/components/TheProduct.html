@@ -154,13 +154,13 @@
 
             <div class="gift-list-subscription p-3" v-if="giftList && giftList.length">
               <h5><a href="https://links.doppelstore.com.br/492GOrS">Baú do Tesouro</a></h5>
-              <p>Assinantes do <span style="color: #9db4cb;font-weight: 600;">Doppelgang</span> ainda ganham os seguintes itens na compra deste produto. <a style="color: var(--primary);font-weight: 600" href="https://links.doppelstore.com.br/492GOrS">Clique aqui para saber mais.</a></p>
+              <p>Assinantes do <span style="color: #9db4cb;font-weight: 600;">Doppelgang</span> ainda ganham os seguintes itens na compra deste produto. <a style="color: #df507c;font-weight: 600" href="https://links.doppelstore.com.br/492GOrS">Clique aqui para saber mais.</a></p>
               <ul>
                 <li v-for="gift in giftList">
                   <div class="gift-block">
                     <span>{{ gift.quantity }}</span> x <span>{{ gift.label }}</span>
                   </div>
-                  <img class"gift-image" width="40px" :src="gift.image_url">  
+                  <img width="40px" :src="gift.image_url">  
                 </li>
               </ul>
             </div>

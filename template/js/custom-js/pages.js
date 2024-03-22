@@ -61,6 +61,8 @@ if (window.isDoppelgangCategory && !isDoppelGang) {
 }
 
 const isDoppelGang3 = window.isDoppelgang3 || window.sessionStorage.getItem('isDoppelGang3')
-if (window.isDoppelgangCategory3 && !isDoppelGang3) {
+
+if (window.isDoppelgang3Category && !isDoppelGang3) {
   window.location = 'https://links.doppelstore.com.br/492GOrS'
 }
+

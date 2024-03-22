@@ -1,4 +1,4 @@
-window.function openImage(imageUrl) {
+window.openImage = function openImage(imageUrl) {
   var modal = document.getElementById("imageModal");
   var modalImg = document.getElementById("expandedImage");
   var captionText = document.getElementById("caption");

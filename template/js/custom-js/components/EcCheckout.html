@@ -163,7 +163,7 @@
           </div>
 
           <discount-applier
-            v-if="canHideSummary && enabledCheckoutStep > 1"
+            v-if="!isSubscription && canHideSummary && enabledCheckoutStep > 1"
             class="checkout__discount mt-4"
             :amount="amount"
             :coupon-code.sync="localDiscountCoupon"
@@ -211,7 +211,7 @@
                 />
               </template>
 
-              <template v-if="enabledCheckoutStep > 1">
+              <template v-if="enabledCheckoutStep > 1 && !isSubscription">
                 <discount-applier
                   class="checkout__discount"
                   :amount="amount"

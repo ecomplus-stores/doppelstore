@@ -171,17 +171,6 @@ const { path } = _.route
           </p>
           <div class="footer__stamps">
             <%- await include(`@/sections/stamps`, { _, opt: { stamps: footer.stamps } }) %>
-            <script src="https://apis.google.com/js/platform.js?onload=renderBadge" async defer></script>
-
-<script>
-  window.renderBadge = function() {
-    var ratingBadgeContainer = document.createElement("div");
-    document.body.appendChild(ratingBadgeContainer);
-    window.gapi.load('ratingbadge', function() {
-      window.gapi.ratingbadge.render(ratingBadgeContainer, {"merchant_id": 115724000});
-    });
-  }
-</script>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+console.log('igor ta on');
 window.openImage = function openImage(imageUrl) {
   var modal = document.getElementById("imageModal");
   var modalImg = document.getElementById("expandedImage");

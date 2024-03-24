@@ -35,7 +35,12 @@
 .bg-custom-primary:hover {
     background-color: #fa71aa!important;
 }
-
+.bg-custom-info {
+    background-color: #5fc5ef!important;
+}
+.bg-custom-info:hover {
+    background-color: #5fc5ef!important;
+}
 .bg-custom-secondary {
     background-color: #393a4b!important;
 }

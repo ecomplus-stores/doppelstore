@@ -161,6 +161,9 @@
                     <span>{{ gift.quantity }}</span> x <span>{{ gift.label }}</span>
                   </div>
                       <img width="40px" :src="gift.image_url" @click="openImage(gift.image_url)">
+                      <script>
+    console.log(gift.image_url);
+  </script>
                 </li>
               </ul>
             </div>

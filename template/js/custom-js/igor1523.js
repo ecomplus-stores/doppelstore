@@ -11,16 +11,3 @@ window.openImage = function openImage(imageUrl) {
     modal.style.display = "none";
   }
 }
-
-// Add an event listener for the DOMContentLoaded event
-document.addEventListener('DOMContentLoaded', function() {
-  var element = document.getElementsByClassName('payment__title');
-
-  if (element.textContent.trim() === 'Assinatura') {
-element[0].textContent = 'Assinatura no Boleto à Vista';
-  }
-
-  if (element.textContent.trim() === 'Assinatura') {
-element[1].textContent = 'Assinatura no Cartão em 3x';
-}
-});

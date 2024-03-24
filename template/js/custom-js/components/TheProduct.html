@@ -164,32 +164,6 @@
                 </li>
               </ul>
             </div>
-<script>
-                  export default {
-              props: {
-                giftList: {
-                  type: Array,
-                  required: true
-                }
-              },
-              methods: {
-                openImage(imageUrl) {
-                  // Your openImage function logic goes here
-                  var modal = document.getElementById("imageModal");
-                  var modalImg = document.getElementById("expandedImage");
-                  var captionText = document.getElementById("caption");
-                  modal.style.display = "block";
-                  modalImg.src = imageUrl;
-                  captionText.innerHTML = "Image";
-                  var span = document.getElementsByClassName("close")[0];
-                  span.onclick = function() {
-                    modal.style.display = "none";
-                  };
-                }
-              }
-            }
-              </script>
-
             <slot
               name="customizations"
               v-if="body.customizations"

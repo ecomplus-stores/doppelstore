@@ -1,4 +1,52 @@
 .gift-list-subscription{
-  background-color: #313c4d;
+  background-color: #313c4d!important;
 
+  .bg-custom-produced {
+    background-color: #ff9d3b!important;
+}
+.bg-custom-produced:hover {
+    background-color: #ffb76f!important;
+}
+
+.bg-custom-success {
+    background-color: #53cc94!important;
+}
+.bg-custom-success:hover {
+    background-color: #71f7b8!important;
+}
+
+.bg-custom-open {
+    background-color: #ffcb30!important;
+}
+.bg-custom-open:hover {
+    background-color: #ffd558!important;
+}
+
+.bg-custom-in-production {
+    background-color: #d771ff!important;
+}
+.bg-custom-in-production:hover {
+    background-color: #dfa0f8!important;
+}
+
+.bg-custom-primary {
+    background-color: #ff4390!important;
+}
+.bg-custom-primary:hover {
+    background-color: #fa71aa!important;
+}
+
+.bg-custom-secondary {
+    background-color: #393a4b!important;
+}
+.bg-custom-secondary:hover {
+    background-color: #575b77!important;
+}
+
+.bg-custom-background {
+    background-color: #21222c!important;
+}
+.bg-custom-background:hover {
+    background-color: #3b3d50!important;
+}
 }

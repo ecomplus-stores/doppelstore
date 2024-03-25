@@ -1,3 +1,4 @@
+import ecomPassport from '@ecomplus/passport-client'
 import {
   i19checkout,
   i19continueShopping,
@@ -131,7 +132,8 @@ export default {
     }
   },r
 created () {
-    window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppel-month-gift`).then(({data}) => {
+  const customerDoc = ecomPassport.getCustomer().doc_number;
+    window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppel-month-gift/${customerDoc}`).then(({data}) => {
       this.monthGift = data.monthGifts || []
     })
 }

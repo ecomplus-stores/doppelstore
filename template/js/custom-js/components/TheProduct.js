@@ -609,13 +609,13 @@ export default {
     },
 
     openImage(imageUrl) {
-      var modal = document.getElementById("imageModal");
-      var modalImg = document.getElementById("expandedImage");
-      var captionText = document.getElementById("caption");
+      var modal = document.getElementById("image-gift-modal");
+      var modalImg = document.getElementById("giftExpandedImage");
+      var captionText = document.getElementById("gift-modal-caption");
       modal.style.display = "block";
       modalImg.src = imageUrl;
       captionText.innerHTML = "Image";
-      var span = document.getElementsByClassName("close")[0];
+      var span = document.getElementsByClassName("close-gift-modal")[0];
       span.onclick = function() {
         modal.style.display = "none";
       }

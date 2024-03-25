@@ -132,7 +132,7 @@ export default {
   },r
 created () {
   const customerDoc = ecomPassport.getCustomer().doc_number;
-    window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppel-month-gift/${customerDoc}`).then(({data}) => {
+    window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppel-month-gift`).then(({data}) => {
       this.monthGift = data.monthGifts || []
     })
 }

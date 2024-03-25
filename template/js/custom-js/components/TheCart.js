@@ -1,4 +1,3 @@
-import ecomPassport from '@ecomplus/passport-client'
 import {
   i19checkout,
   i19continueShopping,

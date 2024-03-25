@@ -24,8 +24,9 @@
       "products": [
         {
           "end": "",
-          "product_id": "65f1741987ab487fbfe30ca5",
-          "html": "<!--StartFragment-->\n\n**Benefícios do Nível I:**\n\n* Acesso ao grupo secreto\n* Prioridade na fabricação de pedidos\n* Brinde colecionável mensal ao fazer um pedido\n* Live mensal de sorteios\n* Poder de voto para decidir novidades e rumos da Doppel\n\n**Recompensa do Nível I:**\n\n* Doppilas (D$ 74,90) ao final do ciclo\n\n<!--EndFragment-->",
+          "disable_stats": false,
+          "product_id": "65f17eaa87ab487fbfe314d7",
+          "html": "<!--StartFragment-->\n\n**Benefícios do Nível III:**\n\n* Todos os benefícios do Plano II\n* Poder personalizar produtos da Doppel com sua arte **(previsão de disponibilidade no final de abril/2024)**.\n\n**Recompensa do Nível III:**\n\n* A edição vigente da Caixa de Schrödinger;\n\n**OU**\n\n* D$ 269,90 na sua conta Doppel (ao final do ciclo, **se informar** que não quer receber aquela edição da Caixa).\n\n<!--EndFragment-->",
           "label": "Assinar"
         },
         {
@@ -38,9 +39,8 @@
         },
         {
           "end": "",
-          "disable_stats": false,
-          "product_id": "65f17eaa87ab487fbfe314d7",
-          "html": "<!--StartFragment-->\n\n**Benefícios do Nível III:**\n\n* Todos os benefícios do Plano II\n* Poder personalizar produtos da Doppel com sua arte **(previsão de disponibilidade no final de abril/2024)**.\n\n**Recompensa do Nível III:**\n\n* A edição vigente da Caixa de Schrödinger;\n\n**OU**\n\n* D$ 269,90 na sua conta Doppel (ao final do ciclo, **se informar** que não quer receber aquela edição da Caixa).\n\n<!--EndFragment-->",
+          "product_id": "65f1741987ab487fbfe30ca5",
+          "html": "<!--StartFragment-->\n\n**Benefícios do Nível I:**\n\n* Acesso ao grupo secreto\n* Prioridade na fabricação de pedidos\n* Brinde colecionável mensal ao fazer um pedido\n* Live mensal de sorteios\n* Poder de voto para decidir novidades e rumos da Doppel\n\n**Recompensa do Nível I:**\n\n* Doppilas (D$ 74,90) ao final do ciclo\n\n<!--EndFragment-->",
           "label": "Assinar"
         }
       ],

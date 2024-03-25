@@ -57,7 +57,7 @@
 
 // MODAL
 /* Modal Styles */
-.modal {
+.gift-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1000; /* Sit on top */
@@ -72,7 +72,7 @@
 }
 
 /* Modal Content */
-.modal-content {
+.gift-modal-content {
   margin: auto;
   display: block;
   width: 80%;
@@ -80,7 +80,7 @@
 }
 
 /* Caption of Modal Image */
-#caption {
+#gift-modal-caption {
   margin: auto;
   display: block;
   width: 80%;
@@ -92,7 +92,7 @@
 }
 
 /* Close Button */
-.close {
+.close-gift-modal {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -102,8 +102,8 @@
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.close-gift-modal:hover,
+.close-gift-modal:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;

@@ -57,7 +57,8 @@ export default {
     return {
       localZipCode: this.zipCode,
       canApplyDiscount: false,
-      isCouponApplied: false
+      isCouponApplied: false,
+      monthGift: []
     }
   },
 
@@ -129,12 +130,12 @@ export default {
       },
       immediate: true
     }
-  },r
-created () {
-    window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppel-month-gift`).then(({data}) => {
-      this.monthGift = data.monthGifts || []
-    })
-}
+  },
+  created () {
+      window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppel-month-gift`).then(({data}) => {
+        this.monthGift = data.monthGifts || []
+      })
+  },
   mounted () {
     this.$nextTick(() => {
       this.canApplyDiscount = !this.localZipCode

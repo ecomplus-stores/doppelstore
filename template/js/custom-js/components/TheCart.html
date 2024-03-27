@@ -1,0 +1,168 @@
+<div class="cart">
+  <transition-group enter-active-class="animated fadeInDown">
+    <div
+      class="row"
+      v-if="cart.items.length"
+      key="list"
+    >
+      <div class="col-md-7 col-lg-8">
+        <div class="cart__list">
+          <slot
+            name="list"
+            v-bind="{ items: cart.items }"
+          >
+            <transition-group
+              enter-active-class="animated fadeInDown"
+              leave-active-class="animated fadeOutUp faster position-absolute"
+            >
+              <cart-item
+                v-for="item in cart.items"
+                :key="item._id"
+                :item="item"
+                :name-max-length="80"
+              />
+            </transition-group>
+          </slot>
+        </div>
+
+        <earn-points-progress
+          class="my-3"
+          :cart-subtotal="cart.subtotal"
+        />
+
+        <recommended-items col-class-name="col-6 col-lg-3"/>
+
+        <slot name="back-shopping">
+          <div class="cart__back d-none d-md-block my-4">
+            <a
+              class="cart__btn-back btn btn-link"
+              role="button"
+              href="/"
+            >
+              <i class="i-arrow-left mr-1"></i>
+              {{ i19continueShopping }}
+            </a>
+          </div>
+        </slot>
+      </div>
+
+      <div class="col-md-5 col-lg-4 mt-3 mt-md-0">
+        <div class="cart__info">
+          <slot name="info">
+            <div
+              class="cart__summary-row"
+              :data-subtotal="cart.subtotal.toFixed(2)"
+            >
+              <span>Subtotal</span>
+              <div>{{ formatMoney(cart.subtotal) }}</div>
+            </div>
+
+            <template v-if="isValidCart">
+              <transition enter-active-class="animated fadeInDown">
+                <div
+                  class="cart__summary-row mt-1"
+                  v-if="amount.discount"
+                  :data-discount="amount.discount.toFixed(2)"
+                >
+                  <span>
+                    <i class="i-tag mr-1"></i>
+                    {{ i19discount }}
+                  </span>
+                  <div>{{ formatMoney(amount.discount) }}</div>
+                </div>
+              </transition>
+
+              <shipping-calculator
+                class="cart__shipping"
+                :can-select-services="true"
+                :shipped-items="cart.items"
+                :zip-code.sync="localZipCode"
+                @select-service="selectShippingService"
+              />
+
+              <div
+                class="cart__summary-row cart__total"
+                :data-total="(amount.total || cart.subtotal).toFixed(2)"
+              >
+                <span>Total</span>
+                <a-prices
+                  :product="{ price: amount.total || cart.subtotal }"
+                  :discount-option="{ value: amount.discount }"
+                  :is-literal="true"
+                  :is-amount-total="true"
+                />
+              </div>
+            </template>
+
+            <slot name="checkout">
+              <a
+                v-if="isValidCart"
+                class="cart__btn-checkout btn btn-lg btn-block btn-success"
+                role="button"
+                :href="checkoutUrl"
+              >
+                <span class="mr-1">
+                  <i class="i-shopping-bag"></i>
+                </span>
+                {{ i19checkout }}
+              </a>
+
+              <a
+                class="cart__btn-back btn btn-block btn-outline-secondary"
+                :class="isValidCart ? 'd-md-none' : 'mt-3'"
+                role="button"
+                href="/"
+              >
+                <i class="i-arrow-left mr-1"></i>
+                {{ i19continueShopping }}
+              </a>
+            </slot>
+          </slot>
+        </div>
+
+        <discount-applier
+          v-if="isValidCart && canApplyDiscount"
+          class="cart__discount"
+          :amount="amount"
+          :is-coupon-applied="isCouponApplied"
+          :coupon-code.sync="localDiscountCoupon"
+          @set-discount-rule="setDiscountRule"
+          :modules-payload="modulesPayload"
+        />
+      </div>
+    </div>
+
+    <div
+      v-else
+      class="cart__empty"
+      key="empty"
+    >
+      <slot name="empty">
+        <p class="lead text-muted">
+          {{ i19emptyCart }} ...
+        </p>
+        <a
+          class="btn btn-primary"
+          href="/"
+        >
+          <span class="mr-1">
+            <i class="i-arrow-left"></i>
+          </span>
+          {{ i19continueShopping }}
+        </a>
+      </slot>
+    </div>
+  </transition-group>
+  <div class="gift-list-subscription p-3" v-if="monthGift && monthGift.length && !isDigitalOnly">
+              <h5><a href="https://links.doppelstore.com.br/492GOrS">Brinde Colecionável</a></h5>
+              <p style="font-size: 0.875rem !important">Assinantes do <span style="color: #9db4cb;font-weight: 600;">Doppelgang</span> ainda ganham os seguintes itens na finalização desse pedido. <a style="color: #df507c;font-weight: 600" href="https://links.doppelstore.com.br/492GOrS">Clique aqui para saber mais.</a></p>
+              <ul style="font-size: 0.875rem !important">
+                <li v-for="gift in monthGift" style="font-size: 0.875rem !important">
+                  <div class="gift-block">
+                    <span>{{ gift.quantity }}</span> x <span>{{ gift.label }}</span>
+                  </div>
+                      <img width="40px" :src="gift.image_url" @click="openImage(gift.image_url)">
+                </li>
+              </ul>
+            </div>
+</div>

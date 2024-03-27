@@ -83,11 +83,28 @@ export default {
       set (couponCode) {
         this.$emit('update:discount-coupon', couponCode)
       }
+    },
+
+    isDigitalOnly () {
+      return this.cart && this.cart.items && this.cart.items.every(({commodity_type}) => commodity_type === 'digital')
     }
   },
 
   methods: {
     formatMoney,
+
+    openImage(imageUrl) {
+      var modal = document.getElementById("image-gift-modal");
+      var modalImg = document.getElementById("giftExpandedImage");
+      var captionText = document.getElementById("gift-modal-caption");
+      modal.style.display = "block";
+      modalImg.src = imageUrl;
+      captionText.innerHTML = "Image";
+      var span = document.getElementsByClassName("close-gift-modal")[0];
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+    },
 
     selectShippingService (service) {
       this.$emit('select-shipping', service)
@@ -132,7 +149,7 @@ export default {
     }
   },
   created () {
-      window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppel-month-gift`).then(({data}) => {
+      window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppelgang-month-gift`).then(({data}) => {
         this.monthGift = data.monthGifts || []
       })
   },

@@ -18,9 +18,11 @@ module.exports = () => ({
       './js/PointsApplier.js': path.resolve(__dirname, 'template/js/custom-js/components/PointsApplier.js'),
       './base-config': path.resolve(__dirname, 'template/js/netlify-cms/base-config'),
       './html/CartQuickview.html': path.resolve(__dirname, 'template/js/custom-js/components/CartQuickview.html'),
+      './js/CartQuickview.js': path.resolve(__dirname, 'template/js/custom-js/components/CartQuickview.js'),
       './html/APrices.html': path.resolve(__dirname, 'template/js/custom-js/components/APrices.html'),
       './js/APrices.js': path.resolve(__dirname, 'template/js/custom-js/components/APrices.js'),
       './js/TheCart.js': path.resolve(__dirname, 'template/js/custom-js/components/TheCart.js'),
+      './html/TheCart.html': path.resolve(__dirname, 'template/js/custom-js/components/TheCart.html'),
       './js/TheAccount.js': path.resolve(__dirname, 'template/js/custom-js/components/TheAccount.js'),
       //'./js/DiscountApplier.js': path.resolve(__dirname, 'template/js/custom-js/components/DiscountApplier.js'),
     }

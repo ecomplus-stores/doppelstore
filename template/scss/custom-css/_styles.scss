@@ -1498,3 +1498,14 @@ div.backdrop {
 .___ratingbadge_0 {
   display: none !important;
 }
+
+#cart-quickview {
+  .gift-list-subscription {
+    h5 {
+      font-size: 1rem !important;
+    }
+    p, ul, li {
+      font-size: 0.875 !important;
+    }
+  }
+}

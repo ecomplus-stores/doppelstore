@@ -1,0 +1,190 @@
+<div class="payment">
+  <transition-group
+    enter-active-class="animated fadeIn slow"
+  >
+    <div
+      v-if="isWaiting"
+      key="waiting"
+      class="payment__loading"
+    >
+      <div
+        class="spinner-grow"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <div
+      v-else-if="paymentGateways.length"
+      key="gateways"
+      class="list-group"
+    >
+      <a
+        href="#"
+        v-for="(gateway, i) in paymentGateways"
+        v-if="checkListedGateway(gateway, i)"
+        v-show="checkShownGateway(gateway, i)"
+        :key="gateway.app_id + gateway.payment_method.code + i"
+        class="payment__gateway list-group-item list-group-item-action"
+        :class="`payment__gateway--${gateway.app_id}`"
+        @click.prevent="selectedGateway = selectedGateway === i ? -1 : i"
+        :data-intermediator="gateway.intermediator && gateway.intermediator.code"
+        :data-label="gateway.label"
+      >
+        <span class="payment__head">
+          <span class="payment__title">
+            <span
+              class="payment__back"
+              v-if="selectedGateway > -1"
+              :aria-label="i19changePaymentMethod"
+            >
+              <i class="i-chevron-left"></i>
+            </span>
+            {{ gateway.type !== 'recurrence' ? gateway.label : gateway.payment_method.code === 'banking_billet' ? `${i19subscription} - Boleto` : `${i19subscription} - Cartão` }}
+          </span>
+
+          <span>
+            <span class="payment__badges">
+              <span
+                v-if="gateway.type === 'recurrence'"
+                class="payment__recurrence mr-1"
+                :title="i19recurrent"
+              >
+                <i class="i-history"></i>
+              </span>
+
+              <span
+                class="badge badge-success payment__discount"
+                v-if="gateway.discount && gateway.discount.value > 0"
+              >
+                <template v-if="gateway.discount.type === 'percentage'">
+                  {{ gateway.discount.value }}%
+                </template>
+                <span
+                  v-else
+                  class="payment__discount-value"
+                >
+                  {{ formatMoney(gateway.discount.value) }}
+                </span>
+                {{ i19ofDiscount }}
+                <template v-if="gateway.discount.apply_at === 'freight'">
+                  {{ i19onFreight }}
+                </template>
+              </span>
+
+              <span
+                class="badge badge-info payment__installment"
+                v-else-if="gateway.installment_option"
+              >
+                {{ i19upTo }}
+                {{ gateway.installment_option.number }}x
+                <template v-if="!gateway.installment_option.tax">
+                  {{ i19interestFree }}
+                </template>
+              </span>
+            </span>
+
+            <span class="payment__icon">
+              <i
+                class="fas"
+                :class="`fa-${gatewayIcon(gateway)}`"
+              ></i>
+            </span>
+          </span>
+        </span>
+
+        <template v-if="canShowGatewayIcon">
+          <img
+            class="payment__stamp"
+            v-if="gateway.icon"
+            :src="gateway.icon"
+          >
+          <small
+            v-else-if="gateway.intermediator && gateway.intermediator.name"
+            class="payment__intermediator"
+          >
+            {{ gateway.intermediator.name }}
+          </small>
+        </template>
+      </a>
+
+      <transition enter-active-class="animated fadeIn">
+        <div
+          class="payment__method list-group-item"
+          v-if="selectedGateway > -1"
+        >
+          <p
+            class="payment__text"
+            v-if="paymentGateway.text"
+            v-html="paymentGateway.text"
+          ></p>
+
+          <div
+            v-if="jsClient && jsClient.container_html"
+            :data-loaded="jsClientLoad.toString()"
+            :data-amount="JSON.stringify(amount)"
+            v-html="jsClient.container_html"
+            ref="gatewayContainer"
+          >
+          </div>
+
+          <template v-else>
+            <p class="payment__total">
+              {{ i19total }}:
+              <strong>{{ formatMoney(amount.total) }}</strong>
+            </p>
+
+            <credit-card-form
+              v-if="shouldUseCardForm"
+              :gateway-options="cardFormGatewayOptions"
+              :gateway-options-label="i19chooseSubscriptionPeriod"
+              @select-gateway="onCardFormSelectGateway"
+              :amount="amount"
+              :check-holder="customerName"
+              :is-company="isCompany"
+              :installment-options="paymentGateway.installment_options"
+              :js-client="jsClient"
+              :js-client-load="jsClientLoad"
+              @checkout="checkout"
+            />
+
+            <button
+              v-else
+              class="btn btn-success btn-lg btn-block payment__pay"
+              @click="handleCheckout"
+            >
+              <i class="i-check mr-1"></i>
+              {{ paymentGateway.payment_method.code === 'banking_billet'
+                  ? i19generateBillet : i19checkout }}
+            </button>
+          </template>
+
+          <hr>
+          <button
+            class="btn btn-sm btn-light"
+            type="button"
+            @click="selectedGateway = -1"
+          >
+            <i class="fa fa-edit mr-1"></i>
+            {{ i19changePaymentMethod }}
+          </button>
+        </div>
+      </transition>
+    </div>
+
+    <div
+      v-else
+      key="empty"
+      class="payment__empty"
+    >
+      <p>{{ i19anyPaymentMethodMsg }}</p>
+      <button
+        class="btn btn-primary"
+        @click="() => fetchPaymentGateways()"
+      >
+        {{ i19tryAgain }}
+      </button>
+    </div>
+  </transition-group>
+</div>

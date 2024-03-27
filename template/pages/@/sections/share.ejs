@@ -1,23 +1,28 @@
+<% 
+const domain = `https://${_.settings.domain || _.store.domain}${_.route.path}`
+console.log(domain)
+ %>
+
 <div class="mb-3 compartilhe-ghanor">
   <span>Compartilhe esse projeto</span>
   <ul class="d-flex list-unstyled">
     <li class="px-2">
-      <a target="_blank" href="https://wa.me/554132065962?text=www.doppelstore.com.br/pages/ghanor">
+      <a target="_blank" href="https://wa.me/send?text=<%= domain %>">
         <i class="fab fa-whatsapp" style="color: rgb(37, 211, 102);"></i>
       </a>
     </li>
     <li class="px-2">
-      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=www.doppelstore.com.br/pages/ghanor">
+      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%= domain %>">
         <i class="fab fa-facebook" style="color: rgb(24, 119, 242);"></i>
       </a>
     </li>
     <li class="px-2">
-      <a target="_blank" href="https://t.me/share/url?url=www.doppelstore.com.br/pages/ghanor">
+      <a target="_blank" href="https://t.me/share/url?url=<%= domain %>">
         <i class="fab fa-telegram" style="color: rgb(0, 136, 204);"></i>
       </a>
     </li>
     <li class="px-2">
-      <a target="_blank" href="mailto:?subject=Veja www.doppelstore.com.br/pages/ghanor">
+      <a target="_blank" href="mailto:?subject=Veja <%= domain %>">
         <i class="fas fa-envelope" style="color: #fff"></i>
       </a>
     </li>

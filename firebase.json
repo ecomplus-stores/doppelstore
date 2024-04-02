@@ -12,6 +12,11 @@
         "type": 302
       },
       {
+        "source": "/doppelgang-assinaturas",
+        "destination": "/pages/doppelgang",
+        "type": 302
+      },
+      {
         "source": "/camisetas",
         "destination": "/camiseta",
         "type": 301

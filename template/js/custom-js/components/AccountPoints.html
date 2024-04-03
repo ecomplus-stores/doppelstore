@@ -1,10 +1,12 @@
+<div v-if="!validPointsEntries.length" id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
+
 <div
   v-if="validPointsEntries.length"
   class="account-points"
 >
   <div class="account-points__info" v-if="points.activeDoppila">
     <h4> Doppilas </h4>
-    <span>{{ i19available }}: <b>{{ points.activeDoppila }}</b></span>
+    <span><b>{{ i19available }}</b>: <b>{{ points.activeDoppila }}</b></span>
   </div>
 
   <ul class="list-group">
@@ -13,7 +15,7 @@
       class="list-group-item account-points__entry"
     >
       <span class="points__doppilas">
-      <b :style="`padding: 7px; ${pointsEntry.type === 'earning' ? 'background-color: var(--success);' : 'background-color: var(--warning);'} color: #fff; margin-top: 5px; margin-bottom: 5px`"> {{ pointsEntry.type === 'earning' ? 'Débito' : 'Crédito' }}  </b> &nbsp; <b>{{ pointsEntry.doppila_amount }}</b>
+      <b :style="`padding: 7px; ${pointsEntry.type === 'earning' ? 'background-color: var(--warning);' : 'background-color: var(--success);'} color: #fff; margin-top: 5px; margin-bottom: 5px`"> {{ pointsEntry.type === 'earning' ? 'Débito' : 'Crédito' }}  </b> &nbsp; <b>{{ pointsEntry.doppila_amount }}</b>
       </span>
       <span class="points__origin">Origem: {{ pointsEntry.origin }}</span>
       <span class="points__data">Data: {{ pointsEntry.created_at && pointsEntry.created_at.substring(0, 10) }}</span>

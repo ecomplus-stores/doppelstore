@@ -103,7 +103,7 @@ if (mainCategories) {
                   href="/<%= subcategory.slug %>"
                 <% } %>
                 id="c-<%= subcategory._id %>"
-                class="menu__item"
+                class="menu__item<%- hasSubmenu ? ' has-subcategory' : '' %>"
               >
                 <% if (subcategory.icon) { %>
                   <span class="menu__item-icon">
@@ -118,6 +118,9 @@ if (mainCategories) {
                 <span>
                   <%= subcategory.name %>
                 </span>
+                <% if (hasSubmenu) { %>
+                  <i class="i-chevron-right"></i>
+                <% } %>
               </a>
               <% if (subcategory.slug === 'astronautica') { %>
                 <!-- <a id="c-exemplo" class="menu__item" href="/exemplo"><span> EXEMPLO </span></a> -->

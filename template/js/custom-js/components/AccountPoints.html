@@ -13,10 +13,18 @@
       class="list-group-item account-points__entry"
     >
       <span class="points__doppilas">
-      <b :style="`padding: 7px; ${pointsEntry.type === 'earning' ? 'background-color: var(--warning);' : 'background-color: var(--success);'} color: #fff; margin-top: 5px; margin-bottom: 5px`"> {{ pointsEntry.type === 'earning' ? 'Débito' : 'Crédito' }}  </b> &nbsp; <b>{{ pointsEntry.doppila_amount }}</b>
+      <b :style="`padding: 7px; ${pointsEntry.type === 'earning' ? 'background-color: var(--warning);' : 'background-color: var(--success);'} color: #fff; margin-top: 5px; margin-bottom: 5px`"> {{ pointsEntry.type === 'earning' ? 'Crédito' : 'Débito' }}  </b> &nbsp; <b>{{ pointsEntry.doppila_amount }}</b>
       </span>
       <span class="points__origin">Origem: {{ pointsEntry.origin }}</span>
       <span class="points__data">Data: {{ pointsEntry.created_at && pointsEntry.created_at.substring(0, 10) }}</span>
     </li>
   </ul>
+</div>
+<div
+  v-else
+    class="spinner"
+    role="status"
+    id="loading-bar-spinner"
+  >
+    <span class="sr-only">Loading...</span>
 </div>

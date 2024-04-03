@@ -2,9 +2,9 @@
   v-if="validPointsEntries.length"
   class="account-points"
 >
-  <div class="account-points__info">
+  <div class="account-points__info" v-if="points.activeDoppila">
     <h4> Doppilas </h4>
-    <span>{{ i19available }}: <b> D$ {{ totalPoints.toFixed(1) }}</b></span>
+    <span>{{ i19available }}: <b>{{ points.activeDoppila }}</b></span>
   </div>
 
   <ul class="list-group">
@@ -12,9 +12,11 @@
       v-for="pointsEntry in validPointsEntries"
       class="list-group-item account-points__entry"
     >
-
-      {{ i19available }}:
-      <b>D$ {{ pointsEntry.active_points.toFixed(1) }}</b>
+      <span class="points__doppilas">
+      <b :style="`padding: 7px; ${pointsEntry.type === 'earning' ? 'background-color: var(--success);' : 'background-color: var(--warning);'} color: #fff; margin-top: 5px; margin-bottom: 5px`"> {{ pointsEntry.type === 'earning' ? 'Débito' : 'Crédito' }}  </b> &nbsp; <b>{{ pointsEntry.doppila_amount }}</b>
+      </span>
+      <span class="points__origin">Origem: {{ pointsEntry.origin }}</span>
+      <span class="points__data">Data: {{ pointsEntry.created_at && pointsEntry.created_at.substring(0, 10) }}</span>
     </li>
   </ul>
 </div>

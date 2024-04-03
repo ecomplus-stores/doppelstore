@@ -1509,3 +1509,14 @@ div.backdrop {
     }
   }
 }
+
+.account-points__entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media(max-width: 567px) {
+    .points__origin {
+      display: none !important;
+    }
+  } 
+}

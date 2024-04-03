@@ -23,6 +23,12 @@ export default {
     }
   },
 
+  data () {
+    return {
+      points: {}
+    }
+  },
+
   computed: {
     i19available: () => i18n(i19available),
     i19loyaltyPoints: () => i18n(i19loyaltyPoints),
@@ -30,34 +36,23 @@ export default {
     i19upTo: () => i18n(i19upTo),
 
     validPointsEntries () {
-      const pointsEntries = this.customer.loyalty_points_entries
-      if (pointsEntries) {
-        return pointsEntries.filter(pointsEntry => {
-          const validThru = pointsEntry.valid_thru
-          return (!validThru || new Date(validThru).getTime() >= Date.now()) &&
-            pointsEntry.active_points > 0
-        })
-      }
-      return []
-    },
-
-    totalPoints () {
-      if (this.validPointsEntries.length) {
-        return this.validPointsEntries.reduce((prev, curr) => (prev + curr.active_points), 0)
-      }
-      return 0
-    },
-
-    totalCashback () {
-      if (this.validPointsEntries.length) {
-        return this.validPointsEntries.reduce((prev, curr) => (prev + (curr.active_points * curr.ratio)), 0)
-      }
-      return 0
+      return this.points.doppilaLog
     }
+
   },
 
   methods: {
     formatDate,
     formatMoney
+  },
+
+  created () {
+    window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppila-log/${this.customer.doc_number}`).then(({data}) => {
+      this.points = data.data || {
+        activeDoppila: "D$ 0.00",
+        doppilaLog: [],
+        futureDoppila: []
+      }
+    })
   }
 }

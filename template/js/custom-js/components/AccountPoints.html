@@ -26,7 +26,7 @@
       <span class="points__doppilas">
       <b :style="`padding: 7px; 'background-color:#d771ff ;'} color: #fff; margin-top: 5px; margin-bottom: 5px`"> 'Entrada Futura  </b> &nbsp; <b>{{ futurePointsEntry.doppila_amount }}</b>
       </span>
-      <a href="https://www.doppelstore.com.br/app/#/order/{{futurePointsEntry.Entry.order_d}}></a><span class="points__origin">Origem: {{ futurePointsEntry.origin }}</span></a>
+      <a href="https://www.doppelstore.com.br/app/#/order/{{futurePointsEntry.Entry.order_d}}><span class="points__origin">Origem: {{ futurePointsEntry.origin }}</span></a>
       <span class="points__data">Data: {{ futurePointsEntry.created_at && futurePointsEntry.created_at.substring(0, 10) }}</span>
     </li>
   </ul>

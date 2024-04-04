@@ -38,6 +38,9 @@ export default {
     validPointsEntries () {
       return this.points.doppilaLog
     }
+    futurePointsEntries (){
+    return this.points.futureDoppila
+    }
 
   },
 

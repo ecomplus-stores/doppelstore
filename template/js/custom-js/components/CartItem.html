@@ -1,0 +1,134 @@
+<section
+  class="cart-item"
+  :class="isFreebie ? 'cart-item--freebie' : null"
+>
+  <div class="cart-item__container">
+    <div class="cart-item__thumb">
+      <component
+        v-if="img"
+        :is="item.slug ? 'a-link' : 'span'"
+        :href="`/${item.slug}`"
+      >
+        <a-picture
+          :src="img.url"
+          :alt="img.alt || item.name"
+        />
+      </component>
+    </div>
+
+    <div class="cart-item__data">
+      <button
+        v-if="!isFreebie"
+        type="button"
+        class="close"
+        :title="i19remove"
+        @click="remove"
+      >
+        <i class="i-trash"></i>
+      </button>
+      <span
+        v-else
+        class="cart-item__freebie"
+      >
+        <i class="i-gift mr-1"></i>
+        {{ i19freebie }}
+      </span>
+
+      <div
+        class="cart-item__name"
+        :title="item.name"
+      >
+        <a-link
+          v-if="item.slug"
+          :href="`/${item.slug}`"
+        >
+          {{ name }}
+        </a-link>
+        <template v-else>
+          {{ name }}
+        </template>
+
+        <small
+          class="cart-item__name-subtitle"
+          v-if="item.kit_product"
+        >
+          {{ formatName(item.kit_product.name) }}
+        </small>
+      </div>
+
+      <small
+        v-if="maxQuantity === 0"
+        class="cart-item__out-of-stock"
+      >
+        {{ i19outOfStock }}
+      </small>
+
+      <template v-else>
+        <div
+          :title="i19quantity"
+          class="cart-item__quantity"
+        >
+          <strong v-if="item.kit_product || item.keep_item_quantity">
+            {{ quantity }}x
+          </strong>
+
+          <select
+            v-else-if="canInputSelect && inputType === 'select'"
+            class="custom-select"
+            v-model.number="quantity"
+            :disabled="!price"
+            @change="updateInputType"
+          >
+            <option
+              v-for="qnt in Math.min(maxQuantity, 10)"
+              v-if="qnt >= minQuantity"
+              :key="`qnt-${qnt}`"
+              :value="qnt"
+              :selected="qnt === quantity"
+            >
+              {{ qnt }}
+            </option>
+            <option
+              v-if="maxQuantity > 10"
+              :value="11"
+            >
+              11+
+            </option>
+          </select>
+
+          <input
+            v-else
+            ref="input"
+            :type="inputType && inputType !== 'select' ? inputType : 'number'"
+            :min="minQuantity"
+            :max="maxQuantity"
+            :step="isIntegerQnt ? null : 0.001"
+            class="form-control"
+            v-model.number="quantity"
+            :readonly="!price"
+            @blur="updateInputType"
+          >
+        </div>
+
+        <div
+          v-if="!isFreebie || price > 0"
+          class="cart-item__prices"
+        >
+          <div
+            class="cart-item__price-un fade"
+            :class="{ show: quantity > 1 }"
+          >
+            {{ formatMoney(price) }}
+            <small>/un</small>
+          </div>
+          {{ formatMoney(price * quantity) }}
+        </div>
+      </template>
+
+      <item-customizations
+        :item="item"
+        class="cart-item__customizations"
+      />
+    </div>
+  </div>
+</section>

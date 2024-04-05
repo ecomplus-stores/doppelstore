@@ -35,7 +35,7 @@
       <span class="points__data">Data: {{ pointsEntry.created_at && pointsEntry.created_at.substring(0, 10) }}</span>
     </li>
   </ul>
-  <ul class="list-group mt-4" v-if="validPointsEntries && validPointsEntries.length">
+  <ul class="list-group mt-4" v-if="futurePointsEntries && futurePointsEntries.length">
      <li
       v-for="futurePointsEntry in futurePointsEntries "
       class="list-group-item account-points__entry"

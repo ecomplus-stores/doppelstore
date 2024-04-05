@@ -34,10 +34,11 @@
       </a>
       <span class="points__data">Data: {{ pointsEntry.created_at && pointsEntry.created_at.substring(0, 10) }}</span>
     </li>
-
+  </ul>
+  <ul class="list-group mt-4" v-if="validPointsEntries && validPointsEntries.length">
      <li
       v-for="futurePointsEntry in futurePointsEntries "
-      class="list-group-item account-points__entry mt-4"
+      class="list-group-item account-points__entry"
     >
       <span class="points__doppilas">
       <b class="rounded" style="padding: 7px; background-color:#d771ff ; color: #fff; margin-top: 5px; margin-bottom: 5px"> Entrada Futura  </b> &nbsp; <b>{{ futurePointsEntry.doppila_amount }}</b>

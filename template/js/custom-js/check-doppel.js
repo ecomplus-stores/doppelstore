@@ -18,6 +18,19 @@ export default (isCheckout = false) => {
         })
         .catch(console.error)
 
+ window.axios.get(
+          `https://sistema.doppelverso.com.br/ecom/doppelgang2/${customerDoc}`,
+        )
+          .then(({ data }) => {
+            if (data.isDoppelgang3) {
+              window.checkedDoppelgang2Doc = customerDoc
+              window.isDoppelgang2 = data.isDoppelgang2
+              window.sessionStorage.setItem('isDoppelgang2', 1)
+              window.dispatchEvent(new Event('checkDoppel'))
+            }
+          })
+          .catch(console.error)
+      
         window.axios.get(
           `https://sistema.doppelverso.com.br/ecom/doppelgang3/${customerDoc}`,
         )

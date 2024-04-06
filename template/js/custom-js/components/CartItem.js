@@ -192,5 +192,7 @@ export default {
     window.axios.get(`https://sistema.doppelverso.com.br/ecom/rewardchest/${this.item.sku}`).then(({data}) => {
       this.giftList = data.rewardChest || []
     })
+        console.log(this.giftList);
+
   }
 }

@@ -17,11 +17,6 @@ import ALink from '@ecomplus/storefront-components/src/ALink.vue'
 import APicture from '@ecomplus/storefront-components/src/APicture.vue'
 import ItemCustomizations from '@ecomplus/storefront-components/src/ItemCustomizations.vue'
 
-const isDoppelgang2 = window.isDoppelgang2 || window.sessionStorage.getItem('isDoppelgang2')
-const isDoppelgang3 = window.isDoppelgang3 || window.sessionStorage.getItem('isDoppelgang3')
-console.log('cartItem doppelgang2 ' + isDoppelgang2);
-console.log('cartItem doppelgang3 ' + isDoppelgang3);
-
 export default {
   name: 'CartItem',
 
@@ -105,6 +100,14 @@ export default {
       return typeof maxQuantity === 'number' && maxQuantity >= 0
         ? maxQuantity
         : 9999999
+    },
+
+    isDoppelgang2 () {
+      return window.isDoppelgang2 || window.sessionStorage.getItem('isDoppelgang2')
+    },
+
+    isDoppelgang3 () {
+      return window.isDoppelgang3 || window.sessionStorage.getItem('isDoppelgang3')
     }
   },
 

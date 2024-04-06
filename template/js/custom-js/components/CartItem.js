@@ -16,7 +16,10 @@ import ecomCart from '@ecomplus/shopping-cart'
 import ALink from '@ecomplus/storefront-components/src/ALink.vue'
 import APicture from '@ecomplus/storefront-components/src/APicture.vue'
 import ItemCustomizations from '@ecomplus/storefront-components/src/ItemCustomizations.vue'
-
+const isDoppelGang2 = window.isDoppelgang2 || window.sessionStorage.getItem('isDoppelGang2')
+const isDoppelGang3 = window.isDoppelgang3 || window.sessionStorage.getItem('isDoppelGang3')
+console.log(isDoppelGang2);
+console.log(isDoppelGang3);
 export default {
   name: 'CartItem',
 

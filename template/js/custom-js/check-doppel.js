@@ -6,30 +6,17 @@ export default (isCheckout = false) => {
     const customerDoc = ecomPassport.getCustomer().doc_number
     if (customerDoc && customerDoc !== window.checkedDoppelDoc) {
       window.axios.get(
-        `https://sistema.doppelverso.com.br/ecom/doppelgang/${customerDoc}`,
+        `https://sistema.doppelverso.com.br/ecom/doppelgang2/${customerDoc}`,
       )
         .then(({ data }) => {
-          if (data.isDoppelgang) {
+          if (data.isDoppelgang2) {
             window.checkedDoppelDoc = customerDoc
-            window.isDoppelgang = data.isDoppelgang
-            window.sessionStorage.setItem('isDoppelGang', 1)
+            window.isDoppelgang2 = data.isDoppelgang2
+            window.sessionStorage.setItem('isDoppelGang2', 1)
             window.dispatchEvent(new Event('checkDoppel'))
           }
         })
         .catch(console.error)
-
- window.axios.get(
-          `https://sistema.doppelverso.com.br/ecom/doppelgang2/${customerDoc}`,
-        )
-          .then(({ data }) => {
-            if (data.isDoppelgang3) {
-              window.checkedDoppelgang2Doc = customerDoc
-              window.isDoppelgang2 = data.isDoppelgang2
-              window.sessionStorage.setItem('isDoppelgang2', 1)
-              window.dispatchEvent(new Event('checkDoppel'))
-            }
-          })
-          .catch(console.error)
       
         window.axios.get(
           `https://sistema.doppelverso.com.br/ecom/doppelgang3/${customerDoc}`,

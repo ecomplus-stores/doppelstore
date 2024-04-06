@@ -128,7 +128,7 @@
               <ul>
                 <li v-for="gift in giftList">
                   <div class="gift-block">
-                    <span>{{ gift.quantity }}</span> x <span>{{ gift.label }}</span>
+                    <span style="font-size:small">{{ gift.quantity }}</span> x <span style="font-size:small">{{ gift.label }}</span>
                   </div>
                       <img width="40px" :src="gift.image_url" @click="openImage(gift.image_url)">
                 </li>

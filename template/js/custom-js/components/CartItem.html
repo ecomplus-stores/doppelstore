@@ -123,6 +123,18 @@
           </div>
           {{ formatMoney(price * quantity) }}
         </div>
+           <div class="gift-list-subscription p-3" v-if="giftList && giftList.length && (isDoppelGang2 || isDoppelGang3)">
+              <h5><a href="https://links.doppelstore.com.br/492GOrS">Baú do Tesouro</a></h5>
+              <p>Você por ser <span style="color: #9db4cb;font-weight: 600;"> apoiador Doppelgang nível II ou mais</span> vai levar de presente os seguintes itens na compra deste produto.</p>
+              <ul>
+                <li v-for="gift in giftList">
+                  <div class="gift-block">
+                    <span>{{ gift.quantity }}</span> x <span>{{ gift.label }}</span>
+                  </div>
+                      <img width="40px" :src="gift.image_url" @click="openImage(gift.image_url)">
+                </li>
+              </ul>
+            </div>
       </template>
 
       <item-customizations

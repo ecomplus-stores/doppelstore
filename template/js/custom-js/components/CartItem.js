@@ -188,6 +188,7 @@ export default {
 
   created () {
     this.updateInputType()
+    console.log(this.item.sku);
     window.axios.get(`https://sistema.doppelverso.com.br/ecom/rewardchest/${this.item.sku}`).then(({data}) => {
       this.giftList = data.rewardChest || []
     })

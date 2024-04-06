@@ -53,7 +53,8 @@ export default {
   data () {
     return {
       quantity: 0,
-      canInputSelect: false
+      canInputSelect: false,
+      giftList: []
     }
   },
 
@@ -187,5 +188,8 @@ export default {
 
   created () {
     this.updateInputType()
+    window.axios.get(`https://sistema.doppelverso.com.br/ecom/rewardchest/${this.product.sku}`).then(({data}) => {
+      this.giftList = data.rewardChest || []
+    })
   }
 }

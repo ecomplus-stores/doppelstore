@@ -55,14 +55,14 @@ if (isShowAll === '59$2a82') {
     })
   })
 }
-const isDoppelGang2 = window.isDoppelgang2 || window.sessionStorage.getItem('isDoppelGang2')
-if (window.isDoppelgangCategory && !isDoppelGang2) {
+const isDoppelgang2 = window.isDoppelgang2 || window.sessionStorage.getItem('isDoppelgang2')
+if (window.isDoppelgangCategory && !isDoppelgang2) {
   window.location = 'https://links.doppelstore.com.br/492GOrS'
 }
 
-const isDoppelGang3 = window.isDoppelgang3 || window.sessionStorage.getItem('isDoppelGang3')
+const isDoppelgang3 = window.isDoppelgang3 || window.sessionStorage.getItem('isDoppelgang3')
 
-if (window.isDoppelgang3Category && !isDoppelGang3) {
+if (window.isDoppelgang3Category && !isDoppelgang3) {
   window.location = 'https://links.doppelstore.com.br/492GOrS'
 }
 

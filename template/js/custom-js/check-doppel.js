@@ -14,6 +14,7 @@ export default (isCheckout = false) => {
             window.isDoppelgang2 = data.isDoppelgang2
             window.sessionStorage.setItem('isDoppelGang2', 1)
             window.dispatchEvent(new Event('checkDoppel'))
+            console.log('isDoppelGang2 ' + window.sessionStorage.getItem('isDoppelGang2'))
           }
         })
         .catch(console.error)
@@ -27,6 +28,8 @@ export default (isCheckout = false) => {
               window.isDoppelgang3 = data.isDoppelgang3
               window.sessionStorage.setItem('isDoppelgang3', 1)
               window.dispatchEvent(new Event('checkDoppel'))
+              console.log('isDoppelGang3 ' + window.sessionStorage.getItem('isDoppelGang3'))
+
             }
           })
           .catch(console.error)

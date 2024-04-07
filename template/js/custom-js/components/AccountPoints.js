@@ -38,11 +38,13 @@ export default {
 
     validPointsEntries () {
       const sessionPoints = JSON.parse(window.sessionStorage.getItem('points'))
+      console.log(this.points.doppilaLog);
       return this.points.doppilaLog || sessionPoints.doppilaLog || []
     },
 
     futurePointsEntries () {
       const sessionPoints = JSON.parse(window.sessionStorage.getItem('points'))
+      console.log(this.points.futureDoppila)
       return this.points.futureDoppila || sessionPoints.futureDoppila || []
     },
 
@@ -61,7 +63,6 @@ export default {
         futureDoppila: []
       }
       window.sessionStorage.setItem('points', JSON.stringify(this.points))
-      console.log(this.points)
       this.showSpinner = false
     })
   }

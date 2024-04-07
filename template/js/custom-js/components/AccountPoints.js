@@ -61,6 +61,7 @@ export default {
         futureDoppila: []
       }
       window.sessionStorage.setItem('points', JSON.stringify(this.points))
+      console.log(this.points)
       this.showSpinner = false
     })
   }

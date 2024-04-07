@@ -74,6 +74,10 @@ export default {
       default () {
         return ecomCart
       }
+    },
+    onlyDoppila: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -182,6 +186,9 @@ export default {
     formatMoney,
 
     checkListedGateway (gateway, i) {
+      if (gateway.payment_method.code === 'loyalty_points' && this.onlyDoppila) {
+        return this.onlyDoppila
+      }
       if (gateway.payment_method.code !== 'loyalty_points') {
         if (this.canGroupRecurrentGateways) {
           const checkRecurrentCardGateway = (gateway) => {

@@ -135,7 +135,8 @@ export default {
       paymentGateways: [],
       loyaltyPointsApplied: {},
       loyaltyPointsAmount: 0,
-      hasMoreOffers: false
+      hasMoreOffers: false,
+      availableDoppilas: 0
     }
   },
 
@@ -148,6 +149,14 @@ export default {
     i19proceed: () => i18n(i19proceed),
     i19selectedOffers: () => i18n(i19selectedOffers),
     modulesPayload: () => baseModulesRequestData,
+
+    doppilasPay () {
+      return this.amount.total <= this.availableDoppilas
+    },
+
+    doppilasPoints () {
+      return this.doppilasPay ? this.amount.total : this.loyaltyPointsAmount
+    },
 
     dictionary () {
       return {
@@ -206,7 +215,7 @@ export default {
     paymentAmount () {
       return {
         ...this.amount,
-        total: this.amount.total - this.loyaltyPointsAmount
+        total: this.amount.total - this.loyaltyPointsAmount - this.doppilasPoints
       }
     },
 
@@ -336,10 +345,15 @@ export default {
     },
 
     checkout (transaction) {
-      if (this.loyaltyPointsAmount) {
+      if (this.loyaltyPointsAmount || this.doppilasPoints) {
+
         for (let i = 0; i < this.paymentGateways.length; i++) {
-          if (this.paymentGateways[i].payment_method.code === 'loyalty_points') {
-            const pointsAmountPart = this.loyaltyPointsAmount / this.amount.total
+          if (this.paymentGateways[i].payment_method.code === 'loyalty_points' && this.paymentGateway.payment_method.code !== 'loyalty_points') {
+            const pointsAmountPart = (this.loyaltyPointsAmount + this.doppilasPoints) / this.amount.total
+            const loyaltyPointsApplied = { ...this.loyaltyPointsApplied }
+            if (loyaltyPointsApplied.p0_pontos) {
+              loyaltyPointsApplied.p0_pontos += this.doppilasPoints
+            }
             return this.$emit('checkout', [{
               ...transaction,
               amount_part: 1 - pointsAmountPart
@@ -347,6 +361,15 @@ export default {
               ...this.paymentGateways[i],
               loyalty_points_applied: this.loyaltyPointsApplied,
               amount_part: pointsAmountPart
+            }])
+          } else if (this.paymentGateways[i].payment_method.code === 'loyalty_points' && this.paymentGateway.payment_method.code === 'loyalty_points') {
+            const loyaltyPointsApplied = { 
+              p0_pontos: this.doppilasPoints
+             }
+            return this.$emit('checkout', [{
+              ...transaction,
+              loyalty_points_applied: loyaltyPointsApplied,
+              amount: this.doppilasPoints
             }])
           }
         }

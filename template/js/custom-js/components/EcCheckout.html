@@ -142,10 +142,12 @@
                   v-if="enabledCheckoutStep >= 2"
                   :class="shownCheckoutStep !== 2 ? 'd-none d-md-block' : null"
                 >
+
                   <payment-methods
                     :key="paymentsListKey"
                     :amount="paymentAmount"
                     :customer="localCustomer"
+                    :only-doppila="doppilasPay"
                     :payment-gateways.sync="paymentGateways"
                     @select-gateway="selectPaymentGateway"
                     @checkout="checkout"
@@ -203,11 +205,12 @@
 
               <template #amount-custom>
                 <points-applier
-                  v-if="enabledCheckoutStep > 1 && !isEarningPoints"
+                  v-if="enabledCheckoutStep > 1 && !isEarningPoints && !doppilasPay"
                   class="checkout__loyalty-points"
                   :points-applied.sync="loyaltyPointsApplied"
                   :points-amount.sync="loyaltyPointsAmount"
-                  :max-points-amount="(amount.total - 5)"
+                  :max-points-amount="amount.total"
+                  @available-points="({ p0_pontos }) => availableDoppilas = p0_pontos"
                 />
               </template>
 

@@ -349,7 +349,7 @@ export default {
 
         for (let i = 0; i < this.paymentGateways.length; i++) {
           if (this.paymentGateways[i].payment_method.code === 'loyalty_points' && this.paymentGateway.payment_method.code !== 'loyalty_points') {
-            const pointsAmountPart = (this.loyaltyPointsAmount + this.doppilasPoints) / this.amount.total
+            const pointsAmountPart = this.loyaltyPointsAmount / this.amount.total
             const loyaltyPointsApplied = { ...this.loyaltyPointsApplied }
             if (loyaltyPointsApplied.p0_pontos) {
               loyaltyPointsApplied.p0_pontos += this.doppilasPoints

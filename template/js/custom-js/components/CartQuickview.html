@@ -45,6 +45,7 @@
                 <cart-item
                   v-for="item in cart.items"
                   :key="item._id"
+                  :origin="'sidecart'"
                   :item="item"
                 />
               </transition-group>

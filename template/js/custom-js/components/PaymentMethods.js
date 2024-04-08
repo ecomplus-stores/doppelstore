@@ -115,6 +115,10 @@ export default {
       return this.paymentGateways[this.selectedGateway] || {}
     },
 
+    amountBalance () {
+      return this.amount.subtotal + this.amount.freight - this.amount.discount - this.amount.total
+    },
+
     jsClient () {
       return this.paymentGateway.js_client
     },

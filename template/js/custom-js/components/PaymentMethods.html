@@ -41,7 +41,7 @@
             >
               <i class="i-chevron-left"></i>
             </span>
-            {{ gateway.type !== 'recurrence' ? gateway.label : gateway.payment_method.code === 'banking_billet' ? `${i19subscription} - Boleto` : `${i19subscription} - Cartão` }}
+            {{ gateway.type !== 'recurrence' ? onlyDoppila && gateway.payment_method.code === 'loyalty_points' ? `Pagar com ${gateway.label}: ${formatMoney(amount.total).replace('R', 'D')}` : gateway.label : gateway.payment_method.code === 'banking_billet' ? `${i19subscription} - Boleto` : `${i19subscription} - Cartão` }}
           </span>
 
           <span>
@@ -130,10 +130,23 @@
           </div>
 
           <template v-else>
-            <p class="payment__total">
-              {{ i19total }}:
-              <strong>{{ formatMoney(amount.total) }}</strong>
-            </p>
+            <div class="new-payment-show" v-if="amountBalance >= 1">
+              <p class="payment__total">
+                Pago em Doppila:
+                <strong>{{ formatMoney(amountBalance).replace('R', 'D') }}</strong>
+              </p>
+              <p class="payment__total" style="color: var(--primary)">
+                A pagar em reais:
+                <strong>{{ formatMoney(amount.total) }}</strong>
+              </p>
+            </div>
+            <div v-else>
+              <p class="payment__total">
+                Total:
+                <strong>{{ onlyDoppila ? formatMoney(amount.total).replace('R', 'D') : formatMoney(amount.total) }}</strong>
+              </p>
+            </div>
+            
 
             <credit-card-form
               v-if="shouldUseCardForm"

@@ -18,6 +18,7 @@
               <cart-item
                 v-for="item in cart.items"
                 :key="item._id"
+                :origin="'cart'"
                 :item="item"
                 :name-max-length="80"
               />

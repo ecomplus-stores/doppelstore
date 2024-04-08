@@ -1,6 +1,6 @@
 <section
   class="cart-item"
-  :class="isFreebie ? 'cart-item--freebie' : null"
+  :class="isFreebie ? `cart-item--freebie ${origin}` : origin"
 >
   <div class="cart-item__container">
     <div class="cart-item__thumb">

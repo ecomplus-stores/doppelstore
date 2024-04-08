@@ -215,7 +215,7 @@ export default {
     paymentAmount () {
       return {
         ...this.amount,
-        total: this.amount.total - this.loyaltyPointsAmount - this.doppilasPoints
+        total: this.amount.total - this.loyaltyPointsAmount
       }
     },
 

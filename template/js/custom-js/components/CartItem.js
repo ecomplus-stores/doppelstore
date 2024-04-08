@@ -31,6 +31,10 @@ export default {
       type: Object,
       required: true
     },
+    origin: {
+      type: String,
+      default: 'sidecart'
+    },
     nameMaxLength: {
       type: Number,
       default: 35

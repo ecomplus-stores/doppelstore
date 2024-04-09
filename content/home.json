@@ -55,6 +55,16 @@
       "type": "collection-shelf",
       "shuffle": false,
       "limit": 12,
+      "page": 1,
+      "collection_id": "64c590c95e60690370785d65:categories:Edições Anteriores:/edicoes-anteriores-caixa-de-schrodinger",
+      "sort": "sales",
+      "title": "Edições Anteriores Caixa de Schrödinger",
+      "autoplay": 0
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
       "page": 2,
       "collection_id": null,
       "title": "ÚLTIMOS LANÇAMENTOS",

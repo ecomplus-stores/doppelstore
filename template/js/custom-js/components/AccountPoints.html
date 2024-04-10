@@ -29,7 +29,10 @@
       <span class="points__doppilas">
       <b class="rounded" :style="`padding: 7px; ${pointsEntry.type === 'earning' ? 'background-color: var(--success);' : 'background-color: var(--warning);'} color: #fff; margin-top: 5px; margin-bottom: 5px`"> {{ pointsEntry.type === 'earning' ? 'Crédito' : 'Débito' }}  </b> &nbsp; <b>{{ pointsEntry.doppila_amount }}</b>
       </span>
-      <a :href="`/app/#/order/${pointsEntry.origin.replace(/.*Pedido (\d+).*/, '$1')}/${pointsEntry.order_id}`">
+      <span v-if="!(pointsEntry.origin && pointsEntry.origin.includes('pedido') && pointsEntry.order_id)" class="points__origin">
+          Origem: {{ pointsEntry.origin }}
+      </span>
+      <a v-else :href="`/app/#/order/${pointsEntry.origin.replace(/.*Pedido (\d+).*/, '$1')}/${pointsEntry.order_id}`">
         <span class="points__origin">Origem: {{ pointsEntry.origin }}</span>
       </a>
       <span class="points__data">Data: {{ pointsEntry.created_at && pointsEntry.created_at.substring(0, 10) }}</span>

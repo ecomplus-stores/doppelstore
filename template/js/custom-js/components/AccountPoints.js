@@ -37,15 +37,11 @@ export default {
     i19upTo: () => i18n(i19upTo),
 
     validPointsEntries () {
-      const sessionPoints = JSON.parse(window.sessionStorage.getItem('points'))
-      console.log('Doppilalog ' + JSON.stringify(this.points.doppilaLog));
-      return this.points.doppilaLog || sessionPoints.doppilaLog || []
+      return this.points.doppilaLog || []
     },
 
     futurePointsEntries () {
-      const sessionPoints = JSON.parse(window.sessionStorage.getItem('points'))
-      console.log('futureDoppila ' + JSON.stringify(this.points.futureDoppila))
-      return this.points.futureDoppila || sessionPoints.futureDoppila || []
+      return this.points.futureDoppila || []
     },
 
   },
@@ -62,7 +58,6 @@ export default {
         doppilaLog: [],
         futureDoppila: []
       }
-      window.sessionStorage.setItem('points', JSON.stringify(this.points))
       this.showSpinner = false
     })
   }

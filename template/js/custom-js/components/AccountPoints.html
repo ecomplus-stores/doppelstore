@@ -21,7 +21,7 @@
     <span><b>{{ i19available }}</b>: <b>{{ points.activeDoppila }}</b></span>
   </div>
 
-  <ul class="list-group" v-if="validPointsEntries && validPointsEntries.length">
+  <ul class="list-group" v-if="validPointsEntries && (Object.keys(validPointsEntries).length ||  validPointsEntries.length)">
     <li
       v-for="pointsEntry in validPointsEntries"
       class="list-group-item account-points__entry"

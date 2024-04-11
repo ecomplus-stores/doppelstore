@@ -28,12 +28,14 @@ import ecomCart from '@ecomplus/shopping-cart'
 import loadPaymentClient from '@ecomplus/storefront-app/src/lib/load-payment-client'
 import { sortApps } from '@ecomplus/storefront-app/src/lib/utils'
 import CreditCardForm from '@ecomplus/storefront-app/src/components/CreditCardForm.vue'
+import PointsApplier from '#components/PointsApplier.vue'
 
 export default {
   name: 'PaymentMethods',
 
   components: {
-    CreditCardForm
+    CreditCardForm,
+    PointsApplier
   },
 
   props: {

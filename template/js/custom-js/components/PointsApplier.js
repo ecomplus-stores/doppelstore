@@ -28,7 +28,8 @@ export default {
   data () {
     return {
       localPointsPrograms: this.pointsPrograms || {},
-      availablePoints: {}
+      availablePoints: {},
+      isActive: false
     }
   },
 
@@ -80,9 +81,10 @@ export default {
       return this.availablePoints[programId] * this.localPointsPrograms[programId].ratio
     },
 
-    togglePoints (programId, isChecked) {
+    togglePoints (programId) {
+      this.isActive = !this.isActive
       const pointsApplied = {}
-      if (isChecked) {
+      if (this.isActive) {
         pointsApplied[programId] = this.availablePoints[programId]
       }
       this.$emit('update:points-applied', pointsApplied)

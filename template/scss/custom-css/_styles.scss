@@ -1555,3 +1555,11 @@ div.backdrop {
 .new-payment-show {
   display: flex;
 }
+
+.points-applier.checkout__loyalty-points {
+  a.active {
+    border-color: #37a581;
+    background-color: #1e293b;
+    color: #ff3f78;
+  }
+}

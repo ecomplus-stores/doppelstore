@@ -2,25 +2,19 @@
   <div
     v-for="({ name }, programId) in localPointsPrograms"
     v-if="availablePoints[programId] >= 0.1"
-    class="custom-control custom-switch"
   >
-    <input
-      type="checkbox"
-      class="custom-control-input"
-      :id="`points-applier-${programId}`"
-      :checked="pointsApplied[programId]"
-      @change="ev => togglePoints(programId, ev.target.checked)"
-    >
 
-    <label
-      class="custom-control-label"
-      :for="`points-applier-${programId}`"
-    >
-      <span class="badge badge-info">
-        - D$ {{ (getPointsAmount(programId).toFixed(2)).replace('.', ',') }}
-      </span>
-      {{ i19use$1LoyaltyPoints.replace('$1', availablePoints[programId].toFixed(1)) }}
-      <em>{{ name }}</em>
-    </label>
+    <a
+        href="#"
+        class="payment__gateway list-group-item list-group-item-action"
+        :class="{ 'active': isActive }"
+        @click.prevent="ev => togglePoints(programId)"
+      >
+        <span class="badge badge-info">
+          - D$ {{ (getPointsAmount(programId).toFixed(2)).replace('.', ',') }}
+        </span>
+        {{ i19use$1LoyaltyPoints.replace('$1', availablePoints[programId].toFixed(1)) }}
+        {{ name }}
+    </a>
   </div>
 </div>

@@ -105,7 +105,7 @@ export default {
     },
 
     isSecret () {
-      return this.body.categories.some(({ _id }) => {
+      return this.body.categories && this.body.categories.length && this.body.categories.some(({ _id }) => {
         return _id === '65fae92687ab487fbfeed8f6'
       })
     },

@@ -131,7 +131,7 @@
 
           <template v-else>
             <div class="new-payment-show" v-if="amountBalance >= 1">
-              <p class="payment__total">
+              <p class="payment__total" style="">
                 Pago em Doppila:
                 <strong>{{ formatMoney(amountBalance).replace('R', 'D') }}</strong>
               </p>

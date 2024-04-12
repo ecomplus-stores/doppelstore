@@ -6,11 +6,11 @@
 
     <a
         href="#"
-        class="payment__gateway list-group-item list-group-item-action"
+        class="payment__gateway list-group-item list-group-item-action doppila"
         :class="{ 'active': isActive }"
         @click.prevent="ev => togglePoints(programId)"
       >
-        <span class="badge badge-info">
+        <span class="badge badge-info p-2" style="margin-right: 10px;">
           - D$ {{ (getPointsAmount(programId).toFixed(2)).replace('.', ',') }}
         </span>
         {{ i19use$1LoyaltyPoints.replace('$1', availablePoints[programId].toFixed(1)) }}

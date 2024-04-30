@@ -36,6 +36,7 @@ import {
 } from '@ecomplus/utils'
 
 import { store } from '@ecomplus/client'
+import vSelect from 'vue-select'
 import ecomPassport from '@ecomplus/passport-client'
 import ecomCart from '@ecomplus/shopping-cart'
 import EcomSearch from '@ecomplus/search-engine'
@@ -47,7 +48,8 @@ export default {
 
   components: {
     ShippingLine,
-    EcSummary
+    EcSummary,
+    vSelect
   },
 
   props: {
@@ -93,7 +95,14 @@ export default {
       orderBody: this.order,
       canReopenOrder: false,
       validThruTimer: null,
-      validThruRemainingTime: null
+      validThruRemainingTime: null,
+      receiveDoppila: null,
+      optionSubscription: null,
+      canModifySubscriptionBonus: null,
+      canModifySubscriptionShirt: null,
+      sizes: [],
+      listOptions: [],
+      size: null
     }
   },
 
@@ -127,7 +136,7 @@ export default {
     i19invoice: () => 'Nota fiscal',
 
     isSubscriptionDoppel () {
-      return this.orderBody && this.orderBody.items && this.orderBody.items.length && this.orderBody.items.some(({name}) => name && name.toLowerCase().includes('apoio'))
+      return this.orderBody && this.orderBody.transactions && this.orderBody.transactions.length && this.orderBody.transactions.some(({type}) => type === "recurrence") && (this.status !== 'cancelled')
     },
 
     localOrder: {
@@ -157,6 +166,10 @@ export default {
       const transactionMethod = this.transaction['banking_billet'] || this.transaction['account_deposit']
       return transactionMethod && transactionMethod.valid_thru
     },
+
+    getSelect (event) {
+      console.log(event)
+    }, 
 
     shippingAddress () {
       const { localOrder } = this
@@ -257,9 +270,17 @@ export default {
       return this.ecomPassport.checkAuthorization()
     },
 
+    isSchrodinger () {
+      return this.localOrder.items.some(({sku}) => sku === 'nivel-iii-caixa-de-schrodinger')
+    },
+
     isSubscription () {
       return this.localOrder.transactions &&
         this.localOrder.transactions.find(({ type }) => type === 'recurrence')
+    },
+
+    isBox () {
+      return this.receiveDoppila === 'box'
     }
   },
 
@@ -414,6 +435,35 @@ export default {
         }
       },
       immediate: true
+    },
+
+    receiveDoppila: {
+      handler (newOption) {
+        console.log('new option', newOption)
+        window.axios.post(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.order.number}`, {
+          choice: newOption
+        }).then((res) => {
+        if (this.canModifySubscriptionBonus && this.isBox) {
+          window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
+            console.log(data)
+            this.sizes = data.options
+            this.listOptions = Object.keys(this.sizes)
+            this.canModifySubscriptionShirt = data['can-modify']
+          })
+        }
+      })
+      }
+    },
+
+    size: {
+      handler (newOption) {
+        console.log('new size', newOption)
+        window.axios.post(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`, {
+          size: this.sizes[newOption]
+        }).then((res) => {
+          console.log('right', res.data)
+      })
+      }
     }
   },
 
@@ -422,6 +472,16 @@ export default {
       if (this.isNew) {
         this.saveCustomerOrder()
       }
+      window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.order.number}`).then(({data}) => {
+        this.receiveDoppila = data.choice
+        this.optionSubscription = data.options
+        this.canModifySubscriptionBonus =  data['can-modify']
+        if (this.canModifySubscriptionBonus && this.isBox) {
+          window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
+            console.log(data)
+          })
+        }
+      })
       if (!this.skipDataLoad) {
         const url = `/orders/${this.order._id}.json`
         const update = () => {

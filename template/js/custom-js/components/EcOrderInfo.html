@@ -370,6 +370,83 @@
                     </div>
                   </slot>
 
+                <slot
+                    name="subcription"
+                  >
+                    <div
+                      v-if="receiveDoppila && isSchrodinger"
+                      class="order-info__subscription card"
+                    >
+                      <div class="card-header">
+                        <span>
+                          Doppila ou Caixa de Schrödinger?
+                        </span>
+                      </div>
+
+                      <div class="card-body">
+                        <p v-if="canModifySubscriptionBonus">
+                          Você ainda pode escolher se deseja receber o valor do apoio em D$ ou a Caixa de Schrödinger do trimestre vigente. Por padrão você receberá a caixa mas basta alterar aqui que ficará como Doppila. Para saber quais itens já foram revelados, dê uma olhada no nosso Instagram <a target="_blank" href="https://www.instagram.com/doppel.store/"><https://www.instagram.com/doppel.store/></a> :D
+                          <br/>
+                          <br/>
+                          <span>
+                            Escolha como gostaria de receber:
+                            <br>
+                            <div class="form-group mt-2" id="choose-subscription-option">
+                              <div
+                                class="custom-control custom-radio custom-control-inline"
+                                v-for="(value, label) in optionSubscription"
+                              >
+                                <input
+                                  type="radio"
+                                  name="subscription-form-type"
+                                  class="custom-control-input"
+                                  :id="`subscription-form-type-${value}`"
+                                  :value="value"
+                                  v-model="receiveDoppila"
+                                  required
+                                >
+                                <label
+                                  class="custom-control-label"
+                                  :for="`subscription-form-type-${value}`"
+                                >
+                                  {{ label }}
+                                </label>
+                              </div>
+                            </div>
+
+                            <div
+                              v-if="isBox"
+                              style="color: #000 !important"
+                            >
+                              <hr style="color: #fff !important" />
+                              <strong style="color: #fff !important">
+                                Caso essa edição da Caixa de Schrödinger tenha camiseta, qual tamanho você vai querer?
+                              </strong>
+                              <hr style="color: #fff !important" />
+                              <v-select 
+                                class=" mb-3 mt-md-0"
+                                v-if="canModifySubscriptionShirt"
+                                :placeholder="`Escolha o tamanho desejado`" 
+                                :options="listOptions"
+                                v-model="size"
+                              />
+                              <span
+                                v-else
+                                style="color: #fff !important;"
+                              >
+                                 Já iniciamos a produção da caixa desse trimestre, portanto não é mais possível fazer essa alteração do tamanho da camiseta para esse ciclo de assinatura.
+                              </span>
+                            </div>
+                          </span>
+                        </p>
+                        <p v-else>
+                        Já iniciamos a produção da caixa desse trimestre, portanto não é mais possível fazer essa alteração para esse ciclo de assinatura.
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </slot>
+
                   <slot
                     name="notes"
                     v-bind="{ order: localOrder }"

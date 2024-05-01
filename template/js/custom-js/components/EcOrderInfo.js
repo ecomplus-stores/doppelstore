@@ -271,7 +271,7 @@ export default {
     },
 
     isSchrodinger () {
-      return this.localOrder.items.some(({sku}) => sku === 'nivel-iii-caixa-de-schrodinger')
+      return this.localOrder.items.some(({sku}) => sku.includes('caixa-de-schrodinger'))
     },
 
     isSubscription () {

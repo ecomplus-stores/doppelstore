@@ -482,6 +482,7 @@ export default {
              for (const [key, value] of Object.entries(data.options)) {
                 if (value === data.size) {
                   this.sizeLabel = key
+                  break
                 }
               });
             }

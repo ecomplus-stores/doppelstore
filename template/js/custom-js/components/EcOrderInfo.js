@@ -482,12 +482,12 @@ export default {
           window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
             for (const [key, value] of Object.entries(data.options)) {
                 if (value === data.size) {
-                  sizeLabel = key
+                  label = key
                   break
                 }
              }
             console.log(data)
-        this.sizeLabel = sizeLabel
+        this.sizeLabel = label
             console.log(this.sizeLabel)
           })
 

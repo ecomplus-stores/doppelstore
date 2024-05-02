@@ -102,8 +102,7 @@ export default {
       canModifySubscriptionShirt: null,
       sizes: [],
       listOptions: [],
-      size: null,
-      sizeLabel: null,
+      size: null
     }
   },
 
@@ -477,20 +476,11 @@ export default {
         this.receiveDoppila = data.choice
         this.optionSubscription = data.options
         this.canModifySubscriptionBonus =  data['can-modify']
-        const label = null
         if (this.canModifySubscriptionBonus && this.isBox) {
           window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
-            for (const [key, value] of Object.entries(data.options)) {
-                if (value === data.size) {
-                  label = key
-                  break
-                }
-             }
+            this.size = data.size
             console.log(data)
-        this.sizeLabel = label
-            console.log(this.sizeLabel)
           })
-
         }
       })
       if (!this.skipDataLoad) {

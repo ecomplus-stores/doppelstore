@@ -481,12 +481,12 @@ export default {
         console.log('new option', current, old)
         if (current && current !== old && old !== null) {
           this.selectedOption = true
-        }
-        window.axios.post(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`, {
+          window.axios.post(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`, {
           size: this.sizes[current]
         }).then((res) => {
           console.log('right', res.data)
-      })
+        })
+        }
       }
     }
   },

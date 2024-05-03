@@ -42,11 +42,13 @@ import ecomCart from '@ecomplus/shopping-cart'
 import EcomSearch from '@ecomplus/search-engine'
 import ShippingLine from '@ecomplus/storefront-components/src/ShippingLine.vue'
 import EcSummary from '@ecomplus/storefront-app/src/components/EcSummary.vue'
+import AAlert from '@ecomplus/storefront-components/src/AAlert.vue'
 
 export default {
   name: 'EcOrderInfo',
 
   components: {
+    AAlert,
     ShippingLine,
     EcSummary,
     vSelect
@@ -102,7 +104,9 @@ export default {
       canModifySubscriptionShirt: null,
       sizes: [],
       listOptions: [],
-      size: null
+      size: null, 
+      changedOption: false,
+      selectedOption: false
     }
   },
 
@@ -137,6 +141,20 @@ export default {
 
     isSubscriptionDoppel () {
       return this.orderBody && this.orderBody.transactions && this.orderBody.transactions.length && this.orderBody.transactions.some(({type}) => type === "recurrence") && (this.status !== 'cancelled')
+    },
+
+    defaultValue () {
+      const myObj = this.sizes
+      console.log(myObj)
+      const desiredValue = this.size;
+      console.log(desiredValue)
+      return Object.keys(myObj).reduce((acc, key) => {
+          if (myObj[key] === desiredValue) {
+              acc = key;
+          }
+          return acc;
+      }, null);
+
     },
 
     localOrder: {
@@ -438,10 +456,13 @@ export default {
     },
 
     receiveDoppila: {
-      handler (newOption) {
-        console.log('new option', newOption)
+      handler (current, old) {
+        console.log('new option', current, old)
+        if (current && current !== old && old !== null) {
+          this.changedOption = true
+        }
         window.axios.post(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.order.number}`, {
-          choice: newOption
+          choice: current
         }).then((res) => {
         if (this.canModifySubscriptionBonus && this.isBox) {
           window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
@@ -456,10 +477,13 @@ export default {
     },
 
     size: {
-      handler (newOption) {
-        console.log('new size', newOption)
+      handler (current, old) {
+        console.log('new option', current, old)
+        if (current && current !== old && old !== null) {
+          this.selectedOption = true
+        }
         window.axios.post(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`, {
-          size: this.sizes[newOption]
+          size: this.sizes[current]
         }).then((res) => {
           console.log('right', res.data)
       })

@@ -413,7 +413,9 @@
                                 </label>
                               </div>
                             </div>
-
+                            <a-alert variant="success" :can-show="changedOption">
+                              Escolha feita :D
+                            </a-alert>
                             <div
                               v-if="isBox"
                               style="color: #000 !important"
@@ -428,15 +430,20 @@
                                 v-if="canModifySubscriptionShirt"
                                 :placeholder="`Escolha o tamanho desejado`" 
                                 :options="listOptions"
-                                :value="size"
+                                :value="defaultValue"
                                 v-model="size"
                               />
+
                               <span
                                 v-else
                                 style="color: #fff !important;"
                               >
                                  Já iniciamos a produção da caixa desse trimestre, portanto não é mais possível fazer essa alteração do tamanho da camiseta para esse ciclo de assinatura.
                               </span>
+
+                              <a-alert variant="success" :can-show="selectedOption">
+                                Escolha do tamanho feita com sucesso :D
+                              </a-alert>
                             </div>
                           </span>
                         </p>

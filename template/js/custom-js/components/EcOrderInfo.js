@@ -460,19 +460,19 @@ export default {
         console.log('new option', current, old)
         if (current && current !== old && old !== null) {
           this.changedOption = true
-        }
-        window.axios.post(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.order.number}`, {
-          choice: current
-        }).then((res) => {
-        if (this.canModifySubscriptionBonus && this.isBox) {
-          window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
-            console.log(data)
-            this.sizes = data.options
-            this.listOptions = Object.keys(this.sizes)
-            this.canModifySubscriptionShirt = data['can-modify']
+          window.axios.post(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.order.number}`, {
+              choice: current
+            }).then((res) => {
+            if (this.canModifySubscriptionBonus && this.isBox) {
+              window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
+                console.log(data)
+                this.sizes = data.options
+                this.listOptions = Object.keys(this.sizes)
+                this.canModifySubscriptionShirt = data['can-modify']
+              })
+            }
           })
         }
-      })
       }
     },
 
@@ -482,10 +482,10 @@ export default {
         if (current && current !== old && old !== null) {
           this.selectedOption = true
           window.axios.post(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`, {
-          size: this.sizes[current]
-        }).then((res) => {
-          console.log('right', res.data)
-        })
+            size: this.sizes[current]
+          }).then((res) => {
+            console.log('right', res.data)
+          })
         }
       }
     }
@@ -502,7 +502,16 @@ export default {
         this.canModifySubscriptionBonus =  data['can-modify']
         if (this.canModifySubscriptionBonus && this.isBox) {
           window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
-            this.size = data.size
+            const myObj = this.sizes
+            console.log(myObj)
+            const desiredValue = data.size;
+            console.log(desiredValue)
+            this.size = Object.keys(myObj).reduce((acc, key) => {
+                if (myObj[key] === desiredValue) {
+                    acc = key;
+                }
+                return acc;
+            }, null);
             console.log(data)
           })
         }

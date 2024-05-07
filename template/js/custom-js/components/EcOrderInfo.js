@@ -143,20 +143,6 @@ export default {
       return this.orderBody && this.orderBody.transactions && this.orderBody.transactions.length && this.orderBody.transactions.some(({type}) => type === "recurrence") && (this.status !== 'cancelled')
     },
 
-    defaultValue () {
-      const myObj = this.sizes
-      console.log(myObj)
-      const desiredValue = this.size;
-      console.log(desiredValue)
-      return Object.keys(myObj).reduce((acc, key) => {
-          if (myObj[key] === desiredValue) {
-              acc = key;
-          }
-          return acc;
-      }, null);
-
-    },
-
     localOrder: {
       get () {
         return this.orderBody
@@ -468,13 +454,22 @@ export default {
         }
         if (this.canModifySubscriptionBonus && this.isBox) {
           window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
-            console.log(data)
+            console.log(JSON.stringify(data))
             this.sizes = data.options
             this.listOptions = Object.keys(this.sizes)
             this.canModifySubscriptionShirt = data['can-modify']
+            const myObj = this.sizes
+            const desiredValue = data.size;
+            this.size = Object.keys(myObj).reduce((acc, key) => {
+                if (myObj[key] === desiredValue) {
+                    acc = key;
+                }
+                return acc;
+            }, null);
           })
         }
-      }
+      },
+      immediate: true
     },
 
     size: {
@@ -504,9 +499,8 @@ export default {
         if (this.canModifySubscriptionBonus && this.isBox) {
           window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
             const myObj = this.sizes
-            console.log(myObj)
             const desiredValue = data.size;
-            console.log(desiredValue)
+            console.log(JSON.stringify(data))
             this.size = Object.keys(myObj).reduce((acc, key) => {
                 if (myObj[key] === desiredValue) {
                     acc = key;

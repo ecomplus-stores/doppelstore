@@ -106,7 +106,8 @@ export default {
       listOptions: [],
       size: null, 
       changedOption: false,
-      selectedOption: false
+      selectedOption: false,
+      defaultValue: null
     }
   },
 
@@ -475,7 +476,7 @@ export default {
     size: {
       handler (current, old) {
         console.log('new option', current, old)
-        if (current && current !== old && this.sizes[current]) {
+        if (current && current !== old && this.sizes[current] && this.defaultValue !== this.sizes[current]) {
           this.selectedOption = true
           window.axios.post(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`, {
             size: this.sizes[current]
@@ -500,6 +501,7 @@ export default {
           window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
             const myObj = this.sizes
             const desiredValue = data.size;
+            this.defaultValue = desiredValue
             console.log(JSON.stringify(data))
             this.size = Object.keys(myObj).reduce((acc, key) => {
                 if (myObj[key] === desiredValue) {

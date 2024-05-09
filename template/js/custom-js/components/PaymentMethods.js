@@ -205,6 +205,9 @@ export default {
             return i === this.paymentGateways.findIndex((gateway) => {
               return checkRecurrentCardGateway(gateway)
             })
+          } else if (gateway.payment_method.code === 'banking_billet' && gateway.label === 'Trimestral em 3x') {
+
+            return false
           }
         }
         return true

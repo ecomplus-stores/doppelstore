@@ -6,6 +6,8 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
 }
 let isSubscription = false
 let isDoppelgang = false
+let isDoppelgangCategory = false
+let isDoppelgang3Category = false
 if (_.state.categories) {
   isSubscription = _.state.categories.some(({ _id, slug }) => {
           return _id === '65301b272cd6b6595980036e' || slug === 'assinaturas'
@@ -22,10 +24,10 @@ if (_.state.categories) {
 %>
 
 <script>
-  window.isDoppelgangCategory = <%- JSON.stringify(isDoppelgang3Category) %>
+  window.isDoppelgangCategory = <%- JSON.stringify(isDoppelgangCategory) %>
 </script>
 <script>
-  window.isDoppelgang3Category = <%- JSON.stringify(isDoppelgangCategory) %>
+  window.isDoppelgang3Category = <%- JSON.stringify(isDoppelgang3Category) %>
 </script>
 
 <div id="product-block" class="product-block my-4 mb-lg-5">

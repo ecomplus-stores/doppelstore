@@ -94,6 +94,7 @@
                       :shipped-items="cart.items"
                       :zip-code="localZipCode"
                       :can-input-zip="false"
+                      :is-subscription="isSubscription"
                       :skip-app-ids="skipShippingApps"
                       @select-service="service => $emit('update:shipping-service', service)"
                     />

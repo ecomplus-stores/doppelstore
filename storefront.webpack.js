@@ -14,6 +14,8 @@ module.exports = () => ({
       './js/EcCheckout.js': path.resolve(__dirname, 'template/js/custom-js/components/EcCheckout.js'),
       './html/EcOrderInfo.html': path.resolve(__dirname, 'template/js/custom-js/components/EcOrderInfo.html'),
       './js/EcOrderInfo.js': path.resolve(__dirname, 'template/js/custom-js/components/EcOrderInfo.js'),
+      './html/ShippingCalculator.html': path.resolve(__dirname, 'template/js/custom-js/components/ShippingCalculator.html'),
+      './js/ShippingCalculator.js': path.resolve(__dirname, 'template/js/custom-js/components/ShippingCalculator.js'),
       './html/PaymentMethods.html': path.resolve(__dirname, 'template/js/custom-js/components/PaymentMethods.html'),
       './js/PaymentMethods.js': path.resolve(__dirname, 'template/js/custom-js/components/PaymentMethods.js'),
       './html/AccountPoints.html': path.resolve(__dirname, 'template/js/custom-js/components/AccountPoints.html'),

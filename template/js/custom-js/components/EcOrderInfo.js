@@ -104,7 +104,7 @@ export default {
       canModifySubscriptionShirt: null,
       sizes: [],
       listOptions: [],
-      size: null, 
+      size: window.sessionStorage.getItem('selectedOption') || window.selectedOption || null, 
       changedOption: false,
       selectedOption: false,
       defaultValue: null
@@ -142,6 +142,10 @@ export default {
 
     isSubscriptionDoppel () {
       return this.orderBody && this.orderBody.transactions && this.orderBody.transactions.length && this.orderBody.transactions.some(({type}) => type === "recurrence") && (this.status !== 'cancelled')
+    },
+
+    sessionChoice () {
+      return window.sessionStorage.getItem('selectedOption') || window.selectedOption
     },
 
     localOrder: {
@@ -194,6 +198,14 @@ export default {
 
     status () {
       return this.localOrder.status
+    },
+
+    orderNumber () {
+      return window.storefrontApp && window.storefrontApp.router && window.storefrontApp.router.currentRoute && window.storefrontApp.router.currentRoute.params && window.storefrontApp.router.currentRoute.params.number
+    },
+
+    orderId () {
+      return window.storefrontApp && window.storefrontApp.router && window.storefrontApp.router.currentRoute && window.storefrontApp.router.currentRoute.params && window.storefrontApp.router.currentRoute.params.id
     },
 
     financialStatus () {
@@ -447,14 +459,14 @@ export default {
         console.log('new option', current, old)
         if (current && current !== old && old !== null) {
           this.changedOption = true
-          window.axios.post(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.order.number}`, {
+          window.axios.post(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.orderNumber}`, {
               choice: current
             }).then((res) => {
             console.log('foi criado')
           })
         }
         if (this.canModifySubscriptionBonus && this.isBox) {
-          window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
+          window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.localOrder.number}`).then(({data}) => {
             console.log(JSON.stringify(data))
             this.sizes = data.options
             this.listOptions = Object.keys(this.sizes)
@@ -473,12 +485,27 @@ export default {
       immediate: true
     },
 
+    sessionChoice: {
+      handler (current, old) {
+        if (current && this.orderId && !window.sessionStorage.getItem('sent_metafield')) {
+          window.ecomPassport.requestApi(`/orders/${this.orderId}/metafields.json`, 'POST', {
+            namespace: 'subscription',
+            field: 'tshirt:option',
+            value: current
+          }).then(() => {
+            window.sessionStorage.setItem('sent_metafield', 1)
+          })
+        }
+      },
+      immediate: true
+    },
+
     size: {
       handler (current, old) {
         console.log('new option', current, old)
         if (current && current !== old && this.sizes[current] && this.defaultValue !== this.sizes[current]) {
           this.selectedOption = true
-          window.axios.post(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`, {
+          window.axios.post(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.orderNumber}`, {
             size: this.sizes[current]
           }).then((res) => {
             console.log('right', res.data)
@@ -493,12 +520,13 @@ export default {
       if (this.isNew) {
         this.saveCustomerOrder()
       }
-      window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.order.number}`).then(({data}) => {
+      console.log('hallooo', )
+      window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.orderNumber}`).then(({data}) => {
         this.receiveDoppila = data.choice
         this.optionSubscription = data.options
         this.canModifySubscriptionBonus =  data['can-modify']
         if (this.canModifySubscriptionBonus && this.isBox) {
-          window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.order.number}`).then(({data}) => {
+          window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.orderNumber}`).then(({data}) => {
             const myObj = this.sizes
             const desiredValue = data.size;
             this.defaultValue = desiredValue
@@ -513,6 +541,7 @@ export default {
           })
         }
       })
+
       if (!this.skipDataLoad) {
         const url = `/orders/${this.order._id}.json`
         const update = () => {

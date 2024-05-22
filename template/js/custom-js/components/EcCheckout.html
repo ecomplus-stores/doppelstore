@@ -287,6 +287,7 @@
       <slot name="login">
         <login-block
           @login="login"
+          :is-subscription="isSubscription"
           @update="isUserIdentified = true"
           :customer-email.sync="customerEmail"
         />

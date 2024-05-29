@@ -48,9 +48,9 @@ if (isShowAll === '59$2a82') {
   EcomSearch.dslMiddlewares.push((dsl) => {
     dsl.query.bool.filter.forEach(filter => {
       if (filter && filter.term) {
-        filter.term = {
-          visible: false
-        }
+  filter.term = {
+    visible: false
+  }
       }
     })
   })
@@ -66,3 +66,47 @@ if (window.isDoppelgang3Category && !isDoppelgang3) {
   window.location = 'https://links.doppelstore.com.br/492GOrS'
 }
 
+const subscriptionModal = window.ecomPassport && window.ecomPassport.customer && window.ecomPassport.customer.doc_number && window.ecomPassport.customer.orders && window.ecomPassport.customer.orders.length && window.ecomPassport.customer.orders.filter(({payment_method_label, status, financial_status}) => status !== 'cancelled' && payment_method_label.includes('Trimestral') && financial_status && financial_status.current === 'paid')
+let canShowModalSubscription = false
+if (subscriptionModal && subscriptionModal.length === 1) {
+  document.querySelector('#modal-subscription a').href = `/app/#/order/${subscriptionModal[0].number}/${subscriptionModal[0]._id}`
+  window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/135363${subscriptionModal[0].number}`).then(({data}) => {
+    const isBox = data.choice === 'box'
+    const canModifySubscriptionBonus = data['can-modify']
+    if (canModifySubscriptionBonus && isBox) {
+      window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${subscriptionModal[0].number}`).then(({data}) => {
+        canShowModalSubscription = Boolean(!data.size);
+      })
+    }
+  })
+}
+
+window.canShowModalSubscription = canShowModalSubscription
+
+function showModal() {
+  const modal = document.getElementById("modal-subscription");
+  modal.style.display = "block";
+}
+
+// Function to hide the modal
+function closeModal() {
+  const modal = document.getElementById("modal-subscription");
+  modal.style.display = "none";
+}
+
+// Add event listener to close button
+document.querySelector("#modal-subscription .close").addEventListener("click", closeModal);
+
+Object.defineProperty(window, 'canShowModalSubscription', {
+  set: function(value) {
+      _canShowModalSubscription = value;
+      if (value) {
+          showModal();
+      } else {
+          closeModal();
+      }
+  },
+  get: function() {
+      return _canShowModalSubscription;
+  }
+});

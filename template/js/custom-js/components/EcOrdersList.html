@@ -1,0 +1,68 @@
+<div class="orders-list">
+  <div
+    class="list-group list-group-flush"
+    v-if="orders.length"
+    v-for="order in orders"
+  >
+    <a
+      href="#"
+      class="orders-list__item list-group-item list-group-item-action"
+      @click.prevent="() => $emit('click:order', order)"
+    >
+      <div>
+        <samp
+          class="orders-list__number"
+          :class="`orders-list__number--${order.status}`"
+          v-text="`#${order.number}`"
+        >
+        </samp>
+
+        <strong v-if="order.amount" class="orders-list__amount">
+          {{ formatMoney(order.amount.total /(order.payment_method_label && order.payment_method_label.includes('Trimestral') ? 3 : 1)) }}
+        </strong>
+      </div>
+
+      <span>{{ formatDate(order.created_at) }}</span>
+
+      <span
+        v-if="isSubscriptions"
+        class="orders-list__status"
+        :class="`orders-list__status--${order.status}`"
+      >
+        {{ order.status === 'cancelled' ? i19inactive : i19active }}
+      </span>
+
+      <span
+        v-else-if="order.status === 'cancelled' || !order.financial_status"
+        class="orders-list__status"
+        :class="`orders-list__status--${order.status}`"
+      >
+        {{ i19OrderStatus(order.status) }}
+      </span>
+
+      <span
+        v-else-if="order.financial_status.current === 'paid' && order.fulfillment_status"
+        class="orders-list__fulfillment-status"
+        :class="`orders-list__fulfillment-status--${order.fulfillment_status.current}`"
+      >
+        {{ i19FulfillmentStatus(order.fulfillment_status.current) }}
+      </span>
+
+      <span
+        v-else
+        class="orders-list__financial-status"
+        :class="`orders-list__financial-status--${order.financial_status.current}`"
+      >
+        {{ i19FinancialStatus(order.financial_status.current) }}
+      </span>
+    </a>
+  </div>
+
+  <a-pagination
+    v-if="totalOrders > 1"
+    class="mt-3"
+    :total-items="totalOrders"
+    :page.sync="currentPage"
+    :page-size="pageSize"
+  />
+</div>

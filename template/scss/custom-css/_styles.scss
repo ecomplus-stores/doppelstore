@@ -1601,3 +1601,9 @@ div.backdrop {
     cursor: pointer;
   }
 }
+
+@media (min-width: 768px) {
+  .orders-list__item > div {
+    flex: 2.5 1 0;
+  }
+}

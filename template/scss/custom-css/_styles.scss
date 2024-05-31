@@ -1604,6 +1604,6 @@ div.backdrop {
 
 @media (min-width: 768px) {
   .orders-list__item > div {
-    flex: 2.5 1 0;
+    flex: 2.5 1 0 !important;
   }
 }

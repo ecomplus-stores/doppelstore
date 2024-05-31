@@ -18,8 +18,12 @@
         </samp>
 
         <strong v-if="order.amount" class="orders-list__amount">
-          {{ formatMoney(order.amount.total /(order.payment_method_label && order.payment_method_label.includes('Trimestral') ? 3 : 1)) }}
+          {{ formatMoney(order.amount.total)  }}
+          <span v-if="order.payment_method_label && order.payment_method_label.includes('Trimestral')">
+          / Trimestral
+          </span>
         </strong>
+
       </div>
 
       <span>{{ formatDate(order.created_at) }}</span>

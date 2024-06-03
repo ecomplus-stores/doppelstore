@@ -99,7 +99,7 @@ export default {
 
     subscription () {
       const subs = this.ecomPassport && this.ecomPassport.customer && this.ecomPassport.customer.doc_number && this.ecomPassport.customer.orders && this.ecomPassport.customer.orders.length && this.ecomPassport.customer.orders.filter(({payment_method_label, status, financial_status}) => status !== 'cancelled' && payment_method_label.includes('Trimestral') && financial_status && financial_status.current === 'paid')
-      return subs.length === 1 ? `/app/#/order/${subs[0].number}/${subs[0]._id}` : '/app/#/account/subscriptions'
+      return subs && subs.length === 1 ? `/app/#/order/${subs[0].number}/${subs[0]._id}` : '/app/#/account/subscriptions'
     }
   },
 

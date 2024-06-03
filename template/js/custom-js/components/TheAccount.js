@@ -37,7 +37,7 @@ export default {
     currentTab: {
       type: String,
       validator: function (value) {
-        return ['orders', 'favorites', 'subscriptions', 'points', 'account'].includes(value)
+        return ['orders', 'subscriptions', 'points', 'account', 'favorites'].includes(value)
       }
     },
     ecomPassport: {
@@ -166,12 +166,16 @@ export default {
         value: 'orders'
       },
       {
-        label: this.i19favorites,
-        value: 'favorites'
+        label: this.i19subscriptions,
+        value: 'subscriptions'
       },
       {
         label: 'Doppilas',
         value: 'points'
+      },
+      {
+        label: this.i19favorites,
+        value: 'favorites'
       }
     ]
     const { favorites } = this.ecomPassport.getCustomer()

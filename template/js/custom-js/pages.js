@@ -97,18 +97,13 @@ function closeModal() {
 
 // Add event listener to close button
 document.querySelector("#modal-subscription .close").addEventListener("click", closeModal);
-let _canShowModalSubscription = false;
-Object.defineProperty(window, 'canShowModalSubscription', {
-  set: function(value) {
-      _canShowModalSubscription = value;
-      if (value) {
-        console.log('oioi')
-          showModal();
-      } else {
-          closeModal();
-      }
-  },
-  get: function() {
-      return _canShowModalSubscription;
-  }
-});
+let intervalId;
+const checkSubCron = () => {
+  intervalId = setInterval(() => {
+    if (window.canShowModalSubscription) {
+      showModal();
+      clearInterval(intervalId)
+    }
+  }, 1000)
+} 
+checkSubCron()

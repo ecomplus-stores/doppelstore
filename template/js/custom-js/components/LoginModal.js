@@ -134,7 +134,7 @@ export default {
               const { faIcon, providerName } = providers[provider]
               let link = host + baseUri + provider + oauthPath
               const referral = typeof window === 'object' &&
-                this.sessionStorage.getItem('ecomReferral')
+                window.sessionStorage.getItem('ecomReferral')
               if (referral) {
                 link += `?referral=${referral}`
               }

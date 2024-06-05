@@ -66,7 +66,7 @@ if (window.isDoppelgang3Category && !isDoppelgang3) {
   window.location = 'https://links.doppelstore.com.br/492GOrS'
 }
 
-const subscriptionModal = window.ecomPassport && window.ecomPassport.customer && window.ecomPassport.customer.doc_number && window.ecomPassport.customer.orders && window.ecomPassport.customer.orders.length && window.ecomPassport.customer.orders.filter(({payment_method_label}) => payment_method_label.includes('Trimestral'))
+/* const subscriptionModal = window.ecomPassport && window.ecomPassport.customer && window.ecomPassport.customer.doc_number && window.ecomPassport.customer.orders && window.ecomPassport.customer.orders.length && window.ecomPassport.customer.orders.filter(({payment_method_label}) => payment_method_label.includes('Trimestral'))
 console.log('oi', subscriptionModal, window.ecomPassport.customer.orders)
 let canShowModalSubscription = false
 if (subscriptionModal && subscriptionModal.length) {
@@ -107,3 +107,4 @@ const checkSubCron = () => {
   }, 1000)
 } 
 checkSubCron()
+ */

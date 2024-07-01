@@ -11,7 +11,7 @@
       "type": "summary_ghanor",
       "meta": 150000,
       "is_money": true,
-      "img": "/img/uploads/unnamed.jpg",
+      "img": "/img/uploads/1-capa.jpg",
       "enable_share": false,
       "end": "",
       "link": ""
@@ -23,13 +23,6 @@
     {
       "type": "product-list-apoio",
       "products": [
-        {
-          "end": "",
-          "disable_stats": false,
-          "product_id": "65f17eaa87ab487fbfe314d7",
-          "html": "<!--StartFragment-->\n\n**Benefícios do Nível III:**\n\n* Todos os benefícios do Plano II\n* Poder personalizar produtos da Doppel com sua arte **(previsão de disponibilidade no final de maio/2024)**.\n\n**Recompensa do Nível III:**\n\n* A edição vigente da Caixa de Schrödinger;\n\n**OU**\n\n* D$ 269,90 na sua conta Doppel (ao final do ciclo, **se informar** que não quer receber aquela edição da Caixa).\n\n<!--EndFragment-->",
-          "label": "Apoiar"
-        },
         {
           "end": "",
           "product_id": "65f17eaa87ab487fbfe314d7",

@@ -140,7 +140,22 @@ export default {
       hasMoreOffers: false,
       availableDoppilas: 0,
       subscriptionSizeOption: null,
-      subscriptionSizes: {}
+      subscriptionSizes: {
+        "Tradicional P": "tradicional-p",
+        "Tradicional M": "tradicional-m",
+        "Tradicional G": "tradicional-g",
+        "Tradicional GG": "tradicional-gg",
+        "Tradicional XG": "tradicional-xg",
+        "Tradicional 2XG": "tradicional-2xg",
+        "Tradicional 3XG": "tradicional-3xg",
+        "Baby Look P": "baby-look-p",
+        "Baby Look M": "baby-look-m",
+        "Baby Look G": "baby-look-g",
+        "Baby Look GG": "baby-look-gg",
+        "Baby Look XG": "baby-look-xg",
+        "Baby Look 2XG": "baby-look-2xg",
+        "Baby Look 3XG": "baby-look-3xg"
+      }
     }
   },
 
@@ -449,11 +464,5 @@ export default {
         })
       })
     })
-    if (this.isSubscription) {
-      window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/135402`)
-        .then(({ data }) => {
-          this.subscriptionSizes = data.options
-        })
-    }
   }
 }

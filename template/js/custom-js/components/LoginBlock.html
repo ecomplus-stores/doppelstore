@@ -1,21 +1,5 @@
 <div class="login">
-  <div
-    v-if="isLpSubscription || isSubscription"
-    class="select-options-tshirt"
-  >
-    <label>Se houver camiseta na caixa do trimestre, qual tamanho você quer? Você poderá alterar posteriormente :)</label>
-      <v-select 
-        style="color: #000 !important"
-        class="mb-3 mt-md-0"
-        :placeholder="`Escolha o tamanho desejado`" 
-        :options="listOptions"
-        v-model="size"
-        @input="$event => getSelect($event)"
-      />
-  </div>
-  <form
-    v-if="!isLpSubscription"
-    @submit.prevent="submitLogin">
+  <form @submit.prevent="submitLogin">
     <label
       class="h4"
       for="login-email"
@@ -143,7 +127,7 @@
     </slot>
   </form>
 
-  <div class="login__info" v-show="!isLpSubscription">
+  <div class="login__info">
     <div class="login__info-title">
       <i class="i-lock"></i>
       {{ i19weUseYourDataToMsg }}:

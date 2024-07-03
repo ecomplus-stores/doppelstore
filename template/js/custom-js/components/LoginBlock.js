@@ -18,15 +18,13 @@ import { i18n } from '@ecomplus/utils'
 import ecomPassport from '@ecomplus/passport-client'
 import AAlert from '@ecomplus/storefront-components/src/AAlert.vue'
 import InputDocNumber from '@ecomplus/storefront-components/src/InputDocNumber.vue'
-import vSelect from 'vue-select'
 
 export default {
   name: 'LoginBlock',
 
   components: {
     AAlert,
-    InputDocNumber,
-    vSelect
+    InputDocNumber
   },
 
   props: {
@@ -44,8 +42,7 @@ export default {
       default () {
         return ecomPassport
       }
-    },
-    isSubscription: Boolean
+    }
   },
 
   data () {
@@ -56,10 +53,7 @@ export default {
       oauthProviders: [],
       isWaitingPopup: false,
       isWaitingLogin: false,
-      failAlertText: null,
-      size: null,
-      sizes: [],
-      listOptions: []
+      failAlertText: null
     }
   },
 
@@ -74,10 +68,7 @@ export default {
     i19oauthOnPopup: () => i18n(i19oauthOnPopup),
     i19orProceedWith: () => i18n(i19orProceedWith),
     i19signInWith: () => i18n(i19signInWith),
-    i19weUseYourDataToMsg: () => i18n(i19weUseYourDataToMsg),
-    isLpSubscription () {
-      return window.location.hash && window.location.hash.includes('/lp/') && this.isSubscription && !this.size
-    }
+    i19weUseYourDataToMsg: () => i18n(i19weUseYourDataToMsg)
   },
 
   methods: {
@@ -93,21 +84,6 @@ export default {
         })
       }
       return isIdentified
-    },
-
-    getSelect (option) {
-      console.log(option)
-      const selectedOption = Object.keys(this.sizes).reduce((acc, key) => {
-        //console.log(key, this.sizes[key], option, this.sizes[key] === option)
-        if (key === option) {
-          console.log('entrei')
-          acc = this.sizes[key];
-          console.log(acc)
-        }
-        return acc;
-      }, null);
-      window.selectedOption = selectedOption
-      window.sessionStorage.setItem('selectedOption', selectedOption)
     },
 
     submitLogin () {
@@ -166,10 +142,6 @@ export default {
   },
 
   created () {
-    window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/135402`).then(({data}) => {
-      this.listOptions = Object.keys(data.options)
-      this.sizes = data.options
-    })
     if (Array.isArray(window.OAUTH_PROVIDERS)) {
       this.oauthProviders = []
       if (window.OAUTH_PROVIDERS.includes('google') && window.signInWithGoogle) {

@@ -152,8 +152,23 @@
                       :max-points-amount="amount.total"
                       @available-points="({ p0_pontos }) => availableDoppilas = p0_pontos"
                     />
+                  
+                  <div
+                    v-if="isSubscription"
+                    class="select-options-tshirt mt-2"
+                  >
+                    <label>Se houver camiseta na caixa do trimestre, qual tamanho você quer? Você poderá alterar posteriormente :)</label>
+                    <v-select 
+                      style="color: #000 !important"
+                      class="mb-3 mt-md-0"
+                      :placeholder="`Escolha o tamanho desejado`" 
+                      :options="sizeSelectOptions"
+                      v-model="subscriptionSizeOption"
+                    />
+                  </div>
 
                   <payment-methods
+                    v-if="!isSubscription || subscriptionSizeOption"
                     :key="paymentsListKey"
                     :amount="paymentAmount"
                     :customer="localCustomer"
@@ -287,7 +302,6 @@
       <slot name="login">
         <login-block
           @login="login"
-          :is-subscription="isSubscription"
           @update="isUserIdentified = true"
           :customer-email.sync="customerEmail"
         />

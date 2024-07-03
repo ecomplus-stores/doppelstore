@@ -29,6 +29,7 @@ import PaymentMethods from '@ecomplus/storefront-app/src/components/PaymentMetho
 import AccountForm from '#components/AccountForm.vue'
 import AccountAddresses from '#components/AccountAddresses.vue'
 import EcSummary from '@ecomplus/storefront-app/src/components/EcSummary.vue'
+import vSelect from 'vue-select'
 
 import {
   Bag,
@@ -61,7 +62,8 @@ export default {
     PaymentMethods,
     AccountForm,
     AccountAddresses,
-    EcSummary
+    EcSummary,
+    vSelect
   },
 
   props: {
@@ -136,7 +138,9 @@ export default {
       loyaltyPointsApplied: {},
       loyaltyPointsAmount: 0,
       hasMoreOffers: false,
-      availableDoppilas: 0
+      availableDoppilas: 0,
+      subscriptionSizeOption: null,
+      subscriptionSizes: {}
     }
   },
 
@@ -279,6 +283,10 @@ export default {
           return _id === '65301b272cd6b6595980036e' || slug === 'assinaturas'
         })
       }))
+    },
+
+    sizeSelectOptions () {
+      return Object.keys(this.subscriptionSizes)
     }
   },
 
@@ -419,7 +427,14 @@ export default {
         this.paymentGateways = window.ecomPaymentGateways || []
       },
       immediate: true
-    }
+    },
+
+    subscriptionSizeOption () {
+      const sizeObj = this.subscriptionSizes[this.subscriptionSizeOption]
+      if (!sizeObj) return
+      window.selectedOption = sizeObj
+      window.sessionStorage.setItem('selectedOption', sizeObj)
+    },
   },
 
   created () {
@@ -434,5 +449,11 @@ export default {
         })
       })
     })
+    if (this.isSubscription) {
+      window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/135402`)
+        .then(({ data }) => {
+          this.subscriptionSizes = data.options
+        })
+    }
   }
 }

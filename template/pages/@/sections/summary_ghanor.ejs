@@ -69,31 +69,41 @@ const percent = Math.round(((is_money ? amount : quantity) * 100) /meta)
 if ((img || link) && meta > 0) {
   %>
   <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-8">
-          <% if (img) { %>
-            <%- await include('@/sections/inc/banner', { _, opt: { img } }) %>
-          <% } else if (link) { %>orntity} Apoiadores` %></h2> 
-          <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? `${_.ecomUtils.formatMoney(meta)} por mês` : meta %></span>
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: <%= percent %>%" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-          <p><%= percent %>%</p>
-          <% if (quantity) {
-            const isSummary = true
-          %>
-            <%- await include('@/sections/support-with-data', { _, opt: { quantity, end, isSummary } }) %> 
-          <% } %>
-          
-          <% if (enable_share) { %>
-            <%- await include('@/sections/share', { _, opt: { enable_share } }) %>
-          <% } %>
-          <strong class="prices__value text-center mb-2">R$ 269,90 <span style="color: white; font-size: 20px">por trimestre</span></strong>
-          <div class="d-flex justify-content-center align-items-center">
-            <a class="btn btn-primary btn-lg mx-auto" style="font-weight: 500" href="/app/#/lp/65f17eaa87ab487fbfe314d7/checkout">ASSINAR A CAIXA</a>
-          </div>
-      </div>
+    <div class="row">
+    <div class="col-12 col-md-8">
+      <% if (img) { %>
+        <%- await include('@/sections/inc/banner', { _, opt: { img } }) %>
+      <% } else if (link) { %>
+        <div id="video-ghanor" class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" src="<%- link %>"></iframe> </div>
+      <% } %>
     </div>
+    <div class="col-12 col-md-4">
+      <h2 id="ghanor-block" class="<%= is_money ? 'amount' : 'apoiadores' %>"><%= is_money ? `${_.ecomUtils.formatMoney(amount)} por mês` : `${quantity} Apoiadores` %></h2> 
+      <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? `${_.ecomUtils.formatMoney(meta)} por mês` : meta %></span>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: <%= percent %>%" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100">
+        </div>
+      </div>
+      <p><%= percent %>%</p>
+      <% if (quantity) {
+        const isSummary = true
+      %>
+        <%- await include('@/sections/support-with-data', { _, opt: { quantity, end, isSummary } }) %> 
+      <% } %>
+      
+      <% if (enable_share) { %>
+        <%- await include('@/sections/share', { _, opt: { enable_share } }) %>
+      <% } %>
+      
+      <strong class="prices__value text-center mb-2">R$ 269,90 <span style="color: white; font-size: 20px">por trimestre</span></strong>
+
+      <div class="d-flex justify-content-center align-items-center">
+            <a class="btn btn-primary btn-lg mx-auto" href="/app/#/lp/65f17eaa87ab487fbfe314d7/checkout" style="
+                font-weight: 500;
+            ">ASSINAR A CAIXA</a>    </div>
+      </div>
+  </div>
   </div>
 <% } %>
+
+  

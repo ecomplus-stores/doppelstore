@@ -89,10 +89,13 @@ if ((img || link) && meta > 0) {
       <% if (enable_share) { %>
         <%- await include('@/sections/share', { _, opt: { enable_share } }) %>
       <% } %>
-<div class="d-flex justify-content-center align-items-center">
-<div class="product-card__prices prices mx-auto"><strong class="prices__value">R$&nbsp;269,90 </strong><span>por trimestre (<strong>Até R$&nbsp;89,97</strong> por mês)</span></div>
-        <a class="btn btn-primary btn-lg mx-auto" href="/app/#/lp/65f17eaa87ab487fbfe314d7/checkout">ASSINAR A CAIXA</a>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="product-card__prices prices mx-auto">
+      <strong class="prices__value">R$ 269,90 </strong>
+      <span>por trimestre</span>
     </div>
+    <a class="btn btn-primary btn-lg mx-auto" href="/app/#/lp/65f17eaa87ab487fbfe314d7/checkout">ASSINAR A CAIXA</a>
+</div>
 </div>
   </div>
   </div>

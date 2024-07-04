@@ -73,12 +73,7 @@ if ((img || link) && meta > 0) {
     <div class="col-12 col-md-8">
       <% if (img) { %>
         <%- await include('@/sections/inc/banner', { _, opt: { img } }) %>
-      <% } else if (link) { %>
-        <div id="video-ghanor" class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item" src="<%- link %>"></iframe> </div>
-      <% } %>
-    </div>
-    <div class="col-12 col-md-4">
-      <h2 id="ghanor-block" class="<%= is_money ? 'amount' : 'apoiadores' %>"><%= is_money ? `${_.ecomUtils.formatMoney(amount)} por mês` : `${quantity} Apoiadores` %></h2> 
+      <% } else if (link) { %>orntity} Apoiadores` %></h2> 
       <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? `${_.ecomUtils.formatMoney(meta)} por mês` : meta %></span>
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: <%= percent %>%" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100">
@@ -95,6 +90,7 @@ if ((img || link) && meta > 0) {
         <%- await include('@/sections/share', { _, opt: { enable_share } }) %>
       <% } %>
 <div class="d-flex justify-content-center align-items-center">
+<div class="product-card__prices prices mx-auto"><strong class="prices__value">R$&nbsp;269,90 </strong><span>por trimestre (<strong>Até R$&nbsp;89,97</strong> por mês)</span></div>
         <a class="btn btn-primary btn-lg mx-auto" href="/app/#/lp/65f17eaa87ab487fbfe314d7/checkout">ASSINAR A CAIXA</a>
     </div>
 </div>

@@ -45,10 +45,10 @@
     },
     {
       "type": "responsive-banner",
-      "link": "https://links.doppelstore.com.br/43hIpJl",
+      "link": "https://promo.doppelstore.com.br/lote-camisetas-agosto?utm_source=site",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop-lote-camiseta.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile-lote-camiseta.jpg",
-      "enabled": false,
+      "enabled": true,
       "full_banner_responsive": false
     },
     {

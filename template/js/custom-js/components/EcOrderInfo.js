@@ -107,7 +107,8 @@ export default {
       size: window.sessionStorage.getItem('selectedOption') || window.selectedOption || null, 
       changedOption: false,
       selectedOption: false,
-      defaultValue: null
+      defaultValue: null,
+      editionTitle: null
     }
   },
 
@@ -469,6 +470,7 @@ export default {
           window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.localOrder.number}`).then(({data}) => {
             console.log(JSON.stringify(data))
             this.sizes = data.options
+            this.editionTitle = data.editionTitle
             this.listOptions = Object.keys(this.sizes)
             this.canModifySubscriptionShirt = data['can-modify']
             const myObj = this.sizes
@@ -523,6 +525,7 @@ export default {
       console.log('hallooo', )
       window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.orderNumber}`).then(({data}) => {
         this.receiveDoppila = data.choice
+        this.editionTitle = data.editionTitle
         this.optionSubscription = data.options
         this.canModifySubscriptionBonus =  data['can-modify']
         if (this.canModifySubscriptionBonus && this.isBox) {

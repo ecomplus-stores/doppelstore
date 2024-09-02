@@ -37,7 +37,7 @@
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.jpg",
       "link": "",
       "full_banner_responsive": true,
-      "enabled": false
+      "enabled": true
     },
     {
       "type": "info-bar",

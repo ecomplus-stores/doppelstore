@@ -29,7 +29,7 @@
           "link": "https://www.doppelstore.com.br/acessorios/planners"
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "type": "responsive-banner",

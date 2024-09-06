@@ -35,7 +35,7 @@
       "type": "responsive-banner",
       "img": "https://static.doppelstore.com.br/promo-vigente/faixa-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.jpg",
-      "link": "",
+      "link": "https://doppelstore.com.br/pages/doppelgang",
       "full_banner_responsive": true,
       "enabled": true
     },

@@ -1,5 +1,5 @@
 {
-  "meta_title": "",
+  "meta_title": "Camisetas",
   "meta_description": "",
   "sections": [
     {
@@ -42,6 +42,16 @@
     {
       "type": "info-bar",
       "enabled": true
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 2,
+      "collection_id": "6492f5055e6069037042bdf1:categories:Camisetas:/camisetas",
+      "sort": "sales",
+      "title": "CAMISETAS DE VOLTA!",
+      "autoplay": 1000
     },
     {
       "type": "responsive-banner",

@@ -224,7 +224,7 @@
     },
     {
       "type": "banners-grid",
-      "enabled": false,
+      "enabled": true,
       "banners": [
         {
           "img": "/img/uploads/banner-mosaico-1.webp",

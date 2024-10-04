@@ -247,7 +247,7 @@
     },
     {
       "type": "banners-grid",
-      "enabled": false,
+      "enabled": true,
       "banners": [
         {
           "img": "/img/uploads/banner-mosaico-10.webp",
@@ -256,10 +256,6 @@
         {
           "img": "/img/uploads/banner-mosaico-8.webp",
           "link": "/historia"
-        },
-        {
-          "img": "/img/uploads/banner-mosaico-3.webp",
-          "link": "/brilha-no-escuro"
         }
       ]
     },

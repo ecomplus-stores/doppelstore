@@ -500,10 +500,17 @@ export default {
                   }
                   break
                 case 'moletom':
+                   if (color) {
+                    this.variationImages = [
+                      [`https://static.doppelstore.com.br/catalogo/${pattern}/${category}/${color}.jpg`, 1476],
+                      [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-serigrafia-${color}.jpg`, 1200]
+                    ]
+                  }
+                  break
                 case 'camiseta-infantil':
                   if (color) {
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/${category}/${color}.jpg`, 1476],
+                      [`https://static.doppelstore.com.br/catalogo/${category}/${pattern}/${color}.jpg`, 1476],
                       [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-serigrafia-${color}.jpg`, 1200]
                     ]
                   }

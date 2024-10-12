@@ -420,10 +420,6 @@ export default {
     },
 
     showVariationPictures (variation) {
-       console.log('this.body');
-      console.log(this.body);
-  console.log('variation');
-      console.log(variation);
       if (this.body.categories) {
         const pattern = this.body.specifications && this.body.specifications.pattern &&
           this.body.specifications.pattern[0] && this.body.specifications.pattern[0].value
@@ -438,7 +434,10 @@ export default {
             .toLowerCase()
             .replaceAll(' ', '-')
             .normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-
+ console.log('this.body');
+      console.log(this.body);
+             console.log('nameCategory');
+      console.log(nameCategory);
             switch (nameCategory) {
               case 'camisetas':
                 category = 'camiseta'; break

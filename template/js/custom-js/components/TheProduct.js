@@ -512,7 +512,7 @@ export default {
                 console.log('variations');
                   if (color) {
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo/${category}/${pattern}/${color}.jpg`, 1476],
+                      [`https://static.doppelstore.com.br/catalogo/camiseta-infantil/${pattern}/${color}.jpg`, 1476],
                       [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-serigrafia-${color}.jpg`, 1200]
                     ]
                   }

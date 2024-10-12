@@ -469,7 +469,8 @@ export default {
                 category = nameCategory
             }
           }
-
+console.log('category');
+      console.log(category);
           if (category) {
             const { specifications } = variation
             if (specifications) {
@@ -483,7 +484,8 @@ export default {
                 .replace(/Úú/g, 'u')
                 .replace(/Çç/g, 'c')
                 .replace(/\s/g, '-')
-             
+             console.log('color');
+      console.log(color);
               const model = specifications.modelo && specifications.modelo[0] &&
                 specifications.modelo[0].value
               const pauta = specifications.pauta && specifications.pauta[0] &&

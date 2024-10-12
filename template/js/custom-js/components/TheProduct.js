@@ -434,10 +434,6 @@ export default {
             .toLowerCase()
             .replaceAll(' ', '-')
             .normalize('NFD').replace(/[\u0300-\u036f]/g, "");
- console.log('this.body');
-      console.log(this.body);
-             console.log('nameCategory');
-      console.log(nameCategory);
             switch (nameCategory) {
               case 'camisetas':
                 category = 'camiseta'; break
@@ -457,7 +453,7 @@ export default {
                 category = 'placa-decorativa'; break
               case 'quebra-cabecas-2d':
                 category = 'quebra-cabeca-2d'; break
-              case 'camiseta-infantil':
+              case 'camisetas-infantis':
                 category = 'camiseta-infantil'; break
               case 'camiseta':
               case 'moletom':

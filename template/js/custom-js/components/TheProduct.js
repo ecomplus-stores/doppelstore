@@ -420,7 +420,8 @@ export default {
     },
 
     showVariationPictures (variation) {
-
+  console.log('variation');
+      console.log(variation);
       if (this.body.categories) {
         const pattern = this.body.specifications && this.body.specifications.pattern &&
           this.body.specifications.pattern[0] && this.body.specifications.pattern[0].value
@@ -482,11 +483,7 @@ export default {
                 .replace(/Úú/g, 'u')
                 .replace(/Çç/g, 'c')
                 .replace(/\s/g, '-')
-
-              console.log('Category: ' + category);
-              console.log('Pattern: ' + pattern);
-              console.log('Color: ' + color);
-              
+             
               const model = specifications.modelo && specifications.modelo[0] &&
                 specifications.modelo[0].value
               const pauta = specifications.pauta && specifications.pauta[0] &&
@@ -576,8 +573,7 @@ export default {
         })
         if (variation) {
           this.showVariationPictures(variation);
-          console.log(variation);
-        }
+                  }
       }
     },
 

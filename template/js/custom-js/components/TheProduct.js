@@ -458,6 +458,7 @@ export default {
               case 'camiseta':
               case 'moletom':
               case 'camiseta-infantil':
+                category = 'camiseta-infantil'; break
               case 'caderno':
               case 'copo-bucks':
               case 'quadro':
@@ -508,13 +509,14 @@ export default {
                   }
                   break
                 case 'camiseta-infantil':
+                console.log('variations');
                   if (color) {
                     this.variationImages = [
                       [`https://static.doppelstore.com.br/catalogo/${category}/${pattern}/${color}.jpg`, 1476],
                       [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-serigrafia-${color}.jpg`, 1200]
                     ]
-                    console.log(this.variationImages);
                   }
+                console.log(this.variationImages);
                   break
                 case 'caderno':
                   if (pauta) {

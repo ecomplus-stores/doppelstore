@@ -420,6 +420,8 @@ export default {
     },
 
     showVariationPictures (variation) {
+       console.log('this.body');
+      console.log(this.body);
   console.log('variation');
       console.log(variation);
       if (this.body.categories) {

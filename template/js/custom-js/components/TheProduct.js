@@ -482,6 +482,10 @@ export default {
                 .replace(/Úú/g, 'u')
                 .replace(/Çç/g, 'c')
                 .replace(/\s/g, '-')
+
+              console.log('Category:', category);
+console.log('Pattern:', pattern);
+console.log('Color:', color);
               const model = specifications.modelo && specifications.modelo[0] &&
                 specifications.modelo[0].value
               const pauta = specifications.pauta && specifications.pauta[0] &&

@@ -455,10 +455,10 @@ export default {
                 category = 'placa-decorativa'; break
               case 'quebra-cabecas-2d':
                 category = 'quebra-cabeca-2d'; break
-              case 'camiseta':
-              case 'moletom':
               case 'camiseta-infantil':
                 category = 'camiseta-infantil'; break
+              case 'camiseta':
+              case 'moletom':
               case 'caderno':
               case 'copo-bucks':
               case 'quadro':
@@ -483,9 +483,10 @@ export default {
                 .replace(/Çç/g, 'c')
                 .replace(/\s/g, '-')
 
-              console.log('Category:', category);
-console.log('Pattern:', pattern);
-console.log('Color:', color);
+              console.log('Category: ' + category);
+              console.log('Pattern: ' + pattern);
+              console.log('Color: ' + color);
+              
               const model = specifications.modelo && specifications.modelo[0] &&
                 specifications.modelo[0].value
               const pauta = specifications.pauta && specifications.pauta[0] &&
@@ -513,14 +514,12 @@ console.log('Color:', color);
                   }
                   break
                 case 'camiseta-infantil':
-                console.log('variations');
                   if (color) {
                     this.variationImages = [
                       [`https://static.doppelstore.com.br/catalogo/camiseta-infantil/${pattern}/${color}.jpg`, 1476],
                       [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-serigrafia-${color}.jpg`, 1200]
                     ]
                   }
-                console.log(this.variationImages);
                   break
                 case 'caderno':
                   if (pauta) {
@@ -576,7 +575,8 @@ console.log('Color:', color);
           return getSpecTextValue(variation, gridId) === optionText
         })
         if (variation) {
-          this.showVariationPictures(variation)
+          this.showVariationPictures(variation);
+          console.log(variation);
         }
       }
     },

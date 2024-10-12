@@ -513,6 +513,7 @@ export default {
                       [`https://static.doppelstore.com.br/catalogo/${category}/${pattern}/${color}.jpg`, 1476],
                       [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-serigrafia-${color}.jpg`, 1200]
                     ]
+                    console.log(this.variationImages);
                   }
                   break
                 case 'caderno':

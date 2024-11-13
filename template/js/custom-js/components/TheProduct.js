@@ -769,9 +769,6 @@ console.log('category');
   },
 
   mounted () {
-          console.log(product.pictures[0].zoom.url);
-      console.log(product.pictures[1].zoom.url);
-      console.log(product.pictures[2].zoom.url);
     if (this.$refs.sticky && !this.isWithoutPrice) {
       let isBodyPaddingSet = false
       const setStickyBuyObserver = (isToVisible = true) => {

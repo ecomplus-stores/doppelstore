@@ -533,7 +533,7 @@ console.log('category');
                   if (tampa) {
                     var tampaName = tampa == 'canudo' ? 3 : 2;
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/copo-bucks/${pattern}${tampaName}.jpg`, 1500],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/copo-bucks/${pattern}/${tampaName}.jpg`, 1500],
                       [`https://static.doppelstore.com.br/catalogo-de-produtos/arte-papelaria/${pattern}/1.jpg`, 1200]
                     ]
                   }

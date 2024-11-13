@@ -483,9 +483,6 @@ console.log('category');
                 .replace(/\s/g, '-')
              console.log('color');
       console.log(color);
-      console.log(pictures[0].zoom.url);
-      console.log(pictures[1].zoom.url);
-      console.log(pictures[2].zoom.url);
               const model = specifications.modelo && specifications.modelo[0] &&
                 specifications.modelo[0].value
               const pauta = specifications.pauta && specifications.pauta[0] &&
@@ -772,6 +769,9 @@ console.log('category');
   },
 
   mounted () {
+          console.log(product.pictures[0].zoom.url);
+      console.log(product.pictures[1].zoom.url);
+      console.log(product.pictures[2].zoom.url);
     if (this.$refs.sticky && !this.isWithoutPrice) {
       let isBodyPaddingSet = false
       const setStickyBuyObserver = (isToVisible = true) => {

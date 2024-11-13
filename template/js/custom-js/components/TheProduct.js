@@ -523,17 +523,18 @@ console.log('category');
                       [pauta !== 'sem-pauta'
                         ? `https://static.doppelstore.com.br/produtos/${category}/pauta-${pauta}.jpg`
                         : `https://static.doppelstore.com.br/produtos/${category}/sem-pauta.jpg`, 1500],
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}/1.jpg`, 1500],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${category}/${pattern}/1.jpg`, 1500],
                       [`https://static.doppelstore.com.br/produtos/${category}/contra-capa.jpg`, 1500],
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/arte-papelaria.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte-papelaria/${pattern}/1.jpg`, 1200]
                     ]
                   }
                   break
                 case 'copo-bucks':
                   if (tampa) {
+                    var tampaName = tampa == 'canudo' ? 3 : 2;
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/copo-bucks/${tampa}.jpg`, 1500],
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/arte-papelaria.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/copo-bucks/${pattern}${tampaName}.jpg`, 1500],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte-papelaria/${pattern}/1.jpg`, 1200]
                     ]
                   }
                   break
@@ -544,8 +545,8 @@ console.log('category');
                   if (size) {
                     this.variationImages = [
                       [`https://static.doppelstore.com.br/produtos/${category}/${size.replace(/-[\d]+-pcs$/, '')}.jpg`, 1200],
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}/1.jpg`, 1200],
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/arte-papelaria.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${category}/${pattern}/1.jpg`, 1500],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte-papelaria/${pattern}/1.jpg`, 1200]
                     ]
                   }
                   break

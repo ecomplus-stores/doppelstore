@@ -497,7 +497,7 @@ console.log('category');
                   if (model && color) {
                     this.variationImages = [
                       [`https://static.doppelstore.com.br/catalogo-de-produtos/${category}-${model}/${pattern}/${color}.jpg`, 1476],
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${color}.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${pattern}/${color}.jpg`, 1200]
                     ]
                   }
                   break
@@ -505,7 +505,7 @@ console.log('category');
                    if (color) {
                     this.variationImages = [
                       [`https://static.doppelstore.com.br/catalogo-de-produtos/${category}/${pattern}/${color}.jpg`, 1476],
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${color}.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${pattern}/${color}.jpg`, 1200]
                     ]
                   }
                   break
@@ -513,7 +513,7 @@ console.log('category');
                   if (color) {
                     this.variationImages = [
                     [`https://static.doppelstore.com.br/catalogo-de-produtos/${category}/${pattern}/${color}.jpg`, 1476],
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${color}.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${pattern}/${color}.jpg`, 1200]
                     ]
                   }
                   break
@@ -551,7 +551,7 @@ console.log('category');
                   break
               }
               if (isBrilliant && this.variationImages.length) {
-                this.variationImages.push([`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/arte-brilho.jpg`, 1200])
+                this.variationImages.push([`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${pattern}/brilho-no-escuro.jpg`, 1200])
               }
             }
           }

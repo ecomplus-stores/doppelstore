@@ -496,24 +496,24 @@ console.log('category');
                 case 'camiseta':
                   if (model && color) {
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/${category}/${model}/${color}.jpg`, 1476],
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-serigrafia-${color}.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}-${model}/${color}.jpg`, 1476],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${color}.jpg`, 1200]
                     ]
                   }
                   break
                 case 'moletom':
                    if (color) {
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/${category}/${color}.jpg`, 1476],
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-serigrafia-${color}.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}/${color}.jpg`, 1476],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${color}.jpg`, 1200]
                     ]
                   }
                   break
                 case 'camiseta-infantil':
                   if (color) {
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo/camiseta-infantil/${pattern}/${color}.jpg`, 1476],
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-serigrafia-${color}.jpg`, 1200]
+                    [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}/${color}.jpg`, 1476],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${color}.jpg`, 1200]
                     ]
                   }
                   break
@@ -523,17 +523,17 @@ console.log('category');
                       [pauta !== 'sem-pauta'
                         ? `https://static.doppelstore.com.br/produtos/${category}/pauta-${pauta}.jpg`
                         : `https://static.doppelstore.com.br/produtos/${category}/sem-pauta.jpg`, 1500],
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/${category}/1.jpg`, 1500],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}/1.jpg`, 1500],
                       [`https://static.doppelstore.com.br/produtos/${category}/contra-capa.jpg`, 1500],
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-papelaria.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/arte-papelaria.jpg`, 1200]
                     ]
                   }
                   break
                 case 'copo-bucks':
                   if (tampa) {
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/copo-bucks/${tampa}.jpg`, 1500],
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-papelaria.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/copo-bucks/${tampa}.jpg`, 1500],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/arte-papelaria.jpg`, 1200]
                     ]
                   }
                   break
@@ -544,14 +544,14 @@ console.log('category');
                   if (size) {
                     this.variationImages = [
                       [`https://static.doppelstore.com.br/produtos/${category}/${size.replace(/-[\d]+-pcs$/, '')}.jpg`, 1200],
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/${category}/1.jpg`, 1200],
-                      [`https://static.doppelstore.com.br/catalogo/${pattern}/arte-papelaria.jpg`, 1200]
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}/1.jpg`, 1200],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/arte-papelaria.jpg`, 1200]
                     ]
                   }
                   break
               }
               if (isBrilliant && this.variationImages.length) {
-                this.variationImages.push([`https://static.doppelstore.com.br/catalogo/${pattern}/arte-brilho.jpg`, 1200])
+                this.variationImages.push([`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/arte-brilho.jpg`, 1200])
               }
             }
           }

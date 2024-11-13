@@ -483,6 +483,9 @@ console.log('category');
                 .replace(/\s/g, '-')
              console.log('color');
       console.log(color);
+      console.log(pictures[0].zoom.url);
+      console.log(pictures[1].zoom.url);
+      console.log(pictures[2].zoom.url);
               const model = specifications.modelo && specifications.modelo[0] &&
                 specifications.modelo[0].value
               const pauta = specifications.pauta && specifications.pauta[0] &&

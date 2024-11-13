@@ -496,7 +496,7 @@ console.log('category');
                 case 'camiseta':
                   if (model && color) {
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}-${model}/${color}.jpg`, 1476],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${category}-${model}/${pattern}/${color}.jpg`, 1476],
                       [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${color}.jpg`, 1200]
                     ]
                   }
@@ -504,7 +504,7 @@ console.log('category');
                 case 'moletom':
                    if (color) {
                     this.variationImages = [
-                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}/${color}.jpg`, 1476],
+                      [`https://static.doppelstore.com.br/catalogo-de-produtos/${category}/${pattern}/${color}.jpg`, 1476],
                       [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${color}.jpg`, 1200]
                     ]
                   }
@@ -512,7 +512,7 @@ console.log('category');
                 case 'camiseta-infantil':
                   if (color) {
                     this.variationImages = [
-                    [`https://static.doppelstore.com.br/catalogo-de-produtos/${pattern}/${category}/${color}.jpg`, 1476],
+                    [`https://static.doppelstore.com.br/catalogo-de-produtos/${category}/${pattern}/${color}.jpg`, 1476],
                       [`https://static.doppelstore.com.br/catalogo-de-produtos/arte/${color}.jpg`, 1200]
                     ]
                   }

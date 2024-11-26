@@ -429,9 +429,10 @@
                               v-if="isBox"
                               style="color: #000 !important"
                             >
-                              <hr style="color: #fff !important" />
-                              <strong style="color: #fff !important">
-                                Caso essa edição da Caixa de Schrödinger tenha camiseta, qual tamanho você vai querer?
+                            <div v-if="hasTshirt">
+                                <hr style="color: #fff !important" />
+                                <strong style="color: #fff !important">
+                                   Essa edição da Caixa de Schrödinger possui camiseta, qual tamanho você vai querer?
                                 <br/>
                                 <br/>
                                 Sempre enviamos a camiseta escolhida no ciclo anterior, mas você pode alterar a qualquer momento por aqui enquanto a caixa ainda não foi enviada.
@@ -443,7 +444,8 @@
                                 :placeholder="`Escolha o tamanho desejado`" 
                                 :options="listOptions"
                                 v-model="size"
-                              />
+                                />
+                            </div>
 
                               <span
                                 v-else

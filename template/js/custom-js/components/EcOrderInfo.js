@@ -308,8 +308,10 @@ export default {
         isBox() {
             return this.receiveDoppila === 'box';
         },
-        
+
         hasTshirt() {
+            console.log('this.hasTshirt', this.hasTshirt);
+
             return this.hasTshirt === true;
         }
     },
@@ -535,7 +537,6 @@ export default {
             if (this.isNew) {
                 this.saveCustomerOrder();
             }
-            console.log('hallooo');
             window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppila-or-box/${this.orderNumber}`).then(({ data }) => {
                 this.receiveDoppila = data.choice;
                 this.editionTitle = data.editionTitle;

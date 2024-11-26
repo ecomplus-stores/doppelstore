@@ -485,6 +485,8 @@ export default {
                         this.editionTitle = data.editionTitle;
                         this.listOptions = Object.keys(this.sizes);
                         this.canModifySubscriptionShirt = data['can-modify'];
+                        this.hasTshirt = data['has-tshirt'];
+
                         const myObj = this.sizes;
                         const desiredValue = data.size;
                         this.size = Object.keys(myObj).reduce((acc, key) => {
@@ -542,7 +544,7 @@ export default {
                 this.receiveDoppila = data.choice;
                 this.editionTitle = data.editionTitle;
                 this.optionSubscription = data.options;
-                hasTshirt = data['has-tshirt'];
+                this.hasTshirt = data['has-tshirt'];
                 this.canModifySubscriptionBonus = data['can-modify'];
                 if (this.canModifySubscriptionBonus && this.isBox) {
                     window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.orderNumber}`).then(({ data }) => {

@@ -418,6 +418,7 @@
                                   class="custom-control-label"
                                   :for="`subscription-form-type-${value}`"
                                 >
+
                                   {{ label }}
                                 </label>
                               </div>
@@ -426,12 +427,11 @@
                               Escolha feita :D
                             </a-alert>
                             <div
-                              v-if="isBox"
+                              v-if="isBox && hasTshirt"
                               style="color: #000 !important"
                             >
-                            <div v-if="hasTshirt">
-                                <hr style="color: #fff !important" />
-                                <strong style="color: #fff !important">
+                              <hr style="color: #fff !important" />
+                              <strong style="color: #fff !important">
                                    Essa edição da Caixa de Schrödinger possui camiseta, qual tamanho você vai querer?
                                 <br/>
                                 <br/>
@@ -444,8 +444,7 @@
                                 :placeholder="`Escolha o tamanho desejado`" 
                                 :options="listOptions"
                                 v-model="size"
-                                />
-                            </div>
+                              />
 
                               <span
                                 v-else

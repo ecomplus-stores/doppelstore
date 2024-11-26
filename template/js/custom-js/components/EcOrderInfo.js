@@ -104,7 +104,8 @@ export default {
             changedOption: false,
             selectedOption: false,
             defaultValue: null,
-            editionTitle: null
+            editionTitle: null,
+            hasTshirt: null
         };
     },
 
@@ -541,7 +542,7 @@ export default {
                 this.receiveDoppila = data.choice;
                 this.editionTitle = data.editionTitle;
                 this.optionSubscription = data.options;
-                this.hasTshirt = data['has-tshirt'];
+                hasTshirt = data['has-tshirt'];
                 this.canModifySubscriptionBonus = data['can-modify'];
                 if (this.canModifySubscriptionBonus && this.isBox) {
                     window.axios.get(`https://sistema.doppelverso.com.br/ecom/box-tshirt-choice/${this.orderNumber}`).then(({ data }) => {

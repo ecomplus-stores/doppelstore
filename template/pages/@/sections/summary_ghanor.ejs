@@ -78,7 +78,7 @@ if ((img || link) && meta > 0) {
       <% } %>
     </div>
     <div class="col-12 col-md-4">
-      <h2 id="ghanor-block" class="<%= is_money ? 'amount' : 'apoiadores' %>"><%= is_money ? `${_.ecomUtils.formatMoney(amount)} por mês` : `${quantity} Apoiadores` %></h2> 
+      <!-- <h2 id="ghanor-block" class="<%= is_money ? 'amount' : 'apoiadores' %>"><%= is_money ? `${_.ecomUtils.formatMoney(amount)} por mês` : `${quantity} Apoiadores` %></h2> 
       <span font-weight="medium" color="white" class="sc-de075f52-1 bnnsWj">arrecadados da meta de <%= is_money ? `${_.ecomUtils.formatMoney(meta)} por mês` : meta %></span>
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: <%= percent %>%" aria-valuenow="<%= percent %>" aria-valuemin="0" aria-valuemax="100">
@@ -93,7 +93,7 @@ if ((img || link) && meta > 0) {
       
       <% if (enable_share) { %>
         <%- await include('@/sections/share', { _, opt: { enable_share } }) %>
-      <% } %>
+      <% } %> -->
       
       <strong class="prices__value text-center">R$ 269,90 <span style="color: white; font-size: 20px">por trimestre</span></strong>
       <div class="text-center" style="color: white; font-size: 16px; font-weight:400">• uma caixa inédita enviada a cada 3 meses</div>

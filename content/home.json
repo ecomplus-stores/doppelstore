@@ -1,5 +1,5 @@
 {
-  "meta_title": "Camisetas",
+  "meta_title": "Jogos Educativos",
   "meta_description": "",
   "sections": [
     {
@@ -54,6 +54,26 @@
       "autoplay": 1000
     },
     {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 2,
+      "collection_id": "6492f5285e6069037042be5b:categories:Moletons:/moletons",
+      "sort": "sales",
+      "title": "MOLETONS DE VOLTA!",
+      "autoplay": 1000
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 2,
+      "collection_id": "6492f5065e6069037042bdf3:categories:Camisetas Infantis:/camisetas-infantis",
+      "sort": "sales",
+      "title": "CAMISETAS INFANTIS DE VOLTA!",
+      "autoplay": 1000
+    },
+    {
       "type": "responsive-banner",
       "link": "https://sistema.doppelverso.com.br/promo/categoria",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
@@ -67,9 +87,36 @@
       "limit": 12,
       "page": 1,
       "collection_id": "64c590c95e60690370785d65:categories:Edições Anteriores:/edicoes-anteriores-caixa-de-schrodinger",
-      "sort": "sales",
+      "sort": "slug",
       "title": "Edições Anteriores Caixa de Schrödinger",
       "autoplay": 0
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 1,
+      "collection_id": "655c73342cd6b65959b14e04:categories:Jogos:/jogos",
+      "sort": "sales",
+      "title": "Aprenda se divertindo",
+      "autoplay": 3000
+    },
+    {
+      "type": "responsive-banner",
+      "full_banner_responsive": false,
+      "img": "/img/uploads/1675345524_1621135595_trustvox-desktop2.webp",
+      "mobile_img": "/img/uploads/trust_vox_mobile.webp",
+      "enabled": true
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 3,
+      "collection_id": "6492f5025e6069037042bde7:categories:Cadernos:/cadernos",
+      "sort": "sales",
+      "title": "Cadernos",
+      "autoplay": 3000
     },
     {
       "type": "collection-shelf",
@@ -110,36 +157,6 @@
       ]
     },
     {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
-      "collection_id": "6492f5025e6069037042bde7:categories:Cadernos:/cadernos",
-      "sort": "sales",
-      "title": "Cadernos",
-      "autoplay": 3000
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
-      "collection_id": "65c8c3f687ab487fbfb30864:categories:Planners de Estudos:/planners-de-estudos",
-      "sort": "sales",
-      "title": "Planners de Estudos",
-      "autoplay": 3000
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
-      "collection_id": "655c74822cd6b65959b14e82:categories:Planners:/acessorios/planners",
-      "sort": "sales",
-      "link": "Planners com e sem data",
-      "autoplay": 3000
-    },
-    {
       "type": "banners-grid",
       "enabled": true,
       "banners": [
@@ -167,60 +184,14 @@
       ]
     },
     {
-      "type": "responsive-banner",
-      "full_banner_responsive": false,
-      "img": "/img/uploads/1675345524_1621135595_trustvox-desktop2.webp",
-      "mobile_img": "/img/uploads/trust_vox_mobile.webp",
-      "enabled": true
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 1,
-      "collection_id": "655c73342cd6b65959b14e04:categories:Jogos:/jogos",
-      "sort": "sales",
-      "title": "Aprenda se divertindo",
-      "autoplay": 3000
-    },
-    {
       "type": "collection-shelf",
       "shuffle": false,
       "limit": 12,
       "page": 3,
-      "collection_id": "6492f5335e6069037042be7c:categories:Placas Decorativa:/placas-decorativas",
-      "sort": "sales",
-      "title": "Placas Decorativas",
-      "autoplay": 3000
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
-      "sort": "sales",
       "collection_id": "6492f5355e6069037042be83:categories:Quadros:/quadros",
-      "autoplay": 3000,
-      "title": "Quadros"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
-      "collection_id": "6492f5345e6069037042be81:categories:Pôsters:/posters",
       "sort": "sales",
-      "autoplay": 3000,
-      "link": "Pôsters"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 1,
-      "collection_id": "6492f50d5e6069037042be0a:categories:Copo Bucks:/copo-bucks",
-      "autoplay": 3000,
-      "title": "Copo Bucks"
+      "title": "Quadros",
+      "autoplay": 3000
     },
     {
       "type": "banners-grid",

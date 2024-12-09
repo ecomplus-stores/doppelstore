@@ -1,5 +1,5 @@
 {
-  "meta_title": "Jogos Educativos",
+  "meta_title": "Doppel Store",
   "meta_description": "",
   "sections": [
     {
@@ -51,7 +51,7 @@
       "collection_id": "6492f5055e6069037042bdf1:categories:Camisetas:/camisetas",
       "sort": "sales",
       "title": "CAMISETAS DE VOLTA!",
-      "autoplay": 3000
+      "autoplay": 5000
     },
     {
       "type": "collection-shelf",
@@ -61,7 +61,7 @@
       "collection_id": "6492f5285e6069037042be5b:categories:Moletons:/moletons",
       "sort": "sales",
       "title": "MOLETONS DE VOLTA!",
-      "autoplay": 3000
+      "autoplay": 5000
     },
     {
       "type": "collection-shelf",
@@ -71,7 +71,7 @@
       "collection_id": "6492f5065e6069037042bdf3:categories:Camisetas Infantis:/camisetas-infantis",
       "sort": "sales",
       "title": "CAMISETAS INFANTIS DE VOLTA!",
-      "autoplay": 3000
+      "autoplay": 5000
     },
     {
       "type": "responsive-banner",
@@ -89,7 +89,7 @@
       "collection_id": "64c590c95e60690370785d65:categories:Edições Anteriores:/edicoes-anteriores-caixa-de-schrodinger",
       "sort": "slug",
       "title": "Edições Anteriores Caixa de Schrödinger",
-      "autoplay": 3000
+      "autoplay": 5000
     },
     {
       "type": "collection-shelf",
@@ -99,7 +99,7 @@
       "collection_id": "655c73342cd6b65959b14e04:categories:Jogos:/jogos",
       "sort": "sales",
       "title": "Aprenda se divertindo",
-      "autoplay": 3000
+      "autoplay": 5000
     },
     {
       "type": "responsive-banner",
@@ -116,7 +116,7 @@
       "collection_id": "6492f5025e6069037042bde7:categories:Cadernos:/cadernos",
       "sort": "sales",
       "title": "Cadernos",
-      "autoplay": 3000
+      "autoplay": 5000
     },
     {
       "type": "collection-shelf",
@@ -126,7 +126,7 @@
       "collection_id": null,
       "title": "ÚLTIMOS LANÇAMENTOS",
       "sort": "news",
-      "autoplay": 3000
+      "autoplay": 5000
     },
     {
       "type": "banners-grid",
@@ -191,7 +191,7 @@
       "collection_id": "6492f5355e6069037042be83:categories:Quadros:/quadros",
       "sort": "sales",
       "title": "Quadros",
-      "autoplay": 3000
+      "autoplay": 5000
     },
     {
       "type": "banners-grid",

@@ -51,7 +51,7 @@
       "collection_id": "6492f5055e6069037042bdf1:categories:Camisetas:/camisetas",
       "sort": "sales",
       "title": "CAMISETAS DE VOLTA!",
-      "autoplay": 1000
+      "autoplay": 3000
     },
     {
       "type": "collection-shelf",
@@ -61,7 +61,7 @@
       "collection_id": "6492f5285e6069037042be5b:categories:Moletons:/moletons",
       "sort": "sales",
       "title": "MOLETONS DE VOLTA!",
-      "autoplay": 1000
+      "autoplay": 3000
     },
     {
       "type": "collection-shelf",
@@ -71,7 +71,7 @@
       "collection_id": "6492f5065e6069037042bdf3:categories:Camisetas Infantis:/camisetas-infantis",
       "sort": "sales",
       "title": "CAMISETAS INFANTIS DE VOLTA!",
-      "autoplay": 1000
+      "autoplay": 3000
     },
     {
       "type": "responsive-banner",
@@ -85,11 +85,11 @@
       "type": "collection-shelf",
       "shuffle": false,
       "limit": 12,
-      "page": 1,
+      "page": 2,
       "collection_id": "64c590c95e60690370785d65:categories:Edições Anteriores:/edicoes-anteriores-caixa-de-schrodinger",
       "sort": "slug",
       "title": "Edições Anteriores Caixa de Schrödinger",
-      "autoplay": 0
+      "autoplay": 3000
     },
     {
       "type": "collection-shelf",

@@ -18,6 +18,8 @@ stores
 npm i
 ```
 
+teste
+
 ### Compiles and hot-reloads for development
 
 ```

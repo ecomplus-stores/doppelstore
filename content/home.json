@@ -46,7 +46,7 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
-      "limit": 12,
+      "limit": 20,
       "page": 2,
       "collection_id": "6492f5055e6069037042bdf1:categories:Camisetas:/camisetas",
       "sort": "sales",
@@ -56,7 +56,7 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
-      "limit": 12,
+      "limit": 20,
       "page": 1,
       "collection_id": "655da44d2cd6b65959b3a424:categories:Aprenda se Divertindo:/aprenda-se-divertindo",
       "sort": "sales",

@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "description": "SSR for Storefront on Firebase with Cloud Functions",
   "engines": {
-    "node": "16",
-    "npm": "^8.19.4"
+    "node": "20"
   },
   "main": "index.js",
   "dependencies": {
     "@ecomplus/storefront-renderer": "^2.11.7",
-    "firebase-admin": "^11.10.1",
-    "firebase-functions": "^4.4.1"
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^5.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

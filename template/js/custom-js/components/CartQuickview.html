@@ -1,31 +1,92 @@
-<div class="cart">
-  <transition-group enter-active-class="animated fadeInDown">
-    <div
-      class="row"
-      v-if="cart.items.length"
-      key="list"
+<div class="minicart">
+  <a-backdrop
+    :is-visible="isVisible"
+    @hide="toggle(false)"
+  />
+
+  <transition
+    enter-active-class="animated slideInRight"
+    leave-active-class="animated slideOutRight"
+  >
+    <aside
+      v-show="isVisible"
+      class="minicart__aside card shadow"
     >
-      <div class="col-md-7 col-lg-8">
-        <div class="cart__list">
-          <slot
-            name="list"
-            v-bind="{ items: cart.items }"
+      <slot name="header">
+        <header class="card-header">
+          {{ i19myShoppingCart }}
+          <button
+            type="button"
+            class="close"
+            :aria-label="i19close"
+            @click="toggle"
           >
-            <transition-group
-              enter-active-class="animated fadeInDown"
-              leave-active-class="animated fadeOutUp faster position-absolute"
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </header>
+      </slot>
+
+      <article class="minicart__body card-body">
+        <slot name="list-prepend"></slot>
+        <transition-group enter-active-class="animated fadeIn slow">
+          <div
+            class="minicart__list"
+            v-if="cart.items.length"
+            key="list"
+          >
+            <slot
+              name="list"
+              v-bind="{ items: cart.items }"
             >
-              <cart-item
-                v-for="item in cart.items"
-                :key="item._id"
-                :origin="'cart'"
-                :item="item"
-                :name-max-length="80"
-              />
-            </transition-group>
-          </slot>
-        </div>
-     <div class="gift-list-subscription the-cart p-3 mb-3">
+              <transition-group
+                enter-active-class="animated fadeInDown"
+                leave-active-class="animated fadeOutUp faster position-absolute"
+              >
+                <cart-item
+                  v-for="item in cart.items"
+                  :key="item._id"
+                  :origin="'sidecart'"
+                  :item="item"
+                />
+              </transition-group>
+            </slot>
+          </div>
+
+          <div
+            v-else
+            class="minicart__empty"
+            key="empty"
+          >
+            <slot name="empty">
+              <p class="lead text-muted">
+                {{ i19emptyCart }} ...
+              </p>
+              <a
+                class="btn btn-block btn-primary"
+                href="#"
+                @click.prevent="toggle"
+              >
+                <i class="i-arrow-left mr-1"></i>
+                {{ i19continueShopping }}
+              </a>
+            </slot>
+          </div>
+
+          <div
+            class="minicart__shipping"
+            v-if="cart.items.length && hasShippingCalculator"
+            key="shipping"
+          > 
+            <hr>
+            <shipping-calculator
+              class="minicart__shipping-calculator"
+              :can-select-services="true"
+              :shipped-items="cart.items"
+              @select-service="selectShippingService"
+            />
+          </div>
+        </transition-group>
+       <div class="gift-list-subscription the-cart p-3 mb-3">
                 <!-- <h4 style="color: #df507c;font-weight: 600;">Promo Progressiva de Vestuário: Como Participar</h4>
               <p style="font-size: 0.875rem !important">
                 <span style="color: #9db4cb;font-weight: 600;">Insira no carrinho 5, 8 ou 10 moletons, camisetas adultas ou infantis à sua escolha que o desconto correspondente aparece sozinho na finalização do pedido :D
@@ -54,140 +115,50 @@
                  <!-- <div style="color: #df507c; font-weight: 50">*Importante: O valor para ativar a promo precisa ser em produtos tirando os cadernos que vão ser o brinde. Por exemplo, se você colocar R$ 200 em produtos e dentro desse valor contiver o caderno que vai ser dado como presente, a promo não vai ser ativada. Precisa ser R$ 200 + o caderno.
                  </div> -->
               </p>
-        </div>p>
         </div>
-           <div id="image-gift-modal" class="gift-modal">
-              <span class="close-gift-modal">&times;</span>
-              <img class="gift-modal-content" id="giftExpandedImage">
-              <div id="gift-modal-caption"></div>
-            </div>
-        <earn-points-progress
-          class="my-3"
-          :cart-subtotal="cart.subtotal"
-        />
+      </article>
 
-        <recommended-items col-class-name="col-6 col-lg-3"/>
-
-        <slot name="back-shopping">
-          <div class="cart__back d-none d-md-block my-4">
-            <a
-              class="cart__btn-back btn btn-link"
-              role="button"
-              href="/"
-            >
-              <i class="i-arrow-left mr-1"></i>
-              {{ i19continueShopping }}
-            </a>
-          </div>
-        </slot>
-      </div>
-
-      <div class="col-md-5 col-lg-4 mt-3 mt-md-0">
-        <div class="cart__info">
-          <slot name="info">
-            <div
-              class="cart__summary-row"
-              :data-subtotal="cart.subtotal.toFixed(2)"
-            >
-              <span>Subtotal</span>
-              <div>{{ formatMoney(cart.subtotal) }}</div>
-            </div>
-
-            <template v-if="isValidCart">
-              <transition enter-active-class="animated fadeInDown">
-                <div
-                  class="cart__summary-row mt-1"
-                  v-if="amount.discount"
-                  :data-discount="amount.discount.toFixed(2)"
-                >
-                  <span>
-                    <i class="i-tag mr-1"></i>
-                    {{ i19discount }}
-                  </span>
-                  <div>{{ formatMoney(amount.discount) }}</div>
-                </div>
-              </transition>
-
-              <shipping-calculator
-                class="cart__shipping"
-                :can-select-services="true"
-                :shipped-items="cart.items"
-                :zip-code.sync="localZipCode"
-                @select-service="selectShippingService"
-              />
-
-              <div
-                class="cart__summary-row cart__total"
-                :data-total="(amount.total || cart.subtotal).toFixed(2)"
-              >
-                <span>Total</span>
-                <a-prices
-                  :product="{ price: amount.total || cart.subtotal }"
-                  :discount-option="{ value: amount.discount }"
-                  :is-literal="true"
-                  :is-amount-total="true"
-                />
-              </div>
-            </template>
-
-            <slot name="checkout">
-              <a
-                v-if="isValidCart"
-                class="cart__btn-checkout btn btn-lg btn-block btn-success"
-                role="button"
-                :href="checkoutUrl"
-              >
-                <span class="mr-1">
-                  <i class="i-shopping-bag"></i>
-                </span>
-                {{ i19checkout }}
-              </a>
-
-              <a
-                class="cart__btn-back btn btn-block btn-outline-secondary"
-                :class="isValidCart ? 'd-md-none' : 'mt-3'"
-                role="button"
-                href="/"
-              >
-                <i class="i-arrow-left mr-1"></i>
-                {{ i19continueShopping }}
-              </a>
-            </slot>
-          </slot>
-        </div>
-
-        <discount-applier
-          v-if="isValidCart && canApplyDiscount"
-          class="cart__discount"
-          :amount="amount"
-          :is-coupon-applied="isCouponApplied"
-          :coupon-code.sync="localDiscountCoupon"
-          @set-discount-rule="setDiscountRule"
-          :modules-payload="modulesPayload"
-        />
-      </div>
-    </div>
-
-    <div
-      v-else
-      class="cart__empty"
-      key="empty"
-    >
-      <slot name="empty">
-        <p class="lead text-muted">
-          {{ i19emptyCart }} ...
-        </p>
-        <a
-          class="btn btn-primary"
-          href="/"
+      <slot name="footer">
+        <footer
+          class="card-footer"
+          v-if="cart.subtotal || cart.items.length"
         >
-          <span class="mr-1">
-            <i class="i-arrow-left"></i>
-          </span>
-          {{ i19continueShopping }}
-        </a>
+          <div class="minicart__summary">
+            <span>{{ i19subtotal }}</span>
+            <div class="minicart__subtotal">
+              <a-prices
+                :product="{ price: total || cart.subtotal }"
+                :is-literal="true"
+              />
+            </div>
+          </div>
+
+          <a-link
+            class="minicart__btn-checkout btn btn-block btn-primary"
+            role="button"
+            :href="checkoutUrl"
+          >
+            <i class="i-check mr-1"></i>
+            {{ i19checkout }}
+          </a-link>
+          <a-link
+            class="minicart__btn-cart btn btn-block btn-outline-secondary"
+            role="button"
+            :href="cartUrl"
+          >
+            {{ i19seeCart }}
+          </a-link>
+
+          <button
+            type="button"
+            class="minicart__btn-back btn btn-block btn-sm btn-link d-md-none"
+            @click="toggle"
+          >
+            <i class="i-arrow-left mr-1"></i>
+            {{ i19continueShopping }}
+          </button>
+        </footer>
       </slot>
-    </div>
-  </transition-group>
-  
+    </aside>
+  </transition>
 </div>

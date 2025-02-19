@@ -38,16 +38,12 @@
     "title": "Navegação",
     "list": [
       {
-        "text": "Produtos",
-        "url": "/produtos"
+        "text": "Camisetas",
+        "url": "/camiseta"
       },
       {
-        "text": "Lançamentos",
-        "url": "/lancamentos"
-      },
-      {
-        "text": "Aprenda se Divertindo",
-        "url": "/aprenda-se-divertindo"
+        "text": "Camisetas Infantis",
+        "url": "/camiseta-infantil"
       },
       {
         "text": "Estampas",

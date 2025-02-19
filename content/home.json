@@ -56,26 +56,6 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
-      "limit": 20,
-      "page": 1,
-      "collection_id": "655da44d2cd6b65959b3a424:categories:Aprenda se Divertindo:/aprenda-se-divertindo",
-      "sort": "sales",
-      "title": "Aprenda se divertindo",
-      "autoplay": 5000
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
-      "collection_id": "6492f5025e6069037042bde7:categories:Cadernos:/cadernos",
-      "sort": "sales",
-      "title": "Cadernos",
-      "autoplay": 5000
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
       "limit": 12,
       "page": 2,
       "collection_id": "6492f5065e6069037042bdf3:categories:Camisetas Infantis:/camisetas-infantis",
@@ -96,11 +76,11 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
-      "limit": 12,
+      "limit": 20,
       "page": 1,
-      "collection_id": "64c590c95e60690370785d65:categories:Edições Anteriores:/edicoes-anteriores-caixa-de-schrodinger",
-      "sort": "slug",
-      "title": "Caixa de Schrödinger",
+      "collection_id": "655da44d2cd6b65959b3a424:categories:Aprenda se Divertindo:/aprenda-se-divertindo",
+      "sort": "sales",
+      "title": "Aprenda se divertindo",
       "autoplay": 5000
     },
     {
@@ -119,18 +99,8 @@
       "enabled": true
     },
     {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 2,
-      "collection_id": null,
-      "title": "ÚLTIMOS LANÇAMENTOS",
-      "sort": "news",
-      "autoplay": 5000
-    },
-    {
       "type": "banners-grid",
-      "enabled": true,
+      "enabled": false,
       "banners": [
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/planners-de-estudos.jpg",
@@ -158,7 +128,7 @@
     },
     {
       "type": "banners-grid",
-      "enabled": true,
+      "enabled": false,
       "banners": [
         {
           "img": "https://static.doppelstore.com.br/promo-vigente/meias.jpg",
@@ -182,16 +152,6 @@
           "link": "/decoracao/posters"
         }
       ]
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 3,
-      "collection_id": "6492f5355e6069037042be83:categories:Quadros:/quadros",
-      "sort": "sales",
-      "title": "Quadros",
-      "autoplay": 5000
     },
     {
       "type": "banners-grid",
@@ -227,48 +187,6 @@
         {
           "img": "/img/uploads/banner-mosaico-8.webp",
           "link": "/historia"
-        }
-      ]
-    },
-    {
-      "type": "partner_list",
-      "reverse_order": false,
-      "banners": [
-        {
-          "img": "/img/uploads/usq.jpg",
-          "alt": "",
-          "link": "/um-sabado-qualquer",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/pirula.jpg",
-          "alt": "",
-          "link": "/pirula",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/obrigahistoria.jpg",
-          "alt": "",
-          "link": "/obrigastore",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/nv1.jpg",
-          "alt": "",
-          "link": "/nunca-vi-1-cientista",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/blabla.jpg",
-          "alt": "",
-          "link": "/blablalogia",
-          "mobile_img": ""
-        },
-        {
-          "img": "/img/uploads/ddg2.jpg",
-          "alt": "",
-          "link": "/dragoes-de-garagem",
-          "mobile_img": ""
         }
       ]
     },

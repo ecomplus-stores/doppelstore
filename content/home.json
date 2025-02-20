@@ -64,6 +64,14 @@
       "autoplay": 5000
     },
     {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 1,
+      "collection_id": "655da44d2cd6b65959b3a424:categories:Aprenda se Divertindo:/aprenda-se-divertindo",
+      "sort": "sales"
+    },
+    {
       "type": "responsive-banner",
       "link": "https://sistema.doppelverso.com.br/promo/categoria",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",

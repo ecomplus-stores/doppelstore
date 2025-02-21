@@ -63,76 +63,14 @@ if (mainCategories) {
           <% } %>
           data-parent="#accordion-menu"
         >
-
-          <% if (slug !== '_') { %>
-            <% category = _.categories.find(category => category.slug === slug) %>
-            <% parent = category && category.parent %>
-            <button
-              class="menu__btn btn"
-              type="button"
-              data-toggle="collapse"
-              <% if (!parent || !parent.slug) { %>
-                aria-expanded="true"
-                data-target="#categories-nav"
-                aria-controls="categories-nav"
-              <% } else {
-                const submenuId = getSubmenuId(parent.slug)
-                %>
-                aria-expanded="false"
-                data-target="#<%= submenuId %>"
-                aria-controls="<%= submenuId %>"
-              <% } %>
-            >
-              <i class="i-arrow-left"></i>
-            </button>
-          <% } %>
-
-          <div class="menu__list">
-            <% categoryParents[slug].forEach((subcategory, index) => { %>
-              <% const hasSubmenu = Array.isArray(categoryParents[subcategory.slug]) %>
-              <a
-                <% if (hasSubmenu) {
-                  const submenuId = getSubmenuId(subcategory.slug)
-                  %>
-                  href="#<%= submenuId %>"
-                  data-toggle="collapse"
-                  role="button"
-                  aria-expanded="false"
-                  aria-controls="<%= submenuId %>"
-                <% } else { %>
-                  href="/<%= subcategory.slug %>"
-                <% } %>
-                id="c-<%= subcategory._id %>"
-                class="menu__item<%- hasSubmenu ? ' has-subcategory' : '' %>"
-              >
-                <% if (subcategory.icon) { %>
-                  <span class="menu__item-icon">
-                    <img
-                      data-src="<%= subcategory.icon.url %>"
-                      alt="<%= subcategory.icon.alt || subcategory.name %>"
-                      class="lozad"
-                      data-preload="<%= (index * 200) %>"
-                    >
-                  </span>
-                <% } %>
-                <span>
-                  <%= subcategory.name %>
-                </span>
-                <% if (hasSubmenu) { %>
-                  <i class="i-chevron-right"></i>
-                <% } %>
-              </a>
-              <% if (subcategory.slug === 'astronautica') { %>
-                <!-- <a id="c-exemplo" class="menu__item" href="/exemplo"><span> EXEMPLO </span></a> -->
-              <% } %>
-            <% }) %>
+          <div class="menu__list"> 
+            <a href="/camiseta" class="menu__item">Camiseta</a> 
+            <a href="/camisetas-infantis" class="menu__item">Camisetas Infantis</a> 
+            <a href="/aprenda-se-divertindo" class="menu__item">Aprenda se Divertindo</a> 
+            <a href="/estampas" class="menu__item">Estampas</a> 
+            <a href="/colecoes" class="menu__item">Coleções</a> 
+            <a href="/parceiros" class="menu__item">Parceiros</a> 
           </div>
-
-          <% if (category && category.slug) { %>
-            <a href="/<%= category.slug %>" class="menu__link">
-              <%= _.dictionary('seeAll$1Category').replace('$1', category.name) %>
-            </a>
-          <% } %>
         </div>
       <% } %>
     <% } %>
@@ -184,4 +122,3 @@ if (mainCategories) {
     <% } %>
   </footer>
 </aside>
-  

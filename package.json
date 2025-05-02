@@ -42,7 +42,7 @@
   "dependencies": {
     "@ecomplus/storefront-template": "^2.0.0-beta.283",
     "@fontsource-variable/encode-sans": "^5.0.13",
-    "@netlify/zip-it-and-ship-it": "^8.10.0",
+    "@netlify/zip-it-and-ship-it": "^10.0.4",
     "firebase-tools": "^13.29.2",
     "perfect-debounce": "^1.0.0",
     "vue-select": "^3.20.3"

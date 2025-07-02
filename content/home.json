@@ -54,16 +54,6 @@
       "autoplay": 5000
     },
     {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 2,
-      "collection_id": "6492f5065e6069037042bdf3:categories:Camisetas Infantis:/camisetas-infantis",
-      "sort": "sales",
-      "title": "Camisetas Infantis",
-      "autoplay": 5000
-    },
-    {
       "type": "responsive-banner",
       "link": "https://sistema.doppelverso.com.br/promo/categoria",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",

@@ -13,7 +13,6 @@ $container-width: 1110px;
 #checkout::before,
 .account__content::before {
   content: "";
-  background-image: url(/img/uploads/aviso-mobile.webp);
   background-size: contain;
   display: block;
   width: 100%;
@@ -23,7 +22,6 @@ $container-width: 1110px;
 @media (min-width: 1024px) {
   #checkout::before,
   .account__content::before {
-    background-image: url(/img/uploads/aviso-desktop.webp);
     aspect-ratio: 1181 / 122;
   }
 }

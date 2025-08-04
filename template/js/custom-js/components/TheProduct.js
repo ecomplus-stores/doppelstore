@@ -165,9 +165,9 @@ export default {
       currentTimer: null,
       variationImages: [],
       variationImagesKey: null,
-      giftList: []
-      htmlPromo: null,
-      promoCounter: null,
+      giftList: [],
+      htmlPromo: 'sem nada',
+      promoCounter: 'sem counter',
     }
   },
 

@@ -165,9 +165,7 @@ export default {
       currentTimer: null,
       variationImages: [],
       variationImagesKey: null,
-      giftList: [],
-      htmlPromo: 'sem nada',
-      promoCounter: 'sem counter',
+      giftList: []
     }
   },
 
@@ -756,24 +754,6 @@ console.log('category');
     window.axios.get(`https://sistema.doppelverso.com.br/ecom/rewardchest/${this.product.sku}`).then(({data}) => {
       this.giftList = data.rewardChest || []
     })
-    
-   window.axios.get(`https://sistema.doppelverso.com.br/api/ecom/html-promo`)
-  .then(({ data }) => {
-    this.htmlPromo = data
-    console.log('html promo get feito', data)
-  })
-  .catch(err => {
-    console.error('Erro ao carregar htmlPromo', err)
-  })
-
-    window.axios.get(`https://sistema.doppelverso.com.br/api/ecom/html-promo-counter`)
-  .then(({ data }) => {
-    this.promoCounter = data
-    console.log('counter get feito', data)
-  })
-  .catch(err => {
-    console.error('Erro ao carregar counter', err)
-  })
   
     if (this.product) {
       this.body = this.product

@@ -23,7 +23,8 @@
       v-if="body._id"
       class="row"
     >
-      {{htmlPromo}}
+      <div v-if="htmlPromo" v-html="htmlPromo"></div>
+      
 <!--         <div class="gift-list-subscription the-cart p-3 mb-3">
                 <h4 style="color: #df507c;font-weight: 600;">
                   Campanha para ajudar o Pirulla: Como Ganhar o Pôster e o Frete

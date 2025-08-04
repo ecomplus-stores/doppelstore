@@ -23,7 +23,8 @@
       v-if="body._id"
       class="row"
     >
-        <div class="gift-list-subscription the-cart p-3 mb-3">
+      {{htmlPromo}}
+<!--         <div class="gift-list-subscription the-cart p-3 mb-3">
                 <h4 style="color: #df507c;font-weight: 600;">
                   Campanha para ajudar o Pirulla: Como Ganhar o Pôster e o Frete
                 </h4>
@@ -35,7 +36,7 @@
                   2. Na hora de finalizar a compra, use o cupom <b>PIRULLA</b> que o pôster vai aparecer sozinho. ^^
                 </div>
               </p>
-        </div>
+        </div> -->
       <slot name="gallery-col">
         <div :class="galleryColClassName">
           <component

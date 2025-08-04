@@ -165,7 +165,8 @@ export default {
       currentTimer: null,
       variationImages: [],
       variationImagesKey: null,
-      giftList: []
+      giftList: [],
+      htmlPromo: null,
     }
   },
 
@@ -754,6 +755,11 @@ console.log('category');
     window.axios.get(`https://sistema.doppelverso.com.br/ecom/rewardchest/${this.product.sku}`).then(({data}) => {
       this.giftList = data.rewardChest || []
     })
+    window.axios.get('http://sistema.doppelverso.com.br/api/ecom/html-promo')
+  .then(({ data }) => {
+    this.htmlPromo = data
+    console.log(data);
+  })
     if (this.product) {
       this.body = this.product
       this.sortVariationGrids()

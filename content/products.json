@@ -2,7 +2,7 @@
   "sections": [
     {
       "type": "custom-html",
-      "html": " <div class=\"gift-list-subscription the-cart p-3 mb-3\">\n                <h4 style=\"color: #df507c;font-weight: 600;\">\n                  Campanha Volta da Doppel: Leve 5 Pague 4 + Frete Grátis\n                </h4>\n              <p style=\"font-size: 0.875rem !important\">\n                <div style=\"color: #9db4cb;font-weight: 500;\" class=\"mb-1\">\n                  1. Insira no carrinho 5 ou mais camisetas. Pode misturar quaisquer umas.\n                </div>\n                <div style=\"color: #9db4cb;font-weight: 500;\" class=\"mb-1\">\n                  2. O valor de 1 camiseta e do frete vai ficar por nossa conta!\n                </div>\n              </p>\n        </div>"
+      "html": " <div class=\"gift-list-subscription the-cart p-3 mb-3\">\n                <h4 style=\"color: #df507c;font-weight: 600;\">\n                  Campanha #VoltaDaDoppel: Leve 5 Pague 4 + Frete Grátis\n                </h4>\n              <p style=\"font-size: 0.875rem !important\">\n                <div style=\"color: #9db4cb;font-weight: 500;\" class=\"mb-1\">\n                  1. Insira no carrinho 5 ou mais camisetas. Pode misturar quaisquer umas.\n                </div>\n                <div style=\"color: #9db4cb;font-weight: 500;\" class=\"mb-1\">\n                  2. O valor de 1 camiseta e do frete vai ficar por nossa conta!\n                </div>\n              </p>\n        </div>"
     },
     {
       "type": "custom-html",

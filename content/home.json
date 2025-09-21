@@ -62,6 +62,16 @@
       "shuffle": false,
       "limit": 20,
       "page": 2,
+      "collection_id": "655da44d2cd6b65959b3a424:categories:Aprenda se Divertindo:/aprenda-se-divertindo",
+      "sort": "sales",
+      "title": "APRENDA SE DIVERTINDO",
+      "autoplay": 5000
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 20,
+      "page": 2,
       "collection_id": "6492f5065e6069037042bdf3:categories:Camisetas Infantis:/camisetas-infantis",
       "sort": "sales",
       "title": "CAMISETAS INFANTILS",

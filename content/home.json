@@ -60,8 +60,8 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
-      "limit": 20,
-      "page": 2,
+      "limit": "",
+      "page": "",
       "collection_id": "655da44d2cd6b65959b3a424:categories:Aprenda se Divertindo:/aprenda-se-divertindo",
       "sort": "sales",
       "title": "APRENDA SE DIVERTINDO",

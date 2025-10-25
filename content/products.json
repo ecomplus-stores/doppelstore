@@ -1,14 +1,14 @@
 {
   "sections": [
     {
+      "type": "breadcrumbs",
+      "enabled": true
+    },
+    {
       "type": "responsive-banner",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg",
       "link": "https://sistema.doppelverso.com.br/promo/categoria",
-      "enabled": true
-    },
-    {
-      "type": "breadcrumbs",
       "enabled": true
     },
     {

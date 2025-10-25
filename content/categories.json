@@ -1,6 +1,10 @@
 {
   "sections": [
     {
+      "type": "breadcrumbs",
+      "enabled": true
+    },
+    {
       "type": "document-description",
       "enabled": true
     },
@@ -9,10 +13,6 @@
       "link": "https://sistema.doppelverso.com.br/promo/categoria",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg",
-      "enabled": true
-    },
-    {
-      "type": "breadcrumbs",
       "enabled": true
     },
     {

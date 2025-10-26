@@ -10,7 +10,7 @@
     },
     {
       "type": "responsive-banner",
-      "enabled": false,
+      "enabled": true,
       "img": "https://static.doppelstore.com.br/promo-vigente/promo-2-categoria-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/promo-2-categoria-mobile.jpg"
     },

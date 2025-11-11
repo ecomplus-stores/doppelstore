@@ -37,14 +37,6 @@
     },
     {
       "type": "responsive-banner",
-      "img": "https://static.doppelstore.com.br/promo-vigente/faixa-desktop.jpg",
-      "mobile_img": "https://static.doppelstore.com.br/promo-vigente/faixa-mobile.jpg",
-      "link": "https://sistema.doppelverso.com.br/promo/faixa",
-      "full_banner_responsive": true,
-      "enabled": true
-    },
-    {
-      "type": "responsive-banner",
       "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
       "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg",
       "enabled": true,

@@ -16,7 +16,7 @@
   "marketing_stripe": {
     "text": "FRETE GRÁTIS NAS COMPRAS ACIMA DE R$ 300",
     "link": "/camisetas",
-    "background": "#ea356c",
+    "background": "",
     "color": "#ffffff"
   },
   "alphabetical_order_submenu": false,

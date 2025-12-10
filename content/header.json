@@ -14,7 +14,7 @@
   "menu_all_departments": false,
   "centralized_logo": false,
   "marketing_stripe": {
-    "text": "",
+    "text": "FRETE GRÁTIS NAS COMPRAS ACIMA DE R$ 300",
     "link": "/promotion",
     "background": "#ea356c"
   },

@@ -16,7 +16,8 @@
   "marketing_stripe": {
     "text": "FRETE GRÁTIS NAS COMPRAS ACIMA DE R$ 300",
     "link": "/promotion",
-    "background": "#ea356c"
+    "background": "#ea356c",
+    "color": "#ffffff"
   },
   "alphabetical_order_submenu": false,
   "search_input": true,

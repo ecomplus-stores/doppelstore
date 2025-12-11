@@ -3,8 +3,8 @@
     {
       "type": "responsive-banner",
       "link": "https://sistema.doppelverso.com.br/promo/categoria",
-      "img": "https://static.doppelstore.com.br/promo-vigente/categoria-desktop.jpg",
-      "mobile_img": "https://static.doppelstore.com.br/promo-vigente/categoria-mobile.jpg",
+      "img": "/img/uploads/banner-1-ciencia-faixa-desktop-categoria.png",
+      "mobile_img": "/img/uploads/banner-1-ciencia-faixa-mobile-categoria.png",
       "enabled": true
     },
     {

@@ -33,10 +33,10 @@
     },
     {
       "type": "responsive-banner",
-      "img": "/img/uploads/banner-1-faixa-desktop-geral.jpg",
-      "mobile_img": "/img/uploads/banner-1-faixa-mobile-categoria-1-.jpg",
+      "img": "https://links.doppelverso.com.br/banners/imagens/principal-desktop",
+      "mobile_img": "https://links.doppelverso.com.br/banners/imagens/principal-mobile",
       "enabled": true,
-      "link": "https://sistema.doppelverso.com.br/promo/faixa"
+      "link": "https://links.doppelverso.com.br/banners/links/principal-desktop"
     },
     {
       "type": "info-bar",
@@ -74,9 +74,9 @@
     },
     {
       "type": "responsive-banner",
-      "link": "https://sistema.doppelverso.com.br/promo/categoria",
-      "img": "/img/uploads/banner-1-ciencia-faixa-desktop-categoria.png",
-      "mobile_img": "/img/uploads/banner-1-ciencia-faixa-mobile-categoria.png",
+      "link": "https://links.doppelverso.com.br/banners/links/faixa-menor-desktop",
+      "img": "https://links.doppelverso.com.br/banners/imagens/faixa-menor-desktop",
+      "mobile_img": "https://links.doppelverso.com.br/banners/imagens/faixa-menor-mobile",
       "enabled": true,
       "full_banner_responsive": false
     },

@@ -53,14 +53,15 @@ export default {
   },
 
   
-  data () {
-    return {
-      localZipCode: this.zipCode,
-      canApplyDiscount: false,
-      isCouponApplied: false,
-      monthGift: []
-    }
-  },
+ data () {
+  return {
+    localZipCode: this.zipCode,
+    canApplyDiscount: false,
+    isCouponApplied: false,
+    monthGift: [],
+    promoHtml: ''
+  }
+},
 
   computed: {
     i19checkout: () => i18n(i19checkout),
@@ -149,6 +150,13 @@ export default {
     }
   },
   created () {
+    window.axios.get('https://sistema.doppelverso.com.br/promo/html', {
+    responseType: 'text'
+  }).then((res) => {
+    this.promoHtml = res.data || ''
+  }).catch(() => {
+    this.promoHtml = ''
+  })
       window.axios.get(`https://sistema.doppelverso.com.br/ecom/doppelgang-month-gift`).then(({data}) => {
         this.monthGift = data.monthGifts || []
       })

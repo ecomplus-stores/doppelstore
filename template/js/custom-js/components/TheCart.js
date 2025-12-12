@@ -150,7 +150,7 @@ export default {
     }
   },
   created () {
-    window.axios.get('https://sistema.doppelverso.com.br/promo/html', {
+    window.axios.get('https://links.doppelverso.com.br/promo/html', {
     responseType: 'text'
   }).then((res) => {
     this.promoHtml = res.data || ''

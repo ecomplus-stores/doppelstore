@@ -10,9 +10,9 @@
     },
     {
       "type": "responsive-banner",
-      "link": "https://sistema.doppelverso.com.br/promo/categoria",
-      "img": "/img/uploads/banner-1-faixa-desktop-categoria.jpg",
-      "mobile_img": "/img/uploads/banner-1-faixa-mobile-categoria-1-.jpg",
+      "link": "https://links.doppelverso.com.br/banners/links/categoria-desktop",
+      "img": "https://links.doppelverso.com.br/banners/imagens/categoria-desktop",
+      "mobile_img": "https://links.doppelverso.com.br/banners/imagens/categoria-mobile",
       "enabled": true
     },
     {

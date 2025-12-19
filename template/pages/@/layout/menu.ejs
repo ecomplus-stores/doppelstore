@@ -1,10 +1,7 @@
 <%
-/*
-load menu options and contacts from content
-*/
+// load menu options and contacts from content
 const menu = _.cms('menu') || {}
 const contacts = _.cms('contacts') || {}
-
 // some social networks handled by contacts
 const networksWithColors = [
   ['facebook', '#3B5998'],
@@ -12,18 +9,14 @@ const networksWithColors = [
   ['instagram', '#E1306C'],
   ['twitter', '#1DA1F2']
 ]
-
 // start grouping categories by parent slug
 const allCategories = menu.alphabetical_order
   ? _.lodash.sortBy(_.categories, ['name'])
   : _.categories
-
 const categoryParents = _.lodash.groupBy(allCategories, ({ parent }) => {
   return !parent || !parent.slug ? '_' : parent.slug
 })
-
 const getSubmenuId = slug => `a-${slug.replace(/\//g, '_')}`
-
 const mainCategories = categoryParents._
 if (mainCategories) {
   if (Array.isArray(menu.sort_categories)) {
@@ -40,7 +33,6 @@ if (mainCategories) {
   }
 }
 %>
-
 <aside id="menu" class="menu shadow">
   <nav class="accordion" id="accordion-menu">
     <button
@@ -51,90 +43,33 @@ if (mainCategories) {
     >
       <i class="i-times"></i>
     </button>
-    
     <% for (const slug in categoryParents) { %>
       <% if (categoryParents.hasOwnProperty(slug)) { %>
-        <% const categories = categoryParents[slug] %>
-        <% const isMainLevel = slug === '_' %>
-        
-        <div class="accordion-item">
-          <% if (isMainLevel) { %>
-            <!-- CATEGORIAS PRINCIPAIS (sempre abertas) -->
-            <div id="categories-nav" class="accordion-collapse collapse show" aria-labelledby="categories-header" data-bs-parent="#accordion-menu">
-              <div class="accordion-body menu__list p-0">
-                <!-- SEMPRE VISÍVEIS -->
-                <a href="/camiseta" class="menu__item d-block p-3">Camiseta</a>
-                <a href="/camisetas-infantis" class="menu__item d-block p-3">Camisetas Infantis</a>
-                <a href="/estampas" class="menu__item d-block p-3">Estampas</a>
-                
-                <!-- COM SUBCATEGORIAS (dentro da mesma seção principal) -->
-                <% const aprenda = _.categories.find(cat => cat.slug === 'aprenda-se-divertindo') || { name: 'Aprenda se Divertindo' } %>
-                <button class="menu__item accordion-button collapsed d-block p-3 w-100 text-left border-0 bg-transparent" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#sub-aprenda" 
-                        aria-expanded="false">
-                  <%= aprenda.name %>
-                </button>
-                <div id="sub-aprenda" class="accordion-collapse collapse">
-                  <div class="accordion-body p-0">
-                    <% const subAprenda = categoryParents['aprenda-se-divertindo'] || [] %>
-                    <% subAprenda.forEach(sub => { %>
-                      <a href="/<%= sub.slug %>" class="menu__item d-block p-3 ps-5">• <%= sub.name %></a>
-                    <% }) %>
-                  </div>
-                </div>
-                
-                <% const colecoes = _.categories.find(cat => cat.slug === 'colecoes') || { name: 'Coleções' } %>
-                <button class="menu__item accordion-button collapsed d-block p-3 w-100 text-left border-0 bg-transparent" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#sub-colecoes" 
-                        aria-expanded="false">
-                  <%= colecoes.name %>
-                </button>
-                <div id="sub-colecoes" class="accordion-collapse collapse">
-                  <div class="accordion-body p-0">
-                    <% const subColecoes = categoryParents['colecoes'] || [] %>
-                    <% subColecoes.forEach(sub => { %>
-                      <a href="/<%= sub.slug %>" class="menu__item d-block p-3 ps-5">• <%= sub.name %></a>
-                    <% }) %>
-                  </div>
-                </div>
-                
-                <% const parceiros = _.categories.find(cat => cat.slug === 'parceiros') || { name: 'Parceiros' } %>
-                <button class="menu__item accordion-button collapsed d-block p-3 w-100 text-left border-0 bg-transparent" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#sub-parceiros" 
-                        aria-expanded="false">
-                  <%= parceiros.name %>
-                </button>
-                <div id="sub-parceiros" class="accordion-collapse collapse">
-                  <div class="accordion-body p-0">
-                    <% const subParceiros = categoryParents['parceiros'] || [] %>
-                    <% subParceiros.forEach(sub => { %>
-                      <a href="/<%= sub.slug %>" class="menu__item d-block p-3 ps-5">• <%= sub.name %></a>
-                    <% }) %>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <% let category, parent %>
+        <div
+          <% if (slug === '_') { %>
+            id="categories-nav"
+            class="collapse show"
+            aria-expanded="true"
           <% } else { %>
-            <!-- OUTRAS SUBCATEGORIAS -->
-            <div id="<%= getSubmenuId(slug) %>" class="accordion-collapse collapse" aria-labelledby="<%= getSubmenuId(slug)-header %>" data-bs-parent="#accordion-menu">
-              <div class="accordion-body menu__list p-0">
-                <% categories.forEach(category => { %>
-                  <a href="/<%= category.slug %>" class="menu__item d-block p-3"><%= category.name %></a>
-                <% }) %>
-              </div>
-            </div>
+            id="<%= getSubmenuId(slug) %>"
+            class="collapse"
+            aria-expanded="false"
           <% } %>
+          data-parent="#accordion-menu"
+        >
+            <div class="menu__list">
+            <a href="/camiseta" class="menu__item">Camiseta</a>
+            <a href="/camisetas-infantis" class="menu__item">Camisetas Infantis</a>
+            <a href="/aprenda-se-divertindo" class="menu__item">Aprenda se Divertindo</a>
+            <a href="/estampas" class="menu__item">Estampas</a>
+            <a href="/colecoes" class="menu__item">Coleções</a>
+            <a href="/parceiros" class="menu__item">Parceiros</a>
+          </div>
         </div>
       <% } %>
     <% } %>
   </nav>
-
   <footer class="menu__footer">
     <% if (menu.phone_wpp) { %>
       <div class="menu__phone">
@@ -161,7 +96,6 @@ if (mainCategories) {
         <% } %>
       </div>
     <% } %>
-    
     <% if (menu.socials) { %>
       <div class="menu__social">
         <% networksWithColors.forEach(([network, color]) => { %>

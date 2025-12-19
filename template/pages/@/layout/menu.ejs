@@ -52,66 +52,66 @@ if (mainCategories) {
       <i class="i-times"></i>
     </button>
     
-    <% for (const slug in categoryParents) { %>
-      <% if (categoryParents.hasOwnProperty(slug)) { %>
-        <% const categories = categoryParents[slug] %>
-        <% const isMainLevel = slug === '_' %>
+    <!-- CATEGORIAS SEM SUBCATEGORIAS (sempre visíveis) -->
+    <div id="categories-nav" class="collapse show" aria-expanded="true" data-parent="#accordion-menu">
+      <div class="menu__list">
+        <!-- Camiseta - SEM subcategorias -->
+        <a href="/camiseta" class="menu__item">Camiseta</a>
         
-        <div
-          <% if (isMainLevel) { %>
-            id="categories-nav"
-            class="collapse show"
-            aria-expanded="true"
-          <% } else { %>
-            id="<%= getSubmenuId(slug) %>"
-            class="collapse"
-            aria-expanded="false"
-          <% } %>
-          data-parent="#accordion-menu"
-        >
+        <!-- Camisetas Infantis - SEM subcategorias -->
+        <a href="/camisetas-infantis" class="menu__item">Camisetas Infantis</a>
+        
+        <!-- Estampas - SEM subcategorias -->
+        <a href="/estampas" class="menu__item">Estampas</a>
+      </div>
+    </div>
+    
+    <!-- CATEGORIAS COM SUBCATEGORIAS (accordion fechado por padrão) -->
+    
+    <!-- Aprenda se Divertindo -->
+    <% const aprenda = _.categories.filter(cat => cat.slug === 'aprenda-se-divertindo')[0] || { name: 'Aprenda se Divertindo' } %>
+    <div id="<%= getSubmenuId('aprenda-se-divertindo') %>" class="collapse" aria-expanded="false" data-parent="#accordion-menu">
+      <div class="menu__list">
+        <a href="/aprenda-se-divertindo" class="menu__item"><%= aprenda.name %></a>
+        <% const subAprenda = categoryParents['aprenda-se-divertindo'] || [] %>
+        <% subAprenda.forEach(sub => { %>
+          <a href="/<%= sub.slug %>" class="menu__item menu__item--sub">• <%= sub.name %></a>
+        <% }) %>
+      </div>
+    </div>
+    
+    <!-- Coleções -->
+    <% const colecoes = _.categories.filter(cat => cat.slug === 'colecoes')[0] || { name: 'Coleções' } %>
+    <div id="<%= getSubmenuId('colecoes') %>" class="collapse" aria-expanded="false" data-parent="#accordion-menu">
+      <div class="menu__list">
+        <a href="/colecoes" class="menu__item"><%= colecoes.name %></a>
+        <% const subColecoes = categoryParents['colecoes'] || [] %>
+        <% subColecoes.forEach(sub => { %>
+          <a href="/<%= sub.slug %>" class="menu__item menu__item--sub">• <%= sub.name %></a>
+        <% }) %>
+      </div>
+    </div>
+    
+    <!-- Parceiros -->
+    <% const parceiros = _.categories.filter(cat => cat.slug === 'parceiros')[0] || { name: 'Parceiros' } %>
+    <div id="<%= getSubmenuId('parceiros') %>" class="collapse" aria-expanded="false" data-parent="#accordion-menu">
+      <div class="menu__list">
+        <a href="/parceiros" class="menu__item"><%= parceiros.name %></a>
+        <% const subParceiros = categoryParents['parceiros'] || [] %>
+        <% subParceiros.forEach(sub => { %>
+          <a href="/<%= sub.slug %>" class="menu__item menu__item--sub">• <%= sub.name %></a>
+        <% }) %>
+      </div>
+    </div>
+    
+    <!-- OUTRAS SUBCATEGORIAS (mantém compatibilidade) -->
+    <% for (const slug in categoryParents) { %>
+      <% if (categoryParents.hasOwnProperty(slug) && slug !== '_' && !['aprenda-se-divertindo', 'colecoes', 'parceiros'].includes(slug)) { %>
+        <div id="<%= getSubmenuId(slug) %>" class="collapse" aria-expanded="false" data-parent="#accordion-menu">
           <div class="menu__list">
-            <% if (isMainLevel) { %>
-              <!-- CATEGORIAS PRINCIPAIS -->
-              
-              <!-- Camiseta - SEM subcategorias -->
-              <a href="/camiseta" class="menu__item">Camiseta</a>
-              
-              <!-- Camisetas Infantis - SEM subcategorias -->
-              <a href="/camisetas-infantis" class="menu__item">Camisetas Infantis</a>
-              
-              <!-- Aprenda se Divertindo - SEM subcategorias -->
-              <a href="/aprenda-se-divertindo" class="menu__item">Aprenda se Divertindo</a>
-              
-              <!-- Estampas - COM subcategorias -->
-              <% const estampas = _.categories.filter(cat => cat.slug === 'estampas')[0] || { name: 'Estampas' } %>
-              <a href="/estampas" class="menu__item"><%= estampas.name %></a>
-              <% const subEstampas = categoryParents['estampas'] || [] %>
-              <% subEstampas.forEach(sub => { %>
-                <a href="/<%= sub.slug %>" class="menu__item menu__item--sub">• <%= sub.name %></a>
-              <% }) %>
-              
-              <!-- Coleções - COM subcategorias -->
-              <% const colecoes = _.categories.filter(cat => cat.slug === 'colecoes')[0] || { name: 'Coleções' } %>
-              <a href="/colecoes" class="menu__item"><%= colecoes.name %></a>
-              <% const subColecoes = categoryParents['colecoes'] || [] %>
-              <% subColecoes.forEach(sub => { %>
-                <a href="/<%= sub.slug %>" class="menu__item menu__item--sub">• <%= sub.name %></a>
-              <% }) %>
-              
-              <!-- Parceiros - COM subcategorias -->
-              <% const parceiros = _.categories.filter(cat => cat.slug === 'parceiros')[0] || { name: 'Parceiros' } %>
-              <a href="/parceiros" class="menu__item"><%= parceiros.name %></a>
-              <% const subParceiros = categoryParents['parceiros'] || [] %>
-              <% subParceiros.forEach(sub => { %>
-                <a href="/<%= sub.slug %>" class="menu__item menu__item--sub">• <%= sub.name %></a>
-              <% }) %>
-              
-            <% } else { %>
-              <!-- SUBCATEGORIAS DE OUTRAS CATEGORIAS -->
-              <% categories.forEach(category => { %>
-                <a href="/<%= category.slug %>" class="menu__item"><%= category.name %></a>
-              <% }) %>
-            <% } %>
+            <% categoryParents[slug].forEach(category => { %>
+              <a href="/<%= category.slug %>" class="menu__item"><%= category.name %></a>
+            <% }) %>
           </div>
         </div>
       <% } %>

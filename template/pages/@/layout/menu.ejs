@@ -17,22 +17,22 @@ const categoryParents = _.lodash.groupBy(allCategories, ({ parent }) => {
   return !parent || !parent.slug ? '_' : parent.slug
 })
 const getSubmenuId = slug => `a-${slug.replace(/\//g, '_')}`
-const mainCategories = categoryParents._
-if (mainCategories) {
-  if (Array.isArray(menu.sort_categories)) {
-    // reorder first level categories list
-    for (let i = menu.sort_categories.length - 1; i >= 0; i--) {
-      const slug = menu.sort_categories[i]
-      const categoryIndex = mainCategories.findIndex(category => category.slug === slug)
-      if (categoryIndex > -1) {
-        const category = mainCategories[categoryIndex]
-        mainCategories.splice(categoryIndex, 1)
-        mainCategories.unshift(category)
-      }
-    }
-  }
-}
+const mainCategories = categoryParents._ || []
+
+// helper para pegar categoria pelo slug
+const bySlug = slug => mainCategories.find(cat => cat.slug === slug)
+const catAprenda   = bySlug('aprenda-se-divertindo')
+const catColecoes  = bySlug('colecoes')
+const catParceiros = bySlug('parceiros')
+
+// filhos / netos das 3 categorias especiais
+const childrenAprenda   = catAprenda   ? (categoryParents[catAprenda.slug] || []) : []
+const childrenColecoes  = catColecoes  ? (categoryParents[catColecoes.slug] || []) : []
+const childrenParceiros = catParceiros ? (categoryParents[catParceiros.slug] || []) : []
+
+const getGrandChildren = (cat) => categoryParents[cat.slug] || []
 %>
+
 <aside id="menu" class="menu shadow">
   <nav class="accordion" id="accordion-menu">
     <button
@@ -44,70 +44,61 @@ if (mainCategories) {
       <i class="i-times"></i>
     </button>
 
-    <% if (mainCategories && mainCategories.length) { %>
-      <div
-        id="categories-nav"
-        class="collapse show"
-        aria-expanded="true"
-        data-parent="#accordion-menu"
-      >
-        <div class="menu__list">
-          <% mainCategories.forEach(parent => { %>
-            <% const children = categoryParents[parent.slug] || [] %>
+    <div
+      id="categories-nav"
+      class="collapse show"
+      aria-expanded="true"
+      data-parent="#accordion-menu"
+    >
+      <div class="menu__list">
+        <!-- mantém exatamente as categorias do topo -->
+        <a href="/camiseta" class="menu__item">Camisetas</a>
+        <a href="/camisetas-infantis" class="menu__item">Camisetas Infantis</a>
 
-            <% if (children.length) { %>
-              <!-- Categoria de primeiro nível com subcategorias -->
-              <button
-                class="menu__item menu__item--toggle"
-                type="button"
-                data-toggle="collapse"
-                data-target="#<%= getSubmenuId(parent.slug) %>"
-                aria-expanded="false"
-              >
-                <%= parent.name %>
-              </button>
-
-              <div
-                id="<%= getSubmenuId(parent.slug) %>"
-                class="collapse menu__submenu"
-                data-parent="#categories-nav"
-              >
-                <% children.forEach(child => { %>
-                  <% const grandChildren = categoryParents[child.slug] || [] %>
-
-                  <a
-                    href="/<%= child.slug %>"
-                    class="menu__item menu__item--sub"
-                  >
-                    <%= child.name %>
-                  </a>
-
-                  <% if (grandChildren.length) { %>
-                    <% grandChildren.forEach(grandChild => { %>
-                      <a
-                        href="/<%= grandChild.slug %>"
-                        class="menu__item menu__item--sub2"
-                      >
-                        <%= grandChild.name %>
-                      </a>
-                    <% }) %>
-                  <% } %>
-                <% }) %>
-              </div>
-            <% } else { %>
-              <!-- Categoria de primeiro nível sem filhos -->
-              <a
-                href="/<%= parent.slug %>"
-                class="menu__item"
-              >
-                <%= parent.name %>
-              </a>
-            <% } %>
+        <!-- Aprenda se Divertindo + filhos/netos -->
+        <a href="/aprenda-se-divertindo" class="menu__item">Aprenda se Divertindo</a>
+        <% childrenAprenda.forEach(child => { %>
+          <a href="/<%= child.slug %>" class="menu__item menu__item--sub">
+            <%= child.name %>
+          </a>
+          <% getGrandChildren(child).forEach(grand => { %>
+            <a href="/<%= grand.slug %>" class="menu__item menu__item--sub2">
+              <%= grand.name %>
+            </a>
           <% }) %>
-        </div>
+        <% }) %>
+
+        <a href="/estampas" class="menu__item">Estampas</a>
+
+        <!-- Coleções + filhos/netos -->
+        <a href="/colecoes" class="menu__item">Coleções</a>
+        <% childrenColecoes.forEach(child => { %>
+          <a href="/<%= child.slug %>" class="menu__item menu__item--sub">
+            <%= child.name %>
+          </a>
+          <% getGrandChildren(child).forEach(grand => { %>
+            <a href="/<%= grand.slug %>" class="menu__item menu__item--sub2">
+              <%= grand.name %>
+            </a>
+          <% }) %>
+        <% }) %>
+
+        <!-- Parceiros + filhos/netos -->
+        <a href="/parceiros" class="menu__item">Parceiros</a>
+        <% childrenParceiros.forEach(child => { %>
+          <a href="/<%= child.slug %>" class="menu__item menu__item--sub">
+            <%= child.name %>
+          </a>
+          <% getGrandChildren(child).forEach(grand => { %>
+            <a href="/<%= grand.slug %>" class="menu__item menu__item--sub2">
+              <%= grand.name %>
+            </a>
+          <% }) %>
+        <% }) %>
       </div>
-    <% } %>
+    </div>
   </nav>
+
   <footer class="menu__footer">
     <% if (menu.phone_wpp) { %>
       <div class="menu__phone">

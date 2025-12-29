@@ -2,13 +2,14 @@
   "categories_list": {
     "featured": [
       "/camisetas?Camisetas",
+      "/acessorios/planners?Planners",
       "/camisetas-infantis?Camisetas Infantis",
       "/aprenda-se-divertindo?Aprenda se Divertindo",
       "/estampas?Estampas",
       "/colecoes?Coleções",
       "/parceiros?Parceiros"
     ],
-    "random": 3,
+    "random": 12,
     "full_width": true
   },
   "menu_all_departments": false,

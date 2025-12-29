@@ -1,6 +1,7 @@
 {
   "sort_categories": [
     "camisetas",
+    "acessorios/planners",
     "camisetas-infantis",
     "aprenda-se-divertindo",
     "estampas",
@@ -10,4 +11,4 @@
   "alphabetical_order": false,
   "phone_wpp": true,
   "socials": true
-} 
+}

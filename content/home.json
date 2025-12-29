@@ -39,6 +39,15 @@
       "link": "https://links.doppelverso.com.br/banners/links/principal-desktop"
     },
     {
+      "type": "collection-shelf",
+      "shuffle": false,
+      "limit": 12,
+      "page": 1,
+      "sort": "sales",
+      "title": "Planners",
+      "collection_id": "655c74822cd6b65959b14e82:categories:Planners:/acessorios/planners"
+    },
+    {
       "type": "info-bar",
       "enabled": true
     },

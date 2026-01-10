@@ -10,26 +10,19 @@
         {
           "start": "",
           "end": "",
-          "img": "https://static.doppelstore.com.br/promo-vigente/slide-desktop-1.jpg",
-          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/slide-mobile-1.jpg",
-          "link": "https://www.doppelstore.com.br/acessorios/cadernos"
+          "img": "https://links.doppelverso.com.br/banners/imagens/home-slider-1-desktop",
+          "mobile_img": "https://links.doppelverso.com.br/banners/imagens/home-slider-2-mobile",
+          "link": "https://links.doppelverso.com.br/banners/links/home-slider-1-desktop"
         },
         {
           "start": "",
           "end": "",
-          "img": "https://static.doppelstore.com.br/promo-vigente/slide-desktop-2.jpg",
-          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/slide-mobile-2.jpg",
-          "link": "https://www.doppelstore.com.br/planners-de-estudos"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "https://static.doppelstore.com.br/promo-vigente/slide-desktop-3.jpg",
-          "mobile_img": "https://static.doppelstore.com.br/promo-vigente/slide-mobile-3.jpg",
-          "link": "https://www.doppelstore.com.br/acessorios/planners"
+          "img": "https://links.doppelverso.com.br/banners/imagens/home-slider-2-desktop",
+          "mobile_img": "https://links.doppelverso.com.br/banners/imagens/home-slider-2-mobile",
+          "link": "https://links.doppelverso.com.br/banners/links/home-slider-2-desktop"
         }
       ],
-      "enabled": false
+      "enabled": true
     },
     {
       "type": "responsive-banner",

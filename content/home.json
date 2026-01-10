@@ -28,7 +28,7 @@
       "type": "responsive-banner",
       "img": "https://links.doppelverso.com.br/banners/imagens/principal-desktop",
       "mobile_img": "https://links.doppelverso.com.br/banners/imagens/principal-mobile",
-      "enabled": true,
+      "enabled": false,
       "link": "https://links.doppelverso.com.br/banners/links/principal-desktop"
     },
     {

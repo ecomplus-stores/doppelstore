@@ -38,11 +38,12 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
-      "limit": 12,
-      "page": 1,
+      "limit": 20,
+      "page": 4,
+      "collection_id": "6492f5025e6069037042bde7:categories:Cadernos:/cadernos",
       "sort": "sales",
-      "title": "Planners",
-      "collection_id": "655c74822cd6b65959b14e82:categories:Planners:/acessorios/planners"
+      "title": "CADERNOS",
+      "autoplay": 5000
     },
     {
       "type": "collection-shelf",

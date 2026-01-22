@@ -58,6 +58,15 @@
     {
       "type": "collection-shelf",
       "shuffle": false,
+      "limit": 20,
+      "page": 3,
+      "collection_id": "655c74822cd6b65959b14e82:categories:Planners:/acessorios/planners",
+      "sort": "sales",
+      "title": "PLANNERS"
+    },
+    {
+      "type": "collection-shelf",
+      "shuffle": false,
       "limit": "",
       "page": "",
       "collection_id": "655da44d2cd6b65959b3a424:categories:Aprenda se Divertindo:/aprenda-se-divertindo",

@@ -15,7 +15,9 @@ body {
     background-color: white;
     color: black;
     padding: 30px;
-    width: max-content;
+}
+.trustvox-widget {
+    max-width: fit-content !important;
 }
 
 .gift-list-subscription{

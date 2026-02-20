@@ -43,7 +43,7 @@
     "@ecomplus/storefront-template": "^2.0.0-beta.288",
     "@fontsource-variable/encode-sans": "^5.0.13",
     "@netlify/zip-it-and-ship-it": "^8.10.0",
-    "firebase-tools": "^13.29.2",
+    "firebase-tools": "^15.7.0",
     "perfect-debounce": "^1.0.0",
     "vue-select": "^3.20.3"
   },

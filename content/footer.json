@@ -8,18 +8,6 @@
     "title": "Páginas",
     "list": [
       {
-        "text": "Manifesto",
-        "url": "/pages/sobre-nos"
-      },
-      {
-        "text": "Fale com a Doppel",
-        "url": "pages/contato"
-      },
-      {
-        "text": "Prazos, Trocas e Devoluções",
-        "url": "pages/trocas"
-      },
-      {
         "text": "Condições de Entrega",
         "url": "pages/entrega"
       },
@@ -38,24 +26,12 @@
     "title": "Navegação",
     "list": [
       {
-        "text": "Camisetas",
-        "url": "/camiseta"
+        "text": "Aprenda Se Divertindo",
+        "url": "/aprenda-se-divertindo"
       },
       {
-        "text": "Camisetas Infantis",
-        "url": "/camiseta-infantil"
-      },
-      {
-        "text": "Estampas",
-        "url": "/estampas"
-      },
-      {
-        "text": "Coleções",
-        "url": "/colecoes"
-      },
-      {
-        "text": "Parceiros",
-        "url": "/parceiros"
+        "text": "Papelaria",
+        "url": "/papelaria"
       }
     ]
   },

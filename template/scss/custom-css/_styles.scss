@@ -1,12 +1,12 @@
 // Add your custom CSS here.
-$dark-slate: #283043;
-$darken-slate: #24354d;
+$dark-slate: #55595a;
+$darken-slate: #3a3d3e;
 $slate-100: #f1f5f9;
 $slate-200: #e2e8f0;
-$slate-300: #cbd5e1;
-$slate-400: #94a3b8;
+$slate-300: #d2d7de;
+$slate-400: #b1b5bb;
 $slate-500: #64748b;
-$slate-600: #9db4cb;
+$slate-600: #82868a;
 $container-width: 1110px;
 
 .login-modal__body::before,
@@ -27,7 +27,7 @@ $container-width: 1110px;
 }
 
 body {
-  background-image: url(/img/uploads/fundo.webp);
+  // background-image: url(/img/uploads/fundo.webp);
 }
 
 .top-bar {
@@ -808,7 +808,7 @@ body {
 .page--estampas {
   .banner,
   .html-clearfix {
-    background-color: #283043 !important;
+    background-color: #414245 !important;
   }
 
   .product-name {
@@ -889,7 +889,7 @@ body {
 }
 .form-control:disabled,
 .form-control[readonly] {
-  background-color: #9db4cb;
+  background-color: #c6cbd0;
 }
 @media (max-width: 767px) {
   .desktop {
@@ -915,18 +915,18 @@ $--cool-green: #61a58f;
 
 .cart .cart-item {
   padding: 16px !important;
-  background: #283043 !important;
+  background: #3c3e42 !important;
 }
 
 .cart__info {
-  background: #283043 !important;
+  background: #3c3e42 !important;
 }
 .cart-item__name a {
   color: #ffffff;
   text-decoration: none;
 }
 .cart-item__price-un {
-  color: #9db4cb !important;
+  color: #cdd5d7 !important;
 }
 main .minicart__aside {
   background-color: $darken-slate;
@@ -960,7 +960,7 @@ main .minicart__aside {
 #spa {
   input.form-control,
   #order-notes {
-    background-color: #35445d !important;
+    background-color: #57595d !important;
     &::placeholder {
       color: #fff;
       opacity: 0.5;
@@ -970,7 +970,7 @@ main .minicart__aside {
   .btn-outline-secondary,
   .btn-light,
   .cart__btn-back {
-    background: #627093;
+    background: #888b91;
     color: #fff;
     &:hover {
       background-color: var(--primary) !important;
@@ -992,7 +992,7 @@ main .minicart__aside {
   }
 }
 .main .cart__info {
-  background: #283043 !important;
+  background: #414245 !important;
 }
 
 @media (min-width: 992px) {
@@ -1010,7 +1010,7 @@ main .minicart__aside {
   position: fixed;
   bottom: 0;
   padding: 1rem 0.5rem;
-  background-color: #24354d;
+  background-color: #46494d;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.68);
   z-index: 999;
   width: 100%;
@@ -1059,13 +1059,13 @@ main .minicart__aside {
   }
 }
 .app .app__header {
-  background-color: #1e293b !important;
+  background-color: #46494d !important;
 }
 .checkout__step {
-  background: #35445d !important;
+  background: #54575c !important;
 }
 .payment__stamp {
-  background: #35445d !important;
+  background: #56595d !important;
   padding: 10px !important;
 }
 
@@ -1081,23 +1081,23 @@ main .minicart__aside {
 }
 
 .product-quickview__box {
-  background: #293445 !important;
+  background: #404245 !important;
 }
 
 .variations__select {
-  background: #293445 !important;
+  background: #404245 !important;
 }
 .variations__option--selected {
-  background: #61a58f !important;
+  background: #efba6a !important;
 }
 
 .variations__option--selected:not(.disabled) {
-  border-color: #4bd1a5 !important;
+  border-color: #efba6a !important;
   border-width: 2px !important;
 }
 
 .custom-select {
-  background: #293445 !important;
+  background: #414447 !important;
 }
 
 .btn-primary {
@@ -1108,15 +1108,15 @@ main .minicart__aside {
   display: none !important;
 }
 .footer__title {
-    color: 9db4cb;
+    color: bfc5cb;
     font-weight: 500;
 }
 a {
-    color: #9db4cb;
+    color: #bfc5cb;
 }
 
 .search-engine__option {
-    color: #9db4cb;
+    color: #bfc5cb;
 }
 .search-engine__filter button {
     color: #ffffff;
@@ -1124,7 +1124,7 @@ a {
     font-weight: 400;
 }
 .form-control {
-    background-color: #283043;
+    background-color: #424347;
 }
 .h1, h1 {
     font-size: 1.8rem;
@@ -1139,7 +1139,7 @@ color: var(--success);
   max-height: 550px;
 }
 .header__submenu {
-    background-color: #677495;
+    background-color: #909297;
     grid-template-columns: repeat(auto-fit,minmax(20%,1fr));
 }
 .header__submenu-category {
@@ -1147,23 +1147,23 @@ color: var(--success);
       font-size: 17px;
 }
 .header__submenu-subcategory {
-    color: #bdc8e7!important;
+    color: #d7dae3!important;
 }
 main .card-body, main .login__info {
-    background-color: #475169;
+    background-color: #65676c;
 }
 .accordion {
-    background: #4e5a77;
+    background: #73757a;
 }
 .menu__item {
-      border-bottom: var(--border-width) solid #353751;
+      border-bottom: var(--border-width) solid #4f4f53;
     color: #ffffff;
 }
 .menu__link {
     color: #ffffff;
 }
 .menu__footer a {
-    color: #b0c0d7;
+    color: #cbced3;
 }
 // TRUSTVOX
 .ts-shelf-container {
@@ -1198,25 +1198,25 @@ section.ts-customer-questions {
 }
 
 .header__nav {
-    background-color: #434f6b;
+    background-color: #686a71;
 }
 .info-bar {
-    background-color: #434f6b;
+    background-color: #686a71;
 }
 .footer {
-    background: #434f6b;
+    background: #686a71;
 }
 .partner__list {
-    background-color: #434f6b;
+    background-color: #686a71;
 }
 .info-bar {
-    background-color: #434f6b;
+    background-color: #686a71;
 }
 .product-card {
-    background-color: #394359;
+    background-color: #686a71;
 }
 .header #search-input {
-    background-color: #434f6b;
+    background-color: #686a71;
 }
 
 .toast-body {
@@ -1224,10 +1224,10 @@ section.ts-customer-questions {
     background-color: black;
 }
 .toast-header {
-    color: #64748b!important;
+    color: #84878b!important;
 }
 .minicart__aside .card-footer:before {
-  content: "Descontos, brindes e cupons serão aplicados na finalização do pedido :D";
+  content: "Descontos, brindes e cupons serão aplicados na finalização do pedido.";
   font-weight: bold;
   font-size: .875rem;
 }

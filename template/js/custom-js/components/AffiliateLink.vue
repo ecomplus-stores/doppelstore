@@ -85,7 +85,7 @@
         const share = async () => {
           try {
             await navigator.share({
-              title: 'Doppel Store - Convite especial: Ganhe R$ 25,00',
+              title: 'Forja Estelar - Convite especial: Ganhe R$ 25,00',
               text,
               url: this.link
             })

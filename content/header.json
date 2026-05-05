@@ -1,13 +1,8 @@
 {
   "categories_list": {
     "featured": [
-      "/vestuario?Vestuário",
       "/papelaria?Papelaria",
-      "/aprenda-se-divertindo?Aprenda se Divertindo",
-      "/estampas?Estampas",
-      "/colecoes?Coleções",
-      "/parceiros?Parceiros",
-      "/saldao?Saldão"
+      "/aprenda-se-divertindo?Aprenda se Divertindo"
     ],
     "random": 0,
     "full_width": true
@@ -15,8 +10,8 @@
   "menu_all_departments": false,
   "centralized_logo": false,
   "marketing_stripe": {
-    "text": "FRETE GRÁTIS NAS COMPRAS ACIMA DE R$ 300",
-    "link": "/camisetas",
+    "text": "",
+    "link": "",
     "background": "",
     "color": "#ffffff"
   },
@@ -25,12 +20,7 @@
   "desktop_megamenu": true,
   "full_width_submenu": true,
   "contacts_stripe": {
-    "pages": [
-      {
-        "title": "Manifesto",
-        "link": "/empresa"
-      }
-    ],
+    "pages": [],
     "phone_wpp": true,
     "socials": true
   }

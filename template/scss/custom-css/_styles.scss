@@ -54,8 +54,8 @@ body {
 }
 
 .header {
-  background-color: rgba($dark-slate, 0.9);
-  background-image: url(/img/uploads/fundo.webp);
+  background-color: black;
+  // background-image: url(/img/uploads/fundo.webp);
   backdrop-filter: blur(20px);
   border-bottom: none;
   box-shadow: var(--box-shadow);
@@ -562,7 +562,7 @@ body {
 }
 .header {
   #search-input {
-    background-color: #6c7ea7;
+    background-color: #9a9b9e;
   }
 
   &__search {

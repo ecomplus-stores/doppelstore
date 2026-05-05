@@ -1,16 +1,16 @@
 {
-  "domain": "www.doppelstore.com.br",
+  "domain": "www.forja-estelar.com.br",
   "currency_symbol": "R$",
-  "primary_color": "#e9356c",
+  "primary_color": "#efba6a",
   "theme": {
     "bootswatch": "_",
     "custom": "_"
   },
-  "bg_color": "#151b27",
+  "bg_color": "#56595a",
   "repository": "ecomplus-stores/doppelstore",
-  "logo": "/img/uploads/site_222.webp",
-  "name": "Doppel Store",
-  "short_name": "Doppel Store",
+  "logo": "/img/uploads/logo-vertical-site.webp",
+  "name": "Forja Estelar",
+  "short_name": "Forja Estelar",
   "lang": "pt_br",
   "currency": "BRL",
   "mini_logo": "",
@@ -21,6 +21,6 @@
   "secondary_color": "#f4f4f4",
   "icon": "/img/uploads/logo-efeito.webp",
   "store_id": 4566,
-  "description": "Camisetas de poeira das estrelas!",
+  "description": "Fábrica de personalizados para a sua marca, empresa, evento e tudo mais que existe no universo.\nDo núcleo das estrelas, ideia ganham forma.",
   "large_icon": "/img/uploads/logo-efeito.webp"
 }

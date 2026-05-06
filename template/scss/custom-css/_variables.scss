@@ -7,8 +7,16 @@ $custom-gray-600: #6d7177;
 $custom-gray-700: #555a60;
 $custom-gray-800: #3d4247;
 $custom-gray-900: #24282d;
-$custom-primary-500: #efba6a;
-$custom-primary-700: #c78435;
+
+$custom-primary-100: #ffe8c6;
+$custom-primary-200: #ffdca8;
+$custom-primary-300: #ffd18b;
+$custom-primary-400: #ffc772;
+$custom-primary-500: #ffba54;
+$custom-primary-600: #e0a14a;
+$custom-primary-700: #b8833c;
+$custom-primary-800: #8f652f;
+$custom-primary-900: #664922;
 
 
 $container-width: 1110px;
@@ -23,8 +31,16 @@ $container-width: 1110px;
     --custom-gray-700: #{$custom-gray-700};
     --custom-gray-800: #{$custom-gray-800};
     --custom-gray-900: #{$custom-gray-900};
+
+    --custom-primary-100: #{$custom-primary-100};
+    --custom-primary-200: #{$custom-primary-200};
+    --custom-primary-300: #{$custom-primary-300};
+    --custom-primary-400: #{$custom-primary-400};
     --custom-primary-500: #{$custom-primary-500};
+    --custom-primary-600: #{$custom-primary-600};
     --custom-primary-700: #{$custom-primary-700};
+    --custom-primary-800: #{$custom-primary-800};
+    --custom-primary-900: #{$custom-primary-900};
 
     --container-width: #{$container-width};
 }

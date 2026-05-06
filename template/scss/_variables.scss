@@ -1,21 +1,13 @@
 @import '#template/scss/variables';
+@use 'variables' as *;
 
 $info: #0ea5e9;
 $success: #10b981;
 $warning: #f59e0b;
 $danger: #f43f5e;
 $white: #fff;
-$gray-100: #f8fafc;
-$gray-200: #f1f5f9;
-$gray-300: #e2e8f0;
-$gray-400: #cbd5e1;
-$gray-500: #94a3b8;
-$gray-600: #64748b;
-$gray-700: #475569;
-$gray-800: #334155;
-$gray-900: #1e293b;
 $black: #000;
-$light: #475569;
+$light: #686869;
 
 $text-muted: $gray-500;
 $border-color: $gray-600;

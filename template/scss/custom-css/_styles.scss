@@ -548,7 +548,12 @@
 .header {
   #search-input {
     background-color: #9a9b9e;
+    border-radius: 27px;
   }
+
+  .header__search-btn {
+    background: #feb954;
+    border-radius: 25px;
 
   &__search {
     overflow: visible;

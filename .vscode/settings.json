@@ -4,8 +4,16 @@
   "files.insertFinalNewline": true,
   "standard.enable": true,
   "files.associations": {
-    "**/components/**/*.html": "vue-html",
-    "**/components/**/*.js": "javascript"
+    "*.html": "vue-html",
+    "*.js": "javascript"
+  },
+  "[vue-html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "css.validate": false,
   "scss.validate": true

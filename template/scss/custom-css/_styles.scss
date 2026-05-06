@@ -1,12 +1,12 @@
 // Add your custom CSS here.
-$dark-slate: #55595a;
-$darken-slate: #3a3d3e;
-$slate-100: #f1f5f9;
-$slate-200: #e2e8f0;
-$slate-300: #d2d7de;
-$slate-400: #b1b5bb;
-$slate-500: #898c90;
-$slate-600: #6a6e71;
+$gray-100: #f1f5f9;
+$gray-200: #e2e8f0;
+$gray-300: #d2d7de;
+$gray-400: #b1b5bb;
+$gray-500: #898c90;
+$gray-600: #6a6e71;
+$gray-700: #55595a;
+$gray-800: #3a3d3e;
 $container-width: 1110px;
 
 .login-modal__body::before,
@@ -36,7 +36,7 @@ $container-width: 1110px;
   }
   &__nav {
     padding: 0;
-    color: $slate-300;
+    color: $gray-300;
     .row {
       align-items: center;
     }
@@ -80,7 +80,7 @@ $container-width: 1110px;
   &__nav {
     text-transform: none;
     font-weight: 500;
-    background-color: $dark-slate;
+    background-color: $gray-800;
     a {
       color: #fff;
       &:hover {
@@ -146,7 +146,7 @@ $container-width: 1110px;
 }
 
 .footer {
-  background: $dark-slate;
+  background: $gray-800;
   border-top: none;
   &__title {
     color: $gray-200 !important;
@@ -164,7 +164,7 @@ $container-width: 1110px;
 }
 
 .info-bar {
-  background-color: $dark-slate;
+  background-color: $gray-800;
   @media (min-width: 1024px) {
     max-width: none;
     &__nav {
@@ -189,7 +189,7 @@ $container-width: 1110px;
   }
   &__text {
     font-size: 0.785rem;
-    color: $slate-300;
+    color: $gray-300;
     text-transform: none;
   }
 }
@@ -204,7 +204,7 @@ $container-width: 1110px;
 
 .partner__list {
   padding: 2rem 15px;
-  background-color: $dark-slate;
+  background-color: $gray-800;
   > * {
     max-width: var(--content-max-width);
     margin-left: auto;
@@ -222,19 +222,19 @@ $container-width: 1110px;
 .product-description .html-clearfix,
 .md-content .container,
 #product > .row > div:last-child {
-  background: rgba($dark-slate, 0.75);
+  background: rgba($gray-800, 0.75);
   padding: 1.5rem;
   border-radius: 0.3rem;
 }
 .table td,
 .table th,
 .nav-tabs {
-  border-color: rgba($dark-slate, 0.8);
+  border-color: rgba($gray-800, 0.8);
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
   background: var(--secondary-dark-yiq) !important;
-  border-color: rgba($dark-slate, 0.8);
+  border-color: rgba($gray-800, 0.8);
   color: white !important;
 }
 .tab-pane > .html-clearfix {
@@ -247,14 +247,14 @@ $container-width: 1110px;
   font-weight: 500;
   font-size: 1.1rem;
   &:hover {
-    background: rgba($dark-slate, 0.3);
-    border-color: $slate-600;
+    background: rgba($gray-800, 0.3);
+    border-color: $gray-600;
   }
 }
 
 .product-specs {
   .text-muted {
-    color: $slate-300 !important;
+    color: $gray-300 !important;
   }
 }
 
@@ -303,7 +303,7 @@ $container-width: 1110px;
       display: block;
       text-align: center;
       margin-top: 0.5rem;
-      color: $slate-300;
+      color: $gray-300;
     }
   }
 
@@ -318,7 +318,7 @@ $container-width: 1110px;
   &__production {
     margin-top: 1rem;
     background: #fff;
-    color: $dark-slate;
+    color: $gray-800;
     font-size: 1rem;
     padding: 0.6rem 1rem;
     border-radius: 0.25rem;
@@ -330,7 +330,7 @@ $container-width: 1110px;
   }
 
   &__sticky {
-    background: rgba($dark-slate, 0.85);
+    background: rgba($gray-800, 0.85);
     backdrop-filter: blur(10px);
     img {
       border-radius: 0.25rem;
@@ -353,7 +353,7 @@ $container-width: 1110px;
   }
 
   &__grid-title {
-    color: $slate-200;
+    color: $gray-200;
     font-size: 1.1rem;
   }
   .variations__value {
@@ -367,7 +367,7 @@ $container-width: 1110px;
     min-width: 1.5rem;
     font-size: 0.875rem;
     color: #fff;
-    border-color: $slate-400;
+    border-color: $gray-400;
   }
   &__grid--colors .variations__option {
     border-radius: 100%;
@@ -419,7 +419,7 @@ $container-width: 1110px;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  background-color: $dark-slate;
+  background-color: $gray-800;
   border-radius: 0.3rem;
   overflow: hidden;
 
@@ -427,7 +427,7 @@ $container-width: 1110px;
     padding-top: 1rem;
     font-size: 0.925rem;
     font-weight: 500;
-    color: $slate-200;
+    color: $gray-200;
   }
   .prices__installments {
     font-size: 0.875rem;
@@ -483,7 +483,7 @@ $container-width: 1110px;
     display: inline-block;
     border-radius: 50%;
     font-size: 0;
-    border: 1px solid $slate-400;
+    border: 1px solid $gray-400;
     width: 20px;
     flex: 0 0 20px;
     height: 20px;
@@ -880,7 +880,7 @@ $container-width: 1110px;
 .login-modal {
   &__header,
   &__btn.btn-secondary {
-    background-color: $dark-slate;
+    background-color: $gray-800;
   }
 }
 .form-control:disabled,
@@ -925,7 +925,7 @@ $--cool-green: #61a58f;
   color: #cdd5d7 !important;
 }
 main .minicart__aside {
-  background-color: $darken-slate;
+  background-color: $gray-700;
 }
 .shipping-calculator {
   .list-group-item {
@@ -982,9 +982,9 @@ main .minicart__aside {
 
 .card-header,
 .card-footer {
-  background: $darken-slate;
+  background: $gray-700;
   .close {
-    color: $slate-300;
+    color: $gray-300;
   }
 }
 .main .cart__info {

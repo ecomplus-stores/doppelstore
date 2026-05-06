@@ -5,12 +5,12 @@
     {
       "type": "responsive-banner",
       "img": "/img/uploads/logo-copy.png",
-      "enabled": false
+      "enabled": true
     },
     {
       "type": "summary_ghanor",
       "meta": 150000,
-      "is_money": false,
+      "is_money": true,
       "img": "/img/uploads/1-capa.jpg",
       "enable_share": false,
       "end": "",

@@ -13,11 +13,11 @@ main {
   }
 
   .search__box {
-    background-color: var(--gray-800);
+    background-color: var(--custom-gray-800);
   }
 
   .search-engine__nav {
-    background-color: var(--gray-800);
+    background-color: var(--custom-gray-800);
   }
 
   .checkout__info {
@@ -30,7 +30,7 @@ main {
 
   .cart__info {
     background-color: $black;
-    border: solid 1px var(--gray-600);
+    border: solid 1px var(--custom-gray-600);
   }
 
   .login__info {

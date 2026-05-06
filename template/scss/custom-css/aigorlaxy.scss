@@ -151,21 +151,21 @@ max-width:730px;
 }
 
 main .search-engine__nav, main .search__box {
-    background-color: var(--gray-800);
+    background-color: var(--custom-gray-800);
     color: white;
 }
 
 .btn-light {
-    background-color: var(--gray-600);
-    border-color: var(--gray-600);
+    background-color: var(--custom-gray-600);
+    border-color: var(--custom-gray-600);
 }
 
 .btn-light.focus, .btn-light:focus, .btn-light:hover {
-    background-color: var(--gray-800);
-    border-color: var(--gray-800);
+    background-color: var(--custom-gray-800);
+    border-color: var(--custom-gray-800);
     color: var(--white);
 }
 
 .nav-tabs .nav-link {
-    background-color: var(--gray-700);
+    background-color: var(--custom-gray-700);
 }

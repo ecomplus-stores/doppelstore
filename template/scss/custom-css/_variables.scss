@@ -12,15 +12,15 @@ $custom-gray-900: #24282d;
 $container-width: 1110px;
 
 :root {
-    --gray-100: #{$custom-gray-100};
-    --gray-200: #{$custom-gray-200};
-    --gray-300: #{$custom-gray-300};
-    --gray-400: #{$custom-gray-400};
-    --gray-500: #{$custom-gray-500};
-    --gray-600: #{$custom-gray-600};
-    --gray-700: #{$custom-gray-700};
-    --gray-800: #{$custom-gray-800};
-    --gray-900: #{$custom-gray-900};
+    --custom-gray-100: #{$custom-gray-100};
+    --custom-gray-200: #{$custom-gray-200};
+    --custom-gray-300: #{$custom-gray-300};
+    --custom-gray-400: #{$custom-gray-400};
+    --custom-gray-500: #{$custom-gray-500};
+    --custom-gray-600: #{$custom-gray-600};
+    --custom-gray-700: #{$custom-gray-700};
+    --custom-gray-800: #{$custom-gray-800};
+    --custom-gray-900: #{$custom-gray-900};
 
     --container-width: #{$container-width};
 }

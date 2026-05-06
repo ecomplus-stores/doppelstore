@@ -151,17 +151,21 @@ max-width:730px;
 }
 
 main .search-engine__nav, main .search__box {
-    background-color: #595d61;
+    background-color: $gray-800;
     color: white;
 }
 
 .btn-light {
-    background-color: #6b6f74;
-    border-color: #6b6f74;
+    background-color: $gray-600;
+    border-color: $gray-600;
 }
 
 .btn-light.focus, .btn-light:focus, .btn-light:hover {
-    background-color: #434649;
-    border-color: #434649;
+    background-color: $gray-800;
+    border-color: $gray-800;
     color: var(--white);
+}
+
+.nav-tabs .nav-link {
+    background-color: $gray-700;
 }

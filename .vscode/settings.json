@@ -1,9 +1,8 @@
 {
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
-  "files.autoSave": "off",
-  "files.autoSaveDelay": 5000,
+  "files.autoSaveDelay": 800,
   "standard.enable": true,
   "files.associations": {
     "**/html/*.html": "vue-html",

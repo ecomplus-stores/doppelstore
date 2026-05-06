@@ -145,3 +145,23 @@ max-width:730px;
 .products-carousel__title a, .products-carousel__title span {
     background: none!important;
 }
+
+.footer__title {
+    color: #efba6a;
+}
+
+main .search-engine__nav, main .search__box {
+    background-color: #595d61;
+    color: white;
+}
+
+.btn-light {
+    background-color: #6b6f74;
+    border-color: #6b6f74;
+}
+
+.btn-light.focus, .btn-light:focus, .btn-light:hover {
+    background-color: #434649;
+    border-color: #434649;
+    color: var(--white);
+}

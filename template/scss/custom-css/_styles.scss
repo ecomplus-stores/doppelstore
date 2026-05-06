@@ -19,12 +19,12 @@
   background-color: rgba(var(--primary-rgb), 0.5);
   &__countdown,
   &__nav {
-    font-size: 0.8rem;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
   }
   &__nav {
-    padding: 0;
+    padding: 0 20px 0 20px;
     color: var(--custom-gray-300);
     .row {
       align-items: center;

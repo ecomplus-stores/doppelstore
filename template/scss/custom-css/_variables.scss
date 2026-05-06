@@ -7,6 +7,8 @@ $custom-gray-600: #6d7177;
 $custom-gray-700: #555a60;
 $custom-gray-800: #3d4247;
 $custom-gray-900: #24282d;
+$custom-primary-500: #efba6a;
+$custom-primary-700: #c78435;
 
 
 $container-width: 1110px;
@@ -21,6 +23,8 @@ $container-width: 1110px;
     --custom-gray-700: #{$custom-gray-700};
     --custom-gray-800: #{$custom-gray-800};
     --custom-gray-900: #{$custom-gray-900};
+    --custom-primary-500: #{$custom-primary-500};
+    --custom-primary-700: #{$custom-primary-700};
 
     --container-width: #{$container-width};
 }

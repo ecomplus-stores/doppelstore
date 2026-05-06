@@ -1,7 +1,7 @@
 {
   "domain": "www.forja-estelar.com.br",
   "currency_symbol": "R$",
-  "primary_color": "#efba6a",
+  "primary_color": "var(--custom-primary-500)",
   "theme": {
     "bootswatch": "_",
     "custom": "_"

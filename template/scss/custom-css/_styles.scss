@@ -1073,11 +1073,11 @@ main .minicart__aside {
   background: #404245 !important;
 }
 .variations__option--selected {
-  background: #efba6a !important;
+  background: var(--custom-primary-500) !important;
 }
 
 .variations__option--selected:not(.disabled) {
-  border-color: #efba6a !important;
+  border-color: var(--custom-primary-500) !important;
   border-width: 2px !important;
 }
 
@@ -1093,7 +1093,7 @@ main .minicart__aside {
   display: none !important;
 }
 .footer__title {
-    color: #efba6a;
+    color: var(--custom-primary-500);
     font-weight: 500;
 }
 a {

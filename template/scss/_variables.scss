@@ -9,26 +9,26 @@ $white: #fff;
 $black: #000;
 $light: #686869;
 
-$text-muted: $gray-500;
-$border-color: $gray-600;
+$text-muted: $custom-gray-500;
+$border-color: $custom-gray-600;
 
 $list-group-color: $white;
-$list-group-bg: $gray-900;
-$list-group-border-color: $gray-700;
+$list-group-bg: $custom-gray-900;
+$list-group-border-color: $custom-gray-700;
 
-$breadcrumb-divider-color: $gray-500;
+$breadcrumb-divider-color: $custom-gray-500;
 $breadcrumb-active-color: $white;
 $breadcrumb-divider: quote(".");
 
 $input-bg: $black;
 $input-color: $white;
 $custom-select-bg: $black;
-$custom-select-disabled-bg: $gray-600;
+$custom-select-disabled-bg: $custom-gray-600;
 $component-active-bg: $white;
-$modal-content-bg: $gray-800;
-$card-bg: $gray-700;
+$modal-content-bg: $custom-gray-800;
+$card-bg: $custom-gray-700;
 
 $font-family-sans-serif: 'Encode Sans Variable', sans-serif;
 
-$body-bg: $gray-900;
-$body-color: $gray-100;
+$body-bg: $custom-gray-900;
+$body-color: $custom-gray-100;

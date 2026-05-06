@@ -27,7 +27,7 @@
   }
   &__nav {
     padding: 0;
-    color: $gray-300;
+    color: var(--gray-300);
     .row {
       align-items: center;
     }
@@ -71,7 +71,7 @@
   &__nav {
     text-transform: none;
     font-weight: 500;
-    background-color: $gray-800;
+    background-color: var(--gray-800);
     a {
       color: #fff;
       &:hover {
@@ -137,10 +137,10 @@
 }
 
 .footer {
-  background: $gray-800;
+  background: var(--gray-800);
   border-top: none;
   &__title {
-    color: $gray-200 !important;
+    color: var(--gray-200) !important;
   }
   &__payment-methods i {
     background-color: rgba(225, 225, 225, 0.875);
@@ -155,7 +155,7 @@
 }
 
 .info-bar {
-  background-color: $gray-800;
+  background-color: var(--gray-800);
   @media (min-width: 1024px) {
     max-width: none;
     &__nav {
@@ -180,14 +180,14 @@
   }
   &__text {
     font-size: 0.785rem;
-    color: $gray-300;
+    color: var(--gray-300);
     text-transform: none;
   }
 }
 
 .products-carousel {
   .glide {
-    max-width: $container-width;
+    max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
   }
@@ -195,7 +195,7 @@
 
 .partner__list {
   padding: 2rem 15px;
-  background-color: $gray-800;
+  background-color: var(--gray-800);
   > * {
     max-width: var(--content-max-width);
     margin-left: auto;
@@ -213,19 +213,19 @@
 .product-description .html-clearfix,
 .md-content .container,
 #product > .row > div:last-child {
-  background: rgba($gray-800, 0.75);
+  background: rgba(var(--gray-800), 0.75);
   padding: 1.5rem;
   border-radius: 0.3rem;
 }
 .table td,
 .table th,
 .nav-tabs {
-  border-color: rgba($gray-800, 0.8);
+  border-color: rgba(var(--gray-800), 0.8);
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-  background: var($gray-800) !important;
-  border-color: rgba($gray-800, 0.8);
+  background: var(var(--gray-800)) !important;
+  border-color: rgba(var(--gray-800), 0.8);
   color: white !important;
 }
 .tab-pane > .html-clearfix {
@@ -238,14 +238,14 @@
   font-weight: 500;
   font-size: 1.1rem;
   &:hover {
-    background: rgba($gray-800, 0.3);
-    border-color: $gray-600;
+    background: rgba(var(--gray-800), 0.3);
+    border-color: var(--gray-600);
   }
 }
 
 .product-specs {
   .text-muted {
-    color: $gray-300 !important;
+    color: var(--gray-300) !important;
   }
 }
 
@@ -294,7 +294,7 @@
       display: block;
       text-align: center;
       margin-top: 0.5rem;
-      color: $gray-300;
+      color: var(--gray-300);
     }
   }
 
@@ -309,7 +309,7 @@
   &__production {
     margin-top: 1rem;
     background: #fff;
-    color: $gray-800;
+    color: var(--gray-800);
     font-size: 1rem;
     padding: 0.6rem 1rem;
     border-radius: 0.25rem;
@@ -321,7 +321,7 @@
   }
 
   &__sticky {
-    background: rgba($gray-800, 0.85);
+    background: rgba(var(--gray-800), 0.85);
     backdrop-filter: blur(10px);
     img {
       border-radius: 0.25rem;
@@ -344,7 +344,7 @@
   }
 
   &__grid-title {
-    color: $gray-200;
+    color: var(--gray-200);
     font-size: 1.1rem;
   }
   .variations__value {
@@ -358,7 +358,7 @@
     min-width: 1.5rem;
     font-size: 0.875rem;
     color: #fff;
-    border-color: $gray-400;
+    border-color: var(--gray-400);
   }
   &__grid--colors .variations__option {
     border-radius: 100%;
@@ -410,7 +410,7 @@
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  background-color: $gray-800;
+  background-color: var(--gray-800);
   border-radius: 0.3rem;
   overflow: hidden;
 
@@ -418,7 +418,7 @@
     padding-top: 1rem;
     font-size: 0.925rem;
     font-weight: 500;
-    color: $gray-200;
+    color: var(--gray-200);
   }
   .prices__installments {
     font-size: 0.875rem;
@@ -474,7 +474,7 @@
     display: inline-block;
     border-radius: 50%;
     font-size: 0;
-    border: 1px solid $gray-400;
+    border: 1px solid var(--gray-400);
     width: 20px;
     flex: 0 0 20px;
     height: 20px;
@@ -871,7 +871,7 @@
 .login-modal {
   &__header,
   &__btn.btn-secondary {
-    background-color: $gray-800;
+    background-color: var(--gray-800);
   }
 }
 .form-control:disabled,
@@ -916,7 +916,7 @@ $--cool-green: #61a58f;
   color: #cdd5d7 !important;
 }
 main .minicart__aside {
-  background-color: $gray-700;
+  background-color: var(--gray-700);
 }
 .shipping-calculator {
   .list-group-item {
@@ -973,9 +973,9 @@ main .minicart__aside {
 
 .card-header,
 .card-footer {
-  background: $gray-700;
+  background: var(--gray-700);
   .close {
-    color: $gray-300;
+    color: var(--gray-300);
   }
 }
 .main .cart__info {

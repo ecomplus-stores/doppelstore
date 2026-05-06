@@ -29,7 +29,7 @@
 .ec-search-engine__toggle i,
 .ec-search-engine__toggle svg {
   font-size: .825rem;
-  color: var(--custom-gray-dark);
+  color: var(--gray-dark);
   margin-right: .15rem;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .ec-search-engine__toggle[aria-expanded=true] {
-  color: var(--custom-gray-dark);
+  color: var(--gray-dark);
   opacity: 1;
 }
 

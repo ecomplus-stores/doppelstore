@@ -1,4 +1,3 @@
-console.log('posso comer meu cu?');
 function updateHrefs() {
   document.getElementById('sd-660bfba70fc534303de909e6').href = 'https://links.doppelstore.com.br/3xigRYd';
   document.getElementById('sd-64c590d95e60690370785d73').href = 'https://links.doppelstore.com.br/4aBBtJi';

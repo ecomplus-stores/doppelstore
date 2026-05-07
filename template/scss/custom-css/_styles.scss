@@ -19,12 +19,12 @@
   background-color: rgba(var(--primary-rgb), 0.5);
   &__countdown,
   &__nav {
-    font-size: 16px;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
   }
   &__nav {
-    padding: 0 20px 0 20px;
+    padding: 0;
     color: var(--custom-gray-300);
     .row {
       align-items: center;
@@ -171,13 +171,13 @@
   }
 
   &__title {
-    font-size: 17px;
+    font-size: 0.85rem;
     font-weight: 600;
     color: #fff;
     text-transform: uppercase;
   }
   &__text {
-    font-size: 14px;
+    font-size: 0.785rem;
     color: var(--custom-gray-300);
     text-transform: none;
   }
@@ -548,12 +548,7 @@
 .header {
   #search-input {
     background-color: #9a9b9e;
-    border-radius: 27px;
   }
-
-  .header__search-btn {
-    background: #feb954;
-    border-radius: 25px;
 
   &__search {
     overflow: visible;
@@ -1078,11 +1073,11 @@ main .minicart__aside {
   background: #404245 !important;
 }
 .variations__option--selected {
-  background: var(--custom-primary-500) !important;
+  background: #efba6a !important;
 }
 
 .variations__option--selected:not(.disabled) {
-  border-color: var(--custom-primary-500) !important;
+  border-color: #efba6a !important;
   border-width: 2px !important;
 }
 
@@ -1098,7 +1093,7 @@ main .minicart__aside {
   display: none !important;
 }
 .footer__title {
-    color: var(--custom-primary-500);
+    color: #efba6a;
     font-weight: 500;
 }
 a {
@@ -1188,8 +1183,7 @@ section.ts-customer-questions {
 }
 
 .header__nav {
-        background-color: #000000;
-    border-top: 1px solid #4e4e4e;
+    background-color: #686a71;
 }
 .info-bar {
     background-color: #686a71;
@@ -1611,5 +1605,5 @@ div.backdrop {
 #c-6492f5275e6069037042be58,
 #c-655c744c2cd6b65959b14e68,
 #c-65c8c3f687ab487fbfb30864 {
-  display: none;
+    display: none;
 }

@@ -441,7 +441,7 @@ main,
   }
 
   &__grid-title {
-    color: var(--custom-gray-200);
+    color: var(--custom-primary-300);
     font-size: 1.1rem;
   }
   .variations__value {
@@ -454,7 +454,7 @@ main,
     min-height: 1.5rem;
     min-width: 1.5rem;
     font-size: 0.875rem;
-    color: var(--custom-gray-900);
+    color: var(--custom-gray-100);
     border-color: var(--custom-gray-400);
   }
   &__grid--colors .variations__option {
@@ -1054,17 +1054,33 @@ main .minicart__aside {
   .btn-outline-secondary,
   .btn-light,
   .cart__btn-back {
-    background: var(--custom-gray-100);
-    color: var(--custom-gray-900);
+    background: var(--custom-primary-500) !important;
+    color: var(--custom-gray-200) !important;
     &:hover {
-      background-color: var(--primary) !important;
-      color: var(--custom-gray-900);
+      background-color: var(--custom-accent-500) !important;
+      color: var(--custom-gray-200) !important;
     }
   }
 }
 
+.btn-light {
+    background-color: var(--custom-primary-300) !important;
+    border-color: var(--custom-primary-400) !important;
+    color: var(--custom-gray-100) !important;
+}
+
+.btn-light:hover {
+    background-color: var(--custom-accent-300) !important;
+    border-color: var(--custom-accent-400) !important;
+    color: var(--custom-gray-100) !important;
+}
+.btn-light:selected {
+    background-color: var(--custom-accent-300) !important;
+    border-color: var(--custom-accent-400) !important;
+    color: var(--custom-primary-200) !important;
+}
 .variations__option--selected {
-  border: 2px solid var(--primary) !important;
+  border: 2px solid var(--custom-accent-500) !important;
   box-shadow: unset !important;
 }
 
@@ -1818,12 +1834,12 @@ div.backdrop {
   button {
     background-color: var(--custom-accent-500) !important;
     border-color: var(--custom-accent-500) !important;
-    color: var(--custom-gray-900) !important;
+    color: var(--custom-gray-100) !important;
 
     &:hover {
       background-color: var(--custom-accent-600) !important;
       border-color: var(--custom-accent-600) !important;
-      color: #fff !important;
+      color: var(--custom-gray-100) !important;
     }
   }
 }
@@ -1870,7 +1886,7 @@ h3,
 button.btn.btn-lg.btn-block.btn-success {
   background-color: var(--custom-action-color) !important;
   border-color: var(--custom-action-color) !important;
-  color: var(--custom-gray-900) !important;
+  color: #fff !important;
 }
 
 .btn-primary:hover,

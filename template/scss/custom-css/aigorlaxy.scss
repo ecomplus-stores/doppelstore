@@ -155,22 +155,6 @@ main .search-engine__nav, main .search__box {
     background-color: var(--custom-gray-800)!important;
     color: white;
 }
-
-.btn-light {
-    background-color: var(--custom-gray-600)!important;
-    border-color: var(--custom-gray-600)!important;
-}
-
-.btn-light.focus, .btn-light:focus, .btn-light:hover {
-    background-color: var(--custom-gray-800)!important;
-    border-color: var(--custom-gray-800)!important;
-    color: var(--white)!important;
-}
-
-.nav-tabs .nav-link {
-    background-color: var(--custom-gray-700)!important;
-}
-
     .header__logo {
         padding: 20px;
     }

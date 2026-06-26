@@ -1,37 +1,38 @@
-$custom-gray-100: #f1f5f9;
-$custom-gray-200: #e2e8f0;
-$custom-gray-300: #d2d7de;
-$custom-gray-400: #b1b5bb;
-$custom-gray-500: #898c90;
-$custom-gray-600: #6d7177;
-$custom-gray-700: #555a60;
-$custom-gray-800: #3d4247;
-$custom-gray-900: #24282d;
+$custom-primary-100: #d9d0e7;
+$custom-primary-200: #b4a1cf;
+$custom-primary-300: #8e72b8;
+$custom-primary-400: #6943a0;
+$custom-primary-500: #431488;
+$custom-primary-600: #36106d;
+$custom-primary-700: #280c52;
+$custom-primary-800: #1b0836;
+$custom-primary-900: #0d041b;
 
-$custom-primary-100: #ffe8c6;
-$custom-primary-200: #ffdca8;
-$custom-primary-300: #ffd18b;
-$custom-primary-400: #ffc772;
-$custom-primary-500: #ffba54;
-$custom-primary-600: #e0a14a;
-$custom-primary-700: #b8833c;
-$custom-primary-800: #8f652f;
-$custom-primary-900: #664922;
+$custom-accent-100: #fbefd4;
+$custom-accent-200: #f7dfa9;
+$custom-accent-300: #f3ce7f;
+$custom-accent-400: #efbe54;
+$custom-accent-500: #ebae29;
+$custom-accent-600: #bc8b21;
+$custom-accent-700: #8d6819;
+$custom-accent-800: #5e4610;
+$custom-accent-900: #2f2308;
+
+$custom-gray-100: #efeff3;
+$custom-gray-200: #dfdee7;
+$custom-gray-300: #ceceda;
+$custom-gray-400: #bebdce;
+$custom-gray-500: #aeadc2;
+$custom-gray-600: #8b8a9b;
+$custom-gray-700: #686874;
+$custom-gray-800: #46454e;
+$custom-gray-900: #232327;
+
 
 
 $container-width: 1110px;
 
 :root {
-    --custom-gray-100: #{$custom-gray-100};
-    --custom-gray-200: #{$custom-gray-200};
-    --custom-gray-300: #{$custom-gray-300};
-    --custom-gray-400: #{$custom-gray-400};
-    --custom-gray-500: #{$custom-gray-500};
-    --custom-gray-600: #{$custom-gray-600};
-    --custom-gray-700: #{$custom-gray-700};
-    --custom-gray-800: #{$custom-gray-800};
-    --custom-gray-900: #{$custom-gray-900};
-
     --custom-primary-100: #{$custom-primary-100};
     --custom-primary-200: #{$custom-primary-200};
     --custom-primary-300: #{$custom-primary-300};
@@ -41,6 +42,26 @@ $container-width: 1110px;
     --custom-primary-700: #{$custom-primary-700};
     --custom-primary-800: #{$custom-primary-800};
     --custom-primary-900: #{$custom-primary-900};
+
+    --custom-accent-100: #{$custom-accent-100};
+    --custom-accent-200: #{$custom-accent-200};
+    --custom-accent-300: #{$custom-accent-300};
+    --custom-accent-400: #{$custom-accent-400};
+    --custom-accent-500: #{$custom-accent-500};
+    --custom-accent-600: #{$custom-accent-600};
+    --custom-accent-700: #{$custom-accent-700};
+    --custom-accent-800: #{$custom-accent-800};
+    --custom-accent-900: #{$custom-accent-900};
+
+    --custom-gray-100: #{$custom-gray-100};
+    --custom-gray-200: #{$custom-gray-200};
+    --custom-gray-300: #{$custom-gray-300};
+    --custom-gray-400: #{$custom-gray-400};
+    --custom-gray-500: #{$custom-gray-500};
+    --custom-gray-600: #{$custom-gray-600};
+    --custom-gray-700: #{$custom-gray-700};
+    --custom-gray-800: #{$custom-gray-800};
+    --custom-gray-900: #{$custom-gray-900};
 
     --container-width: #{$container-width};
 }

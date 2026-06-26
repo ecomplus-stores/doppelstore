@@ -1055,10 +1055,10 @@ main .minicart__aside {
   .btn-light,
   .cart__btn-back {
     background: var(--custom-primary-500) !important;
-    color: var(--custom-gray-200) !important;
+    color: #fff !important;
     &:hover {
       background-color: var(--custom-accent-500) !important;
-      color: var(--custom-gray-200) !important;
+      color: #fff !important;
     }
   }
 }

@@ -1101,25 +1101,25 @@ main .minicart__aside {
   margin: 0 auto;
 
   .text {
-    color: var(--custom-gray-900);
+    color: var(--custom-primary-300);
     font-size: 14px;
     font-weight: 700;
   }
 
   button {
     &:hover {
-      color: var(--custom-gray-900);
-      background: var(--custom-accent-500);
+      color: #fff;
+      background: var(--custom-accent-200);
     }
-    color: var(--custom-gray-900);
+    color: #fff;
     font-weight: 700;
     display: block;
     white-space: nowrap;
     text-transform: uppercase;
     padding: 10px 15px;
     font-size: 12px;
-    border: 1px solid var(--custom-primary-500);
-    background: #24354d;
+    border: 1px solid var(--custom-accent-600);
+    background: var(--custom-accent-500);;
     border-radius: 0;
     outline: none;
     transition: all 0.2s;
@@ -1131,7 +1131,7 @@ main .minicart__aside {
   }
 
   #cookieconsent-btn {
-    border: 1px solid var(--primary);
+    border: 1px solid var(--custom-accent-600);
   }
 }
 

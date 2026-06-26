@@ -1,12 +1,12 @@
 {
   "domain": "www.forja-estelar.com.br",
   "currency_symbol": "R$",
-  "primary_color": "#ffba54",
+  "primary_color": "#ebae29",
   "theme": {
     "bootswatch": "_",
     "custom": "_"
   },
-  "bg_color": "#56595a",
+  "bg_color": "#ffffff",
   "repository": "ecomplus-stores/doppelstore",
   "logo": "/img/uploads/logo-horizontal-text-site.png",
   "name": "Loja Geeklandia",
@@ -21,6 +21,6 @@
   "secondary_color": "#f4f4f4",
   "icon": "/img/uploads/logo-efeito.webp",
   "store_id": 4566,
-  "description": "Fábrica de personalizados para a sua marca, empresa, evento e tudo mais que existe no universo.\nDo núcleo das estrelas, ideia ganham forma.",
+  "description": "Fábrica de DTF para a sua marca, empresa, evento e tudo mais que existe no universo. \nDo núcleo das estrelas, ideia ganham forma.",
   "large_icon": "/img/uploads/logo-efeito.webp"
 }

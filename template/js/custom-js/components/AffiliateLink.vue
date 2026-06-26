@@ -85,7 +85,7 @@
         const share = async () => {
           try {
             await navigator.share({
-              title: 'Forja Estelar - Convite especial: Ganhe R$ 25,00',
+              title: 'Loja Geeklandia - Convite especial: Ganhe R$ 25,00',
               text,
               url: this.link
             })

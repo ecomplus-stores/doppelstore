@@ -1,7 +1,7 @@
 {
   "shipping": {
     "show": true,
-    "title": "PRODUÇÃO SOB DEMANDA",
+    "title": "PRODUÇÃO RÁPIDA",
     "text": "Consulte o prazo no produto"
   },
   "installments": {
@@ -16,12 +16,12 @@
   },
   "promo": {
     "show": true,
-    "text": "Mais de 4 mil avaliações positivas",
+    "text": "Mais de 600 avaliações positivas",
     "title": "SUPER RECOMENDADA"
   },
   "freight": {
     "show": true,
-    "text": "Pedidos acima R$ 280",
+    "text": "Pedidos acima R$ 150",
     "title": "Frete Grátis"
   }
 }

@@ -22,7 +22,7 @@
           "link": "https://links.doppelverso.com.br/banners/links/home-slider-2-desktop"
         }
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "type": "responsive-banner",

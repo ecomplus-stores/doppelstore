@@ -210,7 +210,7 @@
   "functions": {
     "predeploy": [
       "cp -r template .functions/; rm -rf .functions/template/public; rm -rf .functions/template/scss",
-      "cp -r content .functions/; cp .*.json .functions/",
+      "cp -r content .functions/; cp .*.json .functions/; rm -f .functions/.firebase-adminsdk.json",
       "mkdir -p .functions/template/pages/@ecomplus/storefront-template/template",
       "cp -r node_modules/@ecomplus/widget-* .functions/template/pages/@ecomplus/ 2>/dev/null || :",
       "cp -r node_modules/@ecomplus/storefront-template/template/pages .functions/template/pages/@ecomplus/storefront-template/template/ || :",

@@ -3,7 +3,16 @@ const { getFirestore, Timestamp } = require('firebase-admin/firestore')
 const { onRequest } = require('firebase-functions/v2/https')
 const { warn } = require('firebase-functions/logger')
 
-const { ssr } = require('@ecomplus/storefront-renderer/functions/')
+const { ssr: renderSsr } = require('@ecomplus/storefront-renderer/functions/')
+
+// Security: the renderer `/~reverse-proxy/` route forwards visitor headers to any URL,
+// which exposes the GCP metadata server (service account token). Keep it disabled.
+const ssr = (req, res) => {
+  if (/reverse-proxy/i.test(`${req.url}${req.originalUrl || ''}`)) {
+    return res.sendStatus(404)
+  }
+  return renderSsr(req, res)
+}
 
 process.env.STOREFRONT_LONG_CACHE = 'false'
 
@@ -14,7 +23,8 @@ exports.ssr = onRequest({
   minInstances: 0,
   memory: '1GiB',
 }, async (req, res) => {
-  if (req.path.startsWith('/~partytown')) {
+  // Security: `/~reverse-proxy/` forwards visitor headers to any URL (SSRF to the GCP metadata server)
+  if (req.path.startsWith('/~partytown') || /reverse-proxy/i.test(`${req.url}${req.originalUrl || ''}`)) {
     res.sendStatus(404)
     return null
   }
